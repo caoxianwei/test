@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+
+		<base id="">
+
+		<meta name="referrer" content="always">
+		<meta name="renderer" content="webkit">
+		<meta name="referrer" content="unsafe-url">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+		<title>千亿彩票 - 彩票APP,彩票开奖查询,重庆时时彩开奖号码,北京pk10开奖记录</title>
+
+		<link type="text/css" rel="stylesheet" href="../assets/statics/css/home.css" />
+		<link rel="stylesheet" href="../assets/statics/css/style.css" type="text/css" />
+		<link rel="stylesheet" href="../assets/statics/css/userCenter.css" type="text/css" />
+		<link rel="stylesheet" type="text/css" href="../assets/js/plugins/datePicker/datePicker.css" />
+		<link rel="stylesheet" type="text/css" href="css/reset.css">
+		<link rel="stylesheet" type="text/css" href="css/hpn-common.css">
+		<link rel="stylesheet" type="text/css" href="css/index.css">
+		<link rel="stylesheet" type="text/css" href="css/global.css">
+		<link rel="stylesheet" type="text/css" href="css/laydate.css"/>
+    	<link rel="stylesheet" href="css/layer/skin/default/laydate.css">
+		<link rel="shortcut icon" type="image/x-icon" href="../assets/statics/images/qianyi.png" media="screen" />
+		<style type="text/css">
+		.laydate_body .laydate_chnext cite {
+		    border-left-style: solid!important;
+		    border-left-color: #666!important;
+		}
+		.laydate_body .laydate_chprev cite {
+		    border-right-style: solid!important;
+		    border-right-color: #666!important;
+		}
+		.laydate_body .laydate_chtop cite {
+		    border-bottom-color: #666!important;
+		}
+		.laydate_body .laydate_chdown cite, .laydate_body .laydate_ym label {
+		    border-top-color: #666!important;
+		}
+			#scroll a {
+				font-size: 12px;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<div class="header-plus" id="header_plus">
+			<div class="header-toptray-plus">
+				<div class="quick-tpis">
+					<i class="icon-acc"></i>
+					<marquee id="sys_tip" behavior="scroll" onmouseover="this.stop()" onmouseout="this.start()">千亿彩票（易记域名58qycp.com）购彩就上千亿彩票，下载彩票APP及完善个人资料即送18元并可提升尊享VIP高级服务，六合彩、时时彩赔率业界最高。</marquee>
+					<div id="scroll" class="quick-list" style="width: 400px;">
+						<a class="kefu" href="javascript:void(0)">在线客服</a><span style="margin-left: 2px;"> | </span>
+						<div id="spread_url_1" style="display: none;">
+							<a href="spread.html">千亿彩票网<img style="margin-left: 2px;margin-bottom: 10px;" src="../assets/statics/images/hot_new.gif"></a><span> | </span></div>
+						<a href="../common/rule/lhc.html">玩法</a><span> | </span>
+						<a href="../common/help.html">帮助中心</a><span> | </span>
+						<a id="shoucang" onclick="addFavorite2()">加入收藏</a>
+						<a id="agent_reg_url" href="../common/agency.html" title="加入代理"><span> | </span>加入代理</a>
+						<a id="play_free" href="../common/trail.html"><span> | </span>免费试玩</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="liansai-wrap" id="liansai-wrap">
+			<div class="liansai" id="liansai">
+				<div class="wrapper clearfix relative">
+					<h1 class="sprite sprite-logo">
+        	<a href="../index.html"><img src="../assets/statics/images/qycplogo.png" alt=""></a>
+        </h1>
+
+					<div id="header_user_login" class="wrap-login" style="display:none;">
+						<div class="logxinxi" id="logxinxi">
+							<div class="top_login">
+								<div style="float:right;">
+									<div class="top-login-bg"><i class="icon-6"></i>
+										<input class="top_loginip" name="username" type="text" placeholder="请输入用户名">
+									</div>
+									<div class="top-login-bg"><i class="icon-lock-icon"></i>
+										<input class="top_loginip" name="passwd" type="password" placeholder="请输入密码" style="width: 70px;">
+										<span style="position: relative;">
+                            	<a href="common/forget" style="float:left;color:blue;margin-top: 8px;">忘记密码</a>
+                            </span>
+									</div>
+									<div class="need_captcha">
+										<div class="top_click" name="div_top_click">请输入验证码</div>
+										<div class="yanzhengma">
+											<div class="top-login-bg2">
+												<input class="top_loginmm" id="authnum" name="authnum" maxlength="4" type="text" placeholder="验证码">
+												<span class="register_captcha_span" style="margin:0; position: relative;">
+                                        <img name="login_img" class="login_img">
+                                    </span>
+											</div>
+										</div>
+									</div>
+									<input class="dr_anniu" type="submit" name="login" value="登录">
+									<input class="dr_anniu reg_anniu" type="button" value="注册" onclick="location=document.getElementById('base_path').href+'common/register?type=0'">
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div id="header_user" class="logxinxi" style="display:none;">
+						<div class="top_login">
+							<span>您好，<a href="../member/center.html" class="play-jl" name="user_name"></a></span>
+							<span>可用余额：</span>
+							<span><a class="balance colorRed" id="a_show_money" rel="nofollow"><span id="balance" class="orange">￥</span></a>
+							</span>
+							<span><a id="header_money_refresh"><i class="icon-refresh-icon"></i></a></span>
+							<span>
+                   &nbsp;|&nbsp;
+                   <a href="../member/center.html">用户中心</a>&nbsp;|&nbsp;
+                   <a href="../member/recharge.html">充值</a>&nbsp;|&nbsp;
+                   <a href="../member/withdraw.html">提现</a>&nbsp;|&nbsp;
+                   <a href="../member/deal.html">交易记录</a>&nbsp;|&nbsp;
+                   <a href="../member/message.html?tab=2">个人消息<b id="un_read_msg_count" style="color:red;display:none;"></b></a>&nbsp;|&nbsp;
+               	   <a href="javascript:void(0)" onclick="sigout1()">退出</a>&nbsp;
+               </span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="header-navbar-plus">
+			<div class="wrapper clearfix" id="header_box">
+				<div class="lottery-plus" id="lotterys">
+					<h2 class="xzcz">选择彩种 <a  class="dropdown-desc" style="margin-left: 75px;"><i class="icon arrow"></i></a></h2>
+					<div class="lotterys-list-hd" id="lotterysList" style="width: 238px;">
+						<ul class="lottery-list-box" id="register">
+
+						</ul>
+						<ul class="gpc_li1">
+							<li>
+								<span style="display: inline-block;width: 80px;position: relative;bottom: 20px;"><i class="icon-ALARM" style="position: relative;left: 14px;"></i><span style="position: relative;right: 20px;top: 20px;">高频彩</span></span> <span class="gpc_li_list1"></span>
+							</li>
+						</ul>
+						<ul class="dpc_li1">
+							<li style="border-top: 1px solid #F13131;">
+								<span style="display: inline-block;width: 80px;position: relative;bottom: 20px;"><i class="icon-TIME" style="position: relative;left: 14px;"></i><span style="position: relative;right: 20px;top: 20px;">低频彩</span></span>
+								<span class="dpc_li_list1"></span>
+							</li>
+						</ul>
+						<ul class="all_li1">
+							<li style="border-top: 1px solid #F13131;">
+								<span style="display: inline-block;width: 80px;position: relative;bottom: 20px;"><i class="" style="display: inline-block;width: 32px;height: 32px;position: relative;right: 10px;background-image: url(../assets/statics/images/qianyi.png);"></i><span style="display: inline-block;position: relative;left: 20px;top: 20px;float: left;">全部</span></span>
+								<span class="all_li_list1"></span>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<ul class="nav-plus clearfix">
+					<li class="">
+						<a href="../index.html">首页</a>
+					</li>
+					<li>
+						<a href="../ssc/main.html">购彩大厅</a>
+					</li>
+					<li class="">
+						<a href="../phone.html"><i class="icon-iphone-icon"></i>&nbsp;手机购彩</a><em class="hot-icon"></em></li>
+					<li>
+						<a href="../common/activity.html">优惠活动</a><em class="hot-icon"></em></li>
+					<li class="">
+						<a href="../common/draw.html" class="dropdown-desc">开奖公告</a>
+					</li>
+					<li class="">
+						<a href="../common/trend.html">走势图表</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="user-box">
+			<div id="h2" class="wrap">
+
+				<ul id="menu" class="menu fl">
+					<a href="center.html">
+						<li id="index" class=""><i class="icon-Home"></i><span>用户中心</span></li>
+					</a>
+					<!--<a href="spread.html">
+						<li id="spread" href="member/spread" class=""><i class="icon-users"></i><span>代理赚钱</span></li>
+					</a>-->
+					<!--<a href="checkin.html">
+						<li id="message" class=""><i class="icon-coin-dollar" style="color: red;"></i><span style="color: red;">签到红包</span></li>
+					</a>-->
+					<a href="recharge.html">
+						<li id="deposit" class=""><i class="icon-coin-yen"></i><span>在线存款</span></li>
+					</a>
+					<a href="withdraw.html">
+						<li id="qukuan" class=""><i class="icon-coin-dollar1"></i><span>在线取款</span></li>
+					</a>
+
+					<a href="deal.html">
+						<li id="jiaoyi" class="current"><i class="icon-Notes"></i><span>交易记录</span></li>
+					</a>
+					<a href="message.html">
+						<li id="message" class=""><i class="icon-acc"></i><span>消息中心</span></li>
+					</a>
+					<a href="" target="_blank"  class="kefu">
+						<div id="customerService"><i class="icon-6" style="margin:0"></i><span>在线客服</span></div>
+					</a>
+				</ul>
+
+				<div class="help_r_main">
+					<div class="eveb_content">
+						<div class="eveb_nav_sub">
+							<ul class="clearfix">
+								<li class="on" id="czjl">
+									<a href="javascript:void(0)">充值记录</a>
+								</li>
+								<li id="txjl">
+									<a href="javascript:void(0)">提现记录</a>
+								</li>
+								<li id="zjjl">
+									<a href="javascript:void(0)">资金记录</a>
+								</li>
+								<li id="tzjl">
+									<a href="javascript:void(0)">投注记录</a>
+								</li>
+								<li id="zjjl">
+									<a href="javascript:void(0)">中奖记录</a>
+								</li>
+							</ul>
+						</div>
+						<table class="eveb_box eveb_table" id="dataTable">
+							<thead>
+								<tr>
+									<th>申请时间</th>
+									<th>充值方式</th>
+									<th>充值金额</th>
+									<th>状态</th>
+								</tr>
+							</thead>
+							<tbody>
+							</tbody>
+						</table>
+						<table class="eveb_box eveb_table" id="dataMoneyTable" style="display: none;">
+							<thead>
+								<tr>
+									<th>申请时间</th>
+									<th>提现账号</th>
+									<th>提现金额</th>
+									<th>状态</th>
+								</tr>
+							</thead>
+							<tbody>
+							</tbody>
+						</table>
+						<table class="eveb_box eveb_table" id="dataBankrollTable" style="display: none;">
+							<h2 id="search">
+                <div class="eveb_search eveb_search_h2">
+                    　			起止时间：
+                    <input name="starttime" id="starttime" type="text" size="11" class="suminp" onclick="laydate({istime: false,istoday: true,  format: 'YYYY-MM-DD'})" value=""> -
+                    <input name="endtime" id="endtime" type="text" size="11" class="suminp" onclick="laydate({istime: false, istoday: true, format: 'YYYY-MM-DD'})" value="">
+                    <a href="javascript:void(0)" class="button_small button_3" id="get-time">查询</a>
+                </div>
+            </h2>
+							<thead>
+								<tr>
+									<th>借代类型</th>
+									<th>交易类型</th>
+									<th>交易金额</th>
+									<th>资金余额</th>
+									<th>交易时间</th>
+									<th>备注</th>
+								</tr>
+							</thead>
+							<tbody>
+							</tbody>
+						</table>
+						<table class="eveb_box eveb_table" id="dataCathecticTable" style="display: none;">
+							<thead>
+								<tr>
+									<th>彩种</th>
+									<th>期号</th>
+									<th>投注时间</th>
+									<th>房间号</th>
+									<th>玩法</th>
+									<th>赔率</th>
+									<th>投注内容</th>
+									<th>投注金额</th>
+									<th>中奖金额</th>
+									<th>状态</th>
+								</tr>
+							</thead>
+							<tbody>
+							</tbody>
+						</table>
+						<table class="eveb_box eveb_table" id="dataWinningTable" style="display: none;">
+							<thead>
+								<tr>
+									<th>彩种</th>
+									<th>期号</th>
+									<th>投注时间</th>
+									<th>房间号</th>
+									<th>玩法</th>
+									<th>赔率</th>
+									<th>投注内容</th>
+									<th>投注金额</th>
+									<th>中奖金额</th>
+									<th>状态</th>
+								</tr>
+							</thead>
+							<tbody>
+							</tbody>
+						</table>
+						<!--<div class="eveb_amount fl">当前小计<span id="pageMoney"> 0 </span>元，总计<span id="totalMoney"> 0 </span>元</div>-->
+						<div class="eveb_page fr">
+						</div>
+					</div>
+				</div>
+				<div class="_clr_"></div>
+			</div>
+		</div>
+
+		<div class="jc-footer">
+
+			<div class="foot_box">
+				<div class="about_box">
+					<ul class="foot_info">
+						<li class="foot_wljc"></li>
+						<li class="foot_wangan"></li>
+						<li class="foot_wsjy"></li>
+						<li class="foot_xylh"></li>
+						<li class="foot_kxwz"></li>
+					</ul>
+
+					<p>2009-2017©
+						<span>千亿彩票</span>
+						<br>
+						<span class="c-grey">千亿彩票郑重提示：彩票有风险，投注需谨慎！ 不向未满18周岁的青少年出售彩票</span>
+					</p>
+
+					<div class="clear"></div>
+				</div>
+			</div>
+
+			<div class="clear nospace"></div>
+		</div>
+		<div class="all_gpc1" style="width: 415px;height:120px;position: relative;bottom: 217px;left: 616px;">
+			<div style="width:400px;height: 30px;margin-top: 30px;position: relative;left: 50px;font-weight: bold;color: black;">高频彩</div>
+			<span></span>
+		</div>
+		<div class="all_all1" style="width: 415px;height:150px;position: relative;bottom: 118px;left: 609px;">
+			<div style="width:400px;height: 30px;margin-top: 30px;position: relative;left: 50px;font-weight: bold;color: black;">全部</div>
+			<span></span>
+		</div>
+		<input type="hidden" value="0000000000" id="member_name">
+		<input id="is_index_page" type="hidden" value="1">
+
+		<script src="../assets/js/plugins/jquery/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../assets/js/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../assets/js/plugins/user/user.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../assets/js/global.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../static/public/js/rollups/tripledes.js"></script>
+		<script src="../static/public/js/components/mode-ecb.js"></script>
+		<script type="text/javascript" src="../static/public/js/clipboard.min.js"></script>
+		<script type="text/javascript" src="../static/public/js/jquery.validate.min.js"></script>
+		<script type="text/javascript" src="../static/public/js/laydate.js"></script>
+		<script type="text/javascript" src="../static/public/js/validate.js"></script>
+		<script src="../assets/js/plugins/datePicker/datePicker.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../static/public/layer/layer.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../assets/js/application/move.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../assets/js/application/type.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../assets/js/base.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../assets/js/application/uHome.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../assets/js/application/uList.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+		//获得在线客服地址
+		$.ajax({
+		  url : CONFIG.BASEURL + 'baseData_onlineService',
+		  type: 'get',
+		  dataType: 'json',
+		  success: function (json) {
+		      if(json.code != 200){
+		          return;
+		      } else {
+		          var data = json.data.url;
+		          $(".kefu").attr('href',data);
+		      }
+		  }
+		});
+			$('.all_gpc1,.all_all1').on('mouseenter', function() {
+				$('#lotterysList').css('display', 'block');
+			})
+			$('.all_gpc1,.all_all1').on('mouseleave', function() {
+				$('#lotterysList').css('display', 'none');
+			})
+
+			$(".ac_list_table").on("click", function() {
+				var display = $(this).next(".xialawz").css("display");
+				$(".ac_list_table").next(".xialawz").hide();
+
+				if(display == 'none') {
+					$(this).next(".xialawz").show();
+				} else {
+					$(this).next(".xialawz").hide();
+				}
+			});
+
+			$('.xzcz,#lotterysList').on('mouseenter', function() {
+				$('#lotterysList').show();
+			});
+			$('.xzcz,#lotterysList').on('mouseleave', function() {
+				$('#lotterysList').hide();
+			});
+
+			$('#left').on('click', function() {
+				$('.l_AD').css('display', 'none');
+			})
+			$('#right').on('click', function() {
+				$('.r_AD').css('display', 'none');
+			})
+
+			function addFavorite2() {
+				var url = window.location;
+				var title = document.title;
+				var ua = navigator.userAgent.toLowerCase();
+				if(ua.indexOf("360se") > -1) {
+					alert("由于360浏览器功能限制，请按 Ctrl+D 手动收藏！");
+				} else if(ua.indexOf("msie 8") > -1) {
+					window.external.AddToFavoritesBar(url, title); //IE8
+				} else if(document.all) {
+					try {
+						window.external.addFavorite(url, title);
+					} catch(e) {
+						alert('您的浏览器不支持,请按 Ctrl+D 手动收藏!');
+					}
+				} else if(window.sidebar) {
+					window.sidebar.addPanel(title, url, "");
+				} else {
+					alert('您的浏览器不支持,请按 Ctrl+D 手动收藏!');
+				}
+			}
+
+			var nowData = new Date();
+			var nowMonth = parseInt(nowData.getMonth()) + 1;
+			if(nowMonth < 10) {
+				nowMonth = '0' + nowMonth;
+			}
+			$("#search input").val(nowData.getFullYear() + '-' + nowMonth + '-' + nowData.getDate());
+			$(function() {
+				$('.eveb_table').eq(0).show().siblings('table').hide();
+				//
+				$('.clearfix li').on('click', function() {
+					$(this).addClass('on').siblings().removeClass('on');
+					var index = $(this).index();
+					$('.eveb_table').eq(index).show().siblings('table').hide();
+					if(index == 0) {
+						getCkjlData();
+					} else if(index == 1) {
+						getTxData();
+					} else if(index == 2) {
+						getMoneyData();
+					} else if(index == 3) {
+						getTzData();
+					} else if(index == 4) {
+						getZjData();
+					};
+				})
+			});
+			
+			function showLoading() {
+				layer.load(2, {
+					shade: [0.1, '#000'] //0.1透明度的白色背景
+				})
+			}
+			
+			function hideLoading() {
+				layer.closeAll();
+			}
+
+			$(function() {
+				parent.hideLoading();
+			});
+
+			$(function() {
+				getCkjlData();
+			});
+
+			function goPage(bool) {
+				getCkjlData(bool);
+			}
+
+			function goPage1(bool) {
+				getTxData(bool);
+			}
+
+			function goPage2(bool) {
+				getTzData(bool);
+			}
+
+			function goPage3(bool) {
+				getZjData(bool);
+			}
+
+			function goPage4(bool) {
+				getMoneyData(bool);
+			}
+
+			var index = 0;
+
+			function getCkjlData(bool) {
+
+				if(bool) {
+					index++;
+				} else {
+					if(bool != null) {
+						index--;
+					}
+				}
+				//充值记录
+				if($.cookie('u')) {
+	                $('#search').hide();
+					var mw = baseObj.mw({
+						u: $.cookie('u'),
+						pageIndex: index
+					});
+					ajaxRequest({
+						url: CONFIG.BASEURL + "recharge_detail",
+						data: {
+							mw: mw
+						},
+						success: function(json) {
+							var str = '';
+							if(json.code != 200) {
+								str = '<tr><td colspan="4" style="text-align:center;">暂无数据</td></tr>';
+								$('#dataTable tbody').html(str);
+								$('.eveb_page').html('');
+								return;
+							}
+							var data = json.data.items;
+							if(data.length == 0) {
+								str = '<tr><td colspan="4" style="text-align:center;">暂无数据</td></tr>';
+								$('.eveb_page').html('');
+							} else {
+								$.each(data, function(index, value) {
+									if(value.status == 1) {
+										value.status = '充值成功';
+									} else if(value.status == 0) {
+										value.status = '充值中';
+									} else {
+										value.status = '充值失效';
+									}
+									str += '<tr><td style="text-align:center;">' + value.createDate + '</td><td style="text-align:center;">' + value.title + '</td><td style="text-align:center;">' + value.money + '</td><td style="text-align:center;">' + value.status + '</td></tr>';
+								});
+								var page = '<span style="margin:0 3px;float:left;width:auto;padding:0 5px;height:25px;line-height:25px;">总共' + json.data.total + '条，当前第' + (json.data.pageIndex + 1) + '页 ,共' + json.data.pageNum + '条</span>';
+								if(json.data.pageIndex > 0) {
+									page += '<a href="javascript:void(0)" onclick="goPage(false)" style="margin:0 3px;float:left;width:auto;padding:0 5px;">上一页</a>';
+								};
+								if(index < parseInt(json.data.total / 20)) {
+									page += '<a href="javascript:void(0)" onclick="goPage(true)" style="margin:0 3px;float:left;width:auto;padding:0 5px;">下一页</a>';
+								}
+
+								$('.eveb_page').html(page);
+								$('#dataTable tbody').html(str);
+							};
+						},
+						error: function() {
+							$('#search').hide();
+							$('.eveb_page').html('');
+							var str = '<tr><td colspan="10" style="text-align:center;">暂无数据</td></tr>';
+							$('#dataCathecticTable tbody').html(str);
+						}
+					});
+				};
+			};
+
+			//提现记录
+			function getTxData(bool) {
+                $('#search').hide();
+				if(bool) {
+					index++;
+				} else {
+					if(bool != null) {
+						index--;
+					} else {
+						index = 0;
+					}
+				}
+				if($.cookie('u')) {
+					var mw = baseObj.mw({
+						u: $.cookie('u'),
+						pageIndex: index
+					});
+					ajaxRequest({
+						url: CONFIG.BASEURL + "cash_list",
+						data: {
+							mw: mw
+						},
+						success: function(json) {
+							var str = '';
+							$("#search").hide();
+							if(json.code != 200) {
+								str = '<tr><td colspan="4" style="text-align:center;">暂无数据</td></tr>';
+								$('#dataMoneyTable tbody').html(str);
+								$('.eveb_page').html('');
+								return;
+							}
+							var data = json.data.items;
+							if(data.length == 0) {
+								str = '<tr><td colspan="4" style="text-align:center;">暂无数据</td></tr>';
+								$('.eveb_page').html('');
+							} else {
+								$.each(data, function(index, value) {
+									if(value.auditStatus == 1) {
+										value.auditStatus = '通过';
+									} else if(value.auditStatus == 0) {
+										value.auditStatus = '审核中';
+									} else {
+										value.auditStatus = '拒绝';
+									}
+									str += '<tr><td style="text-align:center;">' + value.createTime + '</td><td style="text-align:center;">' + value.accountNo + '</td><td style="text-align:center;">' + value.cashMoney + '</td><td style="text-align:center;">' + value.auditStatus + '</td></tr>';
+								});
+								var txPage = '<span style="margin:0 3px;float:left;width:auto;padding:0 5px;height:25px;line-height:25px;">总共' + json.data.total + '条，当前第' + (json.data.pageIndex + 1) + '页 ,共' + json.data.pageNum + '条</span>';
+								if(json.data.pageIndex > 0) {
+									txPage += '<a href="javascript:void(0)" onclick="goPage1(false)" style="margin:0 3px;float:left;width:auto;padding:0 5px;">上一页</a>';
+								};
+								if(index < parseInt(json.data.total / 20)) {
+									txPage += '<a href="javascript:void(0)" onclick="goPage1(true)" style="margin:0 3px;float:left;width:auto;padding:0 5px;">下一页</a>';
+								}
+								$('#search').hide();
+								$('.eveb_page').html(txPage);
+								$('#dataMoneyTable tbody').html(str);
+							};
+						},
+						error: function() {
+							$('#search').hide();
+							$('.eveb_page').html('');
+							var str = '<tr><td colspan="10" style="text-align:center;">暂无数据</td></tr>';
+							$('#dataCathecticTable tbody').html(str);
+						}
+					});
+				};
+			};
+			//投注记录
+			function getTzData(bool) {
+				if(bool) {
+					index++;
+				} else {
+					if(bool != null) {
+						index--;
+					} else {
+						index = 0;
+					}
+				}
+				if($.cookie('u')) {
+					var mw = baseObj.mw({
+						u: $.cookie('u'),
+						pageIndex: index,
+						status: 0
+					});
+					ajaxRequest({
+						url: CONFIG.BASEURL + "baseData_betlist",
+						data: {
+							mw: mw
+						},
+						success: function(json) {
+							var str = '';
+							$("#search").hide();
+							if(json.code != 200) {
+								str = '<tr><td colspan="10" style="text-align:center;">暂无数据</td></tr>';
+								$('#dataCathecticTable tbody').html(str);
+								$('.eveb_page').html('');
+								return;
+							}
+							var data = json.data.items;
+							if(data.length == 0) {
+								str = '<tr><td colspan="4" style="text-align:center;">暂无数据</td></tr>';
+
+								$('.eveb_page').html('');
+							} else {
+								$.each(data, function(index, value) {
+									if(value.winStatus == 1) {
+										value.winStatus = '中奖';
+									} else if(value.winStatus == 0) {
+										value.winStatus = '未开奖';
+									} else if(value.winStatus == 2) {
+										value.winStatus = '不中奖';
+									} else if(value.winStatus == 3) {
+										value.winStatus = '和';
+									}
+									str +=
+										'<tr><td style="text-align:center;">' + value.gameName +
+										'</td><td style="text-align:center;">' + value.sessionNo +
+										'</td><td style="text-align:center;">' + value.betTime +
+										'</td><td style="text-align:center;">' + value.room +
+										'</td><td style="text-align:center;">' + value.playName +
+										'</td><td style="text-align:center;">' + value.betRate +
+										'</td><td style="text-align:center;">' + value.betName +
+										'</td><td style="text-align:center;">' + value.betPoint +
+										'</td><td style="text-align:center;">' + value.winCash +
+										'</td><td style="text-align:center;">' + value.winStatus +
+										'</td></tr>';
+								});
+								var tzPage = '<span style="margin:0 3px;float:left;width:auto;padding:0 5px;height:25px;line-height:25px;">总共' + json.data.total + '条，当前第' + (json.data.pageIndex + 1) + '页 ,共' + json.data.pageNum + '条</span>';
+								if(json.data.pageIndex > 0) {
+									tzPage += '<a href="javascript:void(0)" onclick="goPage2(false)" style="margin:0 3px;float:left;width:auto;padding:0 5px;">上一页</a>';
+								};
+								if(index < parseInt(json.data.total / 20)) {
+									tzPage += '<a href="javascript:void(0)" onclick="goPage2(true)" style="margin:0 3px;float:left;width:auto;padding:0 5px;">下一页</a>';
+								}
+								$('#search').hide();
+								$('.eveb_page').html(tzPage);
+								$('#dataCathecticTable tbody').html(str);
+							};
+						},
+						error: function() {
+							$('#search').hide();
+							$('.eveb_page').html('');
+							var str = '<tr><td colspan="10" style="text-align:center;">暂无数据</td></tr>';
+							$('#dataCathecticTable tbody').html(str);
+						}
+					});
+				};
+			};
+			//中奖记录
+			function getZjData(bool) {
+				if(bool) {
+					index++;
+				} else {
+					if(bool != null) {
+						index--;
+					} else {
+						index = 0;
+					}
+				}
+				if($.cookie('u')) {
+					var mw = baseObj.mw({
+						u: $.cookie('u'),
+						pageIndex: index,
+						status: 1
+					});
+					ajaxRequest({
+						url: CONFIG.BASEURL + "baseData_betlist",
+						data: {
+							mw: mw
+						},
+						success: function(json) {
+							var str = '';
+							$("#search").hide();
+							if(json.code != 200) {
+								str = '<tr><td colspan="10" style="text-align:center;">暂无数据</td></tr>';
+								$('#dataWinningTable tbody').html(str);
+								$('.eveb_page').html('');
+								return;
+							}
+							//                    debugger;
+							var data = json.data.items;
+							var str = '';
+							if(data.length == 0) {
+								str = '<tr><td colspan="4" style="text-align:center;">暂无数据</td></tr>';
+								$('.eveb_page').html('');
+							} else {
+								$.each(data, function(index, value) {
+									if(value.winStatus == 1) {
+										value.winStatus = '中奖';
+									} else if(value.winStatus == 0) {
+										value.winStatus = '未开奖';
+									} else if(value.winStatus == 2) {
+										value.winStatus = '不中奖';
+									} else if(value.winStatus == 3) {
+										value.winStatus = '和';
+									}
+									str +=
+										'<tr><td style="text-align:center;">' + value.gameName +
+										'</td><td style="text-align:center;">' + value.sessionNo +
+										'</td><td style="text-align:center;">' + value.betTime +
+										'</td><td style="text-align:center;">' + value.room +
+										'</td><td style="text-align:center;">' + value.playName +
+										'</td><td style="text-align:center;">' + value.betRate +
+										'</td><td style="text-align:center;">' + value.betName +
+										'</td><td style="text-align:center;">' + value.betPoint +
+										'</td><td style="text-align:center;">' + value.winCash +
+										'</td><td style="text-align:center;">' + value.winStatus +
+										'</td></tr>';
+								});
+								var tzPage = '<span style="margin:0 3px;float:left;width:auto;padding:0 5px;height:25px;line-height:25px;">总共' + json.data.total + '条，当前第' + (json.data.pageIndex + 1) + '页 ,共' + json.data.pageNum + '条</span>';
+								if(json.data.pageIndex > 0) {
+									tzPage += '<a href="javascript:void(0)" onclick="goPage3(false)" style="margin:0 3px;float:left;width:auto;padding:0 5px;">上一页</a>';
+								};
+								if(index < parseInt(json.data.total / 20)) {
+									tzPage += '<a href="javascript:void(0)" onclick="goPage3(true)" style="margin:0 3px;float:left;width:auto;padding:0 5px;">下一页</a>';
+								}
+								$('#search').hide();
+								$('.eveb_page').html(tzPage);
+								$('#dataWinningTable tbody').html(str);
+							};
+						},
+						error: function() {
+							$('#search').hide();
+							$('.eveb_page').html('');
+							var str = '<tr><td colspan="10" style="text-align:center;">暂无数据</td></tr>';
+							$('#dataCathecticTable tbody').html(str);
+						}
+					});
+				};
+			};
+			//资金记录
+			function getMoneyData(bool) {
+				if(bool) {
+					index++;
+				} else {
+					if(bool != null) {
+						index--;
+					} else {
+						index = 0;
+					}
+				}
+				if($.cookie('u')) {
+					var mw = baseObj.mw({
+						u: $.cookie('u'),
+						pageIndex: index,
+						status: 1
+					});
+					ajaxRequest({
+						url: CONFIG.BASEURL + "baseData_balancelist",
+						data: {
+							mw: mw
+						},
+						success: function(json) {
+							var str = '';
+							if(json.code != 200) {
+								str = '<tr><td colspan="6" style="text-align:center;">暂无数据</td></tr>';
+								$('#dataBankrollTable tbody').html(str);
+								return;
+							}
+							//                    debugger;
+							var data = json.data.items;
+							var str = '';
+							if(data.length == 0) {
+								str = '<tr><td colspan="6" style="text-align:center;">暂无数据</td></tr>';
+							} else {
+								$.each(data, function(index, value) {
+									if(value.remark == null) {
+										value.remark = '无';
+									}
+									str +=
+										'<tr><td style="text-align:center;">' + value.tradeType +
+										'</td><td style="text-align:center;">' + value.cashType +
+										'</td><td style="text-align:center;">' + value.changeMoney +
+										'</td><td style="text-align:center;">' + value.balance +
+										'</td><td style="text-align:center;">' + value.time +
+										'</td><td style="text-align:center;">' + value.remark +
+										'</td></tr>';
+									var tzPage = '<span style="margin:0 3px;float:left;width:auto;padding:0 5px;height:25px;line-height:25px;">总共' + json.data.total + '条，当前第' + (json.data.pageIndex + 1) + '页 ,共' + json.data.pageNum + '条</span>';
+									if(json.data.pageIndex > 0) {
+										tzPage += '<a href="javascript:void(0)" onclick="goPage4(false)" style="margin:0 3px;float:left;width:auto;padding:0 5px;">上一页</a>';
+									};
+									if(index < parseInt(json.data.total / 20)) {
+										tzPage += '<a href="javascript:void(0)" onclick="goPage4(true)" style="margin:0 3px;float:left;width:auto;padding:0 5px;">下一页</a>';
+									}
+									$('.eveb_page').html(tzPage);
+								});
+								$('#search').show();
+								$('#dataBankrollTable tbody').html(str);
+							};
+						}
+					});
+				};
+			};
+			$('#get-time').on('click', function() {
+				var startTime = $("#starttime").val();
+				var endTime = $("#endtime").val();
+				var startDate = new Date(startTime.replace("-", "/").replace("-", "/"));
+
+				var endDate = new Date(endTime.replace("-", "/").replace("-", "/"));
+				if(startDate <= endDate) {
+					if($.cookie('u')) {
+						var mw = baseObj.mw({
+							u: $.cookie('u'),
+							pageIndex: 0,
+							beginDate: startTime,
+							endDate: endTime
+						});
+						ajaxRequest({
+							url: CONFIG.BASEURL + "baseData_balancelist",
+							data: {
+								mw: mw
+							},
+							success: function(json) {
+								var str = '';
+								if(json.code != 200) {
+									str = '<tr><td colspan="6" style="text-align:center;">暂无数据</td></tr>';
+									$('#dataBankrollTable tbody').html(str);
+									$('.eveb_page').html('');
+									return;
+								}
+								//                    debugger;
+								var data = json.data.items;
+								var str = '';
+								if(data.length == 0) {
+									str = '<tr><td colspan="6" style="text-align:center;">暂无数据</td></tr>';
+								} else {
+									$.each(data, function(index, value) {
+										if(value.remark == null) {
+											value.remark = '无';
+										}
+										str +=
+											'<tr><td style="text-align:center;">' + value.tradeType +
+											'</td><td style="text-align:center;">' + value.cashType +
+											'</td><td style="text-align:center;">' + value.changeMoney +
+											'</td><td style="text-align:center;">' + value.balance +
+											'</td><td style="text-align:center;">' + value.time +
+											'</td><td style="text-align:center;">' + value.remark +
+											'</td></tr>';
+										var tzPage = '<span style="margin:0 3px;float:left;width:auto;padding:0 5px;height:25px;line-height:25px;">总共' + json.data.total + '条，当前第' + (json.data.pageIndex + 1) + '页 ,共' + json.data.pageNum + '条</span>';
+										if(json.data.pageIndex > 0) {
+											tzPage += '<a href="javascript:void(0)" onclick="goPage4(false)" style="margin:0 3px;float:left;width:auto;padding:0 5px;">上一页</a>';
+										};
+										if(index < parseInt(json.data.total / 20)) {
+											tzPage += '<a href="javascript:void(0)" onclick="goPage4(true)" style="margin:0 3px;float:left;width:auto;padding:0 5px;">下一页</a>';
+										}
+										$('.eveb_page').html(tzPage);
+									});
+									$('#dataBankrollTable tbody').html(str);
+								};
+							}
+						});
+					}
+				} else {
+					layer.msg('开始时间不能大于结束时间');
+				}
+
+			})
+		</script>
+	</body>
+
+</html>

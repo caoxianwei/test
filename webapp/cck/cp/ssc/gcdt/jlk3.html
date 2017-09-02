@@ -1,0 +1,115 @@
+<html><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title></title>
+    <link rel="stylesheet" href="../../static/public/css/cabel-v1.css" type="text/css">
+    <link rel="stylesheet" href="../../static/public/css/style.css" type="text/css"><!--页面CSS-->
+    <link rel="stylesheet" href="../../static/public/css/animate.min.css" type="text/css"><!--CSS3动画-->
+    <link rel="stylesheet" href="../../static/public/css/lottery.css" type="text/css"><!--页面CSS-->
+    <link rel="stylesheet" href="../../static/public/css/liMarquee.css" type="text/css"><!--页面CSS-->
+    <link rel="stylesheet" href="../../static/public/jRange/jquery.range.css" type="text/css">
+    <link rel="stylesheet" href="../../static/public/css/global.css" type="text/css"><!--页面CSS-->
+    <link rel="stylesheet" href="../../static/public/css/other.css" type="text/css"><!--页面CSS-->
+    <link rel="stylesheet" href="../../static/public/css/gfwf.css" type="text/css"><!--页面CSS-->
+    <script src="../../static/public/js/fancyzoom.js" language="JavaScript" type="text/javascript"></script>
+    <script src="../../static/public/js/fancyzoomhtml.js" language="JavaScript" type="text/javascript"></script>
+    <script>
+        <!--
+        // 屏蔽JS错误
+        //    window.onerror = function(){return true;}
+        // -->
+    </script>
+    <script>
+        var CONFIG = {
+            BASEURL: "../../",    // 根路径
+            RESURL: "../../static/public/"         // 资源路径
+        };
+    </script>
+    <script src="../../static/public/js/mobile-detect.min.js"></script><style>
+    a:hover{
+        color: red;
+
+    }
+    a:active{
+        color:deepskyblue;
+    }
+</style>
+    <style>
+        .eveb_nav_sub .on,.button_1, .button_1:link, .button_1:visited,.alert_col h5,.onlineService,.head,.layui-layer-popup .layui-layer-title,.xzqd,.game_name .box2_stage p span i.acti,.Betting,.Single,.list_ject ul li .Result p a.acti,.list_ject ul li .Result p a.acti:hover,.top{background:#fa6200!important}
+        .eveb_nav_sub .on a,.bankInfo .name,.help_l_menu .title p .sum,.help_r_main .light,.game_name .box2_stage p span i,.game_name .box1_name  p i,.Account p a.red{color:#fa6200!important}
+        .eveb_nav_sub .on,.game_name .box2_stage p span{border:1px solid #fa6200!important;}
+        .eveb_nav_sub .on,.game_name .box2_stage p span i.acti{color:#fff!important;}
+        .eveb_nav_sub .on a{border-top:1px #fa6200 solid!important;}
+        .eveb_nav_sub ul{border-bottom:1px #fa6200 solid!important;}
+        .alert_col div::-webkit-scrollbar-thumb {background-color: #fa6200!important;}
+    </style>
+    <style>
+        .head div h5,.Betting .tabs ul li,.top .nav h1{background:#f87c2d!important}
+        .jf_box .url a,.eveb_form label.error,.eveb_transfer_box .center_wallet .money,.eveb_transfer_box .wallet_list li p{color:#f87c2d!important}
+        .Betting .tabs ul li.acti{background:#fff!important}
+        .button_1, .button_1:link, .button_1:visited{border:1px solid #f87c2d!important;}
+    </style>
+    <link rel="stylesheet" href="../../static/public/layer/skin/default/layer.css?v=3.0.11110" id="layuicss-skinlayercss"></head>
+<body marginwidth="0" marginheight="0">
+<script>if (window.top === window.self) {window.location.href = "../../";}</script><div class="list_ject tingcai_page">
+    <div class="sorry-txt">
+        sorry,该彩票暂停！
+    </div>
+</div>
+<script type="text/javascript" src="../../static/public/js/jquery.min.js"></script><!--jQuery库-->
+<script type="text/javascript" src="../../static/public/js/scrollanim.min.js"></script> <!--"动画库"-->
+<script src="../../static/public/js/type.js"></script><!--自定义封装函数-->
+<script src="../../static/public/js/global.js"></script><!--自定义封装函数-->
+<script src="../../static/public/js/jquery.cookie.js"></script><!--自定义封装函数-->
+<script src="../../static/public/js/jquery.md5.js"></script><!--自定义封装函数-->
+<script src="../../static/public/layer/layer.js"></script>
+<script src="../../static/public/js/jquery.nicescroll.js"></script>
+<script src="../../static/public/js/dateformat.js"></script>
+<script src="../../static/public/js/template.js"></script>
+<script src="../../static/public/js/swfobject/swfobject.js"></script>
+<script src="../../static/public/js/jquery.limarquee.js"></script>
+<script src="../../static/public/js/placeholders.jquery.min.js"></script>
+<script src="../../static/public/jRange/jquery.range-min.js"></script>
+<script>
+    // 闪烁
+    var blinkColorArr = "#fa6200|#0f3f94".split("|");
+    $(".blink").each(function() {
+        var obj = $(this);
+        setInterval(function() {
+            var tmpColor = blinkColorArr[parseInt(Math.random() * blinkColorArr.length)];
+            $(obj).css("color", tmpColor);
+        },200);
+    });
+
+
+
+    $(function() {
+        // 底部信息调用
+        function ajaxGetDbxx() {
+            ajaxRequest({
+                url: CONFIG.BASEURL + "ajaxGetWebInfo.json",
+                success: function (json) {
+                    if (json.result != 1) {
+                        return;
+                    }
+                    $(".webDbxx").html(json.webDbxx);
+                }
+            });
+        }
+
+        if ($(".webDbxx").length > 0) {
+            ajaxGetDbxx();
+        }
+    });
+
+
+</script><script>
+    $(function() {
+        // 关闭父页Loding
+        try {
+            parent.hideLoading();
+        } catch (e) {}
+    });
+</script>
+
+</body></html>

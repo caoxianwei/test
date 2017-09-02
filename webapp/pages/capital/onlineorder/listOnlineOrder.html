@@ -1,0 +1,49 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<#assign tool =JspTaglibs["http://caicaike.lottery.com/tag/toolbar"]/>
+<html>
+<head>
+<base href="${basePath}">
+<meta charset="UTF-8">
+<title>彩种信息</title>
+<#include "/common/easyui_css.inc"/>
+<#include "/common/css.inc"/>
+<style type="text/css">
+.textbox{
+  min-width: 50px !important;
+}
+
+</style>
+</head>
+<body>
+<div class="easyui-layout" data-options="fit:true">
+	<div data-options="region:'center', title:'资金调整>>在线充值',iconCls:'icon-texe',cls:'white'">
+          <div  class="quer_label">
+             <label>用户：
+               <input class="easyui-textbox" type="text" id="user_name" style="width:100px"/>
+             </label>
+             <label>订单号：
+               <input class="easyui-textbox" type="text" id="order_num" style="width:100px"/>
+             </label>
+              <label>付款状态：
+                <select class="easyui-combobox" id="pay_status" style="width:90px" data-options="panelHeight:70">
+                     <option value='-2'>全部</option>
+                     <option value='1' selected="selected">未付款</option>
+                     <option value='2'>已付款</option>
+                </select>
+             </label>
+             <label>
+                                         开始时间：<input class="easyui-datebox" style="width:135px" id="startDate" data-options='panelWidth:140'></label>
+             <label> 结束时间：<input class="easyui-datebox" style="width:135px" id="endDate" data-options='panelWidth:140'></label>
+             <a style="width: 60px;margin-right: 10px;font-size: 18px !important"  id="query"class="easyui-linkbutton green"href="javascript:queryOnlineOrder();">查询</a>
+   		 </div>
+          <div id="tb" class="quer_label">
+             <@tool.bar menuId="${menuid!}"/>
+         </div>
+       <table id="dg" style="width:99%"></table>
+</div>  
+</div>
+
+<#include "/common/easyui_js.inc"/>
+<script type="text/javascript" src="pages/capital/onlineorder/listOnlineOrder.js"></script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<#assign tool =JspTaglibs["http://caicaike.lottery.com/tag/toolbar"]/>
+<html>
+<head>
+<base href="${basePath}">
+<meta charset="UTF-8">
+<title>广东11选5手动开奖页面</title>
+<#include "/common/easyui_css.inc"/>
+<#include "/common/css.inc"/>
+<style type="text/css">
+.textbox{
+  min-width: 50px !important;
+}
+.dg-input {
+    margin: 0;
+    padding: 0px !important;
+    border: 1px solid #95B8E7;
+    -moz-border-radius: 0 0 0 0;
+    -webkit-border-radius: 0 0 0 0;
+    border-radius: 2px !important;
+    height:25px
+}
+
+.datagrid-cell, .datagrid-cell-group, .datagrid-header-rownumber, .datagrid-cell-rownumber {
+    white-space: nowrap;
+    word-wrap: normal;
+    height: 45px;
+    line-height: 28px;
+    font-size: 12px;
+    margin: 0px;
+    padding: 0px 4px;
+    overflow: hidden;
+}
+</style>
+</head>
+<body>
+<div class="easyui-layout" data-options="fit:true">
+	<div data-options="region:'center', title:'开奖管理>>广东11选5开奖列表',iconCls:'icon-texe',cls:'white'">
+          <!-- <div  class="quer_label">
+             <label>期号：
+               <input class="easyui-textbox" type="text" id="session_no"/>
+             </label>
+             <label>
+                                         开始时间：<input class="easyui-datebox" style="width:135px" id="startDate"></label>
+             <label> 结束时间：<input class="easyui-datebox" style="width:135px" id="endDate"></label>
+             <a style="width: 60px;margin-right: 10px;font-size: 18px !important"  id="query" class="easyui-linkbutton green" href="javascript:queryData();">查询</a>
+   		 </div> -->
+          <div id="tb" class="quer_label">
+             <!-- <@tool.bar menuId="${menuid!}"/> -->
+         </div>
+       <table id="dg"></table>
+</div>  
+</div>
+<!-- 判断是否有保存的权限 1表示有保存的权限 0 表示没有保存的权限 -->
+<#assign addBtn="0">
+<#assign debit="0">
+<#if operaMap??>
+   <#list operaMap?keys as key>
+     <#if key=="addBtn">
+       <#assign addBtn="1">
+      <#elseif key=="debit">
+       <#assign debit="1">
+     </#if>
+  </#list>
+ </#if>
+ <#if addBtn =='1'>
+   <input type="hidden" id="isSavePower" value="1"  />
+  <#else>
+  <input type="hidden" id="isSavePower" value="0"  />
+ </#if>
+ <#if debit =='1'>
+   <input type="hidden" id="isDebitPower" value="1"  />
+  <#else>
+  <input type="hidden" id="isDebitPower" value="0"  />
+ </#if>
+<div id="cashDiv"></div>
+<#include "/common/easyui_js.inc"/>
+<script type="text/javascript" src="pages/gdpick11/listHandDraw.js"></script>
+</body>
+</html>

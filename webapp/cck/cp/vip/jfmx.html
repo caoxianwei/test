@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>会员中心</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/hpn-common.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/global.css">
+    <script>
+        <!--
+//        window.onerror=function(){return true;}
+        // -->
+    </script>
+    <script>
+    <!--
+    // 屏蔽JS错误
+//    window.onerror = function(){return true;}
+    // -->
+    var nowHref = "../error/index.html";
+</script>
+<script src="../static/public/js/mobile-detect.min.js"></script><style>
+        .eveb_nav_sub .on,.button_1, .button_1:link, .button_1:visited,.alert_col h5,.onlineService,.head,.layui-layer-popup .layui-layer-title,.xzqd,.game_name .box2_stage p span i.acti,.Betting,.Single,.list_ject ul li .Result p a.acti,.list_ject ul li .Result p a.acti:hover,.top{background:#fa6200!important}
+        .eveb_nav_sub .on a,.bankInfo .name,.help_l_menu .title p .sum,.help_r_main .light,.game_name .box2_stage p span i,.game_name .box1_name  p i,.Account p a.red{color:#fa6200!important}
+        .eveb_nav_sub .on,.game_name .box2_stage p span{border:1px solid #fa6200!important;}
+        .eveb_nav_sub .on,.game_name .box2_stage p span i.acti{color:#fff!important;}
+        .eveb_nav_sub .on a{border-top:1px #fa6200 solid!important;}
+        .eveb_nav_sub ul{border-bottom:1px #fa6200 solid!important;}
+        .alert_col div::-webkit-scrollbar-thumb {background-color: #fa6200!important;}
+        .page{display: none;}
+        .page1{display: block;}
+    </style>
+<style>
+        .head div h5,.Betting .tabs ul li,.top .nav h1{background:#f87c2d!important}
+        .jf_box .url a,.eveb_form label.error,.eveb_transfer_box .center_wallet .money,.eveb_transfer_box .wallet_list li p{color:#f87c2d!important}
+        .Betting .tabs ul li.acti{background:#fff!important}
+        .button_1, .button_1:link, .button_1:visited{border:1px solid #f87c2d!important;}
+    </style>
+<link type="text/css" rel="stylesheet" href="css/laydate.css"><link type="text/css" rel="stylesheet" href="css/laydate(1).css" id="LayDateSkin"><link rel="stylesheet" href="css/layer.css" id="layuicss-skinlayercss"></head>
+<body><div class="help_r_main">
+    <div class="eveb_content">
+        <div class="jf_box">
+    <p class="fl title_me">您好，<strong></strong>！您当前账户余额为：<span></span>元  </p>
+    <a href="javascript:void(0)" onclick="parent.goSubUrl('zhcz',false,$('#leftNav li:nth-of-type(2) a'))" class="fl c1">充值</a>
+    <a href="javascript:void(0)" onclick="parent.goSubUrl('withdraw',false,$('#leftNav li:nth-of-type(3) a'))" class="fl c2">提款</a>
+    <p class="fl url">推广链接：<span></span><a href="javascript:void(0)" id="copyTglj" data-tglj="1">复制链接</a></p>
+</div><div class="eveb_nav_sub">
+    <ul class="clearfix">
+        <li class="on"><a href="javascript:void(0)">会员列表</a></li>
+        <li class=""><a href="javascript:void(0)">添加会员</a></li>
+        <li class=""><a href="javascript:void(0)">财务报表</a></li>
+        <li class=""><a href="javascript:void(0)">团队流水</a></li>
+        <li class=""><a href="javascript:void(0)">团队报表</a></li>
+        <li class=""><a href="javascript:void(0)">团队投注</a></li>
+        <li class=""><a href="javascript:void(0)">佣金记录</a></li>
+    </ul>
+</div>
+        <div class="page page1">
+            <h2>
+                <div class="eveb_search eveb_search_h2">
+                    <input type="hidden" name="pageIndex">
+                    会员账号：
+                    <input type="text" class="suminp" name="account">
+                    注册时间：
+                    <input name="starttime" id="starttime" type="text" size="11" class="suminp" onclick="laydate({istime: true, format: &#39;YYYY-MM-DD hh:mm&#39;})"> -
+                    <input name="endtime" id="endtime" type="text" size="11" class="suminp" onclick="laydate({istime: true, format: &#39;YYYY-MM-DD hh:mm&#39;})">
+                    <a href="javascript:void(0)" class="button_small button_1" onclick="shaixuan()">筛选</a>
+                    <a href="javascript:void(0)" class="button_small button_4" onclick="searchday(1)">今日</a>
+                    <a href="javascript:void(0)" class="button_small button_4" onclick="searchday(3)">3天</a>
+                    <a href="javascript:void(0)" class="button_small button_4" onclick="searchday(7)">本周</a>
+                </div>
+            </h2>
+            <table class="eveb_box eveb_table" id="dataTable">
+                <thead>
+                <tr>
+                    <th>编号</th>
+                    <th>用户账号</th>
+                    <th>所属</th>
+                    <th>余额</th>
+                    <th>输赢</th>
+                    <th>注册日期</th>
+                    <th>有效投注</th>
+                    <th>佣金贡献（元）</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+            <div class="eveb_page fr">
+            </div>
+        </div>
+        <div class="page">
+            <form name="addUserForm" novalidate="novalidate" onsubmit="return false;">
+                <ul class="eveb_form eveb_setting_form">
+                    <li>
+                        <span>登录账号名：</span>
+                        <input name="account" id="account" type="text" size="20" class="passwinp error" onkeyup="value=value.replace(/[^\a-\z\A-\Z0-9]/g,'')" onpaste="value=value.replace(/[^\a-\z\A-\Z0-9]/g,'')" oncontextmenu="value=value.replace(/[^\a-\z\A-\Z0-9]/g,'')">
+                        <label class="error" for="account">* （以字母开头的6-12位字母、数字组成的字符）</label>
+                    </li>
+                    <li>
+                        <span>登录密码：</span>
+                        <input name="password" id="password" type="password" size="20" class="passwinp error">
+                        <label class="error" for="password">* （由数字和字母组成6-16个字符）</label>
+                    </li>
+                    <li>
+                        <span>用户qq号：</span>
+                        <input name="qq" id="qq" type="text" size="20" class="passwinp error" maxlength="11" onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')">
+                        <label class="error" for="qq">* （请填写真实QQ号以便联系）</label>
+                    </li>
+                    <li>
+                        <span>用户真实名：</span>
+                        <input name="name" id="name" type="text" size="20" class="passwinp error" onpaste="value=value.replace(/[^\u4E00-\u9FA5]/g,'')" oncontextmenu="value=value.replace(/[^\u4E00-\u9FA5]/g,'')">
+                        <label class="error" for="name">* （请填写真实用户真实名,绑卡开户名需与此名一致）</label>
+                    </li>
+                </ul>
+                <div class="eveb_form_submit">
+                    <input type="submit" value="确认添加" class="button_medium button_1">
+                    <input type="reset" value="重置" class="ml_10 button_medium button_3">
+                </div>
+            </form>
+        </div>
+        <div class="page">
+            <h2>
+                <div clproject38.apiass="eveb_search eveb_search_h2">
+                    时间：
+                    <input name="starttime" id="starttime" type="text" size="11" class="suminp" onclick="laydate({istime: true, format: 'YYYY-MM-DD'})" value="2017-08-01"> -
+                    <input name="endtime" id="endtime" type="text" size="11" class="suminp" onclick="laydate({istime: true, format: 'YYYY-MM-DD'})" value="2017-09-01">
+                    <a href="javascript:void(0)" class="button_small button_1" onclick="shaixuan()">筛选</a>
+                    <a href="javascript:void(0)" class="button_small button_4" onclick="searchDayNoHM(1)">今日</a>
+                    <a href="javascript:void(0)" class="button_small button_4" onclick="searchDayNoHM(3)">3天</a>
+                    <a href="javascript:void(0)" class="button_small button_4" onclick="searchDayNoHM(7)">本周</a>
+                </div>
+            </h2>
+            <table class="eveb_box eveb_table" id="dataTable">
+                <thead>
+                <tr>
+                    <th>旗下会员总数</th>
+                    <th>有效会员总数</th>
+                    <th>存款次数</th>
+                    <th>存款金额</th>
+                    <th>取款次数</th>
+                    <th>取款金额</th>
+                    <th>有效投注</th>
+                    <th>代理佣金</th>
+                    <th>返点比例（%）</th>
+                </tr>
+                </thead>
+                <tbody><tr><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0.000</td></tr></tbody>
+            </table>
+            <div class="eveb_page fr"></div>
+        </div>
+        <div class="page">
+            <h2>
+                <div class="eveb_search eveb_search_h2">
+                    <input type="hidden" name="pageIndex">
+                    会员账号：
+                    <input type="text" class="suminp" name="account">
+                    类型
+                    <select name="type" id="type">
+                        <option value="">所有</option>
+                        <option value="9">彩金/入款优惠</option>
+                        <option value="3">充值/用户入款</option>
+                        <option value="2">提现/用户出款</option>
+                        <option value="11">投注/投注扣款</option>
+                        <option value="12">派奖/投注派奖</option>
+                        <option value="13">撤单/投注撤单</option>
+                        <option value="14">手动扣款</option>
+                        <option value="15">手动存款</option>
+                        <option value="16">提现/用户出款（拒绝）</option>
+                        <option value="17">彩票返水</option>
+                        <option value="18">彩票返点</option>
+                        <option value="19">代理佣金</option>
+                    </select>
+                    时间：
+                    <input name="starttime" id="starttime" type="text" size="11" class="suminp" onclick="laydate({istime: true, format: 'YYYY-MM-DD hh:mm'})" value="2017-08-11 00:00"> -
+                    <input name="endtime" id="endtime" type="text" size="11" class="suminp" onclick="laydate({istime: true, format: 'YYYY-MM-DD hh:mm'})" value="2017-08-12 00:00">
+                    <a href="javascript:void(0)" class="button_small button_1" onclick="shaixuan()">筛选</a>
+                    <a href="javascript:void(0)" class="button_small button_4" onclick="searchday(1)">今日</a>
+                    <a href="javascript:void(0)" class="button_small button_4" onclick="searchday(3)">3天</a>
+                    <a href="javascript:void(0)" class="button_small button_4" onclick="searchday(7)">本周</a>
+                </div>
+            </h2>
+            <table class="eveb_box eveb_table" id="dataTable">
+                <thead>
+                <tr>
+                    <th>序号</th>
+                    <th>用户账号</th>
+                    <th>所属</th>
+                    <th>变动金额</th>
+                    <th>余额</th>
+                    <th>时间</th>
+                    <th>类型</th>
+                    <th>备注</th>
+                </tr>
+                </thead>
+                <tbody><tr><td colspan="8" styl="text-align:center;">暂无数据</td></tr></tbody>
+            </table>
+        </div>
+        <div class="page">
+            <h2>
+                <div class="eveb_search eveb_search_h2">
+                    <input type="hidden" name="pageIndex">
+                    会员账号：
+                    <input type="text" class="suminp" name="account">
+                    统计时间：
+                    <input name="starttime" id="starttime" type="text" size="11" class="suminp" onclick="laydate({istime: true, format: 'YYYY-MM-DD hh:mm'})" value="2017-08-11 00:00"> -
+                    <input name="endtime" id="endtime" type="text" size="11" class="suminp" onclick="laydate({istime: true, format: 'YYYY-MM-DD hh:mm'})" value="2017-08-12 00:00">
+                    <a href="javascript:void(0)" class="button_small button_1" onclick="shaixuan()">筛选</a>
+                    <a href="javascript:void(0)" class="button_small button_4" onclick="searchday(1)">今日</a>
+                    <a href="javascript:void(0)" class="button_small button_4" onclick="searchday(3)">3天</a>
+                    <a href="javascript:void(0)" class="button_small button_4" onclick="searchday(7)">本周</a>
+                </div>
+            </h2>
+            <table class="eveb_box eveb_table" id="dataTable">
+                <thead>
+                <tr>
+                    <th>序号</th>
+                    <th>用户</th>
+                    <th>充值</th>
+                    <th>提现</th>
+                    <th>派奖</th>
+                    <th>活动</th>
+                    <th>返水</th>
+                    <th>盈利</th>
+                    <th>佣金</th>
+                </tr>
+                </thead>
+                <tbody><tr><td colspan="5" styl="text-align:center;">暂无数据</td></tr></tbody>
+            </table>
+            <div class="eveb_page fr"></div>
+        </div>
+        <div class="page">
+            <h2>
+                <div class="eveb_search eveb_search_h2">
+                    <input type="hidden" name="pageIndex">
+                    会员账号：
+                    <input type="text" class="suminp" name="account" style="width:90px">
+                    注单号：
+                    <input type="text" class="suminp" name="orderNumber" style="width:90px">
+                    彩种：
+                    <select name="playGroupId" id="playGroupId">
+                        <option value="">所有</option>
+                    </select>
+                    玩法：
+                    <select name="playId" id="playId">
+                    </select>
+                    状态：
+                    <select name="status" id="status">
+                        <option value="">所有</option>
+                        <option value="0">未结算</option>
+                        <option value="1">已结算</option>
+                    </select>
+                    时间：
+                    <input name="starttime" id="starttime" type="text" size="11" class="suminp" onclick="laydate({istime: true, format: 'YYYY-MM-DD hh:mm'})" value="2017-08-11 00:00"> -
+                    <input name="endtime" id="endtime" type="text" size="11" class="suminp" onclick="laydate({istime: true, format: 'YYYY-MM-DD hh:mm'})" value="2017-08-12 00:00">
+                    <a href="javascript:void(0)" class="button_small button_1" onclick="shaixuan()">筛选</a>
+                    <a href="javascript:void(0)" class="button_small button_4" onclick="searchday(1)">今日</a>
+                    <a href="javascript:void(0)" class="button_small button_4" onclick="searchday(3)">3天</a>
+                    <a href="javascript:void(0)" class="button_small button_4" onclick="searchday(7)">本周</a>
+                </div>
+            </h2>
+            <table class="eveb_box eveb_table" id="dataTable">
+                <thead>
+                <tr>
+                    <th>序号</th>
+                    <th>账号</th>
+                    <th>注单号</th>
+                    <th>时间</th>
+                    <th>彩种</th>
+                    <th>玩法</th>
+                    <th>赔率</th>
+                    <th>期号</th>
+                    <th>投注内容</th>
+                    <th>注数</th>
+                    <th>投注金额</th>
+                    <th>中奖金额</th>
+                    <th>盈亏</th>
+                    <th>状态</th>
+                </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+            <div class="eveb_page fr"></div>
+        </div>
+        <div class="page">
+            <h2>
+                <div class="eveb_search eveb_search_h2">
+                    <input type="hidden" name="pageIndex">
+
+                    时间：
+                    <input name="starttime" id="starttime" type="text" size="11" class="suminp" onclick="laydate({istime: true, format: 'YYYY-MM-DD hh:mm'})" value="2017-08-11 00:00"> -
+                    <input name="endtime" id="endtime" type="text" size="11" class="suminp" onclick="laydate({istime: true, format: 'YYYY-MM-DD hh:mm'})" value="2017-08-12 00:00">
+                    <a href="javascript:void(0)" class="button_small button_1" onclick="shaixuan()">筛选</a>
+                    <a href="javascript:void(0)" class="button_small button_4" onclick="searchday(1)">今日</a>
+                    <a href="javascript:void(0)" class="button_small button_4" onclick="searchday(3)">3天</a>
+                    <a href="javascript:void(0)" class="button_small button_4" onclick="searchday(7)">本周</a>
+                </div>
+            </h2>
+            <table class="eveb_box eveb_table" id="dataTable">
+                <thead>
+                <tr>
+                    <th>序号</th>
+                    <th>单号</th>
+                    <th>金额</th>
+                    <th>返点比例（%）</th>
+                    <th>佣金</th>
+                    <th>时间</th>
+                </tr>
+                </thead>
+                <tbody><tr><td colspan="7" styl="text-align:center;">暂无数据</td></tr></tbody>
+            </table>
+            <div class="eveb_amount fl">当前小计：下注<span id="pageEffectiveBetMoney">0</span>元，佣金<span id="pageYjMoney">0</span>，总计：下注<span id="totalEffectiveBetMoney">0</span>元，佣金<span id="totalYjMoney">0</span>元</div>
+            <div class="eveb_page fr"></div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="../static/public/js/jquery.min.js"></script>
+<script type="text/javascript" src="../static/public/js/jquery.validate.min.js"></script>
+<script type="text/javascript" src="../static/public/js/laydate.js"></script>
+<script type="text/javascript" src="../static/public/js/validate.js"></script>
+<script type="text/javascript" src="../static/public/js/global.js"></script>
+<script type="text/javascript" src="../static/public/js/jquery.form.min.js"></script>
+<script type="text/javascript" src="../static/public/js/jquery.md5.js"></script>
+<script type="text/javascript" src="../static/public/layer/layer.js"></script>
+<script type="text/javascript" src="../static/public/js/jquery.nicescroll.js"></script>
+<script type="text/javascript" src="../static/public/js/clipboard.min.js"></script>
+<script src="../static/public/js/dateformat.js"></script>
+<script src="../static/public/js/template.js"></script>
+<script src="../static/public/js/jquery.cookie.js"></script><!--自定义封装函数-->
+
+<script src="../static/public/js/rollups/tripledes.js"></script>
+<script src="../static/public/js/components/mode-ecb.js"></script>
+<script src="../static/public/js/move.js"></script>
+<script src="../static/public/js/base.js"></script>
+
+<script>
+    $(function() {
+        parent.hideLoading();
+    });
+</script><script>
+    $(function() {
+    	$('.title_me span').html($.cookie('money'));
+    	$('.title_me strong').html($.cookie('loginName'));
+        var user = $.cookie('user');
+        var userInfo = eval('('+decodeURI(user)+')');
+        if(userInfo.url){
+    		$('.url span').html(userInfo.url);
+    		$('.url a').data('tglj',userInfo.url)
+        };
+        
+        
+        
+        var clipboard = new Clipboard('#copyTglj', {
+            text: function() {
+                return $('#copyTglj').data("tglj");
+            }
+        });
+        clipboard.on('success', function(e) {
+            layer.msg("复制成功");
+        });
+        clipboard.on('error', function(e) {
+            layer.msg("浏览器粘贴板不支持复制，请手动复制。")
+        });
+        $(".eveb_nav_sub li").click(function () {
+            $('.eveb_nav_sub li').removeClass('on');
+           $(this).addClass('on');
+           var index = $(this).index();
+           $('.page').hide();
+           $('.page').eq(index).show();
+        });
+    });
+</script><script>
+    $(function () {
+        getData();
+    });
+    function goPage(pageIndex) {
+        $("input[name='pageIndex']").val(pageIndex);
+        getData();
+    }
+    function shaixuan() {
+        $("input[name='pageIndex']").val(1);
+        getData();
+    }
+
+    function getData() {
+        ajaxRequest({
+            url: "http://app.caicaike.com/api/agent/ajaxGetUserList.json",
+            data: {
+                pageIndex: $("input[name='pageIndex']").val(),
+                startTime: $("input[name='starttime']").val(),
+                endTime: $("input[name='endtime']").val(),
+                pageSize: "50",
+                account: $("input[name='account']").val()
+            },
+            beforeSend: function () {
+                $("#dataTable tbody").html('<tr><td colspan="14" styl="text-align:center;"><img src="../static/public/img/base_loading.gif"/></td></tr>');
+                $(".eveb_page").html('');
+            },
+            success: function (json) {
+                if (json.result != 1) {
+                    return;
+                }
+                if (json.agentUserList.length == 0) {
+                    $("#dataTable tbody").html('<tr><td colspan="9" styl="text-align:center;">暂无数据</td></tr>');
+                    return;
+                }
+                $("input[name='pageIndex']").val(json.pageNum);
+
+                // 数据
+                var str = ''
+                $.each(json.agentUserList, function (index, value) {
+                    var currentPageNum = (json.pageNum - 1) * json.pageSize + 1;
+                    str += '<tr>';
+                    str += '<td>' + (parseInt(index) + 1) + '</td>';
+                    str += '<td>' + value.account + '</td>';
+                    str += '<td>qw123456</td>';
+                    str += '<td>' + value.balance + '</td>';
+                    str += '<td>' + value.winOrLose + '</td>';
+                    str += '<td>' + Tools.formatDate(value.registerTime) + '</td>';
+                    str += '<td>' + value.totalEffectiveBetMoney + '</td>';
+                    str += '<td>' + value.totalFandianMoney + '</td>';
+                    str += '<td>';
+                    if (value.enable) {
+                        str += '<a href="javascript:void(0)" onclick="disableUser(' + value.id + ')" style="color:red">禁用</a>';
+                    } else {
+                        str += '<a href="javascript:void(0)" onclick="enableUser(' + value.id + ')" style="color:green">启用</a>';
+                    }
+                    str += '</td>';
+                    str += '</tr>';
+                });
+                $("#dataTable tbody").html(str);
+
+                $("#pageMoney").html(json.pageMoney);
+                $("#totalMoney").html(json.totalMoney);
+                // 分页
+                str = '';
+                str += '<span style="margin:0 3px;float:left;width:auto;padding:0 5px;height:25px;line-height:25px;">总共' + (Math.ceil(json.total / json.pageSize)) + '页，' + json.total + '条，当前第' + json.pageNum + '页</span>';
+                if (json.hasPreviousPage) {
+                    str += '<a href="javascript:void(0)" onclick="goPage(' + (json.prePage) + ')" style="margin:0 3px;float:left;width:auto;padding:0 5px;">上一页</a>';
+                } else {
+                    str += '<a href="javascript:void(0)" style="margin:0 3px;float:left;width:auto;padding:0 5px;">上一页</a>';
+                }
+                str += '<span style="margin:0 3px;float:left;width:auto;padding:0 5px;height:25px;line-height:25px;">跳转到</span>';
+                str += '<input type="text" id="pageNum" style="margin:0 3px;float:left;border:1px solid #eee;width:30px;line-height:25px;height:25px;" value="' + json.pageNum + '" />';
+                str += '<button onclick="goPage(document.getElementById(\'pageNum\').value)" type="text" style="margin:0 3px;float:left;border:1px solid #eee;width:30px;line-height:25px;height:25px;background:#fa6200;padding:0 5px;width:auto;color:#fff;font-size:14px;" value="0">确定</button>';
+                if (json.hasNextPage) {
+                    str += '<a href="javascript:void(0)" onclick="goPage(' + (json.nextPage) + ')" style="margin:0 3px;float:left;width:auto;padding:0 5px;">下一页</a>';
+                } else {
+                    str += '<a href="javascript:void(0)" style="margin:0 3px;float:left;width:auto;padding:0 5px;">下一页</a>';
+                }
+                $(".eveb_page").html(str);
+            }
+        });
+    }
+
+    function enableUser(userId) {
+        enableOrDisable(userId, true);
+    }
+
+    function disableUser(userId) {
+        enableOrDisable(userId, false);
+    }
+    function enableOrDisable(userId, isEnable) {
+        var info = isEnable ? '确认启用该会员吗？' : '确认禁用该会员吗？';
+        if (!confirm(info)) {
+            return;
+        }
+
+        ajaxRequest({
+            url: "http://app.caicaike.com/api/agent/agentEnableUser.json",
+            data: {
+                userId: userId,
+                isEnable: isEnable
+            },
+            beforeSend: function() {
+                parent.showLoading();
+            },
+            success: function(json) {
+                if (json.result == 1) {
+                    Tools.toast("操作成功");
+                    getData();
+                } else {
+                    Tools.toast("操作失败：" + json.description);
+                }
+                parent.hideLoading();
+            }
+        });
+    }
+</script>
+
+</body>
+</html>

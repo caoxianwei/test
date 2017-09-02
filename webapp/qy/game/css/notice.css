@@ -1,0 +1,60 @@
+.main-content{
+    background: #efeff4;
+}
+.card {
+    background: #fff;
+    box-shadow: 0 0.05rem 0.1rem rgba(0,0,0,.3);
+    margin: .5rem;
+    position: relative;
+    border-radius: .1rem;
+    font-size: .7rem;
+}
+.card-header {
+    border-radius: .1rem .1rem 0 0;
+    font-size: .85rem;
+    display: block;
+    color: #000;
+    margin: 5px;
+    padding-bottom: 0;
+    padding: 10px!important;
+}
+.gonggao_title {
+    font-size: .7rem;
+    margin-bottom: 5px;
+    color: #fa6200;
+}
+.gonggao_time {
+    font-size: .6rem;
+    color: #8D8D8D;
+    margin-bottom: 5px;
+}
+.card-detail {
+    width: 100%;
+    padding: 0 15px 15px 15px;
+}
+.gonggao_content {
+    font-size: .6rem;
+    padding: 0!important;
+    margin: 0!important;
+}
+.card-header:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: auto;
+    top: auto;
+    height: 1px;
+    width: 100%;
+    background-color: #e1e1e1;
+    display: block;
+    z-index: 15;
+    -webkit-transform-origin: 50% 100%;
+    transform-origin: 50% 100%;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2){
+    .card-header:after {
+        -webkit-transform: scaleY(.5);
+        transform: scaleY(.5);
+    }
+}

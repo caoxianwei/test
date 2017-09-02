@@ -1,0 +1,88 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+<meta http-equiv="pragma" content="no-cache"> 
+<meta http-equiv="cache-control" content="no-cache"> 
+<meta http-equiv="expires" content="0"> 
+<meta content="telephone=no" name="format-detection">
+<meta content="black" name="apple-mobile-web-app-status-bar-style">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta http-equiv="X-UA-Compatible" content="edge">
+<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="js/mui/mui.min.js"></script>
+<script type="text/javascript" src="js/move.js"></script>
+<script type="text/javascript" src="js/me.js"></script>
+<script type="text/javascript" src="js/rollups/tripledes.js"></script>
+<script type="text/javascript" src="js/components/mode-ecb.js"></script>
+<link type="text/css" rel="stylesheet" href="css/mui/mui.min.css" />
+<link type="text/css" rel="stylesheet" href="css/base.css" />
+<link type="text/css" rel="stylesheet" href="css/me.css" />
+<title>代理赚钱</title>
+<script type="text/javascript">
+    if(move.width>640){
+        move.width=540;
+    }
+    $(document).ready(function(){
+        move.hideHeader();
+        $('.btn').width(move.width);
+        if(move.user.u!=null){
+            $('.bottom-box').show();
+        }
+    });
+</script>
+</head>
+<body>
+<div class="main-content">
+	<header class="mui-bar mui-bar-nav ">
+		<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		<h1 class="mui-title">代理赚钱</h1>
+	</header>
+	<ul class="mui-table-view">
+		 <li class="mui-table-view-cell">
+			<a class="mui-navigate-right" href="javascript:baseObj.openView('touzhuList.html');">
+				<span class="me-ico"><img src="images/ico_touzhu.png"></span>
+				<span class="fl">会员列表</span>
+			</a>
+		</li>
+		<li class="mui-table-view-cell">
+			<a class="mui-navigate-right" href="javascript:baseObj.openView('moneylist.html');">
+				<span class="me-ico"><img src="images/ico_jiaoyijilu.png"></span>
+				<span class="fl">添加会员</span>
+			</a>
+		</li>
+		 <li class="mui-table-view-cell">
+			<a class="mui-navigate-right" href="javascript:baseObj.openView('zhongjiangList.html');">
+				<span class="me-ico"><img src="images/ico_zhongjiang.png"></span>
+				<span class="fl">财务报表</span>
+			</a>
+		</li>
+		 <li class="mui-table-view-cell">
+			<a class="mui-navigate-right" href="javascript:baseObj.openView('wallet.html');">
+				<span class="me-ico"><img src="images/ico_cunqukuan.png"></span>
+				<span class="fl">团队流水</span>
+			</a>
+		</li>
+		 <li class="mui-table-view-cell">
+			<a class="mui-navigate-right" href="javascript:baseObj.openView('rechargeList.html');">
+				<span class="me-ico"><img src="images/ico_chongzhi.png"></span>
+				<span class="fl">团队报表</span>
+			</a>
+		</li>
+		 <li class="mui-table-view-cell">
+			<a class="mui-navigate-right" href="javascript:baseObj.openView('tikuanList.html');">
+				<span class="me-ico"><img src="images/ico_tikuan.png"></span>
+				<span class="fl">团队投注</span>
+			</a>
+		</li>
+		<li class="mui-table-view-cell">
+			<a class="mui-navigate-right" href="javascript:baseObj.openView('info.html');">
+				<span class="me-ico"><img src="images/ico_more.png"></span>
+				<span class="fl">佣金记录</span>
+			</a>
+		</li>
+	</ul>
+</div>
+</body>
+</html>

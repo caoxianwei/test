@@ -1,0 +1,40 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<#assign tool =JspTaglibs["http://caicaike.lottery.com/tag/toolbar"]/>
+<html>
+<head>
+<base href="${basePath}">
+<meta charset="UTF-8">
+<title>彩种信息</title>
+<#include "/common/easyui_css.inc"/>
+<#include "/common/css.inc"/>
+<style type="text/css">
+.textbox{
+  min-width: 50px !important;
+}
+.datagrid-editable-input {
+    margin: 0;
+    padding: 0px !important;
+    border: 1px solid #95B8E7;
+    font-size: 14px !important;
+    outline-style: none;
+    -moz-border-radius: 0 0 0 0;
+    -webkit-border-radius: 0 0 0 0;
+    border-radius: 2px !important;
+    min-height:30px
+}
+</style>
+</head>
+<body>
+<div class="easyui-layout" data-options="fit:true">
+	<div data-options="region:'center', title:'系统管理>>开奖地址管理',iconCls:'icon-texe',cls:'white'">
+          <div id="tb" class="quer_label">
+             <@tool.bar menuId="${menuid!}"/>
+         </div>
+       <table id="dg" style="width:99%"></table>
+</div>  
+</div>
+
+<#include "/common/easyui_js.inc"/>
+<script type="text/javascript" src="pages/sys/collectionaddress/listCollectionAddress.js"></script>
+</body>
+</html>

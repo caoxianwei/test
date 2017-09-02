@@ -1,0 +1,34 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<#assign tool =JspTaglibs["http://caicaike.lottery.com/tag/toolbar"]/>
+<html>
+<head>
+<base href="${basePath}">
+<meta charset="UTF-8">
+<title>优惠活动</title>
+<#include "/common/easyui_css.inc"/>
+<#include "/common/css.inc"/>
+</head>
+<body>
+<div class="easyui-layout" data-options="fit:true">
+	<div data-options="region:'center', title:'活动管理>>活动管理',iconCls:'icon-texe',cls:'white'">
+          <div  class="quer_label">
+             <label>标题：
+               <input class="easyui-textbox" type="text" id="selectTitle" value="${parames.selectTitle}"/>
+             </label>
+             <label>
+                                         发布时间：<input class="easyui-datebox" style="width:110px" id="startDate" value="${parames.startDate}" data-options='panelWidth:170'>
+                                      到<input class="easyui-datebox" style="width:110px" id="selectEndDate" value="${parames.selectEndDate}" data-options='panelWidth:170'></label>
+             <a style="width: 60px;margin-right: 10px;font-size: 18px !important"  id="query"class="easyui-linkbutton green" href="javascript:queryData()">查询</a>
+   		 </div>
+          <div id="tb" class="quer_label">
+             <@tool.bar menuId="${menuid!}"/>
+         </div>
+       <table id="dg"></table>
+</div>  
+</div>
+
+<div id="activityDiv"></div>
+<#include "/common/easyui_js.inc"/>
+<script type="text/javascript" src="pages/infomanager/activity/listActivity.js"></script>
+</body>
+</html>

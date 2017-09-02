@@ -1,0 +1,170 @@
+<!DOCTYPE HTML>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+		<meta http-equiv="pragma" content="no-cache">
+		<meta http-equiv="cache-control" content="no-cache">
+		<meta http-equiv="expires" content="0">
+		<meta content="telephone=no" name="format-detection">
+		<meta content="black" name="apple-mobile-web-app-status-bar-style">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta http-equiv="X-UA-Compatible" content="edge">
+		<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+		<script type="text/javascript" src="js/mui/mui.min.js"></script>
+		<script type="text/javascript" src="js/move.js"></script>
+		<script type="text/javascript" src="js/me.js"></script>
+		<script type="text/javascript" src="js/rollups/tripledes.js"></script>
+		<script type="text/javascript" src="js/components/mode-ecb.js"></script>
+		<script src="js/mui/mui.previewimage.js"></script>
+		<script src="js/mui/mui.zoom.js"></script>
+		<link type="text/css" rel="stylesheet" href="css/mui/mui.min.css" />
+		<link type="text/css" rel="stylesheet" href="css/base.css" />
+		<link type="text/css" rel="stylesheet" href="css/me.css" />
+		<link type="text/css" rel="stylesheet" href="css/loaders.css" />
+		<link rel="stylesheet" href="css/imageview.css">
+		<title>线下充值</title>
+		<script type="text/javascript">
+			move.width = $(window).width();
+			$(document).ready(function() {
+				move.hideHeader();
+				meObj.chongzhiList();
+				mui.previewImage();
+			});
+		</script>
+
+		<style type="text/css">
+			.main-content{ background: #efefef;}
+			.mui-table-view{margin: 10px 0;}
+			.mui-table-view div,.pay_info .info_title{ padding: 10px 0; font-size: 16px; padding-left:15px; border-bottom: 1px solid #eee; }
+			.mui-table-view ul{overflow: auto; height: 170px; }
+			.mui-table-view ul li{position: relative;overflow: hidden;padding: 8px 15px;	-webkit-touch-callout: none;padding-right: 25px; border-bottom: 1px solid #efeff4; }
+			.mui-table-view ul li label{overflow: hidden;display: block;}
+			.mui-table-view ul li img { width: 30px;}
+			.mui-table-view ul li input[type=radio]{ float: right; margin: 8px 0;}
+			.info_title{ margin-bottom: 10px;}
+			.pay_info{background: #fff;overflow: hidden;}
+			.pay_info div{overflow: hidden; line-height: 40px;margin: 10px 0; padding-left: 15px;}
+			.pay_info .info_title{ line-height: inherit;margin: 0;}
+			.pay_info input{ width: 80%;}
+			.pay_info label{ float: right; width: 50%; }
+			.pay_info input{ margin: 0; margin-right: 5px;height: 34px;}
+			.next{ text-align: center; position: fixed; bottom:0; width:100%;width:100%; border-radius: 0; color:#fff; background: red; line-height: 40px; height: 40px;}
+			#popover h4{ width: 100%; text-align: center; line-height: 40px; height: 40px; font-weight: normal; font-size: 16px;}
+			#popover p{ width: 100%; padding:4px 0 ; text-indent: 20px; font-size: 14px;}
+			#popover p img,#popover p button { display: block; margin: 0 auto;}
+			#popover p button{ margin:20px auto;padding: 6px 50px;background: #f53737;color: #fff;}
+		</style>
+	</head>
+
+	<body>
+		<div class="main-content">
+			<header class="mui-bar mui-bar-nav ">
+				<a class="mui-icon mui-icon-left-nav mui-pull-left" id="recharge" href="recharge.html"></a>
+				<h1 class="mui-title"><span></span>线下充值</h1>
+			</header>
+			<div class="mui-table-view">
+				<div>充值账户:</div>
+				<ul>
+				</ul>
+			</div>
+			<div class="pay_info">
+				<div class="info_title">充值信息:</div>
+				<div>充值金额: <label for="pay-money"><input type="tel" id="pay-money" value=""/>元</label></div>
+			<div>支付账号: <label for="pay-accout"><input type="tel" id="pay-accout" value=""/></label></div>
+			</div>
+			<div class="next" id="openPopover">下一步</div>
+		</div>
+		<div id="popover" class="mui-popover">
+		</div>
+		<script>
+			var info = {};
+			$('.next').click(function () {
+				var id = $('input[name=pay-accout]:checked').val();
+				var money = $("#pay-money").val();
+                var accout = $("#pay-accout").val();
+                if(id==null){
+                    mui.alert('请选择充值账户',document.title, function() {});
+                    return;
+                }
+                if(money==''){
+                    mui.alert('请输入充值金额',document.title, function() {});
+                    return;
+                }
+                if(accout==''){
+                    mui.alert('请输入支付账号',document.title, function() {});
+                    return;
+                }
+                var map = {
+                    u : move.user.u,
+                    payid: id,
+                    paymoney: money,
+                    payaccout: accout
+				};
+                info = map;
+				var mw = baseObj.mw(map);
+                var mask=move.createLoading();
+                mask.show();
+                $.ajax({
+                   url: move.payInfo,
+					type: 'POST',
+					dataType: 'json',
+					data:{
+                       mw:mw
+					},
+					success: function (ret) {
+                        console.log(ret);
+                        mask.close();
+                        if(ret.code == 200) {
+                           var data = ret.data;
+                            if(data.type == '001'){
+                                data.type = '微信';
+                            } else if(data.type == '002'){
+                                data.type = '支付宝';
+                            }
+                           var str = '<h4>充值信息确认</h4>' +
+                               '<p>充值方法: <span>'+data.type+'</span></p>' +
+                               '<p>收款姓名: <span>'+data.name+'</span></p>' +
+                               '<p>收款账户: <span>'+data.accout+'</span></p>' +
+                               '<p>支付账户: <span>'+data.payaccout+'</span></p>' +
+                               '<p>订单号: <span>'+data.ordernum+'</span></p>' +
+                               '<p>充值金额: <span>'+data.paymoney+'元</span></p>' +
+                               '<p><img src="'+data.link+'" alt=""></p>' +
+                               '<p><button onclick="submitInfo();">确定</button></p>';
+                           $("#popover").html(str);
+                            info['ordernum'] = data.ordernum;
+                           setTimeout(function () {
+                               mui('.mui-popover').popover('toggle', document.getElementById("openPopover"));
+                           },500);
+                       }
+                    }
+				});
+            });
+			function submitInfo() {
+			    if(info){
+			        var mw = baseObj.mw(info);
+			        $.ajax({
+			            url : move.paySubmit,
+						type:'POST',
+						dataType:'json',
+						data:{
+			                mw: mw
+						},
+						success: function (ret) {
+			                if(ret.code != '200') {
+                                mui('.mui-popover').popover('toggle', document.getElementById("openPopover"));
+                                mui.alert(ret.msg, document.title, function () {
+                                });
+                            } else {
+                                window.location.href = 'recharge.html';
+							}
+                        }
+					});
+				}
+            };
+		</script>
+	</body>
+
+</html>
+

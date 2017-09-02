@@ -1,0 +1,50 @@
+@CHARSET "UTF-8";
+
+#column{background-color: #fff;}
+#column li{padding: 0px 0px;}
+#column .mui-icon img{width: 38px;}
+#column>.mui-table-view:first-child{margin-top: 0;background-color: #fff;}
+#column .mui-grid-view.mui-grid-9 .mui-table-view-cell{border-bottom: none;}
+
+#topline .smarticker1{height: 45px;}
+#topline .smarticker .smarticker-news ul li{line-height: 45px;overflow: hidden;font-size: 15px;}
+#topline .smarticker .tickertitle img{width: 24px;margin: 13px 0 0 10px;}
+.top-nav{  background: #ff7200; position: fixed; top: 0; width:100%; z-index: 10; overflow: hidden;}
+.top-nav div{ position:relative; line-height: 40px; height:40px;float: left; width:57.86%; text-align: center; font-size: 18px; }
+.top-nav div img{width: 100px; height: 36px; margin: 2px auto;}
+.top-nav div a{ color: #ffffff;display: block;}
+.top-nav div:first-of-type,.top-nav div:last-of-type{ width: 20%;}
+
+
+
+.logo-box{width: 60px;float: left;}
+.logo-box img{width:100%;}
+.title-box{margin-left: 20px;float: left;}
+.title-box .title{color: #444;}
+.title-box .sbtitle{color: #888;margin-top:5px;}
+#kaijiangcongtent{background-color: #efeff4;}
+#openbox{margin:5px;background-color: #efeff4;}
+#openbox .mui-table-view-cell{margin-bottom: 5px;background-color: #fff;border-radius:5px;padding: 11px 10px;}
+#openbox .title-box{width: 100%;margin-left: 0px;}
+#openbox .title-box .title{width: 30%;float: left;}
+#openbox .title-box .time{width: 70%;float: left;text-align: right;height: 21px;overflow: hidden;}
+#openbox .open-number{padding: 5px 0 0 0;width: 100%;}
+
+.title-index{height: 32px;line-height: 32px;color: #333;border-bottom: 1px solid #f4f4f4;}
+.title-index span.ico{background-color: #FFB716;display: block;float: left;width: 10px;height: 10px;border-radius:50%;margin: 10px;}
+.winlist-data-box{height:154px; }
+#winlistdatabox{height:154px;}
+#winlistdatabox .tickertitle{display: none;}
+.winlist-data-box .winlist-data-cell{height: 22px;line-height: 22px;padding-left: 10px;color: #999;}
+.winlist-data-box .winlist-data-cell:nth-child(odd){}
+.winlist-data-box .winlist-data-cell:nth-child(even){color:#FFB716;}
+/*<320*/
+@media screen and (max-width: 320px) {
+	#column .mui-icon img{width: 30px;}
+}
+@media screen and (min-width: 321px) and (max-width: 640px) {
+	#column .mui-icon img{width: 32px;}
+}
+/*>640*/
+@media screen and (min-width: 641px) {
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<base href="${basePath}">
+<meta charset="UTF-8">
+<title>新增二维码</title>
+<#include "/common/easyui_css.inc"/>
+<#include "/common/css.inc"/>
+
+</head>
+<body>
+<div class="easyui-layout" data-options="fit:true">
+	<form id="uploadImgForm" style="display: none" action="${basePath}file/uploadFileToTemp.do" method="post" target="imgIfr"  enctype="multipart/form-data">
+ 		<input type="file" id="imgInput" onchange="javascript:uploadImg()" name="img" value="" accept=".jpg,.gif,.png,.jpeg,.bpm" />
+	</form>
+	<div id="showDiv" data-options="region:'center'" style="height:90%;margin-left:0%;padding:10px; border:none !important;">
+           <input type="hidden" id="imgPath" name="imgPath" value="" />
+           <input type="hidden" id="codes" value="${parames.codes}"  />
+           <table class="table table" border="1px solid #e5e5e5" style="border:1px solid #e5e5e5;width:100%; margin:0 auto; margin-bottom:20px;margin-left: 0%">
+             <tbody>
+               <tr>
+                <td class="td-right customtabletd" width="10%"><label for="name">收款人:</label> </td>
+                <td class="customtabletd" width="89%"><input class="easyui-textbox" type="text" id="payoff_name"  style="width:500PX" /> </td>
+               </tr>
+               <tr>
+                <td class="td-right customtabletd" width="10%">
+                   <label for="name">
+                      <#if parames.codes == '001'>
+                                                                   微信账号：
+                      <#elseif parames.codes == '002'>
+                                                                   支付宝账号：
+                      <#else>
+                                                                 收款账号:
+                      </#if>
+                    </label> 
+                </td>
+                <td class="customtabletd" width="89%"><input class="easyui-textbox" type="text" id="payoff_accout" style="width:500PX" /> </td>
+               </tr>
+               <tr>
+                <td class="td-right customtabletd"><label for="name" ><span class="font-red">*</span>图片:</label> </td>
+                <td class="customtabletd">
+                  <a class="easyui-linkbutton blue" href="javascript:void(0)"  onclick="javascript:selectImg()" style="width:80px">上传</a><br/>
+                  <img alt="二维码" id="indexImg" src="" style="display: none;margin-top:3px;width: 440px;height:200px"><br/>
+                </td>
+               </tr>
+         </tbody>
+         </table>        
+	</div>
+	<div data-options="region:'south',border:false" class="panl-footer">
+		<a class="easyui-linkbutton blue" href="javascript:void(0)"  onclick="javascript:addData()" style="width:80px">保存</a>
+		<a class="easyui-linkbutton gray" href="javascript:void(0)" onclick="javascript:window.history.go(-1);" style="width:80px">取消</a>
+	</div>
+</div>
+<iframe id="imgIfr" name="imgIfr" style="display: none"></iframe>
+<#include "/common/easyui_js.inc"/>
+<script type="text/javascript" src="pages/sys/twocodepayoff/listPayoff.js"></script>
+</body>
+</html>

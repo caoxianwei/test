@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+
+		<base id="">
+
+		<meta name="referrer" content="always">
+		<meta name="renderer" content="webkit">
+		<meta name="referrer" content="unsafe-url">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+		<title>千亿彩票 - 彩票APP,彩票开奖查询,重庆时时彩开奖号码,北京pk10开奖记录</title>
+
+		<link rel="stylesheet" href="../../assets/statics/css/result.css" type="text/css">
+		<link rel="stylesheet" type="text/css" href="../../assets/js/plugins/datePicker/datePicker.css" /><br />
+		<style type="text/css">
+			body{
+				overflow-y:hidden;
+			}
+		</style>
+	</head>
+
+	<body id="html_id">
+		<div id="ele-game-wrap" class="ele-game-wrap  clearfix bg-lot" data-mcs-theme="minimal">
+			<div id="ele-live-wrap" class="ele-live-wrap">
+				<div class="main clearfix">
+					<div>
+						<div class="sec-left-draw">
+							<p class="sl-draw-notice">
+								<span class="sl-draw-notice-l">三分时时彩开奖公告</span>
+								<span class="sl-draw-notice-r">开奖时间：08:03-次日7:00,共420期 &nbsp;&nbsp;&nbsp;&nbsp;3分钟开奖</span>
+							</p>
+							<div class="sl-draw-sell">
+								
+							</div>
+							<div class="sl-draw-number clearfix">
+								<ul class="sl-draw-number-ball" id="gg_draw_result">
+
+								</ul>
+								<div class="sl-draw-number-btn">
+								</div>
+							</div>
+
+							<div class="sl-draw-list">
+								<div class="sl-draw-list-t">
+									<span class="sl-draw-list-t-red"><span id="search_result_day">2017-08-09</span> 开奖号码</span>
+									<ul id="sl_draw_list_t_tab" class="sl-draw-list-t-tab">
+										<li class="active" id="jt" date="">
+											<a>今天</a>
+										</li>
+										<li id="zt" date="">
+											<a>昨天</a>
+										</li>
+										<li id="qt" date="">
+											<a>前天</a>
+										</li>
+									</ul>
+									<!--<div class="sl-draw-list-t-date">
+										按日期查询：<input type="text" value="" id="cqssc_draw_time_box" class="cqssc-draw-time-box draw-time-box">
+										<input type="hidden" id="lottery-id" value="51" />
+									</div>-->
+								</div>
+								<div class="sl-draw-list-table-out">
+									<table width="100%" cellpadding="0" cellspacing="0" class="winning-lottery-table ssq-lottery-table">
+										<thead>
+											<tr>
+												<th width="33.3%"><span class="text1" style="width: 90px;">期号</span><span class="text2">开奖号</span><span class="text1">总和</span><span class="text1">龙虎和</span></th>
+												<th width="33.3%"><span class="text1" style="width: 90px;">期号</span><span class="text2">开奖号</span><span class="text1">总和</span><span class="text1">龙虎和</span></th>
+												<th><span class="text1" style="width: 90px;">期号</span><span class="text2">开奖号</span><span class="text1">总和</span><span class="text1">龙虎和</span></th>
+											</tr>
+										</thead>
+										<tbody id="cqssc_draw_list_tbody">
+
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="foot_link_put">
+						<div class="link_l">
+							<ul>
+								<li class="border-right"><i class="draw_cqssc_icon_bg icon_gcdt"></i>
+									<a target="_blank" href="../../ssc/index_1.html">购彩大厅</a>
+								</li>
+								<li><i class="draw_cqssc_icon_bg icon_cqssc_logo"></i>
+									<a target="_blank" href="../../ssc/index.html?module=sfssc">投注时时彩</a>
+								</li>
+							</ul>
+						</div>
+						<div class="link_r" onclick="AddFavorite()">
+							<a>收藏此页面，开奖即时查看</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="../../assets/js/plugins/jquery/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../assets/js/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../assets/js/global.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../static/public/js/rollups/tripledes.js"></script>
+		<script src="../../static/public/js/components/mode-ecb.js"></script>
+		<script src="../../assets/js/application/move.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../assets/js/application/type.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../assets/js/base.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../assets/js/plugins/datePicker/datePicker.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../assets/js/application/drawResult2.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			var gameType = 51;
+			var curDay = '2017-08-09';
+
+			var line = 154;
+			var timeOut = 30000;
+			var betUrl = 'common/hall?gameOpen=51';
+			var xtIni = { dx: { need: 0, mid: 5 }, jo: 0, hz: 0, xt: 0, ssc: 1 };
+
+			$(function() {
+				//彩种列表
+				ajaxRequest({
+					url: CONFIG.BASEURL + 'baseData_latestList',
+					success: function(json) {
+						var data = json.data.items;
+						var gdkj_str = '';
+						var gdkj_str1 = '';
+						var openqs = '';
+						var lis = '';
+						$.each(data, function(index, value) {
+							var o = '';
+							var type = value.type;
+							var time = value.time.substr(11);
+							var url = "";
+							$.each(value.openResult, function(i, v) {
+								o += "<i>" + v + "</i>"
+							})
+							if(type == 0){
+								openqs += '第<span class="sl-draw-sell-red" id="cqssc_latest_draw_phase">' + value.latestSessionNo + '</span>期开奖号码&nbsp;&nbsp';
+								for(var i = 0; i < value.openResult.length; i++){
+									lis += '<li class="red">'+value.openResult[i]+'</li>';
+								}
+								
+							}							
+						});
+						$('#gg_draw_result').append(lis);
+						$('.sl-draw-sell').append(openqs);
+						$('#lastOpenQt').html(gdkj_str1);
+					}
+				});
+
+			});
+			
+			window.onload = function (){
+		        setTimeout(function(){            	
+					var iframe2 = $("#html_id").height();
+					var parent = window.parent.document.getElementById("iframeid1");
+					$(parent).css('height',iframe2+'px');
+					var parent1 = window.parent.document.getElementsByClassName('jc-footer');
+					var iframe3 = Number(iframe2) - 460;
+					console.log(iframe3)
+					$(parent1).css('top',iframe3+'px');
+		        },500);
+    		};
+		</script>
+	</body>
+
+</html>

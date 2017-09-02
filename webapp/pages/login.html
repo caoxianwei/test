@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+<base href="${basePath}">
+<meta charset="UTF-8">
+<title>彩票投注平台后台管理系统</title>
+<style type="text/css">
+*{ margin:0; padding:0; font-family:"微软雅黑","Trebuchet MS", Arial, Helvetica, sans-serif}
+li{ list-style:none;}
+a{ text-decoration:none}
+html{width:100%; height:100%;  font-size:15px;}
+body{width:100%; height:100%; background:url(images/loginbg.png) no-repeat center fixed;  background-size:100% 100%;
+          filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/loginbg.png',sizingMethod='scale');
+          background-repeat: no-repeat;
+          background-positon: 100%, 100%;
+		  font: normal 12px tahoma, arial, verdana, sans-serif;  
+           overflow:hidden;
+      }
+.heider{width: 100%;height:100px;margin:0 auto;}
+.logo1{float: left;}
+.logo1 h2{ line-height:100px; padding-left:20px; color:#0282cd; font-size:32px; font-weight:500}
+/*导航*/
+/*中间登录框部分*/
+.contentbox{width:100%;min-width:1100px;height:70%; min-height:480px; text-align:center; position:relative; background:url(images/loginbg-cn.png); overflow:hidden;}
+.content{width:80%; min-width:1100px;height:100%; margin:0 auto; position:relative;}
+.content>img{ float:left; width:40%;padding:5%;color:#2fa5ff;}
+
+.loginbox{width:360px;height:430px;background:#f2f3f4;border-radius:10px; position:absolute; top:50%; margin-top:-205px; right:10%;}
+.loginbox h4{ line-height:60px; text-align:center; color:#0282cd; font-size:24px; font-weight:500; border-bottom:1px solid #e6e6e6; margin-bottom:15px;}
+
+.loginbox ul{width:80%; height: auto; margin: 0 auto; padding-top:10px;margin:0 auto;}
+.loginbox ul li{ width: 100%; margin-bottom:5px; border:1px solid #cecccd; padding:0; border-radius:4px; overflow:hidden;}
+.loginbox ul li i{ display:block; float:left; width:60px; height:40px; line-height:40px;text-align:right; font-size:14px; color:#5e5f61; background:#FFF !important; border-right:1px solid #cecccd; font-style:normal}
+.loginbox ul li i img{ padding-top:10px;}
+.loginbox ul li input.font-login{ float:left; display:block; width:220px; height:40px;border:none;  background:none; line-height:32px; padding-left:5px;}
+.loginbox ul li span{ line-height:20px; color:#F00; float:left}
+.loginbox ul li .spanl{ background:#f2f3f4; color:#0282cd; font-size:12px; line-height:40px;}
+.loginbox ul li .spanl img{ float:left;}
+.loginbox ul li.loginbox_tome{ height:20px; border:none; line-height:22px; text-align:left; color:#900; padding-left:60px;}
+.forgot{ width:80%; height:30px; margin:0 auto;  text-align:left; line-height:30px; margin-bottom:20px;}
+.forgot a{ float:right;}
+.loginbtn{ width:80%; margin:0 auto;}
+.loginbtn .btn{ width:100%;}
+.footer{  line-height:60px; text-align:center;}
+
+/*版权*/
+.footre{ width:auto; padding:30px; text-align:center; color:#999999; font-size:13px;}
+.btn{
+	display: inline-block;
+	padding:4px 0;
+	width:100%;height:32px;color: #fff;
+line-mian:32px; line-height:32px;background-color: #0282cd;border:none;font-size: 16px;
+border-radius:4px;
+}
+/*登录按钮*/
+.btn-mian{
+}
+.btn-mian:focus,.btn-mian:hover {
+	color: #fff;
+	background-color: #2480b6;
+} 
+.tishi{color:#666;width:100%;margin-left:0px;margin-top:10px;font-size: 12px;clear: both;}
+</style>
+</head>
+<body>
+<!--logo+导航-->
+<div class="heider">
+ <div class="logo1"><h2>彩票投注平台后台管理系统</h2></div>
+</div>
+<!--中间登录框部分-->
+<div class="contentbox">
+ <div class="content">
+   <img src="images/login-img.png">
+   <form  class="" name="loginForm" id="loginForm" action="sysadmin/login" style="" method="post">
+      <div class="loginbox">
+        <h4 class="h4-title">CK彩票网</h4>
+        <ul>
+          <li>
+            <i class="icon-user">用户名：</i>
+            <input type="text" id="userName" name="userName" class="font-login" placeholder="请输入用户名" />
+          </li>
+          <li class="loginbox_tome"></li>
+          <li>
+            <i class="icon-lock">密码：</i>
+            <input type="password" id="password2" name="password2" class="font-login" placeholder="请输入密码" onpaste="return false;" />
+          </li>
+          <li  class="loginbox_tome"></li>
+          <li>
+            <i class="icon-lock">验证码：</i>
+            <input type="text" id="yzm" name="yzm" class="font-login" placeholder=""  style="width:120px;"/>
+            <span class="spanl">
+             <img id="img" src="${basePath}servlet/ImageGeneratorServlet" style="width:100px; height:40px;cursor: pointer;" onclick="changestyle();"/>
+         	 
+          </li>
+        </ul>
+        <div class="loginbtn">
+          <a  href="javascript:loginsubmit()" class="btn">登录 </a>
+          <span id="errors"  style="color: red;font-size: 18px"></span>
+        </div>
+        <p class="tishi"><span style="color:red">提示：</span>为了更好的浏览效果，请使用IE9及以上、火狐浏览器</p> 
+      </div>
+      <input class="input" type="hidden" maxlength="18" id="password" name="password"/>
+      <input class="input" type="hidden" id="errorscode" name="errorscode" value="${error}"/>
+   </form>
+ </div>
+</div>
+<script type="text/javascript" src="js/md5.js"></script>
+<script type="text/javascript">
+
+function loginsubmit(){
+	var userName =  document.loginForm.elements["userName"];
+	var password = document.loginForm.elements["password2"];
+	var yzm = document.loginForm.elements["yzm"];
+	if(userName.value.length<=0){
+		document.getElementById('errors').innerHTML="请输入用户名"
+		userName.focus();
+		return false;
+	}
+	if(password.value.length<=0){
+		document.getElementById('errors').innerHTML="请输入密码"
+		userName.focus();
+		return false;
+	}else{
+		document.getElementById('password').value=hex_md5(document.getElementById('password2').value).toUpperCase();
+	}
+	if(yzm.value.length<=0){
+		document.getElementById('errors').innerHTML="请输入验证码"
+		userName.focus();
+		return false;
+	}
+	 document.getElementById("loginForm").submit();
+}
+function changestyle(){
+	document.getElementById("img").src="${basePath}servlet/ImageGeneratorServlet?version="+Math.random();
+}
+window.onload = function(){
+	var err = document.getElementById("errorscode");
+	if(err && err.value!=""){
+		if(err.value=='browse_not_support'){
+			document.getElementById('errors').innerHTML="当前浏览器不支持本系统！\n\n支持：Internet Explorer浏览器(IE6、IE7、IE8)。\n\n请使用以上浏览器登录，谢谢！";
+		}else if(err.value == '0' || err.value=='1'){
+			document.getElementById('errors').innerHTML="用户名或密码不正确！";
+		}else if(err.value=='-1' || err.value=='expired'){
+			document.getElementById('errors').innerHTML="账号已过期！";
+		}else if(err.value=='no-learnDays'){
+			document.getElementById('errors').innerHTML='账号已过期！';
+		}else if(err.value=='2'){
+			document.getElementById('errors').innerHTML="您登陆错误次数已超过限制次数，请30分钟后重新登陆";
+		}else if(err.value =='3'){
+			document.getElementById('errors').innerHTML="您的账号已被禁用";
+		}else if(err.value =='4'){
+			document.getElementById('errors').innerHTML="验证码不能为空";
+		}else if(err.value =='5'){
+			document.getElementById('errors').innerHTML="验证码错误";
+		}
+	}
+	document.loginForm.elements["userName"].focus();
+};
+</script>
+</body>
+</html>

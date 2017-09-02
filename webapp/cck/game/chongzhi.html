@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+<meta http-equiv="pragma" content="no-cache"> 
+<meta http-equiv="cache-control" content="no-cache"> 
+<meta http-equiv="expires" content="0"> 
+<meta content="telephone=no" name="format-detection">
+<meta content="black" name="apple-mobile-web-app-status-bar-style">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta http-equiv="X-UA-Compatible" content="edge">
+<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="js/mui/mui.min.js"></script>
+<script type="text/javascript" src="js/move.js"></script>
+<script type="text/javascript" src="js/me.js"></script>
+<script type="text/javascript" src="js/rollups/tripledes.js"></script>
+<script type="text/javascript" src="js/components/mode-ecb.js"></script>
+<link type="text/css" rel="stylesheet" href="css/mui/mui.min.css" />
+<link type="text/css" rel="stylesheet" href="css/base.css" />
+<link type="text/css" rel="stylesheet" href="css/me.css" />
+<link type="text/css" rel="stylesheet" href="css/loaders.css" />
+<title>线下充值</title>
+<script type="text/javascript">
+move.width=$(window).width();
+$(document).ready(function(){
+	move.hideHeader();
+	meObj.chongzhiInit();
+	(function($, doc) {
+		var picker = new mui.PopPicker();
+		picker.setData([{value: "1",text: "银行柜台存入"},{value: "2",text: "手机转账"},{value: "3",text: "网银转账"},{value: "4",text: "ATM自动柜员机"},{value: "5",text: "ATM现金存入"}]);
+		var serveTime = doc.getElementById('depositType');
+		serveTime.addEventListener('tap', function(event) {
+			picker.show(function(items) {
+				jQuery('#depositType').val(items[0].text);
+			});
+		}, false);
+	})(mui, document);
+});
+</script>
+</head>
+<body>
+<div class="main-content">
+	<header class="mui-bar mui-bar-nav ">
+		<a class="mui-icon mui-icon-left-nav mui-pull-left" href="wallet.html"></a>
+		<h1 class="mui-title">线下充值</h1>
+	</header>
+	<div class="chongzhi-box chongzhi-box2">
+		<div class="title">收款人信息</div>
+		<div class="mui-input-row" id="bank"></div>
+		<div class="mui-input-row" id="bankNo"></div>
+		<div class="mui-input-row" id="name"></div>
+		<div class="mui-input-row" id="country"></div>
+	</div>
+	<div class="greyline"></div>
+	
+	<div class="chongzhi-box chongzhi-box2">
+		<div class="title">存款人信息</div>
+		<div class="mui-input-row inputbox">
+			<label>存款银行</label>
+			<input type="text" placeholder="请输入汇款银行" id="bank2">
+		</div>
+		<div class="mui-input-row inputbox">
+			<label>存款人姓名</label>
+			<input type="text" placeholder="请输入存款人姓名" id="name2">
+		</div>
+		<div class="mui-input-row inputbox">
+			<label>存款人帐号</label>
+			<input type="text" placeholder="请输入存款人帐号" id="bankNo2">
+		</div>
+		<div class="mui-input-row inputbox">
+			<label>存款金额</label>
+			<input type="text" placeholder="请输入存款金额" id="money">
+		</div>
+		<div class="mui-input-row inputbox">
+			<label>存款方式</label>
+			<input type="text" placeholder="请选择存款类型" id="depositType">
+		</div>
+	</div>
+	<div class="btn-box2">
+		<div class="btn-submit" id="btncz">提交</div>
+	</div>
+</div>
+<script type="text/javascript"  src="js/mui/mui.picker.js"></script>
+<script type="text/javascript"  src="js/mui/mui.poppicker.js"></script>
+<script type="text/javascript"  src="js/mui/mui.view.js"></script>
+<link type="text/css" rel="stylesheet" href="css/mui/mui.picker.css"/>
+<link type="text/css" rel="stylesheet" href="css/mui/mui.poppicker.css"/>
+</body>
+</html>

@@ -1,0 +1,224 @@
+.pointer {
+	cursor: pointer;
+}
+
+.user_usersafe {
+	border-top: none;
+	overflow: hidden;
+	border: 1px solid #ddd;
+}
+
+.usercenter .user_right .user_main {
+	margin-top: 10px;
+	clear: both;
+}
+
+.usercenter .user_right .user_main .user_header {
+	margin-top: 10px;
+}
+
+.user_usersafe .user_body {
+	padding-bottom: 25px;
+}
+
+.usercenter .user_body {
+	border: 1px solid #ddd;
+	border-top: none;
+	overflow: hidden;
+}
+
+.user_usersafe .user_body .safe_item {
+	padding-left: 10px;
+	padding-right: 10px;
+	overflow: hidden;
+}
+
+.user_usersafe .user_body .safe_item .safe_item_head {
+	background: #fff;
+	padding: 10px;
+	overflow: hidden;
+	border-bottom: dashed 1px #ddd;
+}
+
+.user_usersafe .user_body .safe_item .safe_item_head .info_view {
+	width: 520px;
+	line-height: 60px;
+}
+
+.left {
+	overflow: hidden;
+	float: left;
+}
+
+.user_usersafe .user_body .safe_item .safe_item_head .info_view i {
+	float: left;
+	font-size: 40px;
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.user_usersafe .user_body .safe_item .safe_item_head .info_view .left h3
+	{
+	float: left;
+	font-size: 16px;
+	overflow: hidden;
+	margin-left: 10px;
+	color: #323232;
+	line-height: 60px;
+	font-weight: 100;
+}
+
+.user_usersafe .user_body .safe_item .safe_item_head .info_view .left span
+	{
+	float: left;
+	font-size: 14px;
+	margin-left: 30px;
+	color: #999;
+	line-height: 60px;
+}
+
+.user_usersafe .user_body .safe_item .safe_item_head .tool_control {
+	font-size: 14px;
+}
+
+.right {
+	overflow: hidden;
+	float: right;
+}
+
+.user_usersafe .user_body .safe_item .safe_item_head .tool_control .tool_group
+	{
+	float: left;
+	overflow: hidden;
+	line-height: 60px;
+	font-size: 14px;
+	padding-right: 10px;
+	text-align: right;
+	margin-left: 50px;
+}
+
+.user_usersafe .user_body .safe_item .safe_item_head .tool_control .tool_group i.iconfont
+	{
+	color: #5FDD75;
+}
+
+.user_usersafe .user_body .safe_item .safe_item_head .tool_control .tool_group
+	{
+	float: left;
+	overflow: hidden;
+	line-height: 60px;
+	font-size: 14px;
+	padding-right: 10px;
+	text-align: right;
+	margin-left: 50px;
+}
+
+.user_usersafe .user_body .safe_item .safe_item_body {
+	padding-top: 5px;
+}
+
+.user_usersafe .form {
+	overflow: inherit;
+}
+
+.form {
+	overflow: hidden;
+	padding-bottom: 20px;
+}
+
+.form .form_group {
+	display: block;
+	overflow: hidden;
+	margin-bottom: 5px;
+	position: relative;
+}
+
+.user_usersafe .user_body .safe_item .safe_item_body .form .form_group input
+	{
+	margin: 0 auto;
+	width: 268px;
+	display: block;
+	
+	margin-bottom: 5px;
+	margin-top: 5px;
+}
+
+.form .form_group input {
+	border: 1px solid #ddd;
+	border-radius: 2px;
+	width: 296px;
+	margin-left: 5px;
+	padding-left: 12px;
+	color: #999;
+	padding-top: 6px;
+	font-size: 16px;
+	padding-bottom: 7px;
+}
+
+.user_usersafe .user_body .safe_item .safe_item_body .form .form_remark
+	{
+	color: #333;
+	text-align: center;
+	font-size: 14px;
+	margin-bottom: 35px;
+}
+
+.user_usersafe .user_body .safe_item .safe_item_body .form button {
+	display: block;
+	margin: 0 auto;
+	width: 280px;
+	overflow: hidden;
+}
+
+a.btn-default, button.btn-default, input.btn-default, .btn-default {
+	background: #E94335;
+	color: #fff;
+}
+
+.btn-radius {
+	border-radius: 4px;
+}
+
+.btn {
+	display: inline-block;
+	padding: 10px;
+	border: 0px;
+	font-size: 1.0625rem;
+	color: #fff;
+	text-align: center;
+	border-radius: 4px;
+}
+
+.user_usersafe .form_group .select_k {
+    height: 45px;
+    line-height: 45px;
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 270px;
+    margin: 0 auto;
+    display: block;
+}
+
+.form .form_group select {
+    font-size: 15px;
+    margin-left: 5px;
+    border: 1px solid #ddd;
+    background: #fff;
+}
+
+select {
+    background: #fff;
+    border: 1px solid #ddd;
+    height: 30px;
+    line-height: 30px;
+    vertical-align: middle;
+}
+
+.form_group span {
+	margin-left: 205px;
+}
+
+.yes{
+	display: inline-block; width: 10px;height:5px; background: #5FDD75;line-height: 0;font-size:0;vertical-align: middle;-webkit-transform: rotate(45deg);
+}
+.yes:after{content:'/';display:block;width: 20px;height:5px; background: #5FDD75;-webkit-transform: rotate(-90deg) translateY(-50%) translateX(50%);}

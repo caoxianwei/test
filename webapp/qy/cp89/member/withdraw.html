@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+
+		<base id="">
+
+		<meta name="referrer" content="always">
+		<meta name="renderer" content="webkit">
+		<meta name="referrer" content="unsafe-url">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+		<title>千亿彩票 - 彩票APP,彩票开奖查询,重庆时时彩开奖号码,北京pk10开奖记录</title>
+
+		<link type="text/css" rel="stylesheet" href="../assets/statics/css/home.css" />
+		<link rel="stylesheet" href="../assets/statics/css/style.css" type="text/css" />
+		<link rel="stylesheet" href="../assets/statics/css/userCenter.css" type="text/css" />
+		<link rel="stylesheet" type="text/css" href="css/reset.css">
+		<link rel="stylesheet" type="text/css" href="css/hpn-common.css">
+		<link rel="stylesheet" type="text/css" href="css/index.css">
+		<link rel="stylesheet" type="text/css" href="css/global.css">
+		<link type="text/css" rel="stylesheet" href="../static/public/layer/skin/default/laydate.css">
+		<link rel="stylesheet" href="../static/public/layer/skin/default/layer.css" id="layuicss-skinlayercss">
+		<link rel="shortcut icon" type="image/x-icon" href="../assets/statics/images/qianyi.png" media="screen" />
+		<style type="text/css">		
+			.eveb_transfer_box .center_wallet {
+			    width: 200px;
+			}
+			.eveb_transfer_box .wallet_list {
+			    width: 400px;
+			}
+			.wallet_list2 li{
+				width: 40%!important;
+			}
+			#scroll a {
+				font-size: 12px;
+			}
+			.banklogo{
+				margin-left: 5px;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<div class="header-plus" id="header_plus">
+			<div class="header-toptray-plus">
+				<div class="quick-tpis">
+					<i class="icon-acc"></i>
+					<marquee id="sys_tip" behavior="scroll" onmouseover="this.stop()" onmouseout="this.start()">千亿彩票（易记域名58qycp.com）购彩就上千亿彩票，下载彩票APP及完善个人资料即送18元并可提升尊享VIP高级服务，六合彩、时时彩赔率业界最高。</marquee>
+					<div id="scroll" class="quick-list" style="width: 400px;">
+						<a class="kefu" href="" target="_blank">在线客服</a><span style="margin-left: 2px;"> | </span>
+						<div id="spread_url_1" style="display: none;">
+							<a href="spread.html">千亿彩票网<img style="margin-left: 2px;margin-bottom: 10px;" src="../assets/statics/images/hot_new.gif"></a><span> | </span></div>
+						<a href="../common/rule/lhc.html">玩法</a><span> | </span>
+						<a href="../common/help.html">帮助中心</a><span> | </span>
+						<a id="shoucang" onclick="addFavorite2()">加入收藏</a>
+						<a id="agent_reg_url" href="../common/agency.html" title="加入代理"><span> | </span>加入代理</a>
+						<a id="play_free" href="../common/trail.html"><span> | </span>免费试玩</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="liansai-wrap" id="liansai-wrap">
+			<div class="liansai" id="liansai">
+				<div class="wrapper clearfix relative">
+					<h1 class="sprite sprite-logo">
+        	<a href="../index.html"><img src="../assets/statics/images/qycplogo.png" alt=""></a>
+        </h1>
+
+					<div id="header_user_login" class="wrap-login" style="display:none;">
+						<div class="logxinxi" id="logxinxi">
+							<div class="top_login">
+								<div style="float:right;">
+									<div class="top-login-bg"><i class="icon-6"></i>
+										<input class="top_loginip" name="username" type="text" placeholder="请输入用户名">
+									</div>
+									<div class="top-login-bg"><i class="icon-lock-icon"></i>
+										<input class="top_loginip" name="passwd" type="password" placeholder="请输入密码" style="width: 70px;">
+										<span style="position: relative;">
+                            	<a href="common/forget" style="float:left;color:blue;margin-top: 8px;">忘记密码</a>
+                            </span>
+									</div>
+									<div class="need_captcha">
+										<div class="top_click" name="div_top_click">请输入验证码</div>
+										<div class="yanzhengma">
+											<div class="top-login-bg2">
+												<input class="top_loginmm" id="authnum" name="authnum" maxlength="4" type="text" placeholder="验证码">
+												<span class="register_captcha_span" style="margin:0; position: relative;">
+                                        <img name="login_img" class="login_img">
+                                    </span>
+											</div>
+										</div>
+									</div>
+									<input class="dr_anniu" type="submit" name="login" value="登录">
+									<input class="dr_anniu reg_anniu" type="button" value="注册" onclick="location=document.getElementById('base_path').href+'common/register?type=0'">
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div id="header_user" class="logxinxi" style="display:none;">
+						<div class="top_login">
+							<span>您好，<a href="../member/center.html" class="play-jl" name="user_name"></a></span>
+							<span>可用余额：</span>
+							<span><a class="balance colorRed" id="a_show_money" rel="nofollow"><span id="balance" class="orange">￥</span></a>
+							</span>
+							<span><a id="header_money_refresh"><i class="icon-refresh-icon"></i></a></span>
+							<span>
+                   &nbsp;|&nbsp;
+                   <a href="../member/center.html">用户中心</a>&nbsp;|&nbsp;
+                   <a href="../member/recharge.html">充值</a>&nbsp;|&nbsp;
+                   <a href="../member/withdraw.html">提现</a>&nbsp;|&nbsp;
+                   <a href="../member/deal.html">交易记录</a>&nbsp;|&nbsp;
+                   <a href="../member/message.html?tab=2">个人消息<b id="un_read_msg_count" style="color:red;display:none;"></b></a>&nbsp;|&nbsp;
+               	   <a href="javascript:void(0)" onclick="sigout1()">退出</a>&nbsp;
+               </span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="header-navbar-plus">
+			<div class="wrapper clearfix" id="header_box">
+				<div class="lottery-plus" id="lotterys">
+					<h2 class="xzcz">选择彩种 <a  class="dropdown-desc" style="margin-left: 75px;"><i class="icon arrow"></i></a></h2>
+					<div class="lotterys-list-hd" id="lotterysList" style="width: 238px;">
+						<ul class="lottery-list-box" id="register">
+
+						</ul>
+						<ul class="gpc_li1">
+							<li>
+								<span style="display: inline-block;width: 80px;position: relative;bottom: 20px;"><i class="icon-ALARM" style="position: relative;left: 14px;"></i><span style="position: relative;right: 20px;top: 20px;">高频彩</span></span> <span class="gpc_li_list1"></span>
+							</li>
+						</ul>
+						<ul class="dpc_li1">
+							<li style="border-top: 1px solid #F13131;">
+								<span style="display: inline-block;width: 80px;position: relative;bottom: 20px;"><i class="icon-TIME" style="position: relative;left: 14px;"></i><span style="position: relative;right: 20px;top: 20px;">低频彩</span></span>
+								<span class="dpc_li_list1"></span>
+							</li>
+						</ul>
+						<ul class="all_li1">
+							<li style="border-top: 1px solid #F13131;">
+								<span style="display: inline-block;width: 80px;position: relative;bottom: 20px;"><i class="" style="display: inline-block;width: 32px;height: 32px;position: relative;right: 10px;background-image: url(../assets/statics/images/qianyi.png);"></i><span style="display: inline-block;position: relative;left: 20px;top: 20px;float: left;">全部</span></span>
+								<span class="all_li_list1"></span>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<ul class="nav-plus clearfix">
+					<li class="">
+						<a href="../index.html">首页</a>
+					</li>
+					<li>
+						<a href="../ssc/main.html">购彩大厅</a>
+					</li>
+					<li class="">
+						<a href="../phone.html"><i class="icon-iphone-icon"></i>&nbsp;手机购彩</a><em class="hot-icon"></em></li>
+					<li>
+						<a href="../common/activity.html">优惠活动</a><em class="hot-icon"></em></li>
+					<li class="">
+						<a href="../common/draw.html" class="dropdown-desc">开奖公告</a>
+					</li>
+					<li class="">
+						<a href="../common/trend.html">走势图表</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="user-box">
+			<div id="h2" class="wrap">
+
+				<ul id="menu" class="menu fl">
+					<a href="center.html">
+						<li id="index" class=""><i class="icon-Home"></i><span>用户中心</span></li>
+					</a>
+					<!--<a href="spread.html">
+						<li id="spread" href="member/spread" class=""><i class="icon-users"></i><span>代理赚钱</span></li>
+					</a>-->
+					<!--<a href="checkin.html">
+						<li id="message" class=""><i class="icon-coin-dollar" style="color: red;"></i><span style="color: red;">签到红包</span></li>
+					</a>-->
+					<a href="recharge.html">
+						<li id="deposit" class=""><i class="icon-coin-yen"></i><span>在线存款</span></li>
+					</a>
+					<a href="withdraw.html">
+						<li id="qukuan" class="current"><i class="icon-coin-dollar1"></i><span>在线取款</span></li>
+					</a>
+
+					<a href="deal.html">
+						<li id="jiaoyi" class=""><i class="icon-Notes"></i><span>交易记录</span></li>
+					</a>
+					<a href="message.html">
+						<li id="message" class=""><i class="icon-acc"></i><span>消息中心</span></li>
+					</a>
+					<a href="" class="kefu" target="_blank">
+						<div id="customerService"><i class="icon-6" style="margin:0"></i><span>在线客服</span></div>
+					</a>
+				</ul>
+
+				<div class="right-div">
+					<div class="help_r_main">
+						<div class="eveb_content">
+							<div class="eveb_transfer_box mb20 clearfix" style="overflow: visible;">
+								<div class="center_wallet fl rel">
+									<span>账户总余额</span>
+									<p class="money"><strong id="wallet" class="money">00</strong>元</p>
+									<div class="abs Res" onclick="refreshMoney()"><i class="icon-refresh-icon"></i></div>
+								</div>
+								<ul class="wallet_list wallet_list2 fl">
+									<li><span>可提款总额</span>
+										<p id="wallet_1" class="money">00</p>
+									</li>
+								</ul>
+							</div>
+							<div class="eveb_content">
+								<div class="mb10 color-888" style="font-size: 16px;color: #F13131;position: relative;right: 30px;">提现到银行卡：</div>
+								<form name="withdrawForm" novalidate="novalidate" onsubmit="return false;" class="czForm">
+									<ul class="eveb_form">
+										<li style="position: relative;right: 4px;">
+											<span>提现方式:</span>
+											<input type="text" id="cashType" value="银行" readonly="">
+										</li>
+										<li>
+											<span>所属银行：</span>
+											<div class="eveb_form_box eveb_bank_list yhzz" style="width: 610px;height: 130px;position: relative;right: 21px;">
+											</div>
+
+										</li>
+
+										<li>
+											<span>开户行城市：</span>
+											<select name="province" id="province">
+												<option value="" data-province="0">请选择…</option>
+											</select>
+											<select name="city" id="city">
+												<option value="" data-city="0">请选择…</option>
+											</select>
+											<select name="county" id="county">
+												<option value="" data-county="0">请选择…</option>
+											</select>
+										</li>
+										<li>
+											<span>银行帐号：</span>
+											<input class="suminp" name="bankAccount" type="text" id="bankAccount">
+											<label for="bankAccount" class="error">* 请输入银行帐号</label>
+										</li>
+										<li>
+											<span>账号姓名：</span>
+											<input type="text" name="userName" id="userName" class="suminp" value="">
+											<label for="userName" class="error"></label>
+										</li>
+										<li>
+											<span>提款密码：</span>
+											<input type="password" name="userName" id="cashPassword" class="suminp" value="">
+											<label for="cashPassword" class="error">* 请输入提款密码</label>
+										</li>
+										<li>
+											<span>提款金额(元)：</span>
+											<input type="text" size="5" name="money" id="money" value="" class="suminp">
+											<label for="money" class="error">* 请输入提款金额,单笔最少100</label>
+										</li>
+									</ul>
+									<div class="eveb_form_submit">
+										<input type="submit" id="btnSubmit" value="提交" class="button_medium button_1">
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="_clr_"></div>
+			</div>
+		</div>
+
+		<div class="jc-footer">
+
+			<div class="foot_box">
+				<div class="about_box">
+					<ul class="foot_info">
+						<li class="foot_wljc"></li>
+						<li class="foot_wangan"></li>
+						<li class="foot_wsjy"></li>
+						<li class="foot_xylh"></li>
+						<li class="foot_kxwz"></li>
+					</ul>
+
+					<p>2009-2017©
+						<span>千亿彩票</span>
+						<br>
+						<span class="c-grey">千亿彩票郑重提示：彩票有风险，投注需谨慎！ 不向未满18周岁的青少年出售彩票</span>
+					</p>
+
+					<div class="clear"></div>
+				</div>
+			</div>
+
+			<div class="clear nospace"></div>
+		</div>
+		<div class="all_gpc1" style="width: 415px;height:120px;position: relative;bottom: 311px;left: 609px;">
+			<div style="width:400px;height: 30px;margin-top: 30px;position: relative;left: 50px;font-weight: bold;color: black;">高频彩</div>
+			<span></span>
+		</div>
+		<div class="all_all1" style="width: 415px;height:150px;position: relative;bottom: 212px;left: 609px;">
+			<div style="width:400px;height: 30px;margin-top: 30px;position: relative;left: 50px;font-weight: bold;color: black;">全部</div>
+			<span></span>
+		</div>
+		<input type="hidden" id="is_question_set" value="0">
+
+		<script src="../assets/js/plugins/jquery/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../assets/js/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../assets/js/plugins/user/user.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../assets/js/global.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../static/public/js/rollups/tripledes.js"></script>
+		<script src="../static/public/js/components/mode-ecb.js"></script>
+		<script type="text/javascript" src="../static/public/js/clipboard.min.js"></script>
+		<script type="text/javascript" src="../static/public/js/jquery.validate.min.js"></script>
+		<script type="text/javascript" src="../static/public/js/laydate.js"></script>
+		<script type="text/javascript" src="../static/public/js/validate.js"></script>
+		<script src="../static/public/layer/layer.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../assets/js/application/move.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../assets/js/application/type.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../assets/js/base.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../assets/js/application/uHome.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+		//获得在线客服地址
+		$.ajax({
+		  url : CONFIG.BASEURL + 'baseData_onlineService',
+		  type: 'get',
+		  dataType: 'json',
+		  success: function (json) {
+		      if(json.code != 200){
+		          return;
+		      } else {
+		          var data = json.data.url;
+		          $(".kefu").attr('href',data);
+		      }
+		  }
+		});
+
+		if($.cookie('type') == '01'){
+			var str = '<div class="tips-sorry">\
+				<div class="weixiao"><img src="../assets/statics/images/weixiao.gif" width="154" height="154"></div>\
+				<div class="sorry-txt">抱歉，试玩账号不能进行存款取款操作！</div>\
+				</div>';
+				$('.eveb_content').html(str);
+		}
+			$('#userName').val($.cookie("loginName"));
+			
+			$('.all_gpc1,.all_all1').on('mouseenter', function() {
+				$('#lotterysList').css('display', 'block');
+			})
+			$('.all_gpc1,.all_all1').on('mouseleave', function() {
+				$('#lotterysList').css('display', 'none');
+			})
+
+			$(".ac_list_table").on("click", function() {
+				var display = $(this).next(".xialawz").css("display");
+				$(".ac_list_table").next(".xialawz").hide();
+
+				if(display == 'none') {
+					$(this).next(".xialawz").show();
+				} else {
+					$(this).next(".xialawz").hide();
+				}
+			});
+
+			$('.xzcz,#lotterysList').on('mouseenter', function() {
+				$('#lotterysList').show();
+			});
+			$('.xzcz,#lotterysList').on('mouseleave', function() {
+				$('#lotterysList').hide();
+			});
+
+			$('#left').on('click', function() {
+				$('.l_AD').css('display', 'none');
+			})
+			$('#right').on('click', function() {
+				$('.r_AD').css('display', 'none');
+			})
+
+			function addFavorite2() {
+				var url = window.location;
+				var title = document.title;
+				var ua = navigator.userAgent.toLowerCase();
+				if(ua.indexOf("360se") > -1) {
+					alert("由于360浏览器功能限制，请按 Ctrl+D 手动收藏！");
+				} else if(ua.indexOf("msie 8") > -1) {
+					window.external.AddToFavoritesBar(url, title); //IE8
+				} else if(document.all) {
+					try {
+						window.external.addFavorite(url, title);
+					} catch(e) {
+						alert('您的浏览器不支持,请按 Ctrl+D 手动收藏!');
+					}
+				} else if(window.sidebar) {
+					window.sidebar.addPanel(title, url, "");
+				} else {
+					alert('您的浏览器不支持,请按 Ctrl+D 手动收藏!');
+				}
+			}
+			
+			function showLoading() {
+				layer.load(2, {
+					shade: [0.1, '#000'] //0.1透明度的白色背景
+				})
+			}
+			
+			function hideLoading() {
+				layer.closeAll();
+			}
+
+			$(function() {
+				//提现银行
+				ajaxRequest({
+					url: CONFIG.BASEURL + 'cash_bankList',
+					success: function(json) {
+						var data = json.data.items[0].subitems;
+						var str = '';
+						$.each(data, function(index, value) {
+							var icon = '';
+							if(value == '中国工商银行') {
+								icon = 'icbc';
+							} else if(value == '中国建设银行') {
+								icon = 'ccb';
+							} else if(value == '中国银行') {
+								icon = 'chinabank';
+							} else if(value == '中国农业银行') {
+								icon = 'abchina';
+							} else if(value == '中国交通银行') {
+								icon = 'comm';
+							} else if(value == '中国光大银行') {
+								icon = 'cebbank';
+							} else if(value == '中国民生银行') {
+								icon = 'zgms';
+							} else if(value == '招商银行') {
+								icon = 'cmb';
+							} else if(value == '平安银行') {
+								icon = 'pingan';
+							} else if(value == '浦发银行') {
+								icon = 'spdb';
+							} else if(value == '上海银行') {
+								icon = 'bankofshanghai';
+							} else if(value == '中国邮政储蓄银行') {
+								icon = 'psbc';
+							} else if(value == '广发银行') {
+								icon = 'cgbchina';
+							} else if(value == '中信银行') {
+								icon = 'ecitic';
+							} else if(value == '华夏银行') {
+								icon = 'hxb';
+							} else if(value == '浦发银行') {
+								icon = 'spdb';
+							} else if(value == '兴业银行') {
+								icon = 'cib';
+							};
+							str += '<label><input type="radio" name="userBankName" id="userBankName" value="' + value + '"><em class="banklogo bank-' + icon + '"></em></label>';
+						});
+						$('.yhzz').append(str);
+					}
+				});
+
+				//提现省市区三级联动
+				ajaxRequest({
+					url: CONFIG.BASEURL + 'baseData_list3',
+					beforeSend: function() {
+						parent.parent.showLoading();
+					},
+					success: function(json) {
+						var data = json.data.items;
+						var province = '';
+						parent.parent.hideLoading();
+						$.each(data, function(index, value) {
+							var citys = [];
+							$.each(value.list, function(i, v) {
+								citys.push(v.list);
+							});
+							province += '<option value="' + value.cid + '" data-province="' + value.cid + '">' + value.title + '</option>';
+						});
+						$('#province').append(province);
+						$("#province").bind('change', function() {
+							$('#city').html('<option value="" data-city="0">请选择…</option>');
+							$('#county').html('<option value="" data-city="0">请选择…</option>');
+							var val = $(this).val();
+							$.each(data, function(index, value) {
+								if(value.cid == val) {
+									var _city = '';
+									$.each(value.list, function(index, value) {
+										_city += '<option value="' + value.cid + '" data-city="' + value.cid + '">' + value.title + '</option>';
+									});
+									$("#city").append(_city);
+								}
+							});
+						});
+						$("#city").bind('change', function() {
+							$('#county').html('<option value="" data-city="0">请选择…</option>');
+							var val = $(this).val();
+							$.each(data, function(index, value) {
+								$.each(value.list, function(index, value) {
+									if(value.cid == val) {
+										var _county = '';
+										$.each(value.list, function(index, value) {
+											_county += '<option value="' + value.cid + '" data-city="' + value.cid + '">' + value.title + '</option>';
+										});
+										$("#county").append(_county);
+									}
+								});
+							});
+						});
+						$("#county").bind('change', function() {
+							window.getCid = $(this).val(); //获得开户行所在区id;
+						});
+					},
+					error: function(json) {
+						parent.parent.hideLoading();
+					}
+				});
+
+			});
+			$(function() {
+				refreshMoney();
+				$(".errhide").addClass('hide');
+				$("#money").keyup(function() {
+					var obj = this;
+					obj.value = obj.value.replace(/[^\d.]/g, "");
+					obj.value = obj.value.replace(/^\./g, "");
+					obj.value = obj.value.replace(/^0/g, "");
+					obj.value = obj.value.replace(/\.{2,}/g, ".");
+					//确保只有一次小数点出现
+					obj.value = obj.value.replace(".", "#").replace(/\./g, "").replace("#", ".");
+					//确保小数点后是两位数字
+					if(obj.value.indexOf(".") > 0 && obj.value.indexOf(".") + 4 <= obj.value.length) {
+						obj.value = obj.value.substr(0, obj.value.indexOf(".") + 3);
+					}
+					$("#money").val(obj.value);
+
+					//提示非法金额输入
+					var maxMoney = $(".wallet_list .money").text();
+					var inmoney = $("#money").val();
+					if(parseInt(inmoney) > parseInt(maxMoney)) {
+						layer.msg("* 最大提款金额" + maxMoney);
+						$("#money").val(' ');
+					
+					} 
+				});
+
+				$("#btnSubmit").click(function() {
+					var bankName = $("#userBankName:checked").val();
+					var cashMoney = $("#money").val();
+					var accountNo = $("#bankAccount").val();
+					var userName = $("#userName").val();
+					var cashPassword = $("#cashPassword").val();
+					if(window.getCid) {
+						var cid = window.getCid;
+					} else {
+						var cid = '';
+					};
+					var type = $("#cashType").val();
+					console.log(bankName)
+					if(!bankName || bankName == '请选择' || bankName == 'undefined') {
+						layer.msg('请选择银行');
+						return;
+					}
+					if(!cid) {
+						layer.msg('请选择城市');
+						return;
+					}
+					if(!accountNo) {
+						layer.msg('请填写银行卡号');
+						return;
+					}
+					if(!userName) {
+						layer.msg('请填写账户姓名');
+						return;
+					}
+					if(!cashPassword) {
+						layer.msg('请填写提款密码');
+						return;
+					}
+					if(!cashMoney) {
+						layer.msg('请填写提款金额');
+						return;
+					} else {
+						if(parseFloat(cashMoney) > parseFloat($.cookie('money'))) {
+							layer.msg('您的余额不足');
+							$("#money").val(' ');
+							return false;
+						} else if(parseFloat(cashMoney) < 100) {
+							layer.msg('单笔最少100');
+							$("#money").val(' ');
+							return false;
+						}
+
+					}
+					var map = {};
+					map['u'] = $.cookie('u');
+					map['bankName'] = bankName;
+					map['cashMoney'] = cashMoney;
+					map['accountNo'] = accountNo;
+					map['userName'] = userName;
+					map['cashPassword'] = $.md5(cashPassword).toUpperCase();
+					map['cid'] = cid;
+					map['type'] = type;
+					var mw = baseObj.mw(map);
+					$.ajax({
+						type: "POST",
+						url: CONFIG.BASEURL + 'cash_submit',
+						dataType: 'json',
+						data: {
+							mw: mw
+						},
+						success: function(ret) {
+							var code = ret.code;
+							var msg = ret.msg;
+							if(code == '200') {
+								layer.msg('提现成功！');
+								getUserSession();
+								setTimeout(function() {
+									parent.$('.money').html($.cookie('money'));
+									window.location.reload();
+								}, 1000);
+							} else {
+								layer.msg(msg);
+							}
+						}
+					});
+				});
+
+			});
+			//获得用户金额
+			function getUserSession() {
+				var mw = baseObj.mw({
+					u: $.cookie("u")
+				});
+				ajaxRequest({
+					url: CONFIG.BASEURL + 'baseData_money',
+					data: {
+						mw: mw
+					},
+					success: function(json) {
+						if(json.code == 200) {
+							$.cookie('money', json.data.money, { path: "/" });
+						} else {}
+					}
+				});
+			}
+
+			function refreshMoney() {
+				var mw = baseObj.mw({
+					u: $.cookie("u")
+				});
+				ajaxRequest({
+					url: CONFIG.BASEURL + 'baseData_money',
+					data: {
+						mw: mw
+					},
+					beforeSend: function() {
+						$("#wallet_1").html('刷新中');
+						$("#wallet").html('刷新中');
+					},
+					success: function(json) {
+						if(json.code == 200) {
+							$.cookie('money', json.data.money, { path: "/" });
+							$("#wallet").html($.cookie('money'));
+							if(parseInt($.cookie('money')) > 100) {
+								$("#wallet_1").html($.cookie('money') + '元');
+							} else {
+								$("#wallet_1").html('0元');
+							}
+						}
+					}
+				});
+			}
+		</script>
+
+	</body>
+
+</html>

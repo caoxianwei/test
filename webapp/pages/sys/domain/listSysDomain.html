@@ -1,0 +1,25 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<#assign tool =JspTaglibs["http://caicaike.lottery.com/tag/toolbar"]/>
+<html>
+<head>
+<base href="${basePath}">
+<meta charset="UTF-8">
+<title>角色列表</title>
+<#include "/common/easyui_css.inc"/>
+<#include "/common/css.inc"/>
+</head>
+<body>
+<div class="easyui-layout" data-options="fit:true">
+	<div data-options="region:'center', title:'系统管理>>系统域名管理',iconCls:'icon-texe',cls:'white'">
+          <div id="tb" class="quer_label">
+             <@tool.bar menuId="${menuid!}"/>
+         </div>
+       <table id="dg"></table>
+</div>  
+</div>
+
+<div id="domainDiv"></div>
+<#include "/common/easyui_js.inc"/>
+<script type="text/javascript" src="pages/sys/domain/listSysDomain.js"></script>
+</body>
+</html>

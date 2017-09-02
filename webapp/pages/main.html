@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<base href="${basePath}">
+	<meta charset="UTF-8">
+	<title>彩票投注平台后台管理系统</title>
+	<link rel="stylesheet" type="text/css" href="easyui/themes/default/easyui.css">
+	<link rel="stylesheet" type="text/css" href="easyui/themes/icon.css">
+    <link rel="stylesheet" type="text/css" href="css/default.css">
+    <link rel="stylesheet" type="text/css" href="font/font-awesome.min.css"> 
+</head>
+<body class="easyui-layout">
+	<div data-options="region:'north',border:false" style="height:84px;background:#fff;">
+       <div class="header header-navbar header-fixed-top">
+                <div class="nav-top">
+                  <div class="logo">CK彩票网后台管理系统</div>
+                  <div class="nav-right">  
+                       <!-- <li><span id="hoursHeader"></span><span>:</span><span id="minHeader"></span></li>-->
+                        <ul class="header-right">
+                             <!--  <li><a  class="clock" id="clock">3月 10日 星期五</a></li>  -->
+                              <li class="dropdown" id="wecomeLi">
+                                <a class="dropdown-toggle" href="javascript:void()"> <span class="icon icon-user">&nbsp;</span>欢迎您,${admin.login_name} </a>
+                            </li>
+                        </ul>
+                     <ul id="navRight" class="navbar-right">
+                     	<li class="dropdown"><a class="dropdown-toggle" href="sysadmin/logout"><i class="icon icon-off icon-1_5x" title="退出"></i></a>
+                       <li  class="dropdown"><a class="dropdown-toggle" onclick="updateUser()"><i class="icon icon-cog icon-1_5x"  title="修改个人信息"></i>  </a></li>
+                       <li class="dropdown"><a class="dropdown-toggle" id="cashApplyA" href="javascript:gotoApplyCash()">您有<span style="color: red;margin-left: 5px;margin-right: 5px" id="spandoing4">0</span>条新提现</a></li>
+                       <li class="dropdown"><a class="dropdown-toggle" id="onOfforderA" href="javascript:gotoOnoffOrder()">您有<span style="color: red;margin-left: 5px;margin-right: 5px" id="spandoing5">0</span>条线下充值待审核</a></li>
+                    </ul>
+            </div>
+        </div>
+      </div>
+    </div>
+	<div id="easyuipanel" data-options="region:'west',split:true" style="width:280px; border:none; background:none;" class="page-sihcu">
+       <div class="page-menu nav-collapse collapse" id="slimtest1">
+			<!-- BEGIN SIDEBAR MENU -->  
+           <div class="dspay" style="display:block" id="dspay1">  
+            <#assign cashMenuid=""> 
+            <#assign onOffOrderMenuid="">     
+			<ul class="page-sidebar-menu" id="sidebar">
+			<#if (menulist??) && (menulist?size>0)>
+				<#list menulist as menu>
+					<#if menu_index==0>
+						<li class="active">
+					<#else>
+						<li class="">
+					</#if>
+							<a href="javascript:;">
+		                    <i class="iimg iimg1"></i>
+							<span class="title">${menu.mname}</span>
+							<span class="selected"></span>
+							<span class="arrow "></span>
+							</a>
+							<ul class="subn-menu">
+								<#if (menu.childrens??) && (menu.childrens?size>0)>
+								<#list menu.childrens as child>
+									<li class="ajaxify">
+		                               <a href="javascript:void(0)" onClick="openc('${child.murl}','${child.mid}')" title="${child.mname}" class="ajaxify " >
+		                                  <span class="title">${child.mname}</span>
+		                              </a>
+	                       			</li>
+	                       			<#if child.murl == "cashApply/listCashApply.do">
+	                       			  <!-- 提现管理 -->
+	                       			  <#assign cashMenuid="${child.mid}"> 
+	                       			</#if>
+	                       			<#if child.murl == "card/gotoOfflineOrder.do">
+	                       			  <!-- 线下充值 -->
+	                       			  <#assign onOffOrderMenuid="${child.mid}"> 
+	                       			</#if>
+	                       		</#list>
+	                       		</#if>
+							</ul>
+						</li>
+				</#list>
+			</#if>
+			</ul>
+            </div>
+		</div>
+    </div>
+	<div data-options="region:'center'" style="padding:10px 5px; overflow:hidden; border:none; background:#ebeff3">
+        <iframe id="ifr" name="ifr" scrolling="none" src="${firstmenu}" height="100%" width="100%" frameborder="0"></iframe>
+   </div>
+   <input type="hidden" id="appluCashMenuid" value="${cashMenuid}" />
+   <input type="hidden" id="onoffOrderMenuid" value="${onOffOrderMenuid}" />
+   <div id="newwindow"></div>
+   <script type="text/javascript" src="easyui/jquery.min.js"></script>
+	<script type="text/javascript" src="easyui/jquery.easyui.min.js"></script>
+	<script type="text/javascript" src="easyui/EasyuiUtil.js"></script>
+	<script src="easyui/jquery.slimscroll.min.js"></script>	
+    <script src="easyui/easyui-lang-zh_CN.js"></script>
+    <script type="text/javascript" src="js/jquery.wq.tools.js"></script>
+ <script type="text/javascript" src="pages/main.js"></script>
+</body>
+</html>

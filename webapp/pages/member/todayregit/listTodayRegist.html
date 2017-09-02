@@ -1,0 +1,43 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<#assign tool =JspTaglibs["http://caicaike.lottery.com/tag/toolbar"]/>
+<html>
+<head>
+<base href="${basePath}">
+<meta charset="UTF-8">
+<title>彩种信息</title>
+<#include "/common/easyui_css.inc"/>
+<#include "/common/css.inc"/>
+<style type="text/css">
+.textbox{
+  min-width: 50px !important;
+}
+
+</style>
+</head>
+<body> 
+<div class="easyui-layout" data-options="fit:true">
+	<div data-options="region:'center', title:'会员管理>>今日注册',iconCls:'icon-texe',cls:'white'">
+          <div  class="quer_label">
+             <label>
+                                         用户名/ID：<input class="easyui-textbox" type="text" id="userName" /></label>
+             <label>用户类型：
+				<select class="easyui-combobox" id="user_type" name="user_type" style="width:120px" data-options="panelHeight:93">
+					 <option value=''>全部</option>
+					 <option value='1'>注册用户</option>
+					 <option value='02'>试玩用户</option>
+					 <option value='03'>注册代理</option>
+				</select>
+			   </label>
+             <a style="width: 60px;margin-right: 10px;font-size: 18px !important"  id="query"class="easyui-linkbutton green"href="javascript:queryData();">查询</a>
+   		 </div>
+          <div id="tb" class="quer_label">
+             <@tool.bar menuId="${menuid!}"/>
+         </div>
+       <table id="dg" style="width:99%"></table>
+</div>  
+</div>
+
+<#include "/common/easyui_js.inc"/>
+<script type="text/javascript" src="pages/member/todayregit/listTodayRegist.js"></script>
+</body>
+</html>

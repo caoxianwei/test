@@ -1,0 +1,61 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<#assign tool =JspTaglibs["http://caicaike.lottery.com/tag/toolbar"]/>
+<html>
+<head>
+<base href="${basePath}">
+<meta charset="UTF-8">
+<title>余额明细</title>
+<#include "/common/easyui_css.inc"/>
+<#include "/common/css.inc"/>
+<style type="text/css">
+.textbox{
+  min-width: 50px !important;
+}
+label {
+	font-size: 12px
+}
+</style>
+</head>
+<body> 
+<input type="hidden" id="userid" value="${parames.userid}" />
+<div class="easyui-layout" data-options="fit:true" style="overflow-y: auto;overflow-x:hidden ">
+          <div  class="quer_label">
+             <label>用户名/ID：
+               <input class="easyui-textbox" readonly="readonly" type="text" id="user_name" value="${parames.userid}" style="width:65px"/>
+             </label>
+              <label>借贷类型：
+                <select class="easyui-combobox" id="trade_type" style="width:90px" data-options="panelHeight:70">
+                     <option value=''>全部</option>
+                     <option value='1'>收入</option>
+                     <option value='2'>支出</option>
+                </select>
+             </label>
+             <label>交易类型：
+                <select class="easyui-combobox" id="cash_type" style="width:110px">
+                     <option value="">全部</option>
+                     <option value="310">注册赠送</option>
+                     <option value="309">在线充值</option>
+                     <option value="308">提现</option>
+                     <option value="306">管理员充值</option>
+                     <option value="307">管理员扣款</option>
+                     <option value="305">投注退还</option>
+                     <option value="301">中奖</option>
+                     <option value="302">返点</option>
+                     <option value="303">打和</option>
+                     <option value="304">投注</option>
+                </select>
+             </label>
+             <label>
+                                         交易时间：<input class="easyui-datebox" style="width:150px" id="startDate" data-options='panelWidth:150'>
+                                                   到：<input class="easyui-datebox" style="width:150px" id="endDate" data-options='panelWidth:150'></label>
+             <a style="width: 60px;margin-left:-15px;margin-right: 10px;font-size: 18px !important"  id="query"class="easyui-linkbutton green"href="javascript:queryData();">查询</a>
+   		 </div>
+          <div id="tb" class="quer_label">
+         </div>
+       <table id="dg" style="width:99%"></table>
+</div>  
+
+<#include "/common/easyui_js.inc"/>
+<script type="text/javascript" src="pages/capital/cashapply/balancedetail/listBalanceDetail.js"></script>
+</body>
+</html>

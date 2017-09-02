@@ -1,0 +1,33 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<#assign tool =JspTaglibs["http://caicaike.lottery.com/tag/toolbar"]/>
+<html>
+<head>
+<base href="${basePath}">
+<meta charset="UTF-8">
+<title>支付二维码列表页面</title>
+<#include "/common/easyui_css.inc"/>
+<#include "/common/css.inc"/>
+</head>
+<body>
+<input type="hidden" id="menuid" value="menuid" />
+ <div style="margin-top: 10px">
+  <form id="uploadForm" action="${basePath}sysTwoCodePayoff/uploadFile.do" method="post" enctype="multipart/form-data" target="ifr">
+      <input type="hidden" id="codes" name="codes" value="${parames.code}" />
+      <input id="file" type="file" name="img" onchange="javascript:uploadFile(this)" style="display: none" accept=".jpg,.gif,.png,.jpeg,.bpm" />
+</form>
+ </div>
+ <@tool.bar menuId="${menuid!}"/>
+ <div style="margin-top: 10px">
+   <table id="dg"></table>
+ </div>
+
+
+<div id="div_showimg" style="width: 300px;height: 320px;position:absolute;top:50%;left:50%;margin-left:-50px;margin-top:-50px;display:none;text-align: center;">
+ 	<img id="oneimg" alt="微信支付" width="300px" height="300px" src="${item.path}">
+	<a class="easyui-linkbutton blue"  href="javascript:void('0')" onclick="javascript:closeImgDiv()">关闭</a>
+ </div>	
+<br><br>
+<#include "/common/easyui_js.inc"/>
+<script type="text/javascript" src="pages/sys/twocodepayoff/listPayoff.js"></script>
+</body>
+</html>

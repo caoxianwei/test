@@ -1,0 +1,134 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<#assign date =JspTaglibs["http://caicaike.lottery.com/tag/formatdate"]/>
+<html>
+<head>
+<base href="${basePath}">
+<meta charset="UTF-8">
+<title>支付宝线下充值订单</title>
+<#include "/common/easyui_css.inc"/>
+<#include "/common/css.inc"/>
+<style type="text/css">
+.textbox{
+  min-width: 50px !important;
+}
+
+</style>
+</head>
+<body>
+<div class="easyui-layout" data-options="fit:true">
+	<div data-options="region:'center', title:'资金调整>>线下充值',iconCls:'icon-texe',cls:'white'">
+          <div class="titlebar"><img src="images/texe.png"><span>订单信息</span></div>
+            <input type="hidden" id="order_id" value="${order.order_id?c}" />
+            <input type="hidden" id="user_id" value="${order.user_id?c}" />
+            <table class="table table" border="1px solid #e5e5e5" style="border:1px solid #e5e5e5;width:; margin:0 auto; margin-bottom:20px;margin-left: 0%">
+                <tbody>
+                  <tr>
+                     <td class="td-right customtabletd"  width="13%"><label for="name" >订单号:</label> </td>
+                     <td class="customtabletd"  width="86%">${order.order_num}</td>
+                  </tr>
+                 
+                  <tr>
+                     <td class="td-right customtabletd"><label for="name" >用户:</label> </td>
+                     <td class="customtabletd">${order.login_name}</td>
+                  </tr>
+                 
+                  <tr>
+                    <td class="td-right customtabletd"><label for="name" >订单金额:</label> </td>
+                    <td class="customtabletd">${order.total_money?c}</td>
+                   </tr>
+                  <tr>
+                     <td class="td-right customtabletd"><label for="name" >下单日期:</label> </td>
+                     <td class="customtabletd"><@date.format date="${order.create_time}"/></td>
+                  </tr>
+                  <tr>
+                     <td class="td-right customtabletd"><label for="name" >订单处理状态:</label> </td>
+                     <td class="customtabletd">
+                       <#if order.pay_status=='0'>
+                                                                      未处理
+                       <#elseif order.pay_status=='1'>
+                                                                      已拒绝
+                       <#elseif order.pay_status=='2'>
+                                                                      已充值
+                       </#if>
+                     </td>
+                  </tr>
+                  <#if order.pay_status=='1'>
+                    <tr>
+	                   <td class="td-right customtabletd"><label for="name" >拒绝原因:</label> </td>
+	                   <td class="customtabletd">${order.reason}</td>
+	                </tr>
+                  </#if>
+                   
+              </tbody>    
+            </table>
+          <div class="titlebar"><img src="images/texe.png"><span>收款人信息</span></div>
+            <table class="table table" border="1px solid #e5e5e5" style="border:1px solid #e5e5e5;width:; margin:0 auto; margin-bottom:20px;margin-left: 0%">
+                <tbody>
+                  <tr>
+                     <td class="td-right customtabletd" width="13%"><label for="name" >收款银行:</label> </td>
+                     <td class="customtabletd" width="86%">支付宝转账</td>
+                  </tr>
+                 
+                  <tr>
+                     <td class="td-right customtabletd"><label for="name" >收款账号:</label> </td>
+                     <td class="customtabletd">${order.receive_bank_account}</td>
+                  </tr>
+                 
+                  <tr>
+                    <td class="td-right customtabletd"><label for="name" >收款人姓名:</label> </td>
+                    <td class="customtabletd">${order.receive_user_name}</td>
+                   </tr>
+              </tbody>    
+            </table>
+          <div class="titlebar"><img src="images/texe.png"><span>打款人信息</span></div>
+              <table class="table table" border="1px solid #e5e5e5" style="border:1px solid #e5e5e5;width:; margin:0 auto; margin-bottom:20px;margin-left: 0%">
+                <tbody>
+                  <tr>
+                     <td class="td-right customtabletd" width="13%"><label for="name" >打款账号:</label> </td>
+                     <td class="customtabletd" width="86%">${order.depositor_bank_account}</td>
+                  </tr>
+                  <tr>
+                    <td class="td-right customtabletd"><label for="name" >打款人姓名:</label> </td>
+                    <td class="customtabletd">${order.depositor_user_name}</td>
+                   </tr>
+                  <tr>
+                     <td class="td-right customtabletd"><label for="name" >打款方式:</label> </td>
+                     <td class="customtabletd">支付宝转账</td>
+                  </tr>
+                  <#if order.pay_status == "0">
+                    <!-- 未处理的订单 -->
+                    <tr>
+	                   <td class="td-right customtabletd"><label for="name" >金额:</label> </td>
+	                   <td class="customtabletd">
+	                     <input class="easyui-textbox" type="text" id="money" value="${order.total_money?c}" style="width:500PX" />
+	                   </td>
+	                </tr>
+	                <tr>
+	                   <td class="td-right customtabletd"><label for="name" >拒绝原因:</label> </td>
+	                   <td class="customtabletd">
+	                     <input class="easyui-textbox" type="text" multiline="true" id="reason" style="width:500px;height:200px" />
+	                   </td>
+	                </tr>
+                  </#if>
+              </tbody>    
+            </table>
+            
+            <div data-options="region:'south',border:false" class="panl-footer">
+              <#if order.pay_status == "0">
+				<a class="easyui-linkbutton blue" href="javascript:void(0)"  onclick="javascript:updateUserMoney()" style="width:80px">确定</a>
+				<a class="easyui-linkbutton gray" href="javascript:void(0)" onclick="javascript:refuse()" style="width:80px">拒绝</a>
+              </#if>
+			    <a class="easyui-linkbutton gray" href="javascript:void(0)" onclick="javascript:goBack()" style="width:80px">返回</a>
+           </div>
+    </div>  
+</div>
+<input type="hidden" id="menuid" value="${parames.menuid}" />
+<input type="hidden" id="user_name" value="${parames.user_name}" />
+<input type="hidden" id="order_num" value="${parames.order_num}" />
+<input type="hidden" id="pay_status" value="${parames.pay_status}" />
+<input type="hidden" id="startDate" value="${parames.startDate}" />
+<input type="hidden" id="endDate" value="${parames.endDate}" />
+<#include "/common/easyui_js.inc"/> 
+<script type="text/javascript" src="${basePath}pages/capital/offlineorder/onlineOrderInfo.js"></script>
+</body>
+</html>

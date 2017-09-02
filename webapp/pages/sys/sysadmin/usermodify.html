@@ -1,0 +1,42 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<base href="${basePath}"/>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title></title>
+<#include "/common/easyui_css.inc">
+<#include "/common/css.inc">
+
+</head>
+<body>
+<div class="easyui-layout" data-options="fit:true">
+<div id="showDiv" data-options="region:'center'" style="margin-left:-10%;padding:10px; border:none !important;">
+<form name="saveForm" id="saveForm" action="sysadmin/usersave.do" method="post">
+	<table class="table">
+  	<tr>
+		<td class="td-right width-30"><font color="red">*</font>真实姓名:</td>
+		<td><input type="text" id="real_name" name="real_name" value="${bean.real_name!}" class="easyui-textbox" ></td>	
+	</tr>
+	<tr >
+		<td class="td-right width-30"><font color="red">*</font>登录账号:</td>
+		<td><input type="text" id="login_name" name="login_name" readonly="readonly" value="${bean.login_name!}" class="easyui-textbox" ></td>	
+	</tr>
+	<tr >
+		<td class="td-right width-30">密码:</td>
+		<td><input type="text" id="login_pwd" name="login_pwd" value="" class="easyui-textbox"><font color="red">为空不修改</td>	
+		<td><input type="hidden"  name="old_pwd" value="${bean.login_pwd}" >	
+	</tr>
+</table>
+<input type="hidden" id="status" name="status" value="${bean.status}"> 
+<input type="hidden" id="admin_id" name="admin_id" value="${bean.admin_id}"> 
+</form>
+</div>
+<div data-options="region:'south',border:false" class="panl-footer">
+    <button id="tijiao" class="easyui-linkbutton blue" type="button">保存</button>
+	<button id="back" class="easyui-linkbutton gray" type="button" onclick="cancel()">取消</button>
+</div>
+</div>
+</body>
+<#include "/common/easyui_js.inc">
+<script type="text/javascript" src="pages/sys/sysadmin/usermodify.js"></script>
+</html>

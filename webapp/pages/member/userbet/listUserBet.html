@@ -1,0 +1,57 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<#assign tool =JspTaglibs["http://caicaike.lottery.com/tag/toolbar"]/>
+<html>
+<head>
+<base href="${basePath}">
+<meta charset="UTF-8">
+<title>彩种信息</title>
+<#include "/common/easyui_css.inc"/>
+<#include "/common/css.inc"/>
+<style type="text/css">
+.textbox{
+  min-width: 50px !important;
+}
+
+</style>
+</head>
+<body> 
+<div class="easyui-layout" data-options="fit:true">
+	<div data-options="region:'center', title:'会员管理>>用户投注',iconCls:'icon-texe',cls:'white'">
+          <div  class="quer_label">
+             <label>用户名/ID：
+               <input class="easyui-textbox" type="text" id="user_name" style="width:140px"/>
+             </label>
+             <label>期号：
+               <input class="easyui-textbox" type="text" id="session_no" style="width:140px"/>
+             </label>
+             <label>
+                                         投注时间：<input class="easyui-datebox" style="width:160px" id="startDate" data-options='panelWidth:160'>
+                                                   到：<input class="easyui-datebox" style="width:160px" id="endDate" data-options='panelWidth:160'></label>
+             <label>中奖:<select id="bet_flag" name="bet_flag" class="easyui-combobox" style="width:100px;" data-options="panelHeight:140">
+            	<option value="-2">全部</option>
+		        <option value="0" selected="selected">未开奖</option>
+		        <option value="1">中奖</option>
+		        <option value="2">未中奖</option>
+		        <option value="3">打和</option>
+		        <option value="-1">撤单</option>
+             </select></label>	
+             <label style="margin-left: 3%">彩种：
+               <input class="easyui-textbox" type="text" id="game_name" style="width:140px"/>
+             </label>
+             <label>玩法：
+               <input class="easyui-textbox" type="text" id="play_name" style="width:140px"/>
+             </label>
+             <a style="width: 60px;margin-right: 10px;font-size: 18px !important"  id="query"class="easyui-linkbutton green"href="javascript:queryData();">查询</a>
+             <span style="font-size: 18px">有效投注<span id="validMoney" style="color: red;margin-left: 3px;margin-right: 3px">0</span>元</span>
+   		 </div>
+          <div id="tb" class="quer_label">
+             <@tool.bar menuId="${menuid!}"/>
+         </div>
+       <table id="dg" style="width:99%"></table>
+</div>  
+</div>
+
+<#include "/common/easyui_js.inc"/>
+<script type="text/javascript" src="pages/member/userbet/listUserBet.js"></script>
+</body>
+</html>

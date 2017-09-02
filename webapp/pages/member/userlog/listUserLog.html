@@ -1,0 +1,39 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<#assign tool =JspTaglibs["http://caicaike.lottery.com/tag/toolbar"]/>
+<html>
+<head>
+<base href="${basePath}">
+<meta charset="UTF-8">
+<title>彩种信息</title>
+<#include "/common/easyui_css.inc"/>
+<#include "/common/css.inc"/>
+<style type="text/css">
+.textbox{
+  min-width: 50px !important;
+}
+
+</style>
+</head>
+<body> 
+<div class="easyui-layout" data-options="fit:true">
+	<div data-options="region:'center', title:'会员管理>>用户登录查询',iconCls:'icon-texe',cls:'white'">
+          <div  class="quer_label">
+             <label>用户名：
+               <input class="easyui-textbox" type="text" id="login_name" />
+             </label>
+             <label>IP：
+               <input class="easyui-textbox" type="text" id="ip_address"/>
+             </label>
+             <a style="width: 60px;margin-right: 10px;font-size: 18px !important"  id="query"class="easyui-linkbutton green"href="javascript:queryData();">查询</a>
+   		 </div>
+          <div id="tb" class="quer_label">
+             <@tool.bar menuId="${menuid!}"/>
+         </div>
+       <table id="dg" style="width:99%"></table>
+</div>  
+</div>
+
+<#include "/common/easyui_js.inc"/>
+<script type="text/javascript" src="pages/member/userlog/listUserLog.js"></script>
+</body>
+</html>

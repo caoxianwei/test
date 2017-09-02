@@ -1,0 +1,65 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<#assign tool =JspTaglibs["http://caicaike.lottery.com/tag/toolbar"]/>
+<html>
+<head>
+<base href="${basePath}">
+<meta charset="UTF-8">
+<title>提现管理</title>
+<#include "/common/easyui_css.inc"/>
+<#include "/common/css.inc"/>
+</head>
+<body>
+<input type="hidden" id="menuid" value="${menuid}" /> 
+<div class="easyui-layout" data-options="fit:true">
+	<div data-options="region:'center', title:'资金调整>>提现管理',iconCls:'icon-texe',cls:'white'">
+          <div  class="quer_label">
+            <form id="exportExcelForm" action="${basePath}cashApply/exportExcel.do" method="post" target="exportifr">
+             <label>用户：
+               <input class="easyui-textbox" type="text" id="login_name" name="login_name"/>
+             </label>
+             <label>
+                                         申请时间：<input class="easyui-datebox" style="width:110px" id="startDate" name="startDate" data-options='panelWidth:170'>
+                                         到：<input class="easyui-datebox" style="width:110px" id="endDate" name="endDate" data-options='panelWidth:170'></label>
+              <label>审核状态：
+                <select class="easyui-combobox" id="audit_status" name="audit_status" data-options="panelHeight:93">
+                     <option value='-1'>全部</option>
+                     <option value='0' selected="selected">待审核</option>
+                     <option value='1'>已通过</option>
+                     <option value='2'>未通过</option>
+                </select>
+             </label>
+             <a style="width: 60px;margin-right: 10px;font-size: 18px !important"  id="query"class="easyui-linkbutton green"href="javascript:queryCashData();">查询</a>
+             </form>
+   		 </div>
+          <div id="tb" class="quer_label">
+            <@tool.bar menuId="${menuid!}"/>
+         </div>
+       <table id="dg"></table>
+       <div style="margin-top: 10px;text-align: center;">
+         <span style="font-size: 16px">
+                                         总计提现金额<span id="cashMoneySpan" style="font-size: 18px;color: red;">0</span>元
+         </span>
+       </div>
+</div>  
+</div>
+<#assign audit="0">
+<#if operaMap??>
+   <#list operaMap?keys as key>
+     <#if key=="audit">
+       <#assign audit="1">
+     </#if>
+  </#list>
+ </#if>
+ <#if audit =='1'>
+   <input type="hidden" id="isAuditPower" value="1"  />
+  <#else>
+  <input type="hidden" id="isAuditPower" value="0"  />
+ </#if>
+ 
+<div id="cashDiv"></div>
+<iframe id="exportifr" name="exportifr" style="display: none"></iframe>
+
+<#include "/common/easyui_js.inc"/>
+<script type="text/javascript" src="pages/capital/cashapply/listCashApply.js"></script>
+</body>
+</html>

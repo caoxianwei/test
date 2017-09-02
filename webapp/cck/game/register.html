@@ -1,0 +1,157 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+<meta http-equiv="pragma" content="no-cache"> 
+<meta http-equiv="cache-control" content="no-cache"> 
+<meta http-equiv="expires" content="0"> 
+<meta content="telephone=no" name="format-detection">
+<meta content="black" name="apple-mobile-web-app-status-bar-style">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta http-equiv="X-UA-Compatible" content="edge">
+<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="js/mui/mui.min.js"></script>
+<script type="text/javascript" src="js/move.js"></script>
+<script type="text/javascript" src="js/md5.js"></script>
+<script type="text/javascript" src="js/rollups/tripledes.js"></script>
+<script type="text/javascript" src="js/components/mode-ecb.js"></script>
+<link type="text/css" rel="stylesheet" href="css/base.css" />
+<link type="text/css" rel="stylesheet" href="css/mui/mui.min.css" />
+<link type="text/css" rel="stylesheet" href="css/login.css" />
+<link rel="stylesheet" rel="stylesheet" href="css/newlogin.css">
+<title>注册</title>
+<script type="text/javascript">
+var timer=null;
+function reg(){
+	var phone=$('#phone').val().trim();
+	var pwd=$('#pwd').val().trim();
+	var name=$('#name').val().trim();
+	var code=$('#code').val().trim();
+	var recommendId=$('#recommendId').val().trim();
+	var myreg = /^((1[0-9]{2})+\d{8})$/; 
+	var emailreg = /^[a-z0-9]+([._\\-]*[a-z0-9])*@([a-z0-9]+[-a-z0-9]*[a-z0-9]+.){1,63}[a-z0-9]+$/;
+//	if(!myreg.test(phone)) {
+//	    mui.alert('请输入有效的手机号码！',document.title, function() {});
+//	    return false;
+//	}
+    if(phone=='') {
+        mui.alert('请输入账号！',document.title, function() {});
+        return false;
+    }
+	if(pwd=='') {
+	    mui.alert('请输入密码！',document.title, function() {});
+	    return false; 
+	}
+    if(name=='') {
+        mui.alert('请输入真实姓名！',document.title, function() {});
+        return false;
+    }
+	if(code=='') {
+	    mui.alert('请输入验证码！',document.title, function() {});
+	    return false; 
+	}
+	console.log("pwd::"+hex_md5(pwd).toUpperCase());
+	var map = {};
+	map['loginName'] = phone;
+    map['userName'] = name;
+    map['inpcode']=code;
+	map['password'] = hex_md5(pwd).toUpperCase();
+//	map['inviteCode'] = recommendId;
+	var mw=baseObj.mw(map);
+	$.ajax({
+		type: "POST",
+		url:move.reg,
+        xhrFields:{
+            withCredentials: true
+        },
+        crossDomain: true,
+		dataType:'json',
+		data:{
+			mw:mw
+		},  
+		success: function(ret){
+		    debugger;
+			var code=ret.code;
+			console.log("code::"+code);
+			var msg=ret.msg;
+			if(code=='200'){
+				mui.toast('注册成功',{
+					duration:'long',
+					type:'div' 
+				});
+				var result=ret.data;
+				var obj=result.obj;
+				var logo=obj.logo;
+				var uid=obj.uid;
+				var u=obj.u;
+				var loginName=obj.loginName;
+                var userName=obj.userName;
+                var userType=obj.userType;
+				user.init(uid,u,'',logo,loginName,userType,userName,'');
+				user.set(move.user);
+				baseObj.openIndex();
+			}else{
+				mui.toast(msg,{
+					duration:'long',
+					type:'div' 
+				});
+			}
+		},
+		error: function (jqXHR, textStatus, errorThrown) {
+		}
+	});
+}
+$(document).ready(function(){
+	$("#regbtn").bind("click",function(){reg();});
+	move.hideHeader();
+});
+function change(){
+    var img1 = document.getElementById("checkImg");
+    img1.src=move.server+"/api/baseData_checkCode?t="+new Date().getTime();
+}
+
+setTimeout(function () {
+    change();
+},0);
+</script>
+</head>
+<body>
+<div class="main-content">
+	<header class="mui-bar mui-bar-nav ">
+		<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		<h1 class="mui-title">注册</h1>
+	</header>
+	<div id="regnewbox">
+	</div>
+	<!--<div class="login-head-box">-->
+		<!--<img alt="" src="images/login_head.png">-->
+	<!--</div>-->
+	<div class="reg-form">
+		<div class="mui-input-row">
+			<input type="text" placeholder="请输入账号" id="phone" class="reg-input"/>
+		</div>
+		<div class="mui-input-row">
+			<input type="password" placeholder="请输入密码" id="pwd" class="mui-input-password reg-input" maxlength="12"/>
+		</div>
+		<div class="mui-input-row">
+			<input type="text" placeholder="请输入真实姓名，不可更改" id="name" class="reg-input"/>
+		</div>
+		<div class="verification-code">
+				<img id="checkImg" class="captchaImage" src="" onclick="change();" title="点击更换验证码">
+		</div>
+		<div class="mui-input-row code-input" style="padding-right: 110px;">
+			<input type="text" placeholder="验证码" id="code" class="reg-input" maxlength="6"/>
+		</div>
+		<div class="mui-input-row">
+			<input type="text" placeholder="推荐人ID(选填)" id="recommendId" class="reg-input" maxlength="6"/>
+		</div>
+		<div class="btn-box">
+			<input type="button" value="注册" id="regbtn" class="btn btn-orange">
+			<a href="login.html"><input type="button" value="已有帐号，去登录" class="btn btn-blue"></a>
+			<a href="trial.html"><input type="button" value="免费试玩" class="btn btn-blue"></a>
+		</div>
+	</div>
+</div>
+</body>
+</html>

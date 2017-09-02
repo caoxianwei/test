@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<base href="${basePath}">
+<meta charset="UTF-8">
+<title>修改新闻</title>
+<#include "/common/easyui_css.inc"/>
+<#include "/common/css.inc"/>
+<#include "/common/umeditor_css.inc"/>
+</head>
+<body>
+
+<div class="easyui-layout" data-options="fit:true">
+	<div data-options="region:'center', title:'信息管理>>新闻管理>>修改新闻',iconCls:'icon-texe',cls:'white'">
+	<div id="showDiv" data-options="region:'center'" style="margin-left:0%;padding:10px; border:none !important;">
+          <input type="hidden" id="news_id" value="${bean.news_id}" />
+           <table class="table" border="1px solid #e5e5e5"  style="border:1px solid #e5e5e5 !important;width:100%; margin:0 auto; margin-bottom:20px;margin-left: 0%">
+             <tbody>
+               <tr>
+                <td class="td-right customtabletd" width="10%"><label for="name"><span class="font-red">*</span>新闻分类:</label> </td>
+                <td class="customtabletd" width="89%">
+                   <input id="category_id" name="category_id" value="${bean.category_id}">  
+                </td>
+               </tr>
+               <tr>
+                <td class="td-right customtabletd" width="10%"><label for="name"><span class="font-red">*</span>新闻来源:</label> </td>
+                <td class="customtabletd" width="89%">
+                  <select class="easyui-combobox" id="news_source" name="news_source" data-options="panelHeight:50,width:130">
+                     <option value='转载' ${(bean.news_source=='转载')?string('selected','')}>转载</option>
+                     <option value='原创' ${(bean.news_source=='原创')?string('selected','')}>原创</option>
+                   </select>
+                </td>
+               </tr>
+               <tr>
+                <td class="td-right customtabletd" width="10%"><label for="name"><span class="font-red">*</span>新闻标题:</label> </td>
+                <td class="customtabletd" width="89%"><input class="easyui-textbox" type="text" id="news_title" name="news_title" value="${bean.news_title}" style="width:900PX" /> </td>
+               </tr>
+               <tr>
+                <td class="td-right customtabletd" width="10%"><label for="name"><span class="font-red">*</span>新闻摘要:</label> </td>
+                <td class="customtabletd" width="89%"><input class="easyui-textbox" type="text" id="news_abstract" name="news_abstract" value="${bean.news_abstract}"  style="width:900PX" /> </td>
+               </tr>
+               <tr id="contentbox">
+                <td class="td-right customtabletd"><label for="name" ><span class="font-red">*</span>新闻内容:</label> </td>
+                <td class="customtabletd" >
+                  <div style="width: 750px;height: 360px;margin-bottom: 10px">
+			        <input type="hidden" id="content" name="content" value="${bean.news_content}" />
+				    <textarea id="myEditor"  name="myEditor" style="width:900px;height:360px;">
+			        </textarea>
+			      </div>
+                </td>
+               </tr>
+               <tr>
+                <td class="td-right customtabletd"><label for="name" >是否重点显示:</label> </td>
+                <td class="customtabletd">
+                  <input type="checkbox" id="news_show" name="news_show" value="1" ${(bean.news_show=='1')?string('checked','')}/>
+                </td>
+               </tr>
+         </tbody>
+         </table>        
+	</div>
+	<div data-options="region:'south',border:false" class="panl-footer">
+		<a class="easyui-linkbutton blue" href="javascript:void(0)"  onclick="javascript:updateData()" style="width:80px">保存</a>
+		<a class="easyui-linkbutton gray" href="javascript:void(0)" onclick="javascript:goBack();" style="width:80px">取消</a>
+	</div>
+</div>
+</div>
+<input type="hidden" id="selectTitle" value="${parames.selectTitle}" />
+<input type="hidden" id="startDate" value="${parames.startDate}" />
+<input type="hidden" id="endDate" value="${parames.endDate}" />
+<iframe id="imgIfr" name="imgIfr" style="display: none"></iframe>
+<#include "/common/easyui_js.inc"/>
+<#include "/common/umeditor_js.inc"/>
+<script type="text/javascript" src="pages/infomanager/activity/initumeditor.js"></script>
+<script type="text/javascript" src="pages/infomanager/news/listNews.js"></script>
+</body>
+</html>

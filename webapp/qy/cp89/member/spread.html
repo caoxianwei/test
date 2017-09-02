@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+
+		<base id="">
+
+		<meta name="referrer" content="always">
+		<meta name="renderer" content="webkit">
+		<meta name="referrer" content="unsafe-url">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+		<title>千亿彩票 - 彩票APP,彩票开奖查询,重庆时时彩开奖号码,北京pk10开奖记录</title>
+
+		<link rel="stylesheet" type="text/css" href="css/index1.css">
+		<link type="text/css" rel="stylesheet" href="../assets/statics/css/home.css" />
+		<link rel="stylesheet" href="../assets/statics/css/style.css" type="text/css" />
+		<link rel="stylesheet" href="../assets/statics/css/userCenter.css" type="text/css" />
+		<link rel="stylesheet" type="text/css" href="css/hpn-common1.css">
+		<link rel="stylesheet" type="text/css" href="css/global1.css">
+		<link rel="stylesheet" type="text/css" href="css/laydate.css"/>
+    	<link rel="stylesheet" href="css/layer/skin/default/laydate.css">
+    	<link rel="stylesheet" href="css/layer/skin/default/layer.css">
+		<link rel="stylesheet" type="text/css" href="../assets/js/plugins/datePicker/datePicker.css"/>
+		<style type="text/css">
+		.laydate_body .laydate_chnext cite {
+		    border-left-style: solid!important;
+		    border-left-color: #666!important;
+		}
+		.laydate_body .laydate_chprev cite {
+		    border-right-style: solid!important;
+		    border-right-color: #666!important;
+		}
+		.laydate_body .laydate_chtop cite {
+		    border-bottom-color: #666!important;
+		}
+		.laydate_body .laydate_chdown cite, .laydate_body .laydate_ym label {
+		    border-top-color: #666!important;
+		}
+			.list_outer .content table thead td {
+				background-color: #efefef;
+				color: black;
+			}
+			
+			.tip_mesg>strong {
+				height: 46px;
+				line-height: 48px;
+				display: block;
+				font-size: 14px;
+			}
+			
+			.checkinlog {
+				width: 80px;
+				height: 35px;
+				text-align: center;
+				color: blue;
+				cursor: pointer;
+			}
+			
+			.tip_mesg>p {
+				padding-bottom: 5px;
+			}
+			
+			#scroll a {
+				font-size: 12px;
+			}
+			
+			#dataTable th {
+				width: 800px;
+				height: 45px;
+				color: #666;
+				font-weight: 400;
+				background: #FCFCFC;
+				border-bottom: 1px solid #e9e9e9;
+				border-right: 1px solid #e9e9e9;
+				text-align: center;
+			}
+			
+			.help_r_main .eveb_table td {
+				color: #666;
+				height: 46px;
+				border-right: 1px solid #e9e9e9
+			}
+			
+			.tr {
+				height: 50px;
+			}
+			
+			.tr td {
+				border-right: 1px solid gainsboro;
+				text-align: center;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<div class="header-plus" id="header_plus">
+			<div class="header-toptray-plus">
+				<div class="quick-tpis">
+					<i class="icon-acc"></i>
+					<marquee id="sys_tip" behavior="scroll" onmouseover="this.stop()" onmouseout="this.start()">千亿彩票（易记域名58qycp.com）购彩就上千亿彩票，下载彩票APP及完善个人资料即送18元并可提升尊享VIP高级服务，六合彩、时时彩赔率业界最高。</marquee>
+					<div id="scroll" class="quick-list" style="width: 400px;">
+						<a class="news_url" href="" target="_blank"  onclick="retrun false;">在线客服</a><span style="margin-left: 2px;"> | </span>
+						<div id="spread_url_1" style="display: none;">
+							<a href="spread.html">千亿彩票网<img style="margin-left: 2px;margin-bottom: 10px;" src="../assets/statics/images/hot_new.gif"></a><span> | </span></div>
+						<a href="../common/rule/lhc.html">玩法</a><span> | </span>
+						<a href="../common/help.html">帮助中心</a><span> | </span>
+						<a id="shoucang" onclick="addFavorite2()">加入收藏</a>
+						<a id="agent_reg_url" href="../common/agency.html" title="加入代理"><span> | </span>加入代理</a>
+						<a id="play_free" href="../common/trail.html"><span> | </span>免费试玩</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="liansai-wrap" id="liansai-wrap">
+			<div class="liansai" id="liansai">
+				<div class="wrapper clearfix relative">
+					<h1 class="sprite sprite-logo">
+        	<a href="../index.html"><img src="../assets/statics/images/qycplogo.png" alt=""></a>
+        </h1>
+
+					<div id="header_user_login" class="wrap-login" style="display:none;">
+						<div class="logxinxi" id="logxinxi">
+							<div class="top_login">
+								<div style="float:right;">
+									<div class="top-login-bg"><i class="icon-6"></i>
+										<input class="top_loginip" name="username" type="text" placeholder="请输入用户名">
+									</div>
+									<div class="top-login-bg"><i class="icon-lock-icon"></i>
+										<input class="top_loginip" name="passwd" type="password" placeholder="请输入密码" style="width: 70px;">
+										<span style="position: relative;">
+                            	<a href="common/forget" style="float:left;color:blue;margin-top: 8px;">忘记密码</a>
+                            </span>
+									</div>
+									<div class="need_captcha">
+										<div class="top_click" name="div_top_click">请输入验证码</div>
+										<div class="yanzhengma">
+											<div class="top-login-bg2">
+												<input class="top_loginmm" id="authnum" name="authnum" maxlength="4" type="text" placeholder="验证码">
+												<span class="register_captcha_span" style="margin:0; position: relative;">
+                                        <img name="login_img" class="login_img">
+                                    </span>
+											</div>
+										</div>
+									</div>
+									<input class="dr_anniu" type="submit" name="login" value="登录">
+									<input class="dr_anniu reg_anniu" type="button" value="注册" onclick="location=document.getElementById('base_path').href+'common/register?type=0'">
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div id="header_user" class="logxinxi" style="display:none;">
+						<div class="top_login">
+							<span>您好，<a href="../member/center.html" class="play-jl" name="user_name"></a></span>
+							<span>可用余额：</span>
+							<span><a class="balance colorRed" id="a_show_money" rel="nofollow"><span id="balance" class="orange">￥</span></a>
+							</span>
+							<span><a id="header_money_refresh"><i class="icon-refresh-icon"></i></a></span>
+							<span>
+                   &nbsp;|&nbsp;
+                   <a href="../member/center.html">用户中心</a>&nbsp;|&nbsp;
+                   <a href="../member/recharge.html">充值</a>&nbsp;|&nbsp;
+                   <a href="../member/withdraw.html">提现</a>&nbsp;|&nbsp;
+                   <a href="../member/deal.html">交易记录</a>&nbsp;|&nbsp;
+                   <a href="../member/message.html?tab=2">个人消息<b id="un_read_msg_count" style="color:red;display:none;"></b></a>&nbsp;|&nbsp;
+               	   <a href="javascript:void(0)" onclick="sigout1()">退出</a>&nbsp;
+               </span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="header-navbar-plus">
+			<div class="wrapper clearfix" id="header_box">
+				<div class="lottery-plus" id="lotterys">
+					<h2 class="xzcz">选择彩种 <a  class="dropdown-desc" style="margin-left: 75px;"><i class="icon arrow"></i></a></h2>
+					<div class="lotterys-list-hd" id="lotterysList" style="width: 238px;">
+						<ul class="lottery-list-box" id="register">
+
+						</ul>
+						<ul class="gpc_li1">
+							<li>
+								<span style="display: inline-block;width: 80px;position: relative;bottom: 20px;"><i class="icon-ALARM" style="position: relative;left: 14px;"></i><span style="position: relative;right: 20px;top: 20px;">高频彩</span></span>
+								<span class="gpc_li_list1"></span>
+							</li>
+						</ul>
+						<ul class="dpc_li1">
+							<li style="border-top: 1px solid #F13131;">
+								<span style="display: inline-block;width: 80px;position: relative;bottom: 20px;"><i class="icon-TIME" style="position: relative;left: 14px;"></i><span style="position: relative;right: 20px;top: 20px;">低频彩</span></span>
+								<span class="dpc_li_list1"></span>
+							</li>
+						</ul>
+						<ul class="all_li1">
+							<li style="border-top: 1px solid #F13131;">
+								<span style="display: inline-block;width: 80px;position: relative;bottom: 20px;"><i class="" style="display: inline-block;width: 32px;height: 32px;position: relative;right: 10px;background-image: url(../assets/statics/images/qianyi.png);"></i><span style="display: inline-block;position: relative;left: 20px;top: 20px;float: left;">全部</span></span>
+								<span class="all_li_list1"></span>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<ul class="nav-plus clearfix">
+					<li class="">
+						<a href="../index.html">首页</a>
+					</li>
+					<li>
+						<a href="../ssc/main.html">购彩大厅</a>
+					</li>
+					<li class="">
+						<a href="../phone.html"><i class="icon-iphone-icon"></i>&nbsp;手机购彩</a><em class="hot-icon"></em></li>
+					<li>
+						<a href="../common/activity.html">优惠活动</a><em class="hot-icon"></em></li>
+					<li class="">
+						<a href="../common/draw.html" class="dropdown-desc">开奖公告</a>
+					</li>
+					<li class="">
+						<a href="../common/trend.html">走势图表</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="user-box">
+			<div id="h2" class="wrap">
+
+				<ul id="menu" class="menu fl">
+					<a href="center.html">
+						<li id="index" class=""><i class="icon-Home"></i><span>用户中心</span></li>
+					</a>
+					<!--<a href="spread.html">
+						<li id="spread" href="member/spread" class="current"><i class="icon-users"></i><span>代理赚钱</span></li>
+					</a>-->
+					<!--<a href="checkin.html">
+						<li id="message" class=""><i class="icon-coin-dollar" style="color: red;"></i><span style="color: red;">签到红包</span></li>
+					</a>-->
+					<a href="recharge.html">
+						<li id="deposit" class=""><i class="icon-coin-yen"></i><span>在线存款</span></li>
+					</a>
+					<a href="withdraw.html">
+						<li id="qukuan" class=""><i class="icon-coin-dollar1"></i><span>在线取款</span></li>
+					</a>
+
+					<a href="deal.html">
+						<li id="jiaoyi" class=""><i class="icon-Notes"></i><span>交易记录</span></li>
+					</a>
+					<a href="message.html">
+						<li id="message" class=""><i class="icon-acc"></i><span>消息中心</span></li>
+					</a>
+					<a class="kefu" href="">
+						<div id="customerService"><i class="icon-6" style="margin:0"></i><span>在线客服</span></li>
+					</a>
+				</ul>
+
+				<div class="eveb_content">
+					<div class="jf_box">
+						<p class="fl" style="margin-left: -160px;">您好，<span class="zh1"></span>，您当前账户余额为：<span class="ye"></span>元 </p>
+						<a href="recharge.html"  class="fl c1">充值</a>
+						<a href="withdraw.html" class="fl c2">提款</a>
+						<p class="fl url" style="position: relative;right: 10px;">推广链接：
+							<span id="spread_url" style="color: red;"></span></br>
+							<!--<a href="javascript:void(0)" id="copyTglj" data-tglj="http://www.600wan.cm/?p=245088">复制链接</a>-->
+						</p>
+					</div>
+					<div class="eveb_nav_sub">
+						<ul class="clearfix">
+							<li class="on" style="margin-left: -160px;" id="hylb">
+								<a href="javascript:void(0)">会员列表</a>
+							</li>
+							<li class="" style="margin-left: -60px;" id="tjhy">
+								<a href="javascript:void(0)">添加会员</a>
+							</li>
+							<li class="" id="cwbb">
+								<a href="javascript:void(0)">财务报表</a>
+							</li>
+							<li class="" id="tdls">
+								<a href="javascript:void(0)">团队流水</a>
+							</li>
+							<li class="" id="tdbb">
+								<a href="javascript:void(0)">团队报表</a>
+							</li>
+							<li class="" id="tdtz">
+								<a href="javascript:void(0)">团队投注</a>
+							</li>
+							<li class="" id="yjjl">
+								<a href="javascript:void(0)">佣金记录</a>
+							</li>
+						</ul>
+					</div>
+					<div class="hylb" style="height: 355px;">
+						<h2 style="width: 800px;position: relative;bottom: 200px;">
+				            <div class="eveb_search eveb_search_h2">
+				                <input type="hidden" name="pageIndex">
+				               		会员账号：
+				                <input type="text" class="suminp" name="account">
+				                	注册时间：
+				                <input name="starttime" id="starttime" type="text" size="11" class="suminp" onclick="laydate({istime: true, format: 'YYYY-MM-DD hh:mm'})"> -
+				                <input name="endtime" id="endtime" type="text" size="11" class="suminp" onclick="laydate({istime: true, format: 'YYYY-MM-DD hh:mm'})">
+				                <a href="javascript:void(0)" class="button_small button_1" onclick="shaixuan()">筛选</a>
+				                <a href="javascript:void(0)" class="button_small button_4" onclick="searchday(1)">今日</a>
+				                <a href="javascript:void(0)" class="button_small button_4" onclick="searchday(3)">3天</a>
+				                <a href="javascript:void(0)" class="button_small button_4" onclick="searchday(7)">本周</a>
+				            </div>
+				        </h2>
+						<table class="eveb_box eveb_table" id="dataTable" style="width: 800px;position: relative;bottom: 200px;border: 1px solid gainsboro;text-align: center;">
+							<thead>
+								<tr>
+									<th>编号</th>
+									<th>用户账号</th>
+									<th>所属</th>
+									<th>余额</th>
+									<th>输赢</th>
+									<th>注册日期</th>
+									<th>有效投注</th>
+									<th>佣金贡献（元）</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td colspan="9" style="text-align:center;height: 50px;">暂无数据</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="tjhy" style="display: none;height: 355px;">
+						<form name="addUserForm" novalidate="novalidate" onsubmit="return false;">
+							<ul class="eveb_form eveb_setting_form">
+								<li>
+									<span>登录账号名：</span>
+									<input name="account" id="account" type="text" size="20" class="passwinp error" onkeyup="value=value.replace(/[^\a-\z\A-\Z0-9]/g,'')" onpaste="value=value.replace(/[^\a-\z\A-\Z0-9]/g,'')" oncontextmenu="value=value.replace(/[^\a-\z\A-\Z0-9]/g,'')">
+									<label class="error" for="account">* （以字母开头的6-12位字母、数字组成的字符）</label>
+								</li>
+								<li>
+									<span>登录密码：</span>
+									<input name="password" id="password" type="password" size="20" class="passwinp error">
+									<label class="error" for="password">* （由数字或字母组成6-12个字符）</label>
+								</li>
+								<li>
+									<span>用户qq号：</span>
+									<input name="qq" id="qq" type="text" size="20" class="passwinp error" maxlength="11" onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')">
+									<label class="error" for="qq">* （请填写真实QQ号以便联系）</label>
+								</li>
+								<li>
+									<span>用户真实名：</span>
+									<input name="name" id="name" type="text" size="20" class="passwinp error" onpaste="value=value.replace(/[^\u4E00-\u9FA5]/g,'')" oncontextmenu="value=value.replace(/[^\u4E00-\u9FA5]/g,'')">
+									<label class="error" for="name">* （请填写真实用户真实名,绑卡开户名需与此名一致）</label>
+								</li>
+							</ul>
+							<div class="eveb_form_submit">
+								<input type="submit" value="确认添加" class="button_medium button_1">
+								<input type="reset" value="重置" class="ml_10 button_medium button_3">
+							</div>
+						</form>
+					</div>
+					<div class="cwbb" style="display: none;height: 355px;">
+						<h2 style="width: 800px;position: relative;bottom: 200px;">
+				            <div class="eveb_search eveb_search_h2">
+				               	 时间：
+				                <input name="starttime" id="starttime" type="text" size="11" class="suminp" onclick="laydate({istime: true, format: 'YYYY-MM-DD'})" value="2017-08-01"> -
+				                <input name="endtime" id="endtime" type="text" size="11" class="suminp" onclick="laydate({istime: true, format: 'YYYY-MM-DD'})" value="2017-09-01">
+				                <a href="javascript:void(0)" class="button_small button_1" onclick="shaixuan()">筛选</a>
+				                <a href="javascript:void(0)" class="button_small button_4" onclick="searchDayNoHM(1)">今日</a>
+				                <a href="javascript:void(0)" class="button_small button_4" onclick="searchDayNoHM(3)">3天</a>
+				                <a href="javascript:void(0)" class="button_small button_4" onclick="searchDayNoHM(7)">本周</a>
+				            </div>
+				        </h2>
+						<table class="eveb_box eveb_table" id="dataTable" style="width: 800px;position: relative;bottom: 200px;border: 1px solid gainsboro;">
+							<thead>
+								<tr>
+									<th>旗下会员总数</th>
+									<th>有效会员总数</th>
+									<th>存款次数</th>
+									<th>存款金额</th>
+									<th>取款次数</th>
+									<th>取款金额</th>
+									<th>有效投注</th>
+									<th>代理佣金</th>
+									<th>返点比例（%）</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr class="tr">
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0</td>
+									<td>0.000</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="tdls" style="display: none;height: 355px;">
+						<h2 style="width: 800px;position: relative;bottom: 200px;">
+				            <div class="eveb_search eveb_search_h2">
+				                <input type="hidden" name="pageIndex">
+				               		 会员账号：
+				                <input type="text" class="suminp" name="account">
+				                	类型
+				                <select name="type" id="type" style="width: 100px;border: 1px solid gainsboro;height: 20px;">
+				                    <option value="">所有</option>
+				                    <option value="9">彩金/入款优惠</option>
+				                    <option value="3">充值/用户入款</option>
+				                    <option value="2">提现/用户出款</option>
+				                    <option value="11">投注/投注扣款</option>
+				                    <option value="12">派奖/投注派奖</option>
+				                    <option value="13">撤单/投注撤单</option>
+				                    <option value="14">手动扣款</option>
+				                    <option value="15">手动存款</option>
+				                    <option value="16">提现/用户出款（拒绝）</option>
+				                    <option value="17">彩票返水</option>
+				                    <option value="18">彩票返点</option>
+				                    <option value="19">代理佣金</option>
+				                </select>
+				               		 时间：
+				                <input name="starttime" id="starttime" type="text" size="11" class="suminp" onclick="laydate({istime: true, format: 'YYYY-MM-DD hh:mm'})" value="2017-08-31 00:00"> -
+				                <input name="endtime" id="endtime" type="text" size="11" class="suminp" onclick="laydate({istime: true, format: 'YYYY-MM-DD hh:mm'})" value="2017-09-01 00:00">
+				                <a href="javascript:void(0)" class="button_small button_1" onclick="shaixuan()">筛选</a>
+				                <a href="javascript:void(0)" class="button_small button_4" onclick="searchday(1)">今日</a>
+				                <a href="javascript:void(0)" class="button_small button_4" onclick="searchday(3)">3天</a>
+				                <a href="javascript:void(0)" class="button_small button_4" onclick="searchday(7)">本周</a>
+				            </div>
+				        </h2>
+						<table class="eveb_box eveb_table" id="dataTable" style="width: 800px;position: relative;bottom: 200px;border: 1px solid gainsboro;">
+							<thead>
+								<tr>
+									<th>序号</th>
+									<th>用户账号</th>
+									<th>所属</th>
+									<th>变动金额</th>
+									<th>余额</th>
+									<th>时间</th>
+									<th>类型</th>
+									<th>备注</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td colspan="8" style="text-align:center;height: 50px;">暂无数据</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="tdbb" style="display: none;height: 355px;">
+						<h2 style="width: 800px;position: relative;bottom: 200px;">
+				            <div class="eveb_search eveb_search_h2">
+				                <input type="hidden" name="pageIndex">
+				              	  	会员账号：
+				                <input type="text" class="suminp" name="account">
+				               		 统计时间：
+				                <input name="starttime" id="starttime" type="text" size="11" class="suminp" onclick="laydate({istime: true, format: 'YYYY-MM-DD hh:mm'})" value="2017-08-31 00:00"> -
+				                <input name="endtime" id="endtime" type="text" size="11" class="suminp" onclick="laydate({istime: true, format: 'YYYY-MM-DD hh:mm'})" value="2017-09-01 00:00">
+				                <a href="javascript:void(0)" class="button_small button_1" onclick="shaixuan()">筛选</a>
+				                <a href="javascript:void(0)" class="button_small button_4" onclick="searchday(1)">今日</a>
+				                <a href="javascript:void(0)" class="button_small button_4" onclick="searchday(3)">3天</a>
+				                <a href="javascript:void(0)" class="button_small button_4" onclick="searchday(7)">本周</a>
+				            </div>
+				        </h2>
+						<table class="eveb_box eveb_table" id="dataTable" style="width: 800px;position: relative;bottom: 200px;border: 1px solid gainsboro;">
+							<thead>
+								<tr>
+									<th>序号</th>
+									<th>用户</th>
+									<th>充值</th>
+									<th>提现</th>
+									<th>派奖</th>
+									<th>活动</th>
+									<th>返水</th>
+									<th>盈利</th>
+									<th>佣金</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td colspan="9" style="text-align:center;height: 50px;">暂无数据</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="tdtz" style="display: none;height: 355px;">
+						<h2 style="width: 800px;position: relative;bottom: 200px;">
+				            <div class="eveb_search eveb_search_h2">
+				                <input type="hidden" name="pageIndex">
+				                会员账号：
+				                <input type="text" class="suminp" name="account" style="width:70px">
+				                注单号：
+				                <input type="text" class="suminp" name="orderNumber" style="width:70px">
+				                彩种：
+				                <select name="playGroupId" id="playGroupId">
+				                    <option value="">所有</option>
+				                </select>
+				                玩法：
+				                <select name="playId" id="playId">
+				                </select>
+				                状态：
+				                <select name="status" id="status">
+				                    <option value="">所有</option>
+				                    <option value="0">未结算</option>
+				                    <option value="1">已结算</option>
+				                </select>
+				                时间：
+				                <input name="starttime" id="starttime" type="text" size="11" class="suminp" onclick="laydate({istime: true, format: 'YYYY-MM-DD hh:mm'})" value="2017-08-31 00:00"> -
+				                <input name="endtime" id="endtime" type="text" size="11" class="suminp" onclick="laydate({istime: true, format: 'YYYY-MM-DD hh:mm'})" value="2017-09-01 00:00">
+				                <a href="javascript:void(0)" class="button_small button_1" onclick="shaixuan()">筛选</a>
+				                <a href="javascript:void(0)" class="button_small button_4" onclick="searchday(1)">今日</a>
+				                <a href="javascript:void(0)" class="button_small button_4" onclick="searchday(3)">3天</a>
+				                <a href="javascript:void(0)" class="button_small button_4" onclick="searchday(7)">本周</a>
+				            </div>
+				        </h2>
+						<table class="eveb_box eveb_table" id="dataTable" style="width: 800px;position: relative;bottom: 200px;border: 1px solid gainsboro;">
+							<thead>
+								<tr>
+									<th>序号</th>
+									<th>账号</th>
+									<th>注单号</th>
+									<th>时间</th>
+									<th>彩种</th>
+									<th>玩法</th>
+									<th>赔率</th>
+									<th>期号</th>
+									<th>投注内容</th>
+									<th>注数</th>
+									<th>投注金额</th>
+									<th>中奖金额</th>
+									<th>盈亏</th>
+									<th>状态</th>
+								</tr>
+							</thead>
+							<tbody>
+							</tbody>
+						</table>
+					</div>
+					<div class="yjjl" style="display: none;height: 355px;">
+						<h2 style="width: 800px;position: relative;bottom: 200px;">
+				            <div class="eveb_search eveb_search_h2">
+				                <input type="hidden" name="pageIndex" value="1">    
+				              		 时间：
+				                <input name="starttime" id="starttime" type="text" size="11" class="suminp" onclick="laydate({istime: true, format: 'YYYY-MM-DD hh:mm'})" value="2017-08-31 00:00"> -
+				                <input name="endtime" id="endtime" type="text" size="11" class="suminp" onclick="laydate({istime: true, format: 'YYYY-MM-DD hh:mm'})" value="2017-09-01 00:00">
+				                <a href="javascript:void(0)" class="button_small button_1" onclick="shaixuan()">筛选</a>
+				                <a href="javascript:void(0)" class="button_small button_4" onclick="searchday(1)">今日</a>
+				                <a href="javascript:void(0)" class="button_small button_4" onclick="searchday(3)">3天</a>
+				                <a href="javascript:void(0)" class="button_small button_4" onclick="searchday(7)">本周</a>
+				            </div>
+				        </h2>
+						<table class="eveb_box eveb_table" id="dataTable" style="width: 800px;position: relative;bottom: 200px;border: 1px solid gainsboro;">
+							<thead>
+								<tr>
+									<th>序号</th>
+									<th>单号</th>
+									<th>金额</th>
+									<th>返点比例（%）</th>
+									<th>佣金</th>
+									<th>时间</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td colspan="7" style="text-align:center;height: 50px;">暂无数据</td>
+								</tr>
+							</tbody>
+						</table>
+						<div class="eveb_amount fl" style="width: 800px;position: relative;bottom: 200px;">当前小计：下注
+							<span id="pageEffectiveBetMoney">0</span>元，佣金
+							<span id="pageYjMoney">0</span>，总计：下注
+							<span id="totalEffectiveBetMoney">0</span>元，佣金
+							<span id="totalYjMoney">0</span>元
+						</div>
+					</div>
+					<div class="eveb_page fr"></div>
+				</div>
+				<div class="_clr_"></div>
+			</div>
+		</div>
+
+		<input type="hidden" id="spread_id" value="19456">
+
+		<div class="jc-footer">
+
+			<div class="foot_box">
+				<div class="about_box">
+					<ul class="foot_info">
+						<li class="foot_wljc"></li>
+						<li class="foot_wangan"></li>
+						<li class="foot_wsjy"></li>
+						<li class="foot_xylh"></li>
+						<li class="foot_kxwz"></li>
+					</ul>
+
+					<p>2009-2017©
+						<span>千亿彩票</span>
+						<br>
+						<span class="c-grey">千亿彩票郑重提示：彩票有风险，投注需谨慎！ 不向未满18周岁的青少年出售彩票</span>
+					</p>
+
+					<div class="clear"></div>
+				</div>
+			</div>
+
+			<div class="clear nospace"></div>
+		</div>
+		<div class="all_gpc1" style="width: 415px;height:120px;position: relative;bottom: 216px;left: 616px;">
+			<div style="width:400px;height: 30px;margin-top: 30px;position: relative;left: 50px;font-weight: bold;color: black;">高频彩</div>
+			<span></span>
+		</div>
+		<div class="all_all1" style="width: 415px;height:150px;position: relative;bottom: 117px;left: 609px;">
+			<div style="width:400px;height: 30px;margin-top: 30px;position: relative;left: 50px;font-weight: bold;color: black;">全部</div>
+			<span></span>
+		</div>
+		<input id="is_index_page" type="hidden" value="1">
+
+		<script src="../assets/js/plugins/jquery/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../assets/js/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../assets/js/plugins/user/user.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../assets/js/global.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../static/public/js/rollups/tripledes.js"></script>
+		<script src="../static/public/js/components/mode-ecb.js"></script>
+		<script src="../assets/js/application/move.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../assets/js/application/type.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../assets/js/base.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../assets/js/application/uHome.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../static/public/js/laydate.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../assets/js/plugins/datePicker/datePicker.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+		//获得在线客服地址
+		$.ajax({
+		  url : CONFIG.BASEURL + 'baseData_onlineService',
+		  type: 'get',
+		  dataType: 'json',
+		  success: function (json) {
+		      if(json.code != 200){
+		          return;
+		      } else {
+		          var data = json.data.url;
+		          $(".kefu").attr('href',data);
+		      }
+		  }
+		});
+			$('.zh1').html($.cookie('loginName'));	
+			$('.ye').html($.cookie('money'));
+			var info = eval('('+decodeURI($.cookie('user'))+')');
+			if(info.url){
+				$("#spread_url").html(info.url);
+			}
+			$('.all_gpc1,.all_all1').on('mouseenter', function() {
+				$('#lotterysList').css('display', 'block');
+			})
+			$('.all_gpc1,.all_all1').on('mouseleave', function() {
+				$('#lotterysList').css('display', 'none');
+			})
+
+			$(".ac_list_table").on("click", function() {
+				var display = $(this).next(".xialawz").css("display");
+				$(".ac_list_table").next(".xialawz").hide();
+
+				if(display == 'none') {
+					$(this).next(".xialawz").show();
+				} else {
+					$(this).next(".xialawz").hide();
+				}
+			});
+
+			$('.xzcz,#lotterysList').on('mouseenter', function() {
+				$('#lotterysList').show();
+			});
+			$('.xzcz,#lotterysList').on('mouseleave', function() {
+				$('#lotterysList').hide();
+			});
+
+			$('#left').on('click', function() {
+				$('.l_AD').css('display', 'none');
+			})
+			$('#right').on('click', function() {
+				$('.r_AD').css('display', 'none');
+			})
+
+			function addFavorite2() {
+				var url = window.location;
+				var title = document.title;
+				var ua = navigator.userAgent.toLowerCase();
+				if(ua.indexOf("360se") > -1) {
+					alert("由于360浏览器功能限制，请按 Ctrl+D 手动收藏！");
+				} else if(ua.indexOf("msie 8") > -1) {
+					window.external.AddToFavoritesBar(url, title); //IE8
+				} else if(document.all) {
+					try {
+						window.external.addFavorite(url, title);
+					} catch(e) {
+						alert('您的浏览器不支持,请按 Ctrl+D 手动收藏!');
+					}
+				} else if(window.sidebar) {
+					window.sidebar.addPanel(title, url, "");
+				} else {
+					alert('您的浏览器不支持,请按 Ctrl+D 手动收藏!');
+				}
+			}
+			$('#hylb').on('click', function() {
+				$('#hylb').addClass('on');
+				$('#tjhy').removeClass('on');
+				$('#cwbb').removeClass('on');
+				$('#tdls').removeClass('on');
+				$('#tdbb').removeClass('on');
+				$('#tdtz').removeClass('on');
+				$('#yjjl').removeClass('on');
+				$('.cwbb').css('display', 'none');
+				$('.hylb').css('display', 'block');
+				$('.tjhy').css('display', 'none');
+				$('.tdls').css('display', 'none');
+				$('.tdbb').css('display', 'none');
+				$('.tdtz').css('display', 'none');
+				$('.yjjl').css('display', 'none');
+			})
+			$('#tjhy').on('click', function() {
+				$('#tjhy').addClass('on');
+				$('#hylb').removeClass('on');
+				$('#cwbb').removeClass('on');
+				$('#tdls').removeClass('on');
+				$('#tdbb').removeClass('on');
+				$('#tdtz').removeClass('on');
+				$('#yjjl').removeClass('on');
+				$('.cwbb').css('display', 'none');
+				$('.tjhy').css('display', 'block');
+				$('.hylb').css('display', 'none');
+				$('.tdls').css('display', 'none');
+				$('.tdbb').css('display', 'none');
+				$('.tdtz').css('display', 'none');
+				$('.yjjl').css('display', 'none');
+			})
+			$('#cwbb').on('click', function() {
+				$('#cwbb').addClass('on');
+				$('#hylb').removeClass('on');
+				$('#tjhy').removeClass('on');
+				$('#tdls').removeClass('on');
+				$('#tdbb').removeClass('on');
+				$('#tdtz').removeClass('on');
+				$('#yjjl').removeClass('on');
+				$('.tjhy').css('display', 'none');
+				$('.cwbb').css('display', 'block');
+				$('.hylb').css('display', 'none');
+				$('.tdls').css('display', 'none');
+				$('.tdbb').css('display', 'none');
+				$('.tdtz').css('display', 'none');
+				$('.yjjl').css('display', 'none');
+			})
+			$('#tdls').on('click', function() {
+				$('#tdls').addClass('on');
+				$('#hylb').removeClass('on');
+				$('#tjhy').removeClass('on');
+				$('#cwbb').removeClass('on');
+				$('#tdbb').removeClass('on');
+				$('#tdtz').removeClass('on');
+				$('#yjjl').removeClass('on');
+				$('.tjhy').css('display', 'none');
+				$('.tdls').css('display', 'block');
+				$('.hylb').css('display', 'none');
+				$('.cwbb').css('display', 'none');
+				$('.tdbb').css('display', 'none');
+				$('.tdtz').css('display', 'none');
+				$('.yjjl').css('display', 'none');
+			})
+			$('#tdbb').on('click', function() {
+				$('#tdbb').addClass('on');
+				$('#hylb').removeClass('on');
+				$('#tjhy').removeClass('on');
+				$('#cwbb').removeClass('on');
+				$('#tdls').removeClass('on');
+				$('#tdtz').removeClass('on');
+				$('#yjjl').removeClass('on');
+				$('.tjhy').css('display', 'none');
+				$('.tdbb').css('display', 'block');
+				$('.hylb').css('display', 'none');
+				$('.cwbb').css('display', 'none');
+				$('.tdls').css('display', 'none');
+				$('.tdtz').css('display', 'none');
+				$('.yjjl').css('display', 'none');
+			})
+			$('#tdtz').on('click', function() {
+				$('#tdtz').addClass('on');
+				$('#hylb').removeClass('on');
+				$('#tjhy').removeClass('on');
+				$('#cwbb').removeClass('on');
+				$('#tdls').removeClass('on');
+				$('#tdbb').removeClass('on');
+				$('#yjjl').removeClass('on');
+				$('.tjhy').css('display', 'none');
+				$('.tdtz').css('display', 'block');
+				$('.hylb').css('display', 'none');
+				$('.cwbb').css('display', 'none');
+				$('.tdls').css('display', 'none');
+				$('.tdbb').css('display', 'none');
+				$('.yjjl').css('display', 'none');
+			})
+			$('#yjjl').on('click', function() {
+				$('#yjjl').addClass('on');
+				$('#hylb').removeClass('on');
+				$('#tjhy').removeClass('on');
+				$('#cwbb').removeClass('on');
+				$('#tdls').removeClass('on');
+				$('#tdbb').removeClass('on');
+				$('#tdtz').removeClass('on');
+				$('.tjhy').css('display', 'none');
+				$('.yjjl').css('display', 'block');
+				$('.hylb').css('display', 'none');
+				$('.cwbb').css('display', 'none');
+				$('.tdls').css('display', 'none');
+				$('.tdbb').css('display', 'none');
+				$('.tdtz').css('display', 'none');
+			})
+			// 获取推荐地址
+		</script>
+	</body>
+
+</html>

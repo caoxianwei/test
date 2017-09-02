@@ -1,0 +1,132 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+<meta http-equiv="pragma" content="no-cache"> 
+<meta http-equiv="cache-control" content="no-cache"> 
+<meta http-equiv="expires" content="0"> 
+<meta content="telephone=no" name="format-detection">
+<meta content="black" name="apple-mobile-web-app-status-bar-style">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta http-equiv="X-UA-Compatible" content="edge">
+<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="js/mui/mui.min.js"></script>
+<script type="text/javascript" src="js/move.js"></script>
+<script type="text/javascript" src="js/md5.js"></script>
+<script type="text/javascript" src="js/rollups/tripledes.js"></script>
+<script type="text/javascript" src="js/components/mode-ecb.js"></script>
+<link type="text/css" rel="stylesheet" href="css/base.css" />
+<link type="text/css" rel="stylesheet" href="css/mui/mui.min.css" />
+<link type="text/css" rel="stylesheet" href="css/login.css" />
+<title>注册试玩账号</title>
+<script type="text/javascript">
+var timer=null;
+function reg(){
+	var phone=$('#phone').val().trim();
+	var pwd=$('#pwd').val().trim();
+	var code=$('#code').val().trim();
+	if(pwd=='') {
+	    mui.alert('请输入密码！',document.title, function() {});
+	    return false; 
+	}
+	if(code=='') {
+	    mui.alert('请输入验证码！',document.title, function() {});
+	    return false; 
+	}
+	console.log("pwd::"+hex_md5(pwd).toUpperCase());
+	var map = {};
+	map['loginName'] = phone;
+    map['inpcode']=code;
+	map['password'] = hex_md5(pwd).toUpperCase();
+//	map['inviteCode'] = recommendId;
+	var mw=baseObj.mw(map);
+	$.ajax({
+		type: "POST",
+		url:move.trial,
+        xhrFields:{
+            withCredentials: true
+        },
+        crossDomain: true,
+		dataType:'json',
+		data:{
+			mw:mw
+		},  
+		success: function(ret){
+			var code=ret.code;
+			console.log("code::"+code);
+			var msg=ret.msg;
+			if(code=='200'){
+				mui.toast('注册成功',{
+					duration:'long',
+					type:'div' 
+				});
+				var result=ret.data;
+				var obj=result.obj;
+				var logo=obj.logo;
+				var uid=obj.uid;
+				var u=obj.u;
+				var loginName=obj.loginName;
+				var userType = obj.userType;
+				user.init(uid,u,'',logo,loginName,userType,'');
+				user.set(move.user);
+				baseObj.openIndex();
+			}else{
+				mui.toast('注册失败',{
+					duration:'long',
+					type:'div' 
+				});
+			}
+		},
+		error: function (jqXHR, textStatus, errorThrown) {
+		}
+	});
+}
+$(document).ready(function(){
+	$("#regbtn").bind("click",function(){reg();});
+	move.hideHeader();
+	move.trialAccount();
+});
+function change(){
+    var img1 = document.getElementById("checkImg");
+    img1.src=move.server+"/api/baseData_checkCode?t="+new Date().getTime();
+}
+setTimeout(function () {
+    change();
+},0);
+</script>
+	<style>
+		.reg-form{margin-top: 120px;}
+	</style>
+</head>
+<body>
+<div class="main-content">
+	<header class="mui-bar mui-bar-nav ">
+		<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		<h1 class="mui-title">注册</h1>
+	</header>
+	<div id="regnewbox">
+	</div>
+	<!--<div class="login-head-box">-->
+		<!--<img alt="" src="images/login_head.png">-->
+	<!--</div>-->
+	<div class="reg-form">
+		<div class="mui-input-row">
+			<input type="tel" placeholder="请获得试玩账号" id="phone" disabled class="reg-input" maxlength="11"/>
+		</div>
+		<div class="mui-input-row">
+			<input type="password" placeholder="请输入密码" id="pwd" class="mui-input-password reg-input" maxlength="12"/>
+		</div>
+		<div class="verification-code" >
+				<img id="checkImg" class="captchaImage" src="" onclick="change();" title="点击更换验证码">
+		</div>
+		<div class="mui-input-row" style="padding-right: 110px;">
+			<input type="text" placeholder="验证码" id="code" class="reg-input" maxlength="6"/>
+		</div>
+		<div class="btn-box">
+			<input type="button" value="立即试玩" id="regbtn" class="btn btn-orange">
+		</div>
+	</div>
+</div>
+</body>
+</html>

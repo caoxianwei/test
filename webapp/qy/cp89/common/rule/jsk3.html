@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+
+		<base id="">
+
+		<meta name="referrer" content="always">
+		<meta name="renderer" content="webkit">
+		<meta name="referrer" content="unsafe-url">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+		<title>千亿彩票 - 彩票APP,彩票开奖查询,重庆时时彩开奖号码,北京pk10开奖记录</title>
+
+		<link type="text/css" rel="stylesheet" href="../../assets/statics/css/home.css" />
+		<link type="text/css" rel="stylesheet" href="../../assets/statics/css/style.css" />
+		<link type="text/css" rel="stylesheet" href="../../assets/statics/css/page.css" />
+		<link rel="shortcut icon" type="image/x-icon" href="../../assets/statics/images/qianyi.png" media="screen" />
+	</head>
+
+	<body>
+
+		<div class="header-plus" id="header_plus">
+			<div class="header-toptray-plus">
+				<div class="quick-tpis">
+					<i class="icon-acc"></i>
+					<marquee id="sys_tip" behavior="scroll" onmouseover="this.stop()" onmouseout="this.start()">千亿彩票（易记域名58qycp.com）购彩就上千亿彩票，下载彩票APP及完善个人资料即送18元并可提升尊享VIP高级服务，六合彩、时时彩赔率业界最高。</marquee>
+					<div id="scroll" class="quick-list" style="width: 388px;">
+						<a id="news_url" href="https://f18.livechatvalue.com/chat/chatClient/chatbox.jsp?companyID=866220&configID=71383&jid=9483081749&s=1" target="_blank">在线客服</a><span style="margin-left: 2px;"> | </span>
+						<div id="spread_url_1" style="display: none;">
+							<!-- <a href="../../member/spread.html">千亿彩票网<img style="margin-left: 2px;margin-bottom: 10px;" src="../../assets/statics/images/hot_new.gif"></a><span> | </span></div> -->
+						<a href="lhc.html">玩法</a><span> | </span>
+						<a href="../help.html">帮助中心</a><span> | </span>
+						<a id="shoucang" onclick="addFavorite2()">加入收藏</a>
+						<a id="agent_reg_url" href="../agency.html" title="加入代理"><span> | </span>加入代理</a>
+						<a id="play_free" href="../trail.html"><span> | </span>免费试玩</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="liansai-wrap" id="liansai-wrap">
+			<div class="liansai" id="liansai">
+				<div class="wrapper clearfix relative">
+					<h1 class="sprite sprite-logo">
+        	<a href="../../index.html"><img src="../../assets/statics/images/qycplogo.png" alt=""></a>
+        </h1>
+
+					<div id="header_user_login" class="wrap-login" style="display:none;">
+						<div class="logxinxi" id="logxinxi">
+							<div class="top_login">
+								<div style="float:right;">
+									<div class="top-login-bg"><i class="icon-6"></i>
+										<input class="top_loginip" name="username" type="text" placeholder="请输入用户名">
+									</div>
+									<div class="top-login-bg"><i class="icon-lock-icon"></i>
+										<input class="top_loginip" name="passwd" type="password" placeholder="请输入密码" style="width: 70px;">
+										<span style="position: relative;">
+                            	<a href="https://f18.livechatvalue.com/chat/chatClient/chatbox.jsp?companyID=866220&configID=71383&jid=9483081749&s=1" style="float:left;color:blue;margin-top: 8px;">忘记密码</a>
+                            </span>
+									</div>
+									<div class="need_captcha">
+										<div class="top_click" name="div_top_click">请输入验证码</div>
+										<div class="yanzhengma">
+											<div class="top-login-bg2">
+												<input class="top_loginmm" id="authnum" name="authnum" maxlength="4" type="text" placeholder="验证码">
+												<span class="register_captcha_span" style="margin:0; position: relative;">
+                                        <img name="login_img" class="login_img">
+                                    </span>
+											</div>
+										</div>
+									</div>
+									<input class="dr_anniu" type="submit" name="login" value="登录">
+									<input class="dr_anniu reg_anniu" type="button" value="注册" onclick="location=document.getElementById('base_path').href+'common/register?type=0'">
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div id="header_user" class="logxinxi" style="display:none;">
+						<div class="top_login">
+							<span>您好，<a href="../member/center.html" class="play-jl" name="user_name"></a></span>
+							<span>可用余额：</span>
+							<span><a class="balance colorRed" id="a_show_money" rel="nofollow"><span id="balance" class="orange">￥</span></a>
+							</span>
+							<span><a id="header_money_refresh"><i class="icon-refresh-icon"></i></a></span>
+							<span>
+                   &nbsp;|&nbsp;
+                   <a href="../../member/center.html">用户中心</a>&nbsp;|&nbsp;
+                   <a href="../../member/recharge.html">充值</a>&nbsp;|&nbsp;
+                   <a href="../../member/withdraw.html">提现</a>&nbsp;|&nbsp;
+                   <a href="../../member/deal.html">交易记录</a>&nbsp;|&nbsp;
+                   <a href="../../member/message.html?tab=2">个人消息<b id="un_read_msg_count" style="color:red;display:none;"></b></a>&nbsp;|&nbsp;
+               	   <a href="javascript:void(0)" onclick="sigout2()">退出</a>&nbsp;
+               </span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="header-navbar-plus">
+			<div class="wrapper clearfix" id="header_box">
+				<div class="lottery-plus" id="lotterys">
+					<h2 class="xzcz">选择彩种 <a  class="dropdown-desc" style="margin-left: 75px;"><i class="icon arrow"></i></a></h2>
+					<div class="lotterys-list-hd" id="lotterysList">
+						<ul class="lottery-list-box" id="lottery-list-box2">
+						</ul>
+						<ul class="gpc_li">
+							<li>
+								<span style="display: inline-block;width: 80px;position: relative;bottom: 20px;"><i class="icon-ALARM" style="position: relative;left: 14px;"></i><span style="position: relative;right: 20px;top: 20px;">高频彩</span></span>
+								<span class="gpc_li_list"></span>
+							</li>
+						</ul>
+						<ul class="dpc_li">
+							<li style="border-top: 1px solid #F13131;">
+								<span style="display: inline-block;width: 80px;position: relative;bottom: 20px;"><i class="icon-TIME" style="position: relative;left: 14px;"></i><span style="position: relative;right: 20px;top: 20px;">低频彩</span></span>
+								<span class="dpc_li_list"></span>
+							</li>
+						</ul>
+						<ul class="all_li">
+							<li style="border-top: 1px solid #F13131;">
+								<span style="display: inline-block;width: 80px;position: relative;bottom: 20px;"><i class="" style="display: inline-block;width: 32px;height: 32px;position: relative;right: 10px;background-image: url(../../assets/statics/images/qianyi.png);"></i><span style="display: inline-block;position: relative;left: 20px;top: 20px;float: left;">全部</span></span>
+								<span class="all_li_list"></span>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<ul class="nav-plus clearfix">
+					<li class="">
+						<a href="../../../cp89/index.html">首页</a>
+					</li>
+					<li>
+						<a href="../../../cp89/ssc/main.html">购彩大厅</a>
+					</li>
+					<li class="">
+						<a href="../../../cp89/phone.html"><i class="icon-iphone-icon"></i>&nbsp;手机购彩</a><em class="hot-icon"></em></li>
+					<li class="">
+						<a href="../activity.html">优惠活动</a><em class="hot-icon"></em></li>
+					<li class="">
+						<a href="../draw.html" class="dropdown-desc">开奖公告</a>
+					</li>
+					<li class="">
+						<a href="../trend.html">走势图表</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="wrap-bg">
+			<div class="wrapper">
+				<div id="left" class="rule-left">
+					<div class="lbar"><span>玩法规则</span></div>
+					<div class="list" style="">
+						<ul id="rule_list" style="float: left;">
+						</ul>
+					</div>
+					<div class="lbot"></div>
+				</div>
+
+				<div class="rule-right">
+					<div class="rtop"></div>
+					<div id="rcont">
+						<!-- begin -->
+						<div class="rbar">
+							<h1><span class="gamek-10">江苏快三玩法规则</span></h1>
+						</div>
+
+						<div class="rcon">
+							<h2><a href="jsk3.html#1">一、玩法类型及承销</a></h2>
+							<h2><a href="jsk3.html#2">二、开奖与购买方式</a></h2>
+							<h2><a href="jsk3.html#3">三、兑奖</a></h2>
+							<h2><a href="jsk3.html#4">四、玩法说明</a></h2>
+							<br>
+
+							<p id="1">一、玩法类型及承销</p>
+							中国福利彩票江苏省快三游戏（以下简称“快三”）由中国福利彩票发行管理中心和组织销售，江苏省福利彩票销售机构（以下称“江苏福彩机构”）在所辖区域内承销。
+
+							<p id="2">二、 开奖与购买方式</p>
+							1. 本站江苏快三游戏每天进行82期，开奖时间为08:39至22:10，每隔10分钟开奖一次。快三采用专用电子开奖设备开奖，每期随机生成3个号码，作为当期中奖号码。
+							<br>2. 每期开奖后，相关江苏福彩机构应向社会公布开奖号码、将当期销售总额、开各奖级中奖情况及奖池资金余额等信息，并通过视频方式将开奖结果通知销售网点。
+							<br>3. 购买者可在对其选定的投注号码选择返点投注，返点越高投注赔率则低。购买者也可以进行追号投注，追号是指将一注或一组号码进行两期或两期以上的投注。追号可分为连续追号和间隔追号，连续追号指追号的期数是连续的，间隔追号指追号的期数不连续。
+							<br>4. 购买者可选择机选号码投注、自选号码投注。机选号码投注是指由投注机随机产生投注号码进行投注，自选号码投注是指将购买者选定的号码输入投注机进行投注。
+							<br>5. 如果用户投注成功后，若因销售终端故障、通讯线路故障和投注站信用额度受限等原因造成当期无法开奖的，应退还购买者投注金额。
+
+							<p id="2">三、兑奖</p>
+							1. 无论大小奖均返还至用户在本站的账户中，一旦用户中奖，系统将自动返还中奖金额。可继续投注或提款，永无弃奖。
+
+							<p id="4">四、玩法说明</p>
+							1. 快三投注是指以3个号码组合为一注彩票进行单式投注，每个投注号码为1-6共六个自然数中的任意一个。
+							<div align="center">
+								<img src="../../assets/statics/images/rule/rule.k3.p1.gif" />
+							</div>
+
+							<br> 2. 快三包括三军大小、围骰全骰、点数、长牌、短牌等玩法。：
+							<br>
+							<table width="100%" cellspacing="1" cellpadding="0" border="0" bgcolor="#CCCCCC" class="s-table">
+								<tbody>
+									<tr align="center" class="cu">
+										<td width="79" height="25" bgcolor="#efefef" class="td">玩法</td>
+										<td width="514" height="25" bgcolor="#efefef" class="td">规则</td>
+									</tr>
+									<tr align="left">
+										<td height="25" bgcolor="#FFFFFF" align="center">三军、大小</td>
+										<td width="514" height="25" bgcolor="#FFFFFF">
+											大小：三粒骰子之点数总和由4点至10点为小，三粒骰子之点数总和由11点至17点为大，若三粒骰子平面点数相同，通吃「大」、「小」各注。<br> 三军：任何一粒骰子出现选定之平面点数。
+										</td>
+									</tr>
+									<tr align="left">
+										<td height="25" bgcolor="#FFFFFF" align="center">围骰、全骰</td>
+										<td width="514" height="25" bgcolor="#FFFFFF">
+											围骰：三粒骰子平面与选定点数相同。<br> 全骰：在一点至六点内，三粒骰子平面点数相同。
+											<br>
+										</td>
+									</tr>
+									<tr align="left">
+										<td height="25" bgcolor="#FFFFFF" align="center">点数</td>
+										<td width="514" height="25" bgcolor="#FFFFFF">由4点至17点，三粒骰子平面点数之总和。</td>
+									</tr>
+									<tr align="left">
+										<td height="25" bgcolor="#FFFFFF" align="center">长牌</td>
+										<td width="514" height="25" bgcolor="#FFFFFF">任两粒骰子之平面点数。</td>
+									</tr>
+									<tr align="left">
+										<td height="25" bgcolor="#FFFFFF" align="center">短牌</td>
+										<td width="514" height="25" bgcolor="#FFFFFF">选定两粒骰子之平面点数。</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+
+						<div class="rcon">
+							<a href="#top"><span>回到顶部</span></a>
+						</div>
+						<div class="rbot"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="all_gpc" style="width: 400px;height:120px;position: relative;bottom: 658px;left: 610px;">
+			<div style="width:400px;height: 30px;margin-top: 30px;position: relative;left: 50px;font-weight: bold;color: black;">高频彩</div>
+			<span></span>
+		</div>
+		<div class="all_all" style="width: 400px;height:150px;position: relative;bottom: 559px;left: 610px;">
+			<div style="width:400px;height: 30px;margin-top: 30px;position: relative;left: 50px;font-weight: bold;color: black;">全部</div>
+			<span></span>
+		</div>
+		<div class="jc-footer">
+
+			<div class="foot_box">
+				<div class="about_box">
+					<ul class="foot_info">
+						<li class="foot_wljc"></li>
+						<li class="foot_wangan"></li>
+						<li class="foot_wsjy"></li>
+						<li class="foot_xylh"></li>
+						<li class="foot_kxwz"></li>
+					</ul>
+
+					<p>2009-2017©
+						<span>千亿彩票</span>
+						<br>
+						<span class="c-grey">千亿彩票郑重提示：彩票有风险，投注需谨慎！ 不向未满18周岁的青少年出售彩票</span>
+					</p>
+
+					<div class="clear"></div>
+				</div>
+			</div>
+
+			<div class="clear nospace"></div>
+		</div>
+
+		<!-- 更新浏览器 -->
+		<div class="ie-alert-wrap" style="display: none;">
+			<h1>是时候升级你的浏览器了</h1>
+			<p>你正在使用 Internet Explorer 的早期版本（IE9以下版本 或使用该内核的浏览器）。这意味着在升级浏览器前，你将无法访问此网站。</p>
+			<hr>
+			<h2>请注意：Windows XP 及 Internet Explorer 早期版本的支持已经结束</h2>
+			<p>自 2016 年 1 月 12 日起，Microsoft 不再为 IE 11 以下版本提供相应支持和更新。没有关键的浏览器安全更新，您的 PC 可能易受有害病毒、间谍软件和其他恶意软件的攻击，它们可以窃取或损害您的业务数据和信息。请参阅
+				<a href="https://www.microsoft.com/zh-cn/WindowsForBusiness/End-of-IE-support">微软对 Internet Explorer 早期版本的支持将于 2016 年 1 月 12 日结束的说明</a> 。</p>
+			<hr>
+			<h2>更先进的浏览器</h2>
+			<p>推荐使用以下浏览器的最新版本。如果你的电脑已有以下浏览器的最新版本则直接使用该浏览器访问<b id="referrer"></b>即可。</p>
+			<ul class="browser">
+				<li class="browser-chrome">
+					<a href="http://www.google.cn/chrome/browser/index.html?hl=zh-CN&standalone=1" target="_blank"> 谷歌浏览器<span>Google Chrome</span></a>
+				</li>
+				<li class="browser-360">
+					<a href="http://se.360.cn/" target="_blank"> 360安全浏览器 <span>360用户推荐</span></a>
+				</li>
+				<!-- 2016-08-06 -->
+				<li class="browser-firefox">
+					<a href="http://www.firefox.com.cn/" target="_blank"> 火狐浏览器<span>Mozilla Firefox</span></a>
+				</li>
+				<li class="browser-ie">
+					<a href="http://windows.microsoft.com/zh-cn/internet-explorer/download-ie" target="_blank"> IE浏览器<span>Internet Explorer</span></a>
+				</li>
+				<li class="browser-qq">
+					<a href="http://browser.qq.com/" target="_blank"> QQ浏览器9 <span>全新升级版本</span></a>
+				</li>
+				<!-- 9.4.8187.400 -->
+				<div class="clean"></div>
+			</ul>
+			<hr>
+			<h2>为什么会出现这个页面？</h2>
+			<p>如果你不知道升级浏览器是什么意思，请请教一些熟练电脑操作的朋友。如果你使用的不是IE6/7/8/9/10，而是360浏览器、QQ浏览器、搜狗浏览器等，出现这个页面是因为你使用的不是该浏览器的最新版本，升级至最新即可。</p>
+			<hr>
+		</div>
+		<div class="ie-alert-bg" style="display: none;"></div>
+		<div id="_leftAD " class="_float_AD l_AD ">
+			<img src="../../assets/statics/images/online-left.png ">
+			<div class="close_btn " id="left_close"></div>
+			<a class="top1_btn " href="tencent://message/?uin=2598889959&Site=千亿彩票网&Menu=yes "></a>
+			<a class="top2_btn " href="common/trail.html "></a>
+			<div class="two_img "><img src="../../assets/statics/images/download.png"></div>
+		</div>
+		<div id="_rightAD " class="_float_AD r_AD ">
+			<img src="../../assets/statics/images/online-right.png ">
+			<div class="close_btn " id="right"></div>
+			<a class="top1_btn kefu" href="" target="_blank"></a>
+			<a class="top2_btn " href="javascript:void(0)"></a>
+			<div class="two_img "><img src="../../assets/statics/images/download.png "></div>
+		</div>
+
+		<script src="../../assets/js/plugins/jquery/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../assets/js/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../assets/js/global.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../static/public/js/rollups/tripledes.js "></script>
+		<script src="../../static/public/js/components/mode-ecb.js "></script>
+		<script src="../../assets/js/application/move.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../assets/js/application/type.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../assets/js/base.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+
+
+		//获得在线客服地址
+		$.ajax({
+		  url : CONFIG.BASEURL + 'baseData_onlineService',
+		  type: 'get',
+		  dataType: 'json',
+		  success: function (json) {
+		      if(json.code != 200){
+		          return;
+		      } else {
+		          var data = json.data.url;
+		          $(".kefu").attr('href',data);
+		      }
+		  }
+		});
+			$('#left_close').on('click', function() {
+				$('.l_AD').css('display', 'none');
+			})
+			$('#right').on('click', function() {
+				$('.r_AD').css('display', 'none');
+			})
+
+			$('.xzcz,#lotterysList').on('mouseenter', function() {
+				$('#lotterysList').show();
+			});
+			$('.xzcz,#lotterysList').on('mouseleave', function() {
+				$('#lotterysList').hide();
+			});
+
+			$('.all_gpc,.all_all').on('mouseenter', function() {
+				$('#lotterysList').css('display', 'block');
+			})
+			$('.all_gpc,.all_all').on('mouseleave', function() {
+				$('#lotterysList').css('display', 'none');
+			})
+
+			function addFavorite2() {
+				var url = window.location;
+				var title = document.title;
+				var ua = navigator.userAgent.toLowerCase();
+				if(ua.indexOf("360se") > -1) {
+					alert("由于360浏览器功能限制，请按 Ctrl+D 手动收藏！");
+				} else if(ua.indexOf("msie 8") > -1) {
+					window.external.AddToFavoritesBar(url, title); //IE8
+				} else if(document.all) {
+					try {
+						window.external.addFavorite(url, title);
+					} catch(e) {
+						alert('您的浏览器不支持,请按 Ctrl+D 手动收藏!');
+					}
+				} else if(window.sidebar) {
+					window.sidebar.addPanel(title, url, "");
+				} else {
+					alert('您的浏览器不支持,请按 Ctrl+D 手动收藏!');
+				}
+			}
+		</script>
+	</body>
+
+</html>

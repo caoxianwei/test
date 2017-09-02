@@ -1,0 +1,39 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<#assign tool =JspTaglibs["http://caicaike.lottery.com/tag/toolbar"]/>
+<html>
+<head>
+<base href="${basePath}">
+<meta charset="UTF-8">
+<title>系统版本列表</title>
+<#include "/common/easyui_css.inc"/>
+<#include "/common/css.inc"/>
+</head>
+<body>
+<div class="easyui-layout" data-options="fit:true">
+	<div data-options="region:'center', title:'系统管理>>版本管理',iconCls:'icon-texe',cls:'white'">
+          <div  class="quer_label">
+             <label>设备类型：
+                <select class="easyui-combobox" id="selectType" data-options="panelHeight:70">
+                     <option value=''>全部</option>
+                     <option value='1'>ios</option>
+                     <option value='2'>android</option>
+                </select>
+             </label>
+             <label>
+                                         开始时间：<input class="easyui-datebox" style="width:110px" id="startDate" data-options='panelWidth:170'></label>
+             <label>
+                                        结束时间：<input class="easyui-datebox" style="width:110px" id="endDate" data-options='panelWidth:170'></label>
+             <a style="width: 60px;margin-right: 10px;font-size: 18px !important"  id="query"class="easyui-linkbutton green" href="javascript:queryVersionData();">查询</a>
+   		 </div>
+          <div id="tb" class="quer_label">
+             <@tool.bar menuId="${menuid!}"/>
+         </div>
+       <table id="dg"></table>
+</div>  
+</div>
+
+<div id="versionDiv"></div>
+<#include "/common/easyui_js.inc"/>
+<script type="text/javascript" src="pages/sys/version/listVersion.js"></script>
+</body>
+</html>

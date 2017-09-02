@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>会员中心</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/hpn-common.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/global.css">
+    <script>
+        <!--
+//        window.onerror=function(){return true;}
+        // -->
+    </script>
+    <script>
+    <!--
+    // 屏蔽JS错误
+//    window.onerror = function(){return true;}
+    // -->
+    var nowHref = "../error/index.html";
+</script>
+<script src="./letter_files/mobile-detect.min.js.下载"></script><style>
+        .eveb_nav_sub .on,.button_1, .button_1:link, .button_1:visited,.alert_col h5,.onlineService,.head,.layui-layer-popup .layui-layer-title,.xzqd,.game_name .box2_stage p span i.acti,.Betting,.Single,.list_ject ul li .Result p a.acti,.list_ject ul li .Result p a.acti:hover,.top{background:#fa6200!important}
+        .eveb_nav_sub .on a,.bankInfo .name,.help_l_menu .title p .sum,.help_r_main .light,.game_name .box2_stage p span i,.game_name .box1_name  p i,.Account p a.red{color:#fa6200!important}
+        .eveb_nav_sub .on,.game_name .box2_stage p span{border:1px solid #fa6200!important;}
+        .eveb_nav_sub .on,.game_name .box2_stage p span i.acti{color:#fff!important;}
+        .eveb_nav_sub .on a{border-top:1px #fa6200 solid!important;}
+        .eveb_nav_sub ul{border-bottom:1px #fa6200 solid!important;}
+        .alert_col div::-webkit-scrollbar-thumb {background-color: #fa6200!important;}
+    </style>
+<style>
+        .head div h5,.Betting .tabs ul li,.top .nav h1{background:#f87c2d!important}
+        .jf_box .url a,.eveb_form label.error,.eveb_transfer_box .center_wallet .money,.eveb_transfer_box .wallet_list li p{color:#f87c2d!important}
+        .Betting .tabs ul li.acti{background:#fff!important}
+        .button_1, .button_1:link, .button_1:visited{border:1px solid #f87c2d!important;}
+    </style>
+<link type="text/css" rel="stylesheet" href="./letter_files/laydate.css"><link type="text/css" rel="stylesheet" href="./letter_files/laydate(1).css" id="LayDateSkin"><link rel="stylesheet" href="./letter_files/layer.css" id="layuicss-skinlayercss"></head>
+<body><div class="eveb_content">
+    <div class="eveb_sub_nav">
+        <ul class="eveb_sub_nav_type fl">
+            <li class="on"><a href="javascript:void(0)" onclick="changeStatus(this, null)">全部 <em id="totalNum">48</em></a></li>
+            <li><a href="javascript:void(0)" onclick="changeStatus(this, true)">已读<em id="hasReadNum">4</em></a></li>
+            <li><a href="javascript:void(0)" onclick="changeStatus(this, false)">未读 <em id="unReadNum">44</em></a></li>
+        </ul>
+        <div class="eveb_search">
+            <input type="hidden" name="pageIndex" value="1">
+            <input type="hidden" name="hasRead">
+            起止时间：
+            <input name="starttime" id="starttime" type="text" size="11" class="suminp" onclick="laydate({istime: true, format: &#39;YYYY-MM-DD hh:mm&#39;})" value=""> - <input name="endtime" id="endtime" type="text" size="11" class="suminp" onclick="laydate({istime: true, format: &#39;YYYY-MM-DD hh:mm&#39;})" value="">
+
+            <a onclick="shaixuan()" href="javascript:void(0)" class="button_small button_1">筛选</a>
+            <a href="javascript:void(0)" class="button_small button_4" onclick="searchday(1)">今日</a>
+            <a href="javascript:void(0)" class="button_small button_4" onclick="searchday(3)">3天</a>
+            <a href="javascript:void(0)" class="button_small button_4" onclick="searchday(7)">本周</a>
+        </div>
+    </div>
+    <div id="loading" style="display: none;"><img style="display:block;text-align:center;margin:auto;margin-top:429.5px" src="./letter_files/base_loading.gif"></div>
+    <ul class="eveb_letter_list" style="display: block;"><li><div class="eveb_letter_title"><span class="fl"><input type="checkbox" name="ids[]" value="83283"><a href="javascript:void(0)" class="new">温馨提示：尊敬的广大600万会员玩家请注...</a><em>新</em></span><span class="fr">2017-7-12 11:40:38</span></div><div class="detail"><p>温馨提示：尊敬的广大600万会员玩家请注意！公司已经更换了全新的入款账号，公司银行账号不定期更换，请每次存款前，务必先到【银行汇款】入款方式查看账号！以免将款项存入公司已经停用的入款账号内，从而造成不必要的损失及误解~！~
+600万团队敬上！</p><div class="eveb_letter_control"><a href="javascript:void(0)" class="button_small button_3 delete_confirm" onclick="del(83283)">删除</a><a href="javascript:void(0)" class="button_small button_3 readed_confirm" onclick="read(83283)">标记为已读</a></div></div></li><li><div class="eveb_letter_title"><span class="fl"><input type="checkbox" name="ids[]" value="83281"><a href="javascript:void(0)" class="new">温馨提示：尊敬的广大600万会员玩家请注...</a><em>新</em></span><span class="fr">2017-7-12 11:39:49</span></div><div class="detail"><p>温馨提示：尊敬的广大600万会员玩家请注意！公司已经更换了全新的入款账号，公司银行账号不定期更换，请每次存款前，务必先到【银行汇款】入款方式查看账号！以免将款项存入公司已经停用的入款账号内，从而造成不必要的损失及误解~！~
+600万团队敬上！</p><div class="eveb_letter_control"><a href="javascript:void(0)" class="button_small button_3 delete_confirm" onclick="del(83281)">删除</a><a href="javascript:void(0)" class="button_small button_3 readed_confirm" onclick="read(83281)">标记为已读</a></div></div></li><li><div class="eveb_letter_title"><span class="fl"><input type="checkbox" name="ids[]" value="83280"><a href="javascript:void(0)" class="new">温馨提示：尊敬的广大600万会员玩家请注...</a><em>新</em></span><span class="fr">2017-7-12 11:39:00</span></div><div class="detail"><p>温馨提示：尊敬的广大600万会员玩家请注意！公司已经更换了全新的入款账号，公司银行账号不定期更换，请每次存款前，务必先到【银行汇款】入款方式查看账号！以免将款项存入公司已经停用的入款账号内，从而造成不必要的损失及误解~！~
+600万团队敬上！</p><div class="eveb_letter_control"><a href="javascript:void(0)" class="button_small button_3 delete_confirm" onclick="del(83280)">删除</a><a href="javascript:void(0)" class="button_small button_3 readed_confirm" onclick="read(83280)">标记为已读</a></div></div></li><li><div class="eveb_letter_title"><span class="fl"><input type="checkbox" name="ids[]" value="83237"><a href="javascript:void(0)" class="new">温馨提示：尊敬的600万会员玩家请留意：...</a><em>新</em></span><span class="fr">2017-7-12 10:28:00</span></div><div class="detail"><p>温馨提示：尊敬的600万会员玩家请留意：公司的工商银行入款账号：甄蕾，已停用！请玩家暂时使用【在线支付//微信扫码/微信转账方式】进行入款，望广大会员玩家互相转告通知，感谢您的配合！600万团队敬上！！！</p><div class="eveb_letter_control"><a href="javascript:void(0)" class="button_small button_3 delete_confirm" onclick="del(83237)">删除</a><a href="javascript:void(0)" class="button_small button_3 readed_confirm" onclick="read(83237)">标记为已读</a></div></div></li><li><div class="eveb_letter_title"><span class="fl"><input type="checkbox" name="ids[]" value="83236"><a href="javascript:void(0)" class="new">温馨提示：尊敬的600万会员玩家请留意：...</a><em>新</em></span><span class="fr">2017-7-12 10:27:24</span></div><div class="detail"><p>温馨提示：尊敬的600万会员玩家请留意：公司的工商银行入款账号：甄蕾，已停用！请玩家暂时使用【在线支付//微信扫码/微信转账方式】进行入款，望广大会员玩家互相转告通知，感谢您的配合！600万团队敬上！！！</p><div class="eveb_letter_control"><a href="javascript:void(0)" class="button_small button_3 delete_confirm" onclick="del(83236)">删除</a><a href="javascript:void(0)" class="button_small button_3 readed_confirm" onclick="read(83236)">标记为已读</a></div></div></li><li><div class="eveb_letter_title"><span class="fl"><input type="checkbox" name="ids[]" value="83235"><a href="javascript:void(0)" class="new">温馨提示：尊敬的600万会员玩家请留意：...</a><em>新</em></span><span class="fr">2017-7-12 10:26:34</span></div><div class="detail"><p>温馨提示：尊敬的600万会员玩家请留意：公司的工商银行入款账号：甄蕾，已停用！请玩家暂时使用【在线支付//微信扫码/微信转账方式】进行入款，望广大会员玩家互相转告通知，感谢您的配合！600万团队敬上！！！</p><div class="eveb_letter_control"><a href="javascript:void(0)" class="button_small button_3 delete_confirm" onclick="del(83235)">删除</a><a href="javascript:void(0)" class="button_small button_3 readed_confirm" onclick="read(83235)">标记为已读</a></div></div></li><li><div class="eveb_letter_title"><span class="fl"><input type="checkbox" name="ids[]" value="73921"><a href="javascript:void(0)" class="new">温馨提示：尊敬的600万会员玩家请留意：...</a><em>新</em></span><span class="fr">2017-7-03 05:44:38</span></div><div class="detail"><p>温馨提示：尊敬的600万会员玩家请留意：公司的支付宝二维码入款账号：伍环香，已停用！请玩家暂时使用其【银行卡转账/在线支付/微信转账方式】进行入款，望广大会员玩家互相转告通知，感谢您的配合！600万团队敬上！！！</p><div class="eveb_letter_control"><a href="javascript:void(0)" class="button_small button_3 delete_confirm" onclick="del(73921)">删除</a><a href="javascript:void(0)" class="button_small button_3 readed_confirm" onclick="read(73921)">标记为已读</a></div></div></li><li><div class="eveb_letter_title"><span class="fl"><input type="checkbox" name="ids[]" value="73920"><a href="javascript:void(0)" class="new">温馨提示：尊敬的600万会员玩家请留意：...</a><em>新</em></span><span class="fr">2017-7-03 05:42:26</span></div><div class="detail"><p>温馨提示：尊敬的600万会员玩家请留意：公司的支付宝二维码入款账号：伍环香，已停用！请玩家暂时使用其【银行卡转账/在线支付/微信转账方式】进行入款，望广大会员玩家互相转告通知，感谢您的配合！600万团队敬上！！！</p><div class="eveb_letter_control"><a href="javascript:void(0)" class="button_small button_3 delete_confirm" onclick="del(73920)">删除</a><a href="javascript:void(0)" class="button_small button_3 readed_confirm" onclick="read(73920)">标记为已读</a></div></div></li><li><div class="eveb_letter_title"><span class="fl"><input type="checkbox" name="ids[]" value="71768"><a href="javascript:void(0)" class="new">您好，您的提款申请因"银行信息有误，请更...</a><em>新</em></span><span class="fr">2017-7-01 13:47:04</span></div><div class="detail"><p>您好，您的提款申请因"银行信息有误，请更换银行卡"原因导致审核未通过，如有疑问请及时联系我们。</p><div class="eveb_letter_control"><a href="javascript:void(0)" class="button_small button_3 delete_confirm" onclick="del(71768)">删除</a><a href="javascript:void(0)" class="button_small button_3 readed_confirm" onclick="read(71768)">标记为已读</a></div></div></li><li><div class="eveb_letter_title"><span class="fl"><input type="checkbox" name="ids[]" value="71675"><a href="javascript:void(0)" class="new">您好，您的提款申请因"流水不足"原因导致...</a><em>新</em></span><span class="fr">2017-7-01 11:49:24</span></div><div class="detail"><p>您好，您的提款申请因"流水不足"原因导致审核未通过，如有疑问请及时联系我们。</p><div class="eveb_letter_control"><a href="javascript:void(0)" class="button_small button_3 delete_confirm" onclick="del(71675)">删除</a><a href="javascript:void(0)" class="button_small button_3 readed_confirm" onclick="read(71675)">标记为已读</a></div></div></li><li><div class="eveb_letter_title"><span class="fl"><input type="checkbox" name="ids[]" value="71674"><a href="javascript:void(0)" class="new">您好，您的提款申请因"流水不足"原因导致...</a><em>新</em></span><span class="fr">2017-7-01 11:47:12</span></div><div class="detail"><p>您好，您的提款申请因"流水不足"原因导致审核未通过，如有疑问请及时联系我们。</p><div class="eveb_letter_control"><a href="javascript:void(0)" class="button_small button_3 delete_confirm" onclick="del(71674)">删除</a><a href="javascript:void(0)" class="button_small button_3 readed_confirm" onclick="read(71674)">标记为已读</a></div></div></li><li><div class="eveb_letter_title"><span class="fl"><input type="checkbox" name="ids[]" value="71667"><a href="javascript:void(0)" class="new">您好，您的提款申请因"流水不足"原因导致...</a><em>新</em></span><span class="fr">2017-7-01 11:37:13</span></div><div class="detail"><p>您好，您的提款申请因"流水不足"原因导致审核未通过，如有疑问请及时联系我们。</p><div class="eveb_letter_control"><a href="javascript:void(0)" class="button_small button_3 delete_confirm" onclick="del(71667)">删除</a><a href="javascript:void(0)" class="button_small button_3 readed_confirm" onclick="read(71667)">标记为已读</a></div></div></li><li><div class="eveb_letter_title"><span class="fl"><input type="checkbox" name="ids[]" value="71419"><a href="javascript:void(0)" class="new">温馨提示，尊敬的600万会员玩家，由于支...</a><em>新</em></span><span class="fr">2017-7-01 00:48:27</span></div><div class="detail"><p>温馨提示，尊敬的600万会员玩家，由于支付宝和微信配合公安部严查，为十九大献礼，会员如果出现无法充值现象，请玩家进行【银行转账】或【在线充值】进行充值，充值立即到账，600万团队敬上！</p><div class="eveb_letter_control"><a href="javascript:void(0)" class="button_small button_3 delete_confirm" onclick="del(71419)">删除</a><a href="javascript:void(0)" class="button_small button_3 readed_confirm" onclick="read(71419)">标记为已读</a></div></div></li><li><div class="eveb_letter_title"><span class="fl"><input type="checkbox" name="ids[]" value="71140"><a href="javascript:void(0)" class="new">您好，您的提款申请因"流水不足"原因导致...</a><em>新</em></span><span class="fr">2017-6-30 18:01:40</span></div><div class="detail"><p>您好，您的提款申请因"流水不足"原因导致审核未通过，如有疑问请及时联系我们。</p><div class="eveb_letter_control"><a href="javascript:void(0)" class="button_small button_3 delete_confirm" onclick="del(71140)">删除</a><a href="javascript:void(0)" class="button_small button_3 readed_confirm" onclick="read(71140)">标记为已读</a></div></div></li><li><div class="eveb_letter_title"><span class="fl"><input type="checkbox" name="ids[]" value="71121"><a href="javascript:void(0)" class="new">您好，您的提款申请因"流水不足"原因导致...</a><em>新</em></span><span class="fr">2017-6-30 17:46:37</span></div><div class="detail"><p>您好，您的提款申请因"流水不足"原因导致审核未通过，如有疑问请及时联系我们。</p><div class="eveb_letter_control"><a href="javascript:void(0)" class="button_small button_3 delete_confirm" onclick="del(71121)">删除</a><a href="javascript:void(0)" class="button_small button_3 readed_confirm" onclick="read(71121)">标记为已读</a></div></div></li><li><div class="eveb_letter_title"><span class="fl"><input type="checkbox" name="ids[]" value="65630"><a href="javascript:void(0)" class="new">温馨提示！根据人民银行2017年支付清算...</a><em>新</em></span><span class="fr">2017-6-23 22:47:24</span></div><div class="detail"><p>温馨提示！根据人民银行2017年支付清算系统停运的安排: 6月24日00:00至08:00（北京时间）小额支付汇路和网银互联汇路停运，跨行转账和跨行资金归集等业务暂停服务哦，届时人民银行跨行维护期间，我公司仅支持工商银行出入款操作，在线支付入款方式可正常入款，使用其它银行的玩家请您于早上8点之后再进行取款操作，银行维护期间，给您带来不便请您谅解哦，谢谢~</p><div class="eveb_letter_control"><a href="javascript:void(0)" class="button_small button_3 delete_confirm" onclick="del(65630)">删除</a><a href="javascript:void(0)" class="button_small button_3 readed_confirm" onclick="read(65630)">标记为已读</a></div></div></li><li><div class="eveb_letter_title"><span class="fl"><input type="checkbox" name="ids[]" value="65629"><a href="javascript:void(0)" class="new">温馨提示！根据人民银行2017年支付清算...</a><em>新</em></span><span class="fr">2017-6-23 22:45:53</span></div><div class="detail"><p>温馨提示！根据人民银行2017年支付清算系统停运的安排: 6月24日00:00至08:00（北京时间）小额支付汇路和网银互联汇路停运，跨行转账和跨行资金归集等业务暂停服务哦，届时人民银行跨行维护期间，我公司仅支持工商银行出入款操作，在线支付入款方式可正常入款，使用其它银行的玩家请您于早上8点之后再进行取款操作，银行维护期间，给您带来不便请您谅解哦，谢谢~</p><div class="eveb_letter_control"><a href="javascript:void(0)" class="button_small button_3 delete_confirm" onclick="del(65629)">删除</a><a href="javascript:void(0)" class="button_small button_3 readed_confirm" onclick="read(65629)">标记为已读</a></div></div></li><li><div class="eveb_letter_title"><span class="fl"><input type="checkbox" name="ids[]" value="57185"><a href="javascript:void(0)" class="new">温馨提示，尊敬的600万会员玩家，如果您...</a><em>新</em></span><span class="fr">2017-6-13 16:30:19</span></div><div class="detail"><p>温馨提示，尊敬的600万会员玩家，如果您在充值时出现无法充值现象，可以第一选着使用QQ进行进行支付，以便您更好的进行游戏，600万团队敬上！</p><div class="eveb_letter_control"><a href="javascript:void(0)" class="button_small button_3 delete_confirm" onclick="del(57185)">删除</a><a href="javascript:void(0)" class="button_small button_3 readed_confirm" onclick="read(57185)">标记为已读</a></div></div></li><li><div class="eveb_letter_title"><span class="fl"><input type="checkbox" name="ids[]" value="50437"><a href="javascript:void(0)" class="new">温馨提示，尊敬的600万会员玩家，您在使...</a><em>新</em></span><span class="fr">2017-6-04 15:59:51</span></div><div class="detail"><p>温馨提示，尊敬的600万会员玩家，您在使用微信转账时请添加微信专员微信号，进行转账后提交订单，有任何的问题请联系在线客服进行咨询，600万团队敬上！</p><div class="eveb_letter_control"><a href="javascript:void(0)" class="button_small button_3 delete_confirm" onclick="del(50437)">删除</a><a href="javascript:void(0)" class="button_small button_3 readed_confirm" onclick="read(50437)">标记为已读</a></div></div></li><li><div class="eveb_letter_title"><span class="fl"><input type="checkbox" name="ids[]" value="49199"><a href="javascript:void(0)" class="new">【尊敬的600万会员玩家，您好，目前微信...</a><em>新</em></span><span class="fr">2017-6-02 22:57:02</span></div><div class="detail"><p>【尊敬的600万会员玩家，您好，目前微信入款账户kk64865已经停用，请选择其他微信进行存款操作~】</p><div class="eveb_letter_control"><a href="javascript:void(0)" class="button_small button_3 delete_confirm" onclick="del(49199)">删除</a><a href="javascript:void(0)" class="button_small button_3 readed_confirm" onclick="read(49199)">标记为已读</a></div></div></li><li><div class="eveb_letter_title"><span class="fl"><input type="checkbox" name="ids[]" value="38016"><a href="javascript:void(0)" class="new">◆重要讯息◆】尊敬的600W会员玩家，您...</a><em>新</em></span><span class="fr">2017-5-20 02:14:12</span></div><div class="detail"><p>◆重要讯息◆】尊敬的600W会员玩家，您好！六百万彩票网将于5月20号2点维护，维护时间大约3小时，给您带来的不便望您见谅，谢谢配合！！！</p><div class="eveb_letter_control"><a href="javascript:void(0)" class="button_small button_3 delete_confirm" onclick="del(38016)">删除</a><a href="javascript:void(0)" class="button_small button_3 readed_confirm" onclick="read(38016)">标记为已读</a></div></div></li><li><div class="eveb_letter_title"><span class="fl"><input type="checkbox" name="ids[]" value="37967"><a href="javascript:void(0)" class="new">❤❤❤根据中国人民银行等各大银行通知，2...</a><em>新</em></span><span class="fr">2017-5-20 00:51:11</span></div><div class="detail"><p>❤❤❤根据中国人民银行等各大银行通知，2017年5月20日0时至8时所有银行跨行支付系统暂停维护，期间各大行跨行汇款业务暂停，公司无法为您进行提款，请于北京时间8时进行提款操作，给您带来不便，请您见谅呢，谢谢~❤❤❤
+</p><div class="eveb_letter_control"><a href="javascript:void(0)" class="button_small button_3 delete_confirm" onclick="del(37967)">删除</a><a href="javascript:void(0)" class="button_small button_3 readed_confirm" onclick="read(37967)">标记为已读</a></div></div></li><li><div class="eveb_letter_title"><span class="fl"><input type="checkbox" name="ids[]" value="37966"><a href="javascript:void(0)" class="new">❤❤❤根据中国人民银行等各大银行通知，2...</a><em>新</em></span><span class="fr">2017-5-20 00:48:16</span></div><div class="detail"><p>❤❤❤根据中国人民银行等各大银行通知，2017年5月20日0时至8时所有银行跨行支付系统暂停维护，期间各大行跨行汇款业务暂停，公司无法为您进行提款，请于北京时间8时进行提款操作，给您带来不便，请您见谅呢，谢谢~❤❤❤</p><div class="eveb_letter_control"><a href="javascript:void(0)" class="button_small button_3 delete_confirm" onclick="del(37966)">删除</a><a href="javascript:void(0)" class="button_small button_3 readed_confirm" onclick="read(37966)">标记为已读</a></div></div></li><li><div class="eveb_letter_title"><span class="fl"><input type="checkbox" name="ids[]" value="37934"><a href="javascript:void(0)" class="new">...</a><em>新</em></span><span class="fr">2017-5-20 00:23:36</span></div><div class="detail"><p></p><div class="eveb_letter_control"><a href="javascript:void(0)" class="button_small button_3 delete_confirm" onclick="del(37934)">删除</a><a href="javascript:void(0)" class="button_small button_3 readed_confirm" onclick="read(37934)">标记为已读</a></div></div></li><li style="border-bottom: 0px;"><div class="eveb_letter_title"><span class="fl"><input type="checkbox" name="ids[]" value="37891"><a href="javascript:void(0)" class="new">尊敬的广大600w彩票网会员，您好！天津...</a><em>新</em></span><span class="fr">2017-5-19 23:17:23</span></div><div class="detail"><p>尊敬的广大600w彩票网会员，您好！天津时时彩于23:00暂停维护中，请玩家进行别的游戏彩种进行游戏，感谢您对600W彩票网的支持与厚爱，祝您生活愉快，谢谢~</p><div class="eveb_letter_control"><a href="javascript:void(0)" class="button_small button_3 delete_confirm" onclick="del(37891)">删除</a><a href="javascript:void(0)" class="button_small button_3 readed_confirm" onclick="read(37891)">标记为已读</a></div></div></li></ul>
+    <div class="eveb_list_footer" style="display: block;">
+        <div class="eveb_list_select fl">
+            <label><input type="checkbox" id="eveb_select_all"> 全选</label>
+            <a href="javascript:void(0)" class="button_small button_3 delete_confirm" onclick="delSelect()">删除</a>
+            <a href="javascript:void(0)" class="button_small button_3 readed_confirm" onclick="readSelect()">标记为已读</a>
+        </div>
+        <div class="eveb_page fr"><span style="margin:0 3px;float:left;width:auto;padding:0 5px;height:25px;line-height:25px;">总共2页，48条，当前第1页</span><a href="javascript:void(0)" style="margin:0 3px;float:left;width:auto;padding:0 5px;">上一页</a><span style="margin:0 3px;float:left;width:auto;padding:0 5px;height:25px;line-height:25px;">跳转到</span><input type="text" id="pageNum" style="margin:0 3px;float:left;border:1px solid #eee;width:30px;line-height:25px;height:25px;" value="1"><button onclick="goPage(document.getElementById(&#39;pageNum&#39;).value)" type="text" style="margin:0 3px;float:left;border:1px solid #eee;width:30px;line-height:25px;height:25px;background:#fa6200;padding:0 5px;width:auto;color:#fff;font-size:14px;" value="0">确定</button><a href="javascript:void(0)" onclick="goPage(2)" style="margin:0 3px;float:left;width:auto;padding:0 5px;">下一页</a></div>
+    </div>
+</div>
+<script type="text/javascript" src="../static/public/js/jquery.min.js"></script>
+<script type="text/javascript" src="../static/public/js/jquery.validate.min.js"></script>
+<script type="text/javascript" src="../static/public/js/laydate.js"></script>
+<script type="text/javascript" src="../static/public/js/validate.js"></script>
+<script type="text/javascript" src="../static/public/js/global.js"></script>
+<script type="text/javascript" src="../static/public/js/jquery.form.min.js"></script>
+<script type="text/javascript" src="../static/public/js/jquery.md5.js"></script>
+<script type="text/javascript" src="../static/public/layer/layer.js"></script>
+<script type="text/javascript" src="../static/public/js/jquery.nicescroll.js"></script>
+<script type="text/javascript" src="../static/public/js/clipboard.min.js"></script>
+<script src="../static/public/js/dateformat.js"></script>
+<script src="../static/public/js/template.js"></script>
+<script src="../static/public/js/jquery.cookie.js"></script><!--自定义封装函数-->
+
+<script src="../static/public/js/rollups/tripledes.js"></script>
+<script src="../static/public/js/components/mode-ecb.js"></script>
+<script src="../static/public/js/move.js"></script>
+<script src="../static/public/js/base.js"></script>
+
+<script>
+    $(function() {
+        parent.hideLoading();
+    });
+</script><script>
+    $(function() {
+        getData();
+    });
+    function goPage(pageIndex) {
+        $("input[name='pageIndex']").val(pageIndex);
+        getData();
+    }
+    function shaixuan() {
+        $("input[name='pageIndex']").val(1);
+        getData();
+    }
+    function changeStatus(obj, hasRead) {
+        $(".eveb_sub_nav_type .on").removeClass("on");
+        $(obj).parent().addClass("on");
+        if (null == hasRead) {
+            $("input[name='hasRead']").val('');
+        } else {
+            $("input[name='hasRead']").val(hasRead);
+        }
+        $("input[name='pageIndex']").val(1);
+        getData();
+    }
+    function showLoading() {
+        var height = $(window).height() - Tools.parseInt($(".eveb_content").css("padding-top")) - $(".eveb_sub_nav").height();
+        $("#loading").html('<img style="display:block;text-align:center;margin:auto;margin-top:' + (height / 2) + 'px" src="../static/public/img/base_loading.gif"/>');
+        $(".eveb_letter_list").hide();
+        $(".eveb_list_footer").hide();
+        $("#loading").show();
+    }
+    function hideLoading() {
+        $("#loading").hide();
+        $(".eveb_letter_list").show();
+        $(".eveb_list_footer").show();
+        $("input[type='checkbox']").removeAttr("checked");
+    }
+    function getData() {
+        ajaxRequest({
+            url: "ajaxGetLetter.json",
+            data: {
+                pageIndex: $("input[name='pageIndex']").val(),
+                hasRead: $("input[name='hasRead']").val(),
+                startTime: $("input[name='starttime']").val(),
+                endTime: $("input[name='endtime']").val()
+            },
+            beforeSend: function() {
+                showLoading();
+            },
+            success: function(json) {
+                if (json.result != 1) {
+                    return;
+                }
+
+                $("#totalNum").html(json.totalNum);
+                $("#hasReadNum").html(json.totalHasReadNum);
+                $("#unReadNum").html(json.totalUnReadNum);
+                if (json.userInboxList.length == 0) {
+                    $("#loading").html('<p style="text-align:center;padding:15px 0">暂无数据</p>');
+                    return;
+                }
+                $("input[name='pageIndex']").val(json.pageNum);
+
+                // 数据
+                var str = '';
+                $.each(json.userInboxList, function(index, value) {
+                    str += '<li>';
+                    str += '<div class="eveb_letter_title">';
+                    str += '<span class="fl">';
+                    str += '<input type="checkbox" name="ids[]" value="' + value.id + '">';
+                    str += '<a href="javascript:void(0)" '+(value.hasRead ? '' : 'class="new"')+'>' + value.content.substr(0, 20) + '...</a>';
+                    str += value.hasRead ? '' : '<em>新</em>';
+                    str += '</span>';
+                    str += '<span class="fr">' + Tools.formatDate(value.createTime) + '</span>';
+                    str += '</div>';
+                    str += '<div class="detail">';
+                    str += '<p>' + value.content + '</p>';
+                    str += '<div class="eveb_letter_control">';
+                    str += '<a href="javascript:void(0)" class="button_small button_3 delete_confirm" onclick="del(' + value.id + ')">删除</a>';
+                    if (!value.hasRead) {
+                        str += '<a href="javascript:void(0)" class="button_small button_3 readed_confirm" onclick="read(' + value.id + ')">标记为已读</a>';
+                    }
+                    str += '</div>';
+                    str += '</div>';
+                    str += '</li>';
+                });
+                $(".eveb_letter_list").html(str);
+                // 分页
+                str = '';
+                str += '<span style="margin:0 3px;float:left;width:auto;padding:0 5px;height:25px;line-height:25px;">总共' + (Math.ceil(json.total / json.pageSize)) + '页，' + json.total + '条，当前第' + json.pageNum + '页</span>';
+                if (json.hasPreviousPage) {
+                    str += '<a href="javascript:void(0)" onclick="goPage(' + (json.prePage) + ')" style="margin:0 3px;float:left;width:auto;padding:0 5px;">上一页</a>';
+                } else {
+                    str += '<a href="javascript:void(0)" style="margin:0 3px;float:left;width:auto;padding:0 5px;">上一页</a>';
+                }
+                str += '<span style="margin:0 3px;float:left;width:auto;padding:0 5px;height:25px;line-height:25px;">跳转到</span>';
+                str += '<input type="text" id="pageNum" style="margin:0 3px;float:left;border:1px solid #eee;width:30px;line-height:25px;height:25px;" value="' + json.pageNum + '" />';
+                str += '<button onclick="goPage(document.getElementById(\'pageNum\').value)" type="text" style="margin:0 3px;float:left;border:1px solid #eee;width:30px;line-height:25px;height:25px;background:#fa6200;padding:0 5px;width:auto;color:#fff;font-size:14px;" value="0">确定</button>';
+                if (json.hasNextPage) {
+                    str += '<a href="javascript:void(0)" onclick="goPage(' + (json.nextPage) + ')" style="margin:0 3px;float:left;width:auto;padding:0 5px;">下一页</a>';
+                } else {
+                    str += '<a href="javascript:void(0)" style="margin:0 3px;float:left;width:auto;padding:0 5px;">下一页</a>';
+                }
+                $(".eveb_page").html(str);
+                eveb_letter_list();
+                eveb_select_all();
+                hideLoading();
+            }
+        });
+    }
+    //站内信
+    function eveb_letter_list(){
+        $('.eveb_letter_list li .eveb_letter_title').click(function(){
+            $(this).parent('li').css('background','#F5F5F5').siblings().css('background','#FFF');
+            if(!$(this).siblings('.detail').is(':visible')){
+                $(this).siblings('.detail').slideDown().parent('li').siblings().children('.detail').slideUp();
+            }else{
+                $(this).siblings('.detail').slideUp();
+                $(this).parent('li').css('background','#FFF');
+            }
+        });
+        $('.eveb_letter_list li:last').css('border-bottom',0);
+    }
+
+    //全选
+    function eveb_select_all(){
+        $("#eveb_select_all").click(function(){
+            $("input[name='ids[]']").attr("checked", this.checked).prop("checked", this.checked);
+        });
+    }
+
+    function delSelect() {
+        var ids = [];
+        $("input[name='ids[]']").each(function() {
+            if ($(this).is(":checked")) {
+                ids.push($(this).val());
+            }
+        });
+
+        if (ids.length == 0) {
+            layer.msg("请选择");
+            return;
+        }
+        delList(ids);
+    }
+    function del(id) {
+        var ids = [];
+        ids.push(id);
+        delList(ids);
+    }
+    function delList(ids) {
+        if (!confirm("确认要删除吗？")) {
+            return;
+        };
+    }
+
+    function readSelect() {
+        var ids = [];
+        $("input[name='ids[]']").each(function() {
+            if ($(this).is(":checked")) {
+                ids.push($(this).val());
+            }
+        });
+
+        if (ids.length == 0) {
+            layer.msg("请选择");
+            return;
+        }
+        readList(ids);
+    }
+    function read(id) {
+        var ids = [];
+        ids.push(id);
+        readList(ids);
+    }
+    function readList(ids) {
+        ajaxRequest({
+            url: "http://app.caicaike.com/api/member/ajaxReadZnx.json",
+            data: {
+                ids: ids
+            },
+            beforeSend: function() {
+                showLoading();
+            },
+            success: function(json) {
+                if (json.result == 1) {
+
+                }
+                getData();
+            }
+        });
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<#assign tool =JspTaglibs["http://caicaike.lottery.com/tag/toolbar"]/>
+<html>
+<head>
+<base href="${basePath}">
+<meta charset="UTF-8">
+<title>赔率列表页面</title>
+<#include "/common/easyui_css.inc"/>
+<#include "/common/css.inc"/>
+<style type="text/css">
+.textbox{
+  min-width: 50px !important;
+}
+.datagrid-editable-input {
+    margin: 0;
+    padding: 0px !important;
+    border: 1px solid #95B8E7;
+    font-size: 14px !important;
+    outline-style: none;
+    -moz-border-radius: 0 0 0 0;
+    -webkit-border-radius: 0 0 0 0;
+    border-radius: 2px !important;
+    min-height:30px
+}
+</style>
+</head>
+<body>
+<input type="hidden" id="gameType" value="${parames.gameType}" />
+<input type="hidden" id="playType" value="${parames.playType}" />
+<div  style="margin-top: 10px">
+<div id="tb" class="quer_label">
+    <@tool.bar menuId="${menuid!}"/>
+</div>  
+   <div style="margin-top: 10px">
+     <#if titleList?? && (titleList?size > 0)>
+        <#list titleList as title>
+           <div class="titlebar"><img src="images/texe.png"><span>${title}</span></div>
+           <table class="table table" style="width:100%; margin:0 auto; margin-bottom:20px;margin-left: 0%;border-collapse:separate; border-spacing:10px;">
+           <tbody>
+              <#assign tdIndex=0>
+              <#list dataList as item>
+                <#if item.title == title>
+                  <#if tdIndex%3==0>
+                    <tr>
+                  </#if>
+                  <#assign tdIndex=tdIndex + 1>
+	                <td>
+	                  <table class="table" style="border:1px solid #e5e5e5;" >
+	                    <tr><td class="td-center"><label>${item.option_title}</label></td></tr>
+	                    <tr ><td class="td-center">
+	                       <input type="hidden" name="option_id" value="${item.bet_option_id?c}" />
+	                       <input type="hidden" id="game_type_${item.bet_option_id?c}" value="${item.game_type}" />
+	                       <input type="hidden" id="play_type_${item.bet_option_id?c}" value="${item.play_type}" />
+	                       <#if item.bet_rate != null && (item.bet_rate != "-1")>
+	                          <input type="text" id="bet_rate_${item.bet_option_id?c}" value="${item.bet_rate?c}" class="easyui-textbox" style="width:70px" />
+	                        <#else>
+	                          <input type="text" id="bet_rate_${item.bet_option_id?c}" value="${item.bet_rate2}" class="easyui-textbox" style="width:70px" />
+	                       </#if>
+	                       <select id="status_${item.bet_option_id?c}" class="easyui-combobox" style="width:70px" data-options="panelHeight:50">
+	                          <option value="1" ${(item.status=='1')?string('selected','')}>开</option>
+	                          <option value="0" ${(item.status=='0')?string('selected','')}>关</option>
+	                       </select>
+	                       <a class="l-btn l-btn-small blue-x" onclick="javascript:saveBetRate('${item.bet_option_id?c}')" style="padding: 5px !important;border-color:#30acf2">保存</a>
+	                    </td></tr>
+	                    
+	                  </table>	                
+	                </td>
+	              <#if (tdIndex+3)%3==0>
+                    </tr>
+                  </#if>
+                </#if>
+              </#list>
+           </tbody>    
+       </table>
+        </#list>
+     </#if>
+   </div>
+       
+</div>
+<br>
+<#include "/common/easyui_js.inc"/>
+<script type="text/javascript" src="${basePath}pages/paramset/betrate/listBetrateInfo.js"></script>
+</body>
+</html>

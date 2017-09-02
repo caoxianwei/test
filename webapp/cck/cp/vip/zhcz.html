@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>会员中心</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/hpn-common.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/global.css">
+
+    <style>
+        .eveb_nav_sub li{min-width: 200px;}
+        .eveb_form .eveb_bank_list.mode_list{overflow: inherit; height: 50px; line-height: 50px;}
+        .xxczForm .eveb_form{margin-top: -40px;}
+        .imgs{ max-height: 300px; overflow: auto; padding-left: 50px;}
+        .imgs img.accountImg{ width: 40px; padding: 8px 16px;}
+        .imgs label { cursor: pointer;display: inline-block;}
+    </style>
+    <script>
+        <!--
+//        window.onerror=function(){return true;}
+        // -->
+    </script>
+    <script>
+    <!--
+    // 屏蔽JS错误
+//    window.onerror = function(){return true;}
+    // -->
+    var nowHref = "../error/index.html";
+</script>
+
+<script src="../static/public/js/mobile-detect.min.js"></script>
+    <style>
+        .eveb_content{display: none;}
+        .eveb_nav_sub .on,.button_1, .button_1:link, .button_1:visited,.alert_col h5,.onlineService,.head,.layui-layer-popup .layui-layer-title,.xzqd,.game_name .box2_stage p span i.acti,.Betting,.Single,.list_ject ul li .Result p a.acti,.list_ject ul li .Result p a.acti:hover,.top{background:#fa6200!important}
+        .eveb_nav_sub .on a,.bankInfo .name,.help_l_menu .title p .sum,.help_r_main .light,.game_name .box2_stage p span i,.game_name .box1_name  p i,.Account p a.red{color:#fa6200!important}
+        .eveb_nav_sub .on,.game_name .box2_stage p span{border:1px solid #fa6200!important;}
+        .eveb_nav_sub .on,.game_name .box2_stage p span i.acti{color:#fff!important;}
+        .eveb_nav_sub .on a{border-top:1px #fa6200 solid!important;}
+        .eveb_nav_sub ul{border-bottom:1px #fa6200 solid!important;}
+        .alert_col div::-webkit-scrollbar-thumb {background-color: #fa6200!important;}
+        .head div h5,.Betting .tabs ul li,.top .nav h1{background:#f87c2d!important}
+        .jf_box .url a,.eveb_form label.error,.eveb_transfer_box .center_wallet .money,.eveb_transfer_box .wallet_list li p{color:#f87c2d!important}
+        .Betting .tabs ul li.acti{background:#fff!important}
+        .button_1, .button_1:link, .button_1:visited{border:1px solid #f87c2d!important;}
+        .label{
+        	position: relative;
+        	left: -6px;
+        }
+    </style>
+    <link type="text/css" rel="stylesheet" href="../static/public/layer/skin/default/laydate.css">
+    <link rel="stylesheet" href="../static/public/layer/skin/default/layer.css" id="layuicss-skinlayercss">
+</head>
+<body><div class="eveb_content">
+    <div class="eveb_nav_sub">
+        <ul class="clearfix">
+            <li class="on"><a href="javascript:void(0)">银行转账</a></li>
+            <li><a href="javascript:void(0)">支付宝或微信（在线充值）</a></li>
+            <li><a href="javascript:void(0)">支付宝或微信（线下充值）</a></li>
+            </ul>
+    </div>
+    <div class="eveb_content">
+        <form name="czForm" novalidate="novalidate" onsubmit="return false;" class="czForm">
+            <ul class="eveb_form">
+                <li>
+                    <span>收款帐号：</span>
+
+                    <select name="bankCardId" id="bankCardId">
+                        <option value="" data-bank-account-no="0">请选择…</option>
+                        </select>
+                </li>
+                <li id="skxx">
+                </li>
+
+                <li>
+                    <span>转出银行：</span>
+                    <div class="eveb_form_box eveb_bank_list yhzz">
+                        <label>
+                            <input type="radio" name="userBankName" value="中国工商银行">
+                            <em class="banklogo bank-icbc"></em>
+                        </label>
+                        <label>
+                            <input type="radio" name="userBankName" value="中国农业银行">
+                            <em class="banklogo bank-abchina"></em>
+                        </label>
+                        <label>
+                            <input type="radio" name="userBankName" value="中国建设银行">
+                            <em class="banklogo bank-ccb"></em>
+                        </label>
+                        <label>
+                            <input type="radio" name="userBankName" value="中国银行">
+                            <em class="banklogo bank-chinabank"></em>
+                        </label>
+                        <label>
+                            <input type="radio" name="userBankName" value="交通银行">
+                            <em class="banklogo bank-comm"></em>
+                        </label>
+                        <label>
+                            <input type="radio" name="userBankName" value="招商银行">
+                            <em class="banklogo bank-cmb"></em>
+                        </label>
+                        <label>
+                            <input type="radio" name="userBankName" value="兴业银行">
+                            <em class="banklogo bank-cib"></em>
+                        </label>
+                        <label>
+                            <input type="radio" name="userBankName" value="浦发银行">
+                            <em class="banklogo bank-spdb"></em>
+                        </label>
+                        <label>
+                            <input type="radio" name="userBankName" value="华夏银行">
+                            <em class="banklogo bank-hxb"></em>
+                        </label>
+                        <label>
+                            <input type="radio" name="userBankName" value="中信银行">
+                            <em class="banklogo bank-ecitic"></em>
+                        </label>
+                        <label>
+                            <input type="radio" name="userBankName" value="中国光大银行">
+                            <em class="banklogo bank-cebbank"></em>
+                        </label>
+                        <label>
+                            <input type="radio" name="userBankName" value="广发银行">
+                            <em class="banklogo bank-cgbchina"></em>
+                        </label>
+                        <label>
+                            <input type="radio" name="userBankName" value="中国邮政储蓄银行">
+                            <em class="banklogo bank-psbc"></em>
+                        </label>
+                        <label>
+                            <input type="radio" name="userBankName" value="平安银行">
+                            <em class="banklogo bank-pingan"></em>
+                        </label>
+                        <label>
+                            <input type="radio" name="userBankName" value="上海银行">
+                            <em class="banklogo bank-bankofshanghai"></em>
+                        </label>
+                        <label>
+                            <input type="radio" name="userBankName" value="其他银行">
+                            <font>其他银行</font>
+                        </label>
+                    </div>
+                    <div class="parentfr">
+                        <div class="fr">
+                            <label for="userBankName" class="error"></label>
+                            <a href="javascript:;" class="button_small button_2" id="eveb_bank_open" onclick="eveb_bank_more(0)" style="">+ 更多银行</a>
+                            <a href="javascript:;" class="button_small button_2" id="eveb_bank_close" onclick="eveb_bank_more(1)" style="display: none;">- 收起</a>
+                        </div>
+                    </div>
+
+                </li>
+
+
+
+                <li>
+                    <span>转账方式：</span>
+                    <div class="eveb_form_box eveb_radio_list">
+                        <label data-sub="#radio_list_2">
+                                <input name="depositChannelId" type="radio" value="银行柜台存入">银行柜台存入</label>
+                        <label data-sub="#radio_list_2">
+                                <input name="depositChannelId" type="radio" value="手机转账">手机转账</label>
+                        <label data-sub="#radio_list_2">
+                                <input name="depositChannelId" type="radio" value="网银转账">网银转账</label>
+                        <label data-sub="#radio_list_2">
+                                <input name="depositChannelId" type="radio" value="ATM自动柜员机">ATM自动柜员机</label>
+                        <label data-sub="#radio_list_2">
+                                <input name="depositChannelId" type="radio" value="ATM现金存入">ATM现金存入</label>
+                        <label for="depositChannelId" class="error" style="display:none;"></label>
+                    </div>
+                </li>
+                <li>
+                    <span>充值金额：</span>
+                    <input type="text" size="5" name="money" id="money" value="" class="suminp">
+                    <label for="money" class="error">* 请输入存入金额</label>
+                </li>
+                <li>
+                    <span>银行帐号：</span>
+                    <input class="suminp" name="bankAccount" type="text" onkeyup="this.value=this.value.replace(/\D/gi,&#39;&#39;)" id="bankAccount">
+                    <label for="bankAccount" class="error">* 请输入银行帐号</label>
+                </li>
+                <li>
+                    <span>存款姓名：</span>
+                    <input type="text" name="userName" id="userName" class="suminp" value="">
+                    <label for="userName" class="error"></label>
+                </li>
+            </ul>
+            <div class="eveb_form_submit">
+                <input type="submit" id="btnSubmit" value="提交" class="button_medium button_1">
+            </div>
+        </form>
+        <form name="czForm" novalidate="novalidate" onsubmit="return false;" class="czForm" style="display: none;">
+            <ul class="eveb_form">
+                <li>
+                    <span style="height:50px;line-height:50px;">支付渠道：</span>
+                    <div class="eveb_form_box eveb_bank_list">
+                        <label>
+                            <input type="radio"name="payOnlineId" value="5">
+                            <em class=""><img src="images/ico_wechat.png" width="50" height="50" alt=""></em>
+                        </label>
+                        <label>
+                            <input type="radio" name="payOnlineId" value="1">
+                            <em class=""><img src="images/ico_alipay.png" width="50" height="50" alt=""></em>
+                        </label>
+                    </div>
+                </li>
+                <li class="payMoney">
+                    <span>充值金额：</span>
+                </li>
+            </ul>
+            <div class="eveb_form_submit">
+                <input type="submit" id="btncz" value="提交" class="button_medium button_1">
+            </div>
+        </form>
+        <form name="xxczForm" novalidate="novalidate" onsubmit="return false;" class="czForm xxczForm" style="display: none;">
+            <ul class="eveb_form">
+                <li>
+                    <span style="height:50px;line-height:50px;">支付渠道：</span>
+                    <div class="eveb_form_box eveb_bank_list mode_list">
+                    </div>
+                </li>
+                <li>
+                    <div class="imgs">
+
+                    </div>
+                </li>
+                <li>
+                    <span>充值金额：</span>
+                    <input type="text" size="10" name="pay-money" class="suminp" id="pay-money">
+                    <label for="pay-money" class="error" id="" style="display:inline-block;">* 最小充值金额100元</label>
+                </li>
+                <li>
+                    <span>支付账号：</span>
+                    <input type="text" size="10" name="pay-account" class="suminp" id="pay-account">
+                    <label for="pay-account" class="error"  style="display:inline-block;">* 请填写正确的支付账号,否则无法到账</label>
+                </li>
+            </ul>
+            <div class="eveb_form_submit">
+                <input type="submit" value="提交" class="button_medium button_1">
+            </div>
+        </form>
+    </div>
+</div>
+<script type="text/javascript" src="../static/public/js/jquery.min.js"></script>
+<script type="text/javascript" src="../static/public/js/jquery.validate.min.js"></script>
+<script type="text/javascript" src="../static/public/js/laydate.js"></script>
+<script type="text/javascript" src="../static/public/js/validate.js"></script>
+<script type="text/javascript" src="../static/public/js/global.js"></script>
+<script type="text/javascript" src="../static/public/js/jquery.form.min.js"></script>
+<script type="text/javascript" src="../static/public/js/jquery.md5.js"></script>
+<script type="text/javascript" src="../static/public/layer/layer.js"></script>
+<script type="text/javascript" src="../static/public/js/jquery.nicescroll.js"></script>
+<script type="text/javascript" src="../static/public/js/clipboard.min.js"></script>
+<script src="../static/public/js/dateformat.js"></script>
+<script src="../static/public/js/template.js"></script>
+<script src="../static/public/js/jquery.cookie.js"></script><!--自定义封装函数-->
+
+<script src="../static/public/js/rollups/tripledes.js"></script>
+<script src="../static/public/js/components/mode-ecb.js"></script>
+<script src="../static/public/js/move.js"></script>
+<script src="../static/public/js/base.js"></script>
+<script>
+    //存款 更多银行
+    function eveb_bank_more(_state){
+        if(_state == 0){
+            $('.eveb_bank_list').animate({height:'180px'});
+            $('#eveb_bank_open').hide();
+            $('#eveb_bank_close').show();
+        }else{
+            $('.eveb_bank_list').animate({height:'90px'});
+            $('#eveb_bank_open').show();
+            $('#eveb_bank_close').hide();
+        }
+    }
+    $(function() {
+        var userType = $.cookie('type');
+        if(userType != null && userType == '01') {
+            var objImg = document.createElement('img');
+            objImg.style.cssText= 'margin:auto;margin-top:15%;display:block;';
+            objImg.src = "images/noaccess.png";
+            $(".eveb_content").html(objImg);
+            $('.eveb_content').show();
+        }else {
+            $('.eveb_content').show();
+            //读取充值金额
+            ajaxRequest({
+                url: CONFIG.BASEURL + 'recharge_list',
+                success: function (json) {
+                    var data = json.data.items;
+                    var str = '';
+                    $.each(data, function (index, value) {
+                        str += '<label class="label" for="payval_' + index + '">&nbsp;&nbsp;<input type="radio" id="payval_' + index + '" name="payval" value="' + value.rid + '">&nbsp;' + value.price + '元</label>';
+                    });
+                    $('.payMoney').append(str);
+                }
+            });
+            //读取线下充值银行卡列表及账户信息
+            ajaxRequest({
+                url: CONFIG.BASEURL + 'baseData_bankMsg',
+                beforeSend: function () {
+                    parent.showLoading();
+                },
+                success: function (json) {
+                    parent.hideLoading();
+                    var data = json.data.items;
+                    var str = '';
+                    $.each(data, function (index, value) {
+                        str += '<option value="21" data-bank-name="' + value.bankName + '" data-bank-account-no="' + value.bankAccount + '" data-bank-account-name="' + value.userName + '" data-bank-account-country="' + value.country + '">[' + value.bankName + ']&nbsp;' + value.userName + '&nbsp;' + value.bankAccount + '&nbsp;</option>'
+                    });
+                    $("#bankCardId").append(str);
+                },
+                error: function (json) {
+                    parent.hideLoading();
+                }
+            });
+            //读取微信或支付宝线下充值
+            ajaxRequest({
+                url: CONFIG.BASEURL + 'twocode_payOffewm',
+                beforeSend: function () {
+                    parent.showLoading();
+                },
+                success: function (json) {
+                    parent.hideLoading();
+                    var data = json.data.items;
+                    var lables = '';
+                    $.each(data, function (index, value) {
+                        var path = [];
+                        $.each(value.ids, function (index, value) {
+                            path.push(value.payid);
+                        });
+                        path = path.join(',');
+                        if( value.name == '微信支付'){
+                            value.imgName = 'ico_wechat';
+                        }else if(value.name =='支付宝支付'){
+                            value.imgName = 'ico_alipay';
+                        }
+                        lables += '<label>' +
+                            '<input type="radio" name="payMode" data-url="' + path + '" data-imgname="'+value.imgName+'"/>' + value.name +
+                            '</label>';
+                    });
+                    $(".mode_list").html(lables);
+                    $('input[name="payMode"]').eq(0).attr('checked', 'checked');
+                    if ($('input[name="payMode"]').eq(0).attr('checked')) {
+                        getImg($('input[name="payMode"]:checked'));
+                    }
+                    ;
+                    //线下充值切换
+                    $("body").on('change', 'input[name="payMode"]', function () {
+                        getImg(this);
+                    });
+                },
+                error: function (json) {
+                    parent.hideLoading();
+                }
+            });
+
+            //获得微信或者支付宝图片
+            function getImg(dom) {
+                $(".imgs").html('');
+                var arr = $(dom).data('url').split(',');
+                var imgName = $(dom).data('imgname');
+                var html = '';
+//                for(var i = 0; i < 100 ; i++){
+//                    arr.push(arr[0]);
+//                }
+                $.each(arr, function (index, value) {
+                    html += '<label for="radio_'+index+'"><input type="radio" name="get-account" id="radio_'+index+'" value="'+value+'"><img class="accountImg" src="images/'+imgName+'.png"\/></label>';
+                });
+                $(".imgs").html(html);
+                setTimeout(function () {
+                    var imgsHeight = parseInt($(".imgs").css('height'));
+                    var imgsMaxHeight = parseInt($(".imgs").css('max-height'));
+                    if(imgsHeight > imgsHeight){
+                        $(".imgs").css('padding','8px 18px');
+                    }
+                },1000);
+            }
+
+            //微信或支付宝提交按钮
+            $("#btncz").bind("click", function () {
+                if ($.cookie('u') == null) {
+                    return false;
+                }
+                var paytype = $('input[name=payOnlineId]:checked').val();
+                var payval = $('input[name=payval]:checked').val();
+                if (!paytype) {
+                    layer.msg('请选择支付渠道');
+                    return false;
+                }
+                if (!payval) {
+                    layer.msg('请选择充值金额');
+                    return false;
+                }
+                var map = {};
+                map['u'] = $.cookie('u');
+                map['rid'] = payval;
+                map['payType'] = paytype;
+                var mw = baseObj.mw(map);
+                $.ajax({
+                    type: "POST",
+                    url: CONFIG.BASEURL + 'recharge_submit',
+                    dataType: 'json',
+                    data: {
+                        mw: mw
+                    },
+                    beforeSend : function () {
+                        parent.showLoading();
+                    },
+                    success: function (ret) {
+                        var code = ret.code;
+                        var msg = ret.msg;
+                        if (code == '200') {
+                            var data = ret.data;
+                            var obj = data.bxsPayObj;
+                            var url = obj.payUrl;
+                            window.location.href = url;
+                            parent.hideLoading();
+                        } else {
+                            parent.hideLoading();
+                            parent.layer.msg(msg);
+                        }
+                    },
+                    error: function (jqXHR, textStatus, errorThrown) {
+                        parent.hideLoading();
+                    }
+                });
+            });
+            $('.clearfix li').click(function () {
+                $("#money,#pay-money").val('');
+                $('.clearfix li').removeClass('on');
+                $(this).addClass('on');
+                var index = $(this).index();
+                $(".czForm").hide();
+                $(".czForm").eq(index).show();
+
+            });
+
+            //银行转账支付提交
+            $('#btnSubmit').click(function () {
+                var bank_account = $("#bankCardId").find("option:selected");
+                var bank_accountText = $.trim($("#bankCardId").find("option:selected").text());
+                var bank = $(bank_account).data("bank-name");
+                var name = bank_account.attr('data-bank-account-name');
+                var bankNo = bank_account.attr('data-bank-account-no');
+                var country = bank_account.attr('data-bank-account-country');
+                if (bank == '') {
+                    layer.msg('收款人银行有错，请刷新重试');
+                    return;
+                }
+                if (bankNo == '') {
+                    layer.msg('收款人卡号有错，请刷新重试');
+                    return;
+                }
+                if (name == '') {
+                    layer.msg('收款人姓名有错，请刷新重试');
+                    return;
+                }
+                if (country == '') {
+                    layer.msg('收款人国籍有错，请刷新重试');
+                    return;
+                }
+                var bank2 = $.trim($('input[name=userBankName]:checked').val());
+                var bankNo2 = $.trim($('input[name=bankAccount]').val());
+                var name2 = $.trim($('input[name=userName]').val());
+                var money = $.trim($('#money').val());
+                var depositType = $.trim($('input[name=depositChannelId]:checked').val());
+                if(bank_accountText == '请选择…') {
+                    layer.msg('请选择收款帐号');
+                    return;
+                }
+                if (!bank2) {
+                    layer.msg('请选择转出银行');
+                    return;
+                }
+                if (!depositType) {
+                    layer.msg('请选择转账方式');
+                    return;
+                }
+                if (!money) {
+                    layer.msg('请输入充值金额');
+                    return;
+                }
+                if (!bankNo2) {
+                    layer.msg('请输入银行帐号');
+                    return;
+                }
+                if (!name2) {
+                    layer.msg('请输入存款人姓名');
+                    return;
+                }
+                var map = {};
+                map['u'] = $.cookie('u');
+                map['receiveBankName'] = bank;
+                map['receiveBankAccount'] = bankNo;
+                map['receiveUserName'] = name;
+                map['receiveCountry'] = country;
+                map['depositorBankName'] = bank2;
+                map['depositorBankAccount'] = bankNo2;
+                map['depositorUserName'] = name2;
+                map['depositType'] = depositType;
+                map['money'] = money;
+                var mw = baseObj.mw(map);
+                $.ajax({
+                    type: "POST",
+                    url: CONFIG.BASEURL + 'recharge_offlineSubmit',
+                    dataType: 'json',
+                    data: {
+                        mw: mw
+                    },
+                    beforeSend : function () {
+                        parent.showLoading();
+                    },
+                    success: function (ret) {
+                        parent.hideLoading();
+                        var code = ret.code;
+                        var msg = ret.msg;
+                        if (code == '200') {
+                            layer.msg('提交成功');
+                            setTimeout(function () {
+                                window.location.reload();
+                            }, 1500);
+                        } else {
+                            layer.msg(msg);
+                        }
+                    }
+                });
+            });
+            //支付宝或微信线下充值
+            $("form[name=xxczForm]").submit(function () {
+                var info = {};
+                var id = $.trim($('input[name="get-account"]:checked').val());
+                var money = $.trim($("#pay-money").val());
+                var account = $.trim($("#pay-account").val());
+                if(!id){
+                    layer.msg('请选择收款账号');
+                    return false;
+                }
+                if(!money){
+                    layer.msg('请填写充值金额');
+                    return false;
+                }
+                if(money< 100){
+                    layer.msg('最小充值金额100元');
+                    return false;
+                }
+                if(!account){
+                    layer.msg('请填写支付账号');
+                    return false;
+                }
+                var map = {
+                    u : $.cookie('u'),
+                    payid: id,
+                    paymoney: money,
+                    payaccout: account
+                };
+                info = map;
+                var mw = baseObj.mw(map);
+                ajaxRequest({
+                   url: CONFIG.BASEURL + 'twocode_payOrderInfo',
+                   data : {
+                       mw: mw
+                   },
+                    beforeSend : function () {
+                      parent.showLoading();
+                    },
+                success: function (json) {
+                    parent.hideLoading();
+                    var data = json.data;
+                    if(data.type == '001'){
+                        data.type = '微信';
+                    } else if(data.type == '002'){
+                        data.type = '支付宝';
+                    }
+                    var str = '<p>充值方法: '+data.type+'</p>' +
+                        '<p>收款姓名: '+data.name+'</p>' +
+                        '<p>收款账户: '+data.accout+'</p>' +
+                        '<p>订单号: '+data.ordernum+'</p>' +
+                        '<p>充值金额:'+data.paymoney+'元</p>' +
+                        '<p>支付账号:'+data.payaccout+'</p>' +
+                        '<p><img src="'+data.link+'" alt=""></p>';
+                    info['ordernum'] = data.ordernum;
+                    parent.layer.confirm(str,
+                        {
+                            skin: 'czxx',
+                            btn: ['确认','取消'], //按钮
+                             area: '300px',
+                            title: '充值信息确认'
+                        }, function(){
+                            sureCz(info);
+                        }, function(){
+                        });
+                },
+                    error: function (data) {
+//                        debugger;
+                        console.log(data);
+                    }
+                });
+            });
+            function sureCz(info){
+                var mw = baseObj.mw(info);
+                ajaxRequest({
+                    url: CONFIG.BASEURL + 'twocode_paysubmit',
+                        data : {
+                        mw: mw
+                    },
+                    success: function (json) {
+                        if( json.code == 200) {
+                            parent.layer.msg(json.msg);
+                            setTimeout(function () {
+                                location.reload();
+                            },1000);
+                        }else {
+                            parent.layer.msg(json.msg);
+                        }
+                    }
+                });
+            };
+        };
+    });
+</script>
+<script>
+    $(function() {
+        parent.hideLoading();
+    });
+</script>
+<script>
+    function getIdInfo() {
+            var bank_account = $("#bankCardId").children('option:selected');
+            var bank_name = $(bank_account).data("bank-name");
+            var bank_account_name = bank_account.attr('data-bank-account-name');
+            var bank_account_no = bank_account.attr('data-bank-account-no');
+            var bank_account_country = bank_account.attr('data-bank-account-country');
+
+            if ($("#bankCardId").val() > 0) {
+                $('.eveb_copy a').fadeIn('slow');
+                var skxxStr = '';
+                skxxStr += '<span>收款信息：</span>';
+                skxxStr += '<div class="bankInfo">';
+                skxxStr += '<div class="name">' + bank_name + '</div>';
+                skxxStr += '<p class="info">银行账号：<b class="color-1272e8 fwn">' + bank_account_no + '</b></p>';
+                skxxStr += '<p class="user">开户姓名：<b>' + bank_account_name + '</b></p>';
+                skxxStr += '<p class="country">国籍：<b>' + bank_account_country + '</b></p>';
+                skxxStr += '</div>';
+                $("#skxx").html(skxxStr);
+            } else {
+                $('.eveb_copy a').fadeOut();
+                $("#skxx").html('');
+            }
+    }
+    $(function () {
+        $("#money,#pay-money").keyup(function () {
+            var obj = this;
+            obj.value = obj.value.replace(/[^\d.]/g, "");
+            obj.value = obj.value.replace(/^\./g, "");
+            obj.value = obj.value.replace(/^0/g, "");
+            obj.value = obj.value.replace(/\.{2,}/g, ".");
+            //确保只有一次小数点出现
+            obj.value = obj.value.replace(".", "#").replace(/\./g, "").replace("#", ".");
+            //确保小数点后是两位数字
+            if (obj.value.indexOf(".") > 0 && obj.value.indexOf(".") + 4 <= obj.value.length) {
+                obj.value = obj.value.substr(0, obj.value.indexOf(".") + 3);
+            }
+            $("#money,#pay-money").val(obj.value);
+        });
+
+        $('.eveb_copy a').hide();
+        $("#bankCardId").change(function () {
+            getIdInfo();
+        });
+        if ($("#bankCardId").find("option").length > 1) {
+            $("#bankCardId option").eq(1).attr("selected","selected");
+            getIdInfo();
+        }
+    });
+</script>
+
+</body>
+</html>

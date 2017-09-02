@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+
+		<base id="">
+
+		<meta name="referrer" content="always">
+		<meta name="renderer" content="webkit">
+		<meta name="referrer" content="unsafe-url">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+		<title>千亿彩票 - 彩票APP,彩票开奖查询,重庆时时彩开奖号码,北京pk10开奖记录</title>
+
+		<link type="text/css" rel="stylesheet" href="../../assets/statics/css/home.css" />
+		<link type="text/css" rel="stylesheet" href="../../assets/statics/css/style.css" />
+		<link type="text/css" rel="stylesheet" href="../../assets/statics/css/page.css" />
+		<link rel="shortcut icon" type="image/x-icon" href="../../assets/statics/images/qianyi.png" media="screen" />
+	</head>
+
+	<body>
+
+		<div class="header-plus" id="header_plus">
+			<div class="header-toptray-plus">
+				<div class="quick-tpis">
+					<i class="icon-acc"></i>
+					<marquee id="sys_tip" behavior="scroll" onmouseover="this.stop()" onmouseout="this.start()">千亿彩票（易记域名58qycp.com）购彩就上千亿彩票，下载彩票APP及完善个人资料即送18元并可提升尊享VIP高级服务，六合彩、时时彩赔率业界最高。</marquee>
+					<div id="scroll" class="quick-list" style="width: 388px;">
+						<a id="news_url" href="https://f18.livechatvalue.com/chat/chatClient/chatbox.jsp?companyID=866220&configID=71383&jid=9483081749&s=1" target="_blank">在线客服</a><span style="margin-left: 2px;"> | </span>
+						<div id="spread_url_1" style="display: none;">
+							<!-- <a href="../../member/spread.html">千亿彩票网<img style="margin-left: 2px;margin-bottom: 10px;" src="../../assets/statics/images/hot_new.gif"></a><span> | </span></div> -->
+						<a href="lhc.html">玩法</a><span> | </span>
+						<a href="../help.html">帮助中心</a><span> | </span>
+						<a id="shoucang" onclick="addFavorite2()">加入收藏</a>
+						<a id="agent_reg_url" href="../agency.html" title="加入代理"><span> | </span>加入代理</a>
+						<a id="play_free" href="../trail.html"><span> | </span>免费试玩</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="liansai-wrap" id="liansai-wrap">
+			<div class="liansai" id="liansai">
+				<div class="wrapper clearfix relative">
+					<h1 class="sprite sprite-logo">
+        	<a href="../../index.html"><img src="../../assets/statics/images/qycplogo.png" alt=""></a>
+        </h1>
+
+					<div id="header_user_login" class="wrap-login" style="display:none;">
+						<div class="logxinxi" id="logxinxi">
+							<div class="top_login">
+								<div style="float:right;">
+									<div class="top-login-bg"><i class="icon-6"></i>
+										<input class="top_loginip" name="username" type="text" placeholder="请输入用户名">
+									</div>
+									<div class="top-login-bg"><i class="icon-lock-icon"></i>
+										<input class="top_loginip" name="passwd" type="password" placeholder="请输入密码" style="width: 70px;">
+										<span style="position: relative;">
+                            	<a href="https://f18.livechatvalue.com/chat/chatClient/chatbox.jsp?companyID=866220&configID=71383&jid=9483081749&s=1" style="float:left;color:blue;margin-top: 8px;">忘记密码</a>
+                            </span>
+									</div>
+									<div class="need_captcha">
+										<div class="top_click" name="div_top_click">请输入验证码</div>
+										<div class="yanzhengma">
+											<div class="top-login-bg2">
+												<input class="top_loginmm" id="authnum" name="authnum" maxlength="4" type="text" placeholder="验证码">
+												<span class="register_captcha_span" style="margin:0; position: relative;">
+                                        <img name="login_img" class="login_img">
+                                    </span>
+											</div>
+										</div>
+									</div>
+									<input class="dr_anniu" type="submit" name="login" value="登录">
+									<input class="dr_anniu reg_anniu" type="button" value="注册" onclick="location=document.getElementById('base_path').href+'common/register?type=0'">
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div id="header_user" class="logxinxi" style="display:none;">
+						<div class="top_login">
+							<span>您好，<a href="../member/center.html" class="play-jl" name="user_name"></a></span>
+							<span>可用余额：</span>
+							<span><a class="balance colorRed" id="a_show_money" rel="nofollow"><span id="balance" class="orange">￥</span></a>
+							</span>
+							<span><a id="header_money_refresh"><i class="icon-refresh-icon"></i></a></span>
+							<span>
+                   &nbsp;|&nbsp;
+                   <a href="../../member/center.html">用户中心</a>&nbsp;|&nbsp;
+                   <a href="../../member/recharge.html">充值</a>&nbsp;|&nbsp;
+                   <a href="../../member/withdraw.html">提现</a>&nbsp;|&nbsp;
+                   <a href="../../member/deal.html">交易记录</a>&nbsp;|&nbsp;
+                   <a href="../../member/message.html?tab=2">个人消息<b id="un_read_msg_count" style="color:red;display:none;"></b></a>&nbsp;|&nbsp;
+               	   <a href="javascript:void(0)" onclick="sigout2()">退出</a>&nbsp;
+               </span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="header-navbar-plus">
+			<div class="wrapper clearfix" id="header_box">
+				<div class="lottery-plus" id="lotterys">
+					<h2 class="xzcz">选择彩种 <a  class="dropdown-desc" style="margin-left: 75px;"><i class="icon arrow"></i></a></h2>
+					<div class="lotterys-list-hd" id="lotterysList">
+						<ul class="lottery-list-box" id="lottery-list-box2">
+
+						</ul>
+						<ul class="gpc_li">
+							<li>
+								<span style="display: inline-block;width: 80px;position: relative;bottom: 20px;"><i class="icon-ALARM" style="position: relative;left: 14px;"></i><span style="position: relative;right: 20px;top: 20px;">高频彩</span></span>
+								<span class="gpc_li_list"></span>
+							</li>
+						</ul>
+						<ul class="dpc_li">
+							<li style="border-top: 1px solid #F13131;">
+								<span style="display: inline-block;width: 80px;position: relative;bottom: 20px;"><i class="icon-TIME" style="position: relative;left: 14px;"></i><span style="position: relative;right: 20px;top: 20px;">低频彩</span></span>
+								<span class="dpc_li_list"></span>
+							</li>
+						</ul>
+						<ul class="all_li">
+							<li style="border-top: 1px solid #F13131;">
+								<span style="display: inline-block;width: 80px;position: relative;bottom: 20px;"><i class="" style="display: inline-block;width: 32px;height: 32px;position: relative;right: 10px;background-image: url(../../assets/statics/images/qianyi.png);"></i><span style="display: inline-block;position: relative;left: 20px;top: 20px;float: left;">全部</span></span>
+								<span class="all_li_list"></span>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<ul class="nav-plus clearfix">
+					<li class="">
+						<a href="../../../cp89/index.html">首页</a>
+					</li>
+					<li>
+						<a href="../../../cp89/ssc/main.html">购彩大厅</a>
+					</li>
+					<li class="">
+						<a href="../../../cp89/phone.html"><i class="icon-iphone-icon"></i>&nbsp;手机购彩</a><em class="hot-icon"></em></li>
+					<li class="">
+						<a href="../activity.html">优惠活动</a><em class="hot-icon"></em></li>
+					<li class="">
+						<a href="../draw.html" class="dropdown-desc">开奖公告</a>
+					</li>
+					<li class="">
+						<a href="../trend.html">走势图表</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="wrap-bg">
+			<div class="wrapper">
+				<div id="left" class="rule-left">
+					<div class="lbar"><span>玩法规则</span></div>
+					<div class="list" style="">
+						<ul id="rule_list" style="float: left;">
+
+						</ul>
+					</div>
+					<div class="lbot"></div>
+				</div>
+
+				<div class="rule-right">
+					<div class="rtop"></div>
+					<div id="rcont">
+						<!-- begin -->
+						<div class="rbar">
+							<h1><span class="gamek-41">北京28玩法规则</span></h1>
+						</div>
+						<div class="rcon">
+							<h2><a href="pcdd.html#1">一、玩法类型</a></h2>
+							<h2><a href="pcdd.html#2">二、开奖与购买方式</a></h2>
+							<h2><a href="pcdd.html#3">三、兑奖</a></h2>
+							<h2><a href="pcdd.html#4">四、玩法说明</a></h2>
+							<h2><a href="pcdd.html#5">五、中奖说明</a></h2>
+							<h2><a href="pcdd.html#6">六、玩法特点</a></h2><br>
+
+							<b><p id="1">一、玩法类型</p></b>
+							<p>北京28是一种在线数字竞猜游戏。共28个投注号码，押中即可获得奖励。</p><br>
+
+							<b><p id="2">二、开奖与购买方式</p></b>
+							<p>1.本站北京28游戏每天进行179期，开奖时间09:05至23:55，每隔 5分钟开奖一次。 <br> 2.北京28开奖结果源于国家福利彩票北京快乐8开奖号码，北京快乐8每期从01-80共80个号码中开出20个数字。 北京28将这20个开奖号码按照由小到大的顺序依次排列；取其1-6位开奖号码相加，和值的末位数作为北京28开奖第一个数值； 取其7-12位开奖号码相加，和值的末位数作为北京28开奖第二个数值，取其13-18位开奖号码相加，和值的末位数作为北京28开奖第三个数值；三个数值相加即为北京28最终的开奖结果。</p><br>
+							<p>以北京福彩快乐8第799060期开奖为例：</p>
+							<p><img src="../../assets/statics/images/rule/rule.xy28_1.png"></p><br>
+							<p><img src="../../assets/statics/images/rule/rule.xy28_2.png"></p>
+
+							<p>3.购买者可透过本站进行投注，在对其选定的投注号码进行投注；或返点投注，返点越高投注赔率则低。</p>
+							<p>4.购买者可选择机选号码投注、自选号码投注。机选号码投注是指由投注机随机产生投注号码进行投注，自选号码投注是指将购买者选定的号码输入投注机进行投注。</p>
+							<p>5.购买者还可进行多倍投注、追号投注。多倍投注是指同样的投注号码进行翻倍数额购买的投注。追号投注指将一注或一组号码进行两期或两期以上的投注。 </p>
+							<p>6.如果用户投注成功后，若因销售终端故障、通讯线路故障和投注站信用额度受限等原因造成当期无法开奖的，退还购买者投注金额。</p>
+
+							<p></p>
+							<b><p id="3">三、兑奖</p></b>
+							<p>用户一旦中奖，无论奖金大小，系统将自动返还至用户账户中。用户可继续投注或提款，永无弃奖。</p><br>
+
+							<b><p id="4">四、玩法说明</p></b>
+							<p>北京28投注号码竞猜的范围为0-27，共28个号码。以下为各个玩法的规则：</p>
+
+							<table width="600" cellspacing="1" cellpadding="0" border="0" bgcolor="#CCCCCC" class="s-table">
+								<tbody>
+									<tr style="color: #666;">
+										<th width="80">玩法</th>
+										<th>规则</th>
+									</tr>
+									<tr>
+										<td height="25" bgcolor="#FFFFFF">特码</td>
+										<td height="25" bgcolor="#FFFFFF">从0-27中选取一个以上的数字，投注号码与开奖号码和值相同，即中奖</td>
+									</tr>
+									<tr>
+										<td height="25" bgcolor="#FFFFFF">特码包三</td>
+										<td height="25" bgcolor="#FFFFFF">从0-27中任选3个号码组成1注，任意一个选号与开奖号码和值相同，即中奖</td>
+									</tr>
+									<tr>
+										<td height="25" bgcolor="#FFFFFF">大小玩法</td>
+										<td height="25" bgcolor="#FFFFFF">数字14-27为大 ；<br> 数字0-13为小；
+											<br> 当期开奖号码和值，符合投注组合，即中奖
+										</td>
+									</tr>
+									<tr>
+										<td height="25" bgcolor="#FFFFFF">单双玩法</td>
+										<td height="25" bgcolor="#FFFFFF">数字1，3，5，~27为单 ；<br> 数字0，2，4，~26为双；
+											<br> 当期开奖号码和值，符合投注组合，即中奖
+										</td>
+									</tr>
+									<tr>
+										<td height="25" bgcolor="#FFFFFF">组合玩法</td>
+										<td height="25" bgcolor="#FFFFFF">从大双,小单,大单,小双中至少选一注，当期开奖号码和值，符合投注组合，即中奖</td>
+									</tr>
+									<tr>
+										<td height="25" bgcolor="#FFFFFF">极值玩法</td>
+										<td height="25" bgcolor="#FFFFFF">数字0，1，2，3，4，5为极小 ；<br> 数字22，23，24，25，26，27为极大；
+											<br> 当期开奖号码和值，符合投注组合，即中奖
+										</td>
+									</tr>
+									<tr>
+										<td height="25" bgcolor="#FFFFFF">波色玩法</td>
+										<td height="25" bgcolor="#FFFFFF">绿波1，4，7，10，16，19，22，25；<br> 蓝波2，5，8，11，17，20，23，26；
+											<br> 红波3，6，9，12，15，18，21，24；
+											<br> 当期开奖号码和值，符合投注组合，即中奖
+										</td>
+									</tr>
+									<tr>
+										<td height="25" bgcolor="#FFFFFF">豹子玩法</td>
+										<td height="25" bgcolor="#FFFFFF">当期开奖号码三个数字相同即中奖</td>
+									</tr>
+									<tr>
+										<td height="25" bgcolor="#FFFFFF">特码</td>
+										<td height="25" bgcolor="#FFFFFF">从0-27中选取一个以上的数字，投注号码与开奖号码和值相同，即中奖</td>
+									</tr>
+
+								</tbody>
+							</table><br>
+							<b><p id="5">五、中奖说明</p></b>
+
+							<table width="600" cellspacing="1" cellpadding="0" border="0" bgcolor="#CCCCCC" class="s-table">
+								<tbody>
+									<tr style="color: #666;">
+										<th width="80">玩法</th>
+										<th width="80">投注号码示例</th>
+										<th width="150">开奖号码示例</th>
+										<th>中奖条件</th>
+									</tr>
+									<tr>
+										<td height="25" bgcolor="#FFFFFF">特码</td>
+										<td height="25" bgcolor="#FFFFFF">5</td>
+										<td bgcolor="#FFFFFF">
+											0 0 5（顺序不限）<br> 0 1 4（顺序不限）<br> 0 2 3（顺序不限）<br> 1 1 3（顺序不限）<br> 1 2 2（顺序不限）
+										</td>
+										<td bgcolor="#FFFFFF">所选特码与开奖的3个号码相加之和相同，即中奖。</td>
+									</tr>
+									<tr>
+										<td height="25" bgcolor="#FFFFFF">特码包三</td>
+										<td height="25" bgcolor="#FFFFFF">5 6 7</td>
+										<td bgcolor="#FFFFFF">
+											3 1 1<br> 2 2 2<br> 5 0 2<br>
+										</td>
+										<td bgcolor="#FFFFFF">投选三个特码，任意一个特码与开奖的3个号码相加之和相同，即中奖。</td>
+									</tr>
+									<tr>
+										<td height="25" bgcolor="#FFFFFF">大小玩法</td>
+										<td height="25" bgcolor="#FFFFFF">
+											大<br> 小
+											<br>
+
+										</td>
+										<td bgcolor="#FFFFFF">
+											1 6 7<br> 1 6 6<br>
+										</td>
+										<td bgcolor="#FFFFFF">对特码大（14~27），小（0~13）形态进行投注，所选号码的形态与开奖号码的形态相同，即为中奖。</td>
+									</tr>
+									<tr>
+										<td height="25" bgcolor="#FFFFFF">单双玩法</td>
+										<td height="25" bgcolor="#FFFFFF">
+											单<br> 双
+										</td>
+										<td bgcolor="#FFFFFF">
+											2 1 2<br> 2 1 3<br>
+										</td>
+										<td bgcolor="#FFFFFF">对特码单（1，3，5~27），双（0，2，4~26）形态进行投注，所选号码的形态与开奖号码相加之和的形态相同，即为中奖。</td>
+									</tr>
+									<tr>
+										<td height="25" bgcolor="#FFFFFF">组合玩法</td>
+										<td height="25" bgcolor="#FFFFFF">
+											大单<br> 大双
+											<br> 小单
+											<br> 小双
+										</td>
+										<td bgcolor="#FFFFFF">
+											7 7 1<br> 7 7 2<br> 2 7 2<br> 2 7 1<br>
+										</td>
+										<td bgcolor="#FFFFFF">
+											对特码大单（15，17，19，21，23，25，27），<br>小单（1，3，5，7，9，11，13），<br>大双（14，16，18，20，22，24，26），<br>小双（0，2，4，6，8.10，12）<br>形态进行投注，所选号码的形态与开奖号码相加之和的形态相同，即为中奖。</td>
+									</tr>
+									<tr>
+										<td height="25" bgcolor="#FFFFFF">极值玩法</td>
+										<td height="25" bgcolor="#FFFFFF">
+											极小<br> 极大
+										</td>
+										<td bgcolor="#FFFFFF">
+											1 0 0<br> 9 8 5<br>
+										</td>
+										<td bgcolor="#FFFFFF">对特码极大（22，23，24，25，26，27），<br>极小（0，1，2，3，4，5）<br>形态进行投注，所选号码的形态与开奖号码相加之和的形态相同，即为中奖。</td>
+									</tr>
+									<tr>
+										<td height="25" bgcolor="#FFFFFF">波色玩法</td>
+										<td height="25" bgcolor="#FFFFFF">
+											绿波<br> 蓝波
+											<br> 红波
+										</td>
+										<td bgcolor="#FFFFFF">
+											1 2 4<br> 1 2 5<br> 1 2 3
+										</td>
+										<td bgcolor="#FFFFFF">对绿波（1，4，7，10，16，19，22，25），<br>蓝波（2，5，8，11，17，20，23，26），<br>红波（3，6，9，12，15，18，21，24）<br>形态进行投注，所选号码的形态与开奖号码相加之和的形态相同，即为中奖。</td>
+									</tr>
+									<tr>
+										<td height="25" bgcolor="#FFFFFF">豹子玩法</td>
+										<td height="25" bgcolor="#FFFFFF">
+											豹子<br>
+										</td>
+										<td bgcolor="#FFFFFF">
+											0 0 0<br> 1 1 1<br> 2 2 2<br> 3 3 3<br> 4 4 4<br> 5 5 5<br> 6 6 6<br> 7 7 7<br> 8 8 8<br> 9 9 9
+										</td>
+										<td bgcolor="#FFFFFF">对所有的豹子（000，111，222，333，444，555，666，777，888，999）进行投注。当开奖号码为任意1个豹子时，即中奖。</td>
+									</tr>
+								</tbody>
+							</table><br>
+							<b><p id="6">六、玩法特点</p></b>
+							<p>1、即投、即开、即兑<br> 每5分钟一期，全天179期，在线即投、即开、即兑，极大的提高了玩法的刺激性。
+							</p>
+							<p>2、玩法简单多样<br> 北京28是个简单又变化无穷的游戏，运气与技术的完美结合。
+							</p>
+							<p>3、开奖频率高，赔率大<br> 投注可大可小，赔率也可大可小，游戏开奖频率高，赔率大，引人入胜。
+							</p>
+
+							<!-- end -->
+						</div>
+						<div class="rcon">
+							<a href="#top"><span>回到顶部</span></a>
+						</div>
+
+					</div>
+					<div class="rbot"></div>
+				</div>
+			</div>
+		</div>
+		<div class="all_gpc" style="width: 400px;height:120px;position: relative;bottom: 2277px;left: 610px;">
+			<div style="width:400px;height: 30px;margin-top: 30px;position: relative;left: 50px;font-weight: bold;color: black;">高频彩</div>
+			<span></span>
+		</div>
+		<div class="all_all" style="width: 400px;height:150px;position: relative;bottom: 2178px;left: 610px;">
+			<div style="width:400px;height: 30px;margin-top: 30px;position: relative;left: 50px;font-weight: bold;color: black;">全部</div>
+			<span></span>
+		</div>
+		<div class="jc-footer">
+
+			<div class="foot_box">
+				<div class="about_box">
+					<ul class="foot_info">
+						<li class="foot_wljc"></li>
+						<li class="foot_wangan"></li>
+						<li class="foot_wsjy"></li>
+						<li class="foot_xylh"></li>
+						<li class="foot_kxwz"></li>
+					</ul>
+
+					<p>2009-2017©
+						<span>千亿彩票</span>
+						<br>
+						<span class="c-grey">千亿彩票郑重提示：彩票有风险，投注需谨慎！ 不向未满18周岁的青少年出售彩票</span>
+					</p>
+
+					<div class="clear"></div>
+				</div>
+			</div>
+
+			<div class="clear nospace"></div>
+		</div>
+
+		<!-- 更新浏览器 -->
+		<div class="ie-alert-wrap" style="display: none;">
+			<h1>是时候升级你的浏览器了</h1>
+			<p>你正在使用 Internet Explorer 的早期版本（IE9以下版本 或使用该内核的浏览器）。这意味着在升级浏览器前，你将无法访问此网站。</p>
+			<hr>
+			<h2>请注意：Windows XP 及 Internet Explorer 早期版本的支持已经结束</h2>
+			<p>自 2016 年 1 月 12 日起，Microsoft 不再为 IE 11 以下版本提供相应支持和更新。没有关键的浏览器安全更新，您的 PC 可能易受有害病毒、间谍软件和其他恶意软件的攻击，它们可以窃取或损害您的业务数据和信息。请参阅
+				<a href="https://www.microsoft.com/zh-cn/WindowsForBusiness/End-of-IE-support">微软对 Internet Explorer 早期版本的支持将于 2016 年 1 月 12 日结束的说明</a> 。</p>
+			<hr>
+			<h2>更先进的浏览器</h2>
+			<p>推荐使用以下浏览器的最新版本。如果你的电脑已有以下浏览器的最新版本则直接使用该浏览器访问<b id="referrer"></b>即可。</p>
+			<ul class="browser">
+				<li class="browser-chrome">
+					<a href="http://www.google.cn/chrome/browser/index.html?hl=zh-CN&standalone=1" target="_blank"> 谷歌浏览器<span>Google Chrome</span></a>
+				</li>
+				<li class="browser-360">
+					<a href="http://se.360.cn/" target="_blank"> 360安全浏览器 <span>360用户推荐</span></a>
+				</li>
+				<!-- 2016-08-06 -->
+				<li class="browser-firefox">
+					<a href="http://www.firefox.com.cn/" target="_blank"> 火狐浏览器<span>Mozilla Firefox</span></a>
+				</li>
+				<li class="browser-ie">
+					<a href="http://windows.microsoft.com/zh-cn/internet-explorer/download-ie" target="_blank"> IE浏览器<span>Internet Explorer</span></a>
+				</li>
+				<li class="browser-qq">
+					<a href="http://browser.qq.com/" target="_blank"> QQ浏览器9 <span>全新升级版本</span></a>
+				</li>
+				<!-- 9.4.8187.400 -->
+				<div class="clean"></div>
+			</ul>
+			<hr>
+			<h2>为什么会出现这个页面？</h2>
+			<p>如果你不知道升级浏览器是什么意思，请请教一些熟练电脑操作的朋友。如果你使用的不是IE6/7/8/9/10，而是360浏览器、QQ浏览器、搜狗浏览器等，出现这个页面是因为你使用的不是该浏览器的最新版本，升级至最新即可。</p>
+			<hr>
+		</div>
+		<div class="ie-alert-bg" style="display: none;"></div>
+		<div id="_leftAD " class="_float_AD l_AD ">
+			<img src="../../assets/statics/images/online-left.png ">
+			<div class="close_btn " id="left_close"></div>
+			<a class="top1_btn " href="tencent://message/?uin=2598889959&Site=千亿彩票网&Menu=yes "></a>
+			<a class="top2_btn " href="common/trail.html "></a>
+			<div class="two_img "><img src="../../assets/statics/images/download.png"></div>
+		</div>
+		<div id="_rightAD " class="_float_AD r_AD ">
+			<img src="../../assets/statics/images/online-right.png ">
+			<div class="close_btn " id="right"></div>
+			<a class="top1_btn kefu" href="" target="_blank"></a>
+			<a class="top2_btn " href="javascript:void(0)"></a>
+			<div class="two_img "><img src="../../assets/statics/images/download.png "></div>
+		</div>
+
+		<script src="../../assets/js/plugins/jquery/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../assets/js/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../assets/js/global.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../static/public/js/rollups/tripledes.js "></script>
+		<script src="../../static/public/js/components/mode-ecb.js "></script>
+		<script src="../../assets/js/application/move.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../assets/js/application/type.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../assets/js/base.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+
+
+		//获得在线客服地址
+		$.ajax({
+		  url : CONFIG.BASEURL + 'baseData_onlineService',
+		  type: 'get',
+		  dataType: 'json',
+		  success: function (json) {
+		      if(json.code != 200){
+		          return;
+		      } else {
+		          var data = json.data.url;
+		          $(".kefu").attr('href',data);
+		      }
+		  }
+		});
+			$('#left_close').on('click', function() {
+				$('.l_AD').css('display', 'none');
+			})
+			$('#right').on('click', function() {
+				$('.r_AD').css('display', 'none');
+			})
+
+			$('.xzcz,#lotterysList').on('mouseenter', function() {
+				$('#lotterysList').show();
+			});
+			$('.xzcz,#lotterysList').on('mouseleave', function() {
+				$('#lotterysList').hide();
+			});
+
+			$('.all_gpc,.all_all').on('mouseenter', function() {
+				$('#lotterysList').css('display', 'block');
+			})
+			$('.all_gpc,.all_all').on('mouseleave', function() {
+				$('#lotterysList').css('display', 'none');
+			})
+
+			function addFavorite2() {
+				var url = window.location;
+				var title = document.title;
+				var ua = navigator.userAgent.toLowerCase();
+				if(ua.indexOf("360se") > -1) {
+					alert("由于360浏览器功能限制，请按 Ctrl+D 手动收藏！");
+				} else if(ua.indexOf("msie 8") > -1) {
+					window.external.AddToFavoritesBar(url, title); //IE8
+				} else if(document.all) {
+					try {
+						window.external.addFavorite(url, title);
+					} catch(e) {
+						alert('您的浏览器不支持,请按 Ctrl+D 手动收藏!');
+					}
+				} else if(window.sidebar) {
+					window.sidebar.addPanel(title, url, "");
+				} else {
+					alert('您的浏览器不支持,请按 Ctrl+D 手动收藏!');
+				}
+			}
+		</script>
+	</body>
+
+</html>

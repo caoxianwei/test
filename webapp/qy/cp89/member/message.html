@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+
+		<base id="">
+
+		<meta name="referrer" content="always">
+		<meta name="renderer" content="webkit">
+		<meta name="referrer" content="unsafe-url">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+		<title>千亿彩票 - 彩票APP,彩票开奖查询,重庆时时彩开奖号码,北京pk10开奖记录</title>
+
+		<link type="text/css" rel="stylesheet" href="../assets/statics/css/home.css" />
+		<link rel="stylesheet" href="../assets/statics/css/style.css" type="text/css" />
+		<link rel="stylesheet" type="text/css" href="../assets/js/plugins/laypage/laypage.css"/>
+		<link rel="stylesheet" href="../assets/statics/css/userCenter.css" type="text/css" />
+		<link rel="shortcut icon" type="image/x-icon" href="../assets/statics/images/qianyi.png" media="screen" />
+		<style type="text/css">
+			#scroll a {
+				font-size: 12px;
+			}
+		</style>
+	</head>
+
+	<body>
+
+		<div class="header-plus" id="header_plus">
+			<div class="header-toptray-plus">
+				<div class="quick-tpis">
+					<i class="icon-acc"></i>
+					<marquee id="sys_tip" behavior="scroll" onmouseover="this.stop()" onmouseout="this.start()">千亿彩票（易记域名58qycp.com）购彩就上千亿彩票，下载彩票APP及完善个人资料即送18元并可提升尊享VIP高级服务，六合彩、时时彩赔率业界最高。</marquee>
+					<div id="scroll" class="quick-list" style="width: 400px;">
+						<a class="news_url" href="" target="_blank">在线客服</a><span style="margin-left: 2px;"> | </span>
+						<div id="spread_url_1" style="display: none;">
+							</div>
+						<a href="../common/rule/lhc.html">玩法</a><span> | </span>
+						<a href="../common/help.html">帮助中心</a><span> | </span>
+						<a id="shoucang" onclick="addFavorite2()">加入收藏</a>
+						<a id="agent_reg_url" href="../common/agency.html" title="加入代理"><span> | </span>加入代理</a>
+						<a id="play_free" href="../common/trail.html"><span> | </span>免费试玩</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="liansai-wrap" id="liansai-wrap">
+			<div class="liansai" id="liansai">
+				<div class="wrapper clearfix relative">
+					<h1 class="sprite sprite-logo">
+        	<a href="../index.html"><img src="../assets/statics/images/qycplogo.png" alt=""></a>
+        </h1>
+
+					<div id="header_user_login" class="wrap-login" style="display:none;">
+						<div class="logxinxi" id="logxinxi">
+							<div class="top_login">
+								<div style="float:right;">
+									<div class="top-login-bg"><i class="icon-6"></i>
+										<input class="top_loginip" name="username" type="text" placeholder="请输入用户名">
+									</div>
+									<div class="top-login-bg"><i class="icon-lock-icon"></i>
+										<input class="top_loginip" name="passwd" type="password" placeholder="请输入密码" style="width: 70px;">
+										<span style="position: relative;">
+                            	<a href="common/forget" style="float:left;color:blue;margin-top: 8px;">忘记密码</a>
+                            </span>
+									</div>
+									<div class="need_captcha">
+										<div class="top_click" name="div_top_click">请输入验证码</div>
+										<div class="yanzhengma">
+											<div class="top-login-bg2">
+												<input class="top_loginmm" id="authnum" name="authnum" maxlength="4" type="text" placeholder="验证码">
+												<span class="register_captcha_span" style="margin:0; position: relative;">
+                                        <img name="login_img" class="login_img">
+                                    </span>
+											</div>
+										</div>
+									</div>
+									<input class="dr_anniu" type="submit" name="login" value="登录">
+									<input class="dr_anniu reg_anniu" type="button" value="注册" onclick="location=document.getElementById('base_path').href+'common/register?type=0'">
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div id="header_user" class="logxinxi" style="display:none;">
+						<div class="top_login">
+							<span>您好，<a href="../member/center.html" class="play-jl" name="user_name"></a></span>
+							<span>可用余额：</span>
+							<span><a class="balance colorRed" id="a_show_money" rel="nofollow"><span id="balance" class="orange">￥</span></a>
+							</span>
+							<span><a id="header_money_refresh"><i class="icon-refresh-icon"></i></a></span>
+							<span>
+                   &nbsp;|&nbsp;
+                   <a href="../member/center.html">用户中心</a>&nbsp;|&nbsp;
+                   <a href="../member/recharge.html">充值</a>&nbsp;|&nbsp;
+                   <a href="../member/withdraw.html">提现</a>&nbsp;|&nbsp;
+                   <a href="../member/deal.html">交易记录</a>&nbsp;|&nbsp;
+                   <a href="../member/message.html?tab=2">个人消息<b id="un_read_msg_count" style="color:red;display:none;"></b></a>&nbsp;|&nbsp;
+               	   <a href="javascript:void(0)" onclick="sigout1()">退出</a>&nbsp;
+               </span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="header-navbar-plus">
+			<div class="wrapper clearfix" id="header_box">
+				<div class="lottery-plus" id="lotterys">
+					<h2 class="xzcz">选择彩种 <a  class="dropdown-desc" style="margin-left: 75px;"><i class="icon arrow"></i></a></h2>
+					<div class="lotterys-list-hd" id="lotterysList" style="width: 238px;">
+						<ul class="lottery-list-box" id="register">
+
+						</ul>
+						<ul class="gpc_li1">
+							<li>
+								<span style="display: inline-block;width: 80px;position: relative;bottom: 20px;"><i class="icon-ALARM" style="position: relative;left: 14px;"></i><span style="position: relative;right: 20px;top: 20px;">高频彩</span></span> <span class="gpc_li_list1"></span>
+							</li>
+						</ul>
+						<ul class="dpc_li1">
+							<li style="border-top: 1px solid #F13131;">
+								<span style="display: inline-block;width: 80px;position: relative;bottom: 20px;"><i class="icon-TIME" style="position: relative;left: 14px;"></i><span style="position: relative;right: 20px;top: 20px;">低频彩</span></span>
+								<span class="dpc_li_list1"></span>
+							</li>
+						</ul>
+						<ul class="all_li1">
+							<li style="border-top: 1px solid #F13131;">
+								<span style="display: inline-block;width: 80px;position: relative;bottom: 20px;"><i class="" style="display: inline-block;width: 32px;height: 32px;position: relative;right: 10px;background-image: url(../assets/statics/images/qianyi.png);"></i><span style="display: inline-block;position: relative;left: 20px;top: 20px;float: left;">全部</span></span>
+								<span class="all_li_list1"></span>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<ul class="nav-plus clearfix">
+					<li class="">
+						<a href="../index.html">首页</a>
+					</li>
+					<li>
+						<a href="../ssc/main.html">购彩大厅</a>
+					</li>
+					<li class="">
+						<a href="../phone.html"><i class="icon-iphone-icon"></i>&nbsp;手机购彩</a><em class="hot-icon"></em></li>
+					<li>
+						<a href="../common/activity.html">优惠活动</a><em class="hot-icon"></em></li>
+					<li class="">
+						<a href="../common/draw.html" class="dropdown-desc">开奖公告</a>
+					</li>
+					<li class="">
+						<a href="../common/trend.html">走势图表</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="user-box">
+			<div id="h2" class="wrap">
+
+				<ul id="menu" class="menu fl">
+					<a href="center.html">
+						<li id="index" class=""><i class="icon-Home"></i><span>用户中心</span></li>
+					</a>
+					<!--<a href="spread.html">
+						<li id="spread" href="member/spread" class=""><i class="icon-users"></i><span>代理赚钱</span></li>
+					</a>-->
+					<!--<a href="checkin.html">
+						<li id="message" class=""><i class="icon-coin-dollar" style="color: red;"></i><span style="color: red;">签到红包</span></li>
+					</a>-->
+					<a href="recharge.html">
+						<li id="deposit" class=""><i class="icon-coin-yen"></i><span>在线存款</span></li>
+					</a>
+					<a href="withdraw.html">
+						<li id="qukuan" class=""><i class="icon-coin-dollar1"></i><span>在线取款</span></li>
+					</a>
+
+					<a href="deal.html">
+						<li id="jiaoyi" class=""><i class="icon-Notes"></i><span>交易记录</span></li>
+					</a>
+					<a href="message.html">
+						<li id="message" class="current"><i class="icon-acc"></i><span>消息中心</span></li>
+					</a>
+					<a class='kefu' target="_blank" href="" >
+						<div id="customerService"><i class="icon-6" style="margin:0"></i><span>在线客服</span></div>
+					</a>
+				</ul>
+
+				<div class="right-div">
+					<div id="message_div">
+						<div class="top_lab">
+							<div id="lab_sys" class="current">系统公告</div>
+							<div id="lab_per">个人消息</div>
+						</div>
+
+						<!-- 系统公告 -->
+						<div id="system_mesg" class="css4" style="width: 100%; margin-left: 0px; min-height: 250px; display: block;">
+							<div class="list">
+								<div class="row"><i></i>
+									<div><i></i>
+										<p><strong>手机银行转账、网银转账、支付宝转账赠送公告！</strong><span>2017-08-14 15:38:09<i></i></span></p>
+										<p>
+											<br>为保证充值顺畅，及时购彩，千亿彩票建议您使用银行转帐至公司银行卡　笔笔赠送1%，谢谢！ 温馨提示：为避免香港⑥合彩17:00－21:30高峰入款拥堵，千亿彩票建议各用户提前充值，谢谢！
+
+											<br><br> 请牢记千亿彩票官方网址　www.58qycp.com
+											<br>各位会员，为了您的充值快捷和安全，建议各位请勿保存二维码扫码，充值时请到网站获取，谢谢！</p>
+									</div>
+								</div>
+								<div class="row"><i></i>
+									<div><i></i>
+										<p><strong>在线充值备注账号和提交入款通知</strong><span>2017-08-08 00:01:38<i></i></span></p>
+										<p>尊敬的会员大家好，在线充值扫码的会员，您获取二维码充值时务必在备注栏填写您的会员账号(请不要备注名字以及别的)，否则财务无法核实为您入款，充值成功之后回到获得二维码的界面提交入款申请，点我已支付）财务收到信息第一时间会给您入款，谢谢！
+											<br> 望各位会员谨记充值时备注会员账号，并提交 我已支付 入款，谢谢！
+											<br>各位会员，现在在线银行卡转账已经更换，请有保存旧收款人（李国建）的会员请勿再转账了，现在更换新收款人（李现峰）请各位会员谨记，谢谢！
+
+											<br> 各位会员，现在财务微信vep797 已经全面停止使用，请有添加的会员，请勿再扫码了，如有充值不予负责。谢谢</p>
+									</div>
+								</div>
+								<div class="row"><i></i>
+									<div><i></i>
+										<p><strong>银行卡转账暂时停止使用</strong><span>2017-08-01 00:33:03<i></i></span></p>
+										<p> 尊敬的会员，因银行原因，银行卡转账已经更换户名，望各位会员请勿再充值之前的收款人 （李国建） ，现在更换为新收款人（李现峰），谢谢！
+											<br> 尊敬的各位会员，因今日是六合彩开奖日，建议各位需要会员充值请提早，晚上19；00-21；00为高峰期，为了您能快捷存款，建议各位会员提早充值，谢谢！
+
+											<br>尊敬的会员大家好，在线充值扫码的会员，您获取二维码充值时务必在备注栏填写您的会员账号(请不要备注名字以及别的)，否则财务无法核实为您入款，充值成功之后回到获得二维码的界面提交入款申请，点我已支付）财务收到信息第一时间会给您入款，谢谢！
+											<br> 望各位会员谨记充值时备注会员账号，并提交 我已支付 入款，谢谢！
+										</p>
+									</div>
+								</div>
+								<div class="row"><i></i>
+									<div><i></i>
+										<p><strong>下载手机APP送18元</strong><span>2017-07-30 19:00:17<i></i></span></p>
+										<p>为方便大家下注并能第一时间进入千亿彩票平台，现已推出手机APP（苹果IOS和安卓系统），请大家及时下载。推广活动中下载手机APP并完善资料并充值100元以上即送18元，系统将自动赠送，赢到136元即可提款 （如没收到请在APP退出帐号再重新登入），详细请进入 优惠活动 查看！</p>
+									</div>
+								</div>
+								<div class="row"><i></i>
+									<div><i></i>
+										<p><strong>线上二维码更换</strong><span>2017-07-30 12:47:29<i></i></span></p>
+										<p>尊敬的各位会员，在线二维码已经更换了，请有保存之前二维码的会员，可以前往获取新的二维码，谢谢！
+
+											<br>尊敬的会员大家好，在线充值扫码的会员，您获取二维码充值时务必在备注栏填写您的会员账号(请不要备注名字以及别的)，否则财务无法核实为您入款，充值成功之后回到获得二维码的界面提交入款申请，点我已支付）财务收到信息第一时间会给您入款，谢谢！</p>
+									</div>
+								</div>
+							</div>
+							<!--<div class="page_lay">
+								<div class="tip_page" style="display: none;">加载中请稍后</div>
+								<div class="page_outer">
+									<div class="allPageNum" style="display: block;">（共2页）</div>
+									<div class="page" data-pageindex="1">
+										<div name="laypage1.3" class="laypage_main laypageskin_molv" id="laypage_0"><span class="laypage_curr" style="background-color:#002a44">1</span>
+											<a href="javascript:;" data-page="2">2</a>
+											<a href="javascript:;" class="laypage_next" data-page="2">下一页</a><span class="laypage_total"><label>到第</label><input type="number" min="1" onkeyup="this.value=this.value.replace(/\D/, '');" class="laypage_skip"><label>页</label><button type="button" class="laypage_btn">确定</button></span></div>
+									</div>
+								</div>
+							</div>-->
+					</div>
+
+					<!-- 个人消息 -->
+					<div id="personal_mesg" class="css4" style="width: 100%; margin-left: 0px; display: none; min-height: 250px;">
+						<div class="list">
+							<div class="row" id="row"><i></i>
+								<div><i></i>
+									<p><strong>重要消息(必看)</strong><span>2017-08-17 15:12:23<i></i></span></p>
+									<p>尊敬的会员您好 为方便大家下注并能第一时间进入千亿彩票平台，现已推出手机APP（苹果IOS和安卓系统），请大家及时下载。推广活动中完善资料并充值100元以上，系统将自动赠送18元哦 （如没收到请退出然后重新登入）<br><br>
+									</p>
+									<p style="font-size:16px">千亿彩票永久域名 <span style="color:#0070c0"><b>www.58qycp.com</b></span> 请牢记，谢谢！<br><br>
+										<!--<b>苹果IOS下载地址：</b>
+										<a href="https://itunes.apple.com/cn/app/id1236682873?mt=8" target="_blank"><span style="color:#0070c0"><b>请点击此处进入下载</b></span></a><br><br>
+										<b>安卓Android下载地址：</b>
+										<a href="http://cp89app.b0.upaiyun.com/cp89_1.0.apk" target="_blank"><span style="color:#0070c0"><b>请点击此处进入下载</b></span></a>-->
+									</p>
+									<p></p>
+								</div>
+							</div>
+						</div>
+						<!--<div class="page_lay">
+							<div class="tip_page" style="display: none;">加载中请稍后</div>
+							<div class="allPageNum" style="display: block;"></div>
+							<div class="page" data-pageindex="1"></div>
+						</div>-->
+					</div>
+				</div>
+				<div class="_clr_"></div>
+			</div>
+			<div class="_clr_"></div>
+		</div>
+		</div>
+
+		<div class="jc-footer">
+
+			<div class="foot_box">
+				<div class="about_box">
+					<ul class="foot_info">
+						<li class="foot_wljc"></li>
+						<li class="foot_wangan"></li>
+						<li class="foot_wsjy"></li>
+						<li class="foot_xylh"></li>
+						<li class="foot_kxwz"></li>
+					</ul>
+
+					<p>2009-2017©
+						<span>千亿彩票</span>
+						<br>
+						<span class="c-grey">千亿彩票郑重提示：彩票有风险，投注需谨慎！ 不向未满18周岁的青少年出售彩票</span>
+					</p>
+
+					<div class="clear"></div>
+				</div>
+			</div>
+
+			<div class="clear nospace"></div>
+		</div>
+		<div class="all_gpc1" style="width: 415px;height:120px;position: relative;bottom: 217px;left: 616px;">
+			<div style="width:400px;height: 30px;margin-top: 30px;position: relative;left: 50px;font-weight: bold;color: black;">高频彩</div>
+			<span></span>
+		</div>
+		<div class="all_all1" style="width: 415px;height:150px;position: relative;bottom: 118px;left: 609px;">
+			<div style="width:400px;height: 30px;margin-top: 30px;position: relative;left: 50px;font-weight: bold;color: black;">全部</div>
+			<span></span>
+		</div>
+		<script src="../assets/js/plugins/jquery/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../assets/js/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../assets/js/plugins/user/user.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../assets/js/global.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../static/public/js/rollups/tripledes.js"></script>
+		<script src="../static/public/js/components/mode-ecb.js"></script>
+		<script src="../assets/js/application/move.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../assets/js/application/type.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../assets/js/base.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../assets/js/plugins/laypage/laypage.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../assets/js/application/uHome.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../assets/js/application/uMessage.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+		//获得在线客服地址
+		$.ajax({
+		  url : CONFIG.BASEURL + 'baseData_onlineService',
+		  type: 'get',
+		  dataType: 'json',
+		  success: function (json) {
+		      if(json.code != 200){
+		          return;
+		      } else {
+		          var data = json.data.url;
+		          $(".kefu").attr('href',data);
+		      }
+		  }
+		});
+			$('.all_gpc1,.all_all1').on('mouseenter', function() {
+				$('#lotterysList').css('display', 'block');
+			})
+			$('.all_gpc1,.all_all1').on('mouseleave', function() {
+				$('#lotterysList').css('display', 'none');
+			})
+
+			$(".ac_list_table").on("click", function() {
+				var display = $(this).next(".xialawz").css("display");
+				$(".ac_list_table").next(".xialawz").hide();
+
+				if(display == 'none') {
+					$(this).next(".xialawz").show();
+				} else {
+					$(this).next(".xialawz").hide();
+				}
+			});
+
+			$('.xzcz,#lotterysList').on('mouseenter', function() {
+				$('#lotterysList').show();
+			});
+			$('.xzcz,#lotterysList').on('mouseleave', function() {
+				$('#lotterysList').hide();
+			});
+
+			$('#left').on('click', function() {
+				$('.l_AD').css('display', 'none');
+			})
+			$('#right').on('click', function() {
+				$('.r_AD').css('display', 'none');
+			})
+
+			function addFavorite2() {
+				var url = window.location;
+				var title = document.title;
+				var ua = navigator.userAgent.toLowerCase();
+				if(ua.indexOf("360se") > -1) {
+					alert("由于360浏览器功能限制，请按 Ctrl+D 手动收藏！");
+				} else if(ua.indexOf("msie 8") > -1) {
+					window.external.AddToFavoritesBar(url, title); //IE8
+				} else if(document.all) {
+					try {
+						window.external.addFavorite(url, title);
+					} catch(e) {
+						alert('您的浏览器不支持,请按 Ctrl+D 手动收藏!');
+					}
+				} else if(window.sidebar) {
+					window.sidebar.addPanel(title, url, "");
+				} else {
+					alert('您的浏览器不支持,请按 Ctrl+D 手动收藏!');
+				}
+			}
+				
+		</script>
+	</body>
+
+</html>

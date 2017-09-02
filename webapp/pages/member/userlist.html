@@ -1,0 +1,33 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<#assign tool =JspTaglibs["http://caicaike.lottery.com/tag/toolbar"]/>
+<html>
+<head>
+<base href="${basePath}"/>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title></title>
+<#include "/common/easyui_css.inc">
+<#include "/common/css.inc">
+<#include "/common/easyui_js.inc">
+</head>
+<body>
+<div class="easyui-layout" data-options="fit:true">
+	<div data-options="region:'center', title:'用户管理>>注册用户',iconCls:'icon-texe',cls:'white'" >
+          <div  class="quer_label">
+             <label>用户名/ID:<input class="easyui-textbox" style="width:110px" id="userName" name="userName" ></label>
+             <label>状态:<select id="status" name="status" class="easyui-combobox" style="width:100px;" data-options="panelHeight:70">
+             	<option value="" selected="selected">全部</option>
+			    <option value="1">启用</option>
+			    <option value="0">禁用</option>
+             </select></label>
+             <label>注册日期:<input class="easyui-datebox" style="width:110px" id="beginDate" name="beginDate" data-options='panelWidth:170'>到<input class="easyui-datebox" style="width:110px" id="endDate" name="endDate" data-options='panelWidth:170'></label>
+             <a style="width: 60px;margin-right: 10px;font-size: 18px !important"  id="query"class="easyui-linkbutton green"href="javascript:queryData();">查询</a>
+    </div>
+    <div class="quer_label">
+    <@tool.bar menuId="${m_id!}"/>
+    </div>
+<table id="table"></table>  
+<div id="newWin" ></div>  
+</div> 
+<script type="text/javascript" src="pages/member/userlist.js"></script>
+</body>
+</html>

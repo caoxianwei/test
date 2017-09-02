@@ -1,0 +1,38 @@
+
+
+body, p, h1, h2, h3, h4, h5, li, span, i, ul, img, a, strong, input, button, textarea { margin: 0px; padding: 0px; }
+body { font-family: "microsoft yahei"; font-size: 14px; line-height: 1; }
+li { list-style-type: none; float: left; }
+a { text-decoration: none; outline: medium none; color: rgb(0, 0, 0); }
+img { border: medium none; vertical-align: middle; }
+i, var { font-style: normal; }
+input, select, textarea { outline: medium none; font-family: "microsoft yahei"; }
+.at { margin: 0px auto; }
+.wid { width: 1024px; margin: 0px auto; }
+.top { width: 100%; height: 90px; background: rgb(250, 98, 0) none repeat scroll 0% 0%; }
+.top .logo { float: left; margin-top: 20px; }
+.top .menu { float: right; }
+.top .menu ul {  }
+.top .menu ul li { width: 138px; font-size: 18px; line-height: 90px; background: rgb(229, 90, 0) none repeat scroll 0% 0%; text-align: center; }
+.top .menu ul li a { color: rgb(255, 255, 255); display: block; }
+.top .menu ul li.acti { background: rgb(250, 250, 250) none repeat scroll 0% 0%; }
+.top .menu ul li.acti a { color: rgb(229, 90, 0); }
+.banner { height: 805px; position: relative; background: transparent url('../images/img0.jpg') repeat scroll 0% 0%; overflow: hidden; }
+.banner .wid { position: relative; z-index: 1; }
+.banner .text { float: left; margin-top: 186px; display: table; }
+.banner .text img {  }
+.banner .text p { text-shadow: 2px 1px 1px rgba(57, 57, 57, 0.8); margin-top: 45px; color: rgb(255, 255, 255); font-size: 22px; line-height: 1.6; }
+.banner .text .boxsea { width: 517px; height: 69px; border-radius: 8px; overflow: hidden; margin-top: 54px; }
+.banner .text .boxsea input { width: 410px; height: 69px; float: left; border: medium none; font-size: 36px; color: rgb(193, 93, 29); text-align: center; }
+.banner .text .boxsea a { height: 69px; width: 107px; float: right; background: rgb(250, 98, 0) url('../images/ico7.png') no-repeat scroll center center; }
+.banner .rig_pic { margin-top: 102px; float: right; display: table; }
+.banner .list_ico { display: table; margin-top: 105px; float: left; margin-left: 115px; }
+.banner .list_ico ul li { width: 73px; text-align: center; margin: 0px 30px 0px 10px; }
+.banner .list_ico ul li .pict { display: table; height: 69px; width: 100%; }
+.banner .list_ico ul li .pict i { vertical-align: middle; display: table-cell; }
+.banner .list_ico ul li p { color: rgb(255, 255, 255); font-size: 17px; font-weight: bold; margin-top: 8px; }
+.banner .float { position: absolute; left: 0px; width: 100%; text-align: center; }
+.banner .float img { position: relative; left: -125px; transition: all 0.3s ease 0s; }
+.bot_copy { height: 106px; }
+.bot_copy p { line-height: 106px; font-size: 18px; color: rgb(51, 51, 51); text-align: center; text-transform: uppercase; }
+

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<base href="${basePath}">
+<meta charset="UTF-8">
+<title>新增角色</title>
+<#include "/common/easyui_css.inc"/>
+<#include "/common/css.inc"/>
+
+</head>
+<body>
+<div class="easyui-layout" data-options="fit:true">
+	<div id="showDiv" data-options="region:'center'" style="margin-left:-20%;padding:10px; border:none !important;">
+		<form id="ff" action="${basePath}bank/addData.do" method="post" style="text-align:center;">   
+                  <table class="table">
+                    <tbody>
+                      <tr>
+                       <td class="td-right width-30"><label for="name"><span class="font-red">*</span>银行名称:</label> </td>
+                       <td><input class="easyui-textbox" type="text" id="add_bank_name" name="bank_name" style="width:300PX" /> </td>
+                      </tr>
+                      <tr>
+                       <td class="td-right width-30"><label for="name"><span class="font-red">*</span>账号:</label> </td>
+                       <td><input class="easyui-textbox" type="text" id="add_bank_account"  name="bank_account" style="width:300PX" /> </td>
+                      </tr>
+                      <tr>
+                       <td class="td-right width-30"><label for="name"><span class="font-red">*</span>姓名:</label> </td>
+                       <td><input class="easyui-textbox" type="text" id="add_user_name" name="user_name" style="width:300PX"/> </td>
+                      </tr>
+                      <tr>
+                       <td class="td-right width-30"><label for="name"><span class="font-red">*</span>国家:</label> </td>
+                       <td><input class="easyui-textbox" type="text" id="add_country" name="country" style="width:300PX" /> </td>
+                      </tr>
+                        
+                </tbody>
+                </table>        
+              </form> 
+	</div>
+	<div data-options="region:'south',border:false" class="panl-footer">
+		<a class="easyui-linkbutton blue" href="javascript:void(0)"  onclick="javascript:addData()" style="width:80px">保存</a>
+		<a class="easyui-linkbutton gray" href="javascript:void(0)" onclick="javascript:closeDiv()" style="width:80px">取消</a>
+	</div>
+</div>
+<#include "/common/easyui_js.inc"/>
+<script type="text/javascript" src="pages/capital/bank/listBank.js"></script>
+</body>
+</html>

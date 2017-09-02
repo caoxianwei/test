@@ -1,0 +1,166 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+<meta http-equiv="pragma" content="no-cache"> 
+<meta http-equiv="cache-control" content="no-cache"> 
+<meta http-equiv="expires" content="0"> 
+<meta content="telephone=no" name="format-detection">
+<meta content="black" name="apple-mobile-web-app-status-bar-style">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta http-equiv="X-UA-Compatible" content="edge">
+<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="js/mui/mui.min.js"></script>
+<script type="text/javascript" src="js/move.js"></script>
+<script type="text/javascript" src="js/me.js"></script>
+<script type="text/javascript" src="js/rollups/tripledes.js"></script>
+<script type="text/javascript" src="js/components/mode-ecb.js"></script>
+<link type="text/css" rel="stylesheet" href="css/mui/mui.min.css" />
+<link type="text/css" rel="stylesheet" href="css/base.css" />
+<link type="text/css" rel="stylesheet" href="css/me.css" />
+<title>我的</title>
+<script type="text/javascript">
+$(document).ready(function(){
+	meObj.me();
+});
+</script>
+</head>
+<body>
+<div class="main-content">
+	<div class="me-box">
+		<div class="head-setting">
+			<div class="head">
+				<div class="head-img fl">
+					<img id="head-img" src="" onerror="javascript:this.src='images/head.png';">
+				</div>
+				<div class="head-info fl">
+					<span id="u"></span>
+					<span id="loginbtn" onclick="baseObj.openLogin();">点击登录</span>
+				</div>
+			</div>
+			<div class="setting" onclick="baseObj.openView('setting.html');">
+				<span class="setting-ico mui-icon icon-shezhi">
+				</span>
+				<span class="setting-lable">设置</span>
+			</div>
+		</div>
+		<div class="coupons-points transparentlow">
+			<div class="money-box">
+				<span id="yue" class="money-val">0</span>
+				<span class="money-lable">余额</span>
+			</div>
+			<div class="money-box">
+				<span id="tikuan" class="money-val">0</span>
+				<span class="money-lable">提款金额</span>
+			</div>
+			<div class="money-box">
+				<span id="shuying" class="money-val">0</span>
+				<span class="money-lable">今日输赢</span>
+			</div>
+		</div>
+	</div>
+	<div class="greyline"></div>
+	<div class="me-cell-box">
+		<ul class="mui-table-view">
+			 <li class="mui-table-view-cell">
+                <a class="mui-navigate-right" href="javascript:baseObj.openView('touzhuList.html');">
+                	<span class="me-ico"><img src="images/ico_touzhu.png"></span>
+                	<span class="fl">投注记录</span>
+                </a>
+            </li>
+			<li class="mui-table-view-cell">
+				<a class="mui-navigate-right" href="javascript:baseObj.openView('moneylist.html');">
+					<span class="me-ico"><img src="images/ico_jiaoyijilu.png"></span>
+					<span class="fl">交易记录</span>
+				</a>
+			</li>
+			 <li class="mui-table-view-cell">
+                <a class="mui-navigate-right" href="javascript:baseObj.openView('zhongjiangList.html');">
+                	<span class="me-ico"><img src="images/ico_zhongjiang.png"></span>
+                	<span class="fl">中奖记录</span>
+                </a>
+            </li>
+			 <li class="mui-table-view-cell">
+                <a class="mui-navigate-right" href="javascript:baseObj.openView('wallet.html');">
+                	<span class="me-ico"><img src="images/ico_cunqukuan.png"></span>
+                	<span class="fl">存取款</span>
+                </a>
+            </li>
+			 <li class="mui-table-view-cell">
+                <a class="mui-navigate-right" href="javascript:baseObj.openView('rechargeList.html');">
+                	<span class="me-ico"><img src="images/ico_chongzhi.png"></span>
+                	<span class="fl">充值记录</span>
+                </a>
+            </li>
+			 <li class="mui-table-view-cell">
+                <a class="mui-navigate-right" href="javascript:baseObj.openView('tikuanList.html');">
+                	<span class="me-ico"><img src="images/ico_tikuan.png"></span>
+                	<span class="fl">提款记录</span>
+                </a>
+            </li>
+			<!--<li class="mui-table-view-cell">-->
+				<!--<a class="mui-navigate-right" href="javascript:baseObj.openView('info.html');">-->
+					<!--<span class="me-ico"><img src="images/ico_more.png"></span>-->
+					<!--<span class="fl">个人资料</span>-->
+				<!--</a>-->
+			<!--</li>-->
+			<!--<li class="mui-table-view-cell">-->
+				<!--<a class="mui-navigate-right" href="javascript:baseObj.openView('editbank.html');">-->
+					<!--<span class="me-ico"><img src="images/ico_more.png"></span>-->
+					<!--<span class="fl">银行卡管理</span>-->
+				<!--</a>-->
+			<!--</li>-->
+			<!--<li class="mui-table-view-cell">-->
+				<!--<a class="mui-navigate-right" href="javascript:baseObj.openView('litterlist.html');">-->
+					<!--<span class="me-ico"><img src="images/ico_more.png"></span>-->
+					<!--<span class="fl">站内信</span>-->
+				<!--</a>-->
+			<!--</li>-->
+			<!--<li class="mui-table-view-cell">-->
+				<!--<a class="mui-navigate-right" href="javascript:baseObj.openView('agent.html');">-->
+					<!--<span class="me-ico"><img src="images/ico_more.png"></span>-->
+					<!--<span class="fl">代理赚钱</span>-->
+				<!--</a>-->
+			<!--</li>-->
+			<!--<li class="mui-table-view-cell">-->
+				<!--<a class="mui-navigate-right" href="javascript:baseObj.openView('notice.html');">-->
+					<!--<span class="me-ico"><img src="images/ico_more.png"></span>-->
+					<!--<span class="fl">公告</span>-->
+				<!--</a>-->
+			<!--</li>-->
+			 <li class="mui-table-view-cell">
+                <a class="mui-navigate-right" href="javascript:baseObj.openView('more.html');">
+                	<span class="me-ico"><img src="images/ico_more.png"></span>
+                	<span class="fl">更多</span>
+                </a>
+            </li>
+			<!--<li style="height: 50px;">-->
+			<!--</li>-->
+		</ul>
+	</div>
+	<!-- 底部导航栏 -->
+	<div class="nav-box">
+		<nav class="mui-bar mui-bar-tab" id="mui-bar">
+			<a class="mui-bar-item" href="javascript:baseObj.openIndex();">
+				<span class="mui-icon mui-img-home"></span>
+				<span class="mui-tab-label">首页</span>
+			</a>
+			<a class="mui-bar-item" href="javascript:baseObj.xiazhu();" >
+				<span class="mui-icon mui-img-xiazhu"></span>
+				<span class="mui-tab-label">下注</span>
+			</a>
+			<a class="mui-bar-item" href="javascript:baseObj.open();">
+				<span class="mui-icon mui-img-open">
+				</span>
+				<span class="mui-tab-label">开奖</span>
+			</a>
+			<a class="mui-bar-item mui-active" href="javascript:baseObj.openMe();">
+				<span class="mui-icon mui-img-me"></span>
+				<span class="mui-tab-label">我的</span>
+			</a>
+		</nav>
+	</div>
+</div>
+</body>
+</html>

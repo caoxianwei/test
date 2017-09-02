@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<base href="${basePath}">
+<meta charset="UTF-8">
+<title>修改通知</title>
+<#include "/common/easyui_css.inc"/>
+<#include "/common/css.inc"/>
+<#include "/common/umeditor_css.inc"/>
+</head>
+<body>
+<input type="hidden" id="type" value="${advertis.type}" />
+<div class="easyui-layout" data-options="fit:true">
+	<div data-options="region:'center', title:'信息管理>>通知>>修改',iconCls:'icon-texe',cls:'white'">
+	<div id="showDiv" data-options="region:'center'" style="padding:10px; border:none !important">
+          <input type="hidden" id="noticeId" name="id" value="${advertis.id}" />
+          <table class="table" border="1px solid #e5e5e5" style="border:1px solid #e5e5e5;width:100%; margin:0 auto; margin-bottom:20px;margin-left: 0%">
+            <tbody>
+              <tr>
+               <td class="td-right customtabletd" width="10%"><label for="name"><span class="font-red">*</span>标题:</label> </td>
+               <td class="customtabletd" width="89%"><input class="easyui-textbox" type="text" id="title" name="title" value="${advertis.title}" style="width:300PX" /> </td>
+              </tr>
+              <tr>
+               <td class="td-right customtabletd"><label for="name"><span class="font-red">*</span>内容来源:</label> </td>
+               <td class="customtabletd">
+                 <label><input type="radio" name="type" value="1" onclick="javascript:clickType(this)" ${(advertis.type=='1')?string('checked','')} />外部网址</label>
+                 <label><input type="radio" name="type" value="2" onclick="javascript:clickType(this)" ${(advertis.type=='2')?string('checked','')} />发布内容</label>
+                </td>
+              </tr>
+              <tr id="linktext">
+               <td class="td-right customtabletd"><label for="name" >网址:</label> </td>
+               <td class="customtabletd"><input class="easyui-textbox" type="text" id="link" name="link" value="${advertis.link}" style="width:300PX" /> </td>
+              </tr>
+              <tr id="contentbox">
+               <td class="td-right customtabletd"><label for="name" >发布内容:</label> </td>
+               <td class="customtabletd">
+                  <div style="width: 750px;height: 360px;margin-bottom: 10px">
+				     <input type="hidden" id="content" name="content" value="${advertis.content}" />
+				     <textarea id="myEditor"  name="myEditor" style="width:120%;height:360px;">
+			         </textarea>
+				   </div> 
+               </td>
+              </tr>
+        </tbody>
+        </table>      
+	</div>
+	<div data-options="region:'south',border:false" class="panl-footer">
+		<a class="easyui-linkbutton blue" href="javascript:void(0)"  onclick="javascript:updateData()" style="width:80px">保存</a>
+		<a class="easyui-linkbutton gray" href="javascript:void(0)" onclick="javascript:goBack()" style="width:80px">取消</a>
+	</div>
+</div>
+</div>
+<input type="hidden" id="startDate" value="${parames.startDate}" />
+<input type="hidden" id="endDate" value="${parames.endDate}" />
+<#include "/common/easyui_js.inc"/>
+<#include "/common/umeditor_js.inc"/>
+<script type="text/javascript" src="pages/infomanager/activity/initumeditor.js"></script>
+<script type="text/javascript" src="pages/infomanager/notice/listNotice.js"></script>
+</body>
+</html>

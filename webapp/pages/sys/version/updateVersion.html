@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<base href="${basePath}">
+<meta charset="UTF-8">
+<title>修改版本</title>
+<#include "/common/easyui_css.inc"/>
+<#include "/common/css.inc"/>
+
+</head>
+<body>
+<div class="easyui-layout" data-options="fit:true">
+	<div id="showDiv" data-options="region:'center'" style="margin-left:-20%;padding:10px; border:none !important">
+		<form id="ff" action="${basePath}sysVersion/updateVersion.do" method="post" style="text-align:center; width:100%;">   
+		    <input type="hidden" name="id" value="${version.id}" />
+                  <table class="table" >
+                    <tbody>
+                      <tr>
+                       <td class="td-right width-30"><label for="name"><span class="font-red">*</span>设备类型:</label> </td>
+                       <td>
+                          <select class="easyui-combobox" id="type" name="type" data-options="panelHeight:50">
+                            <option value='1' ${(version.type=='1')?string('selected','')}>ios</option>
+                            <option value='2' ${(version.type=='2')?string('selected','')}>android</option>
+                          </select>
+                       </td>
+                      </tr>
+                       <tr>
+                       <td class="td-right width-30"><label for="name" >升级方式:</label> </td>
+                       <td>
+                          <select class="easyui-combobox" id="flag" name="flag" data-options="panelHeight:50">
+                            <option value='0' ${(version.flag=='0')?string('selected','')}>可选升级</option>
+                            <option value='1' ${(version.flag=='1')?string('selected','')}>强制升级</option>
+                          </select>
+                       </td>
+                      </tr>
+                      <tr>
+                       <td class="td-right width-30"><label for="name" >当前版本:</label> </td>
+                       <td>
+                          <select class="easyui-combobox" id="is_def" name="is_def" data-options="panelHeight:50">
+                            <option value='1' ${(version.is_def=='1')?string('selected','')}>是</option>
+                            <option value='0' ${(version.is_def=='0')?string('selected','')}>否</option>
+                          </select>
+                       </td>
+                      </tr>
+                      <tr>
+                       <td class="td-right width-30"><label for="name" ><span class="font-red">*</span>版本号:</label> </td>
+                       <td><input class="easyui-textbox" type="text" id="ver" name="ver" value="${version.ver}" style="width:500PX" /> </td>
+                      </tr>
+                      
+                      <tr>
+                       <td class="td-right width-30"><label for="name" ><span class="font-red">*</span>下载地址:</label> </td>
+                       <td><input class="easyui-textbox" type="text" id="link" name="linkstr" value="${version.link}" style="width:500PX" /> </td>
+                      </tr>
+                      <tr>
+                       <td class="td-right width-30"><label for="name" >升级内容:</label> </td>
+                       <td>
+                        <input class="easyui-textbox" type="text" multiline="true" name="contentstr" style="width:500px;height:200px" value="${version.content}" style="width:80%; height:140px;" /> 
+                       </td>
+                      </tr>
+                </tbody>
+                </table>        
+              </form> 
+	</div>
+	<div data-options="region:'south',border:false" class="panl-footer">
+		<a class="easyui-linkbutton blue" href="javascript:void(0)"  onclick="javascript:updateData()" style="width:80px">保存</a>
+		<a class="easyui-linkbutton gray" href="javascript:void(0)" onclick="javascript:closeDiv()" style="width:80px">取消</a>
+	</div>
+</div>
+<#include "/common/easyui_js.inc"/>
+<script type="text/javascript" src="pages/sys/version/listVersion.js"></script>
+</body>
+</html>

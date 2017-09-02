@@ -1,0 +1,106 @@
+.clear{ clear: both;}
+.top_new_nav{background:#fff; border:1px solid #dedede; line-height:31px; margin-top: 10px;}
+h3 { font-weight: normal; }
+
+.top_new_nav li a:hover{text-decoration: none;}
+.szc_nav_container{height:40px;border-bottom: 1px #dedede solid; line-height: 40px;}
+.szc_nav_container li{float: left;text-align:right;margin-right: 25px;}
+.szc_nav_container .szc_nav_bg{ width: 80px; color: #c71f33; }
+.gpc_nav_container{height: 65px;}
+.gpc_nav_container li{float: left;}
+.gpc_nav_container .gpc_nav_bg{background: url(../images/lottery_szgp_logo_bg.png) 0 -31px no-repeat;height: 65px;width: 100px;}
+.gpc_nav_container .gpc_ul_list ul li{height: 32px;text-align:center;margin-right: 15px;}
+.bottom_dashed{height: 32px;width: 862px;border-bottom: 1px dashed #D8D7D7;}
+.lottery_nav{ width:984px; margin: 10px auto; border: 1px #DEDEDE solid;}
+.lottery_nav .nav_top{background: url(../images/top_nav_bg_28.gif) repeat-x; height: 28px; line-height:28px; padding-left: 15px;}
+.lottery_nav .nav_top h1{color: #777; font-size:14px; float: left;}
+.lottery_nav .nav_top .nav_link{float: right; padding-right: 10px;}
+.lottery_nav .nav_top .nav_link a{margin-right: 8px;}
+.lottery_nav .nav_top ul{float: left; margin-left: 10px; border-left: 1px #DBDBDB solid;}
+.lottery_nav .nav_top li{float: left; width: 72px; text-align: center; border-right: 1px #DBDBDB solid; height:27px;}
+.lottery_nav .nav_top li a{font-size: 14px; color: #767676; }
+.lottery_nav .nav_top li a:hover{text-decoration: none;}
+.lottery_nav .nav_top li.on{background: url(../images/lhc_allbg.gif) -415px -198px no-repeat; height:28px; position: relative;}
+.lottery_nav .nav_top li.on a{color: #E60012; font-weight: bold;}
+.lottery_nav .nav_main{margin:5px 0 5px 10px; text-align: right; padding-right: 15px;}
+.lottery_nav .nav_main dt{float: left; font-weight: bold;}
+.lottery_nav .nav_main .feedback{ color: #FF0000;}
+.lottery_nav .nav_main .analysis_list li{float: left; color: #333333;font: 12px/1.5 tahoma, arial, \5b8b\4f53, sans-serif;}
+.lottery_nav .nav_main .analysis_list li a{margin:0 8px; color: #333333;}
+.lottery_nav .nav_main .analysis_list li a:hover{text-decoration: none;}
+.lottery_nav .nav_main .analysis_list li.on a{color: #FFFFFF; background: #FF0000; padding: 2px;}
+.parameter_draw_wrapper{width:984px; margin: 10px auto;}
+.tab_foot{ background:#f8f8f8; border:#e0eef6 solid 1px;float:left;width:499px;}
+.tab_foot h4{ background:#e5f4fd; font-size:12px; height:25px; line-height:25px; padding-left:15px;border-bottom:#e0eef6 solid 1px;}
+.tab_foot p{ padding:10px 20px; line-height:22px;}
+.draw_main{ float: left; margin-left: 10px; display:inline; width: 470px; background: #F3F3F3; border: 1px #E0EEF6 solid;}
+.draw_main .draw_title{background-attachment: scroll;background-clip: border-box;background-color: #E5F4FD;background-image: none;background-origin: padding-box;background-position: 0 0;background-repeat: repeat;background-size: auto auto;border-bottom-color: #E0EEF6;border-bottom-style: solid;border-bottom-width: 1px;font-size: 12px;height: 25px;line-height: 25px;padding-left: 15px;}
+.draw_main .draw_left{ width: 201px;}
+.draw_main .draw_left .draw_link{ margin-top: 35px;padding: 1px;width: 201px;}
+.draw_main .draw_left .winning_box{width: 201px; margin-top: 10px; padding: 1px;}
+.draw_main .draw_left .winning_box .winning_title{width: 201px; height:25px;}
+.draw_main .draw_left .winning_box .winning_title span{padding-right: 20px; margin-right: 5px; display: block;  color: #333333; text-align: left;}
+.draw_main .draw_left .winning_box .winning_list{width: 201px; height:73px; float: left;}
+.draw_main .draw_left .winning_box .winning_list li{line-height: 24px; padding-left: 5px; color: #333333;}
+.draw_main .draw_left .winning_box .winning_list li.bgcolor{}
+.draw_main .draw_left .winning_box .winning_button{margin-left: 20px;margin-top: 10px;width: 141px; height:73px; float: left;display: inline;}
+.draw_main .draw_left .winning_box .winning_button img.wyyzdj{margin-top: 8px; margin-left: 10px;}
+.draw_main .draw_left .winning_box .winning_button a.button{background: url(../images/btn_bg.gif) no-repeat; display: block; width: 109px; height: 33px; margin-left: 10px; margin-top: 3px;}
+.draw_main .draw_left .winning_box .winning_button a.button2{background: url(../images/btn_bg.gif) 0 -64px no-repeat; display: block; width: 109px; height: 33px; margin-left: 20px; margin-top: 10px;}
+.draw_main .draw_left .winning_box .winning_button .link{margin-left: 15px; margin-top: 5px;}
+.draw_main .draw_right{ width: 252px;}
+.draw_main .draw_right .column_box{width: 252px; margin-top: -1px; padding-bottom: 0px;}
+.draw_main .draw_right .column_box .column_title{background: url(../images/lottery_bg.gif) 0 -200px no-repeat; height: 29px; line-height: 29px; border-right: 1px solid #E3E3E3;}
+.draw_main .draw_right .column_box .column_title span{float: left; margin-left: 10px; color: #333333; font-weight: bold;}
+.draw_main .draw_right .column_box .column_title .draw_phase{padding-left: 10px;}
+.draw_main .draw_right .column_box .column_title .more{float: right; font-weight: normal; margin-right: 10px; display: inline;}
+.draw_main .draw_right .column_box .column_main{border: 1px #E3E3E3 solid; padding-bottom: 10px; background: #FFFFFF; border-left: none;}
+.draw_main .draw_right .column_box .draw_cms{ border-bottom: none;}
+.draw_main .draw_right .none_margin_top{margin-top: 0px;}
+.draw_main .draw_right .column_box .draw_info{padding: 28px 16px; background: #F8F8F8;}
+.draw_main .draw_right .column_box .draw_info .darw_info_list li{height: 26px; line-height: 26px; border: 1px #FFB684 solid; border-bottom: none; padding-left: 10px; background: #FEFEC1;}
+.draw_main .draw_right .column_box .draw_info .darw_info_list li.last{border-bottom: 1px #FFB684 solid;}
+.draw_main .draw_right .column_box .draw_info .lotteryslogon {text-align: center;margin-top:20px;}
+.draw_main .draw_right .column_box .draw_cms_list{margin: 10px 10px 0; white-space: nowrap;}
+.draw_main .draw_right .column_box .draw_cms_list li{margin-left: 15px; list-style-image: url(../images/list_style.gif); line-height: 22px;}
+.draw_main .draw_right .column_box .draw_cms_list li a{color: #333333;text-decoration: none;}
+.draw_main .draw_right .column_box .draw_cms_list li a:hover{text-decoration: none; color: #FF0000;}#baidu_clb_slot_148305 {margin: 10px auto 0 auto;width:986px;}
+
+.no-border { border-bottom: none; }
+.go-top{position: absolute; visibility:visible; top: 0; left: 0; width: 30px; height: 90px;cursor:pointer;}
+._iframe_divs_{width: 100%;margin: 0px;}
+._iframe_divs_>#_games_2{width: 1000px;margin: 0px auto 0 auto;}
+.trend-box{width: 980px; margin: 10px auto 0; background:#fff; border:1px solid #dedede;}
+.trend-box .trend-title{height: 35px; line-height: 35px;  padding-left: 15px; border-bottom: 1px solid #dedede}
+.trend-box .trend-title h2{padding-left: 42px; font-size: 14px; font-weight: normal;}
+.trend-box .trend-main .trend-lot-ul li{float: left; width:155px;}
+.trend-box .trend-main .trend-lot-ul li.last{border-bottom: none;}
+.trend-box .trend-main .lottery-logo{float: left; width: 123px; height: 114px;}
+.trend-box .trend-main .lottery-logo a{width: 77px; height: 77px; display: block; margin-top: 6px; margin-left: 22px; overflow: hidden;}
+.trend-box .trend-main .lottery-logo a img{margin: 0 auto; display: block; max-width: 100%}
+.trend-box .trend-main .lottery-logo .lottery-title{height: 17px; line-height: 17px; padding-top: 8px; width: 114px; text-align: center; font-weight: normal; }
+.trend-box .trend-main .right-content{float: left; padding: 10px 0 0;}
+.trend-box .trend-main .right-content .row-content{ padding-left: 15px;}
+.trend-box .trend-main .right-content .row-content h2{float: left; background: url(../images/index/content_title_bg.gif) 0px 10px no-repeat; padding-left: 15px; color: #585757; line-height: 30px; width: 65px;}
+.trend-box .trend-main .right-content .row-content strong{float: left; background: url(../images/index/content_title_bg.gif) 0px 10px no-repeat; padding-left: 15px; color: #585757; line-height: 30px; width: 65px;}
+.trend-box .trend-main .right-content .row-content .trend-content{float: left; padding-left: 10px;}
+.trend-box .trend-main .right-content .row-content .trend-content span{ display: block; float: left; line-height: 18px;}
+.trend-box .trend-main .right-content .row-content .trend-content span a{ background: #c71f33; color: #fff; padding:5px 10px; position: relative; text-decoration: none; display:inline-block;}
+.trend-box .trend-main .right-content .row-content .trend-content span a:hover{color: #fff; text-decoration: underline;}
+.trend-box .trend-main .right-content .row-content .trend-content span a s{background: url(../images/index/hot.gif) no-repeat; width: 13px; height: 13px; position: absolute; top: -3px; right: -13px;}
+.trend-lot-ul { overflow: hidden; padding:20px; }
+.div_iframe{height:100%;position:relative;padding:0;margin:0;}
+.div_iframe  iframe{display:block;margin:0;height:100%;width:100%}
+
+/*走势图和开奖结果的头部menu*/
+#_top_menu_div{padding:1px 0px 8px 4px;width:960px;margin:0 auto;}
+#_top_menu_div , #_top_menu_div *{box-sizing:border-box;}
+#_top_menu_div  .tab_menu{height:30px;border-bottom:1px solid #C8C8C8;}
+#_top_menu_div  .tab_menu>div{float:left;margin-left:1px;height:31px;line-height:30px;min-width:80px;text-align:center;padding:0 15px;cursor:pointer;}
+#_top_menu_div  .tab_menu>div.current{color:#ea721a;border-bottom:3px solid #ea721a;margin-bottom:-2px;}
+#_top_menu_div  .game_btn{margin-top:1px;padding-top:1px;}
+#_top_menu_div  .game_btn>a{min-width:70px;padding:0 6px 0 6px;text-align:center;line-height:27px;margin-top:2px;display:inline-block;cursor:pointer;border-radius:4px;margin-right:6px;}
+#_top_menu_div  .game_btn>a.current{color:#ea721a;}
+#_top_menu_div  .game_btn i , #_top_menu_div  .game_btn:after{clear:both;}
+
+

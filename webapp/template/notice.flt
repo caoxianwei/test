@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="expires" content="0">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta http-equiv="X-UA-Compatible" content="edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>通知</title>
+    <style>
+        html,body{font-size:14px;}
+        .main-content{max-width: 540px;margin: 0 auto;}
+        
+        .author-box{height: 25px;line-height: 25px;font-size: 15px;}
+        .author-box .author{color: #F7CA5C;margin-right: 10px;}
+		.author-box .date{color: #bbb;float: right;}
+		.news-title{font-size: 20px;color: #333;line-height: 30px;overflow:hidden;display:block;max-height: 60px;text-align: center;}
+
+        h1,h2,h3,h4,h5,ul,ol,p,form{padding:0px;margin:0px;}
+		
+		.content-box figure{margin: 0;}
+		.content-box{padding: 5px 0;color: #333;}
+		.content-box p {font-size: 16px; line-height: 26px; color: #666;text-indent1: 2em;}
+		.content-box img {display: block;margin: 5px auto;max-width: 100%;}
+		.comment-box{}
+		.comment-box .comment-title{width: 78%;margin: 0 auto;}
+		.comment-box .comment-title img{width: 100%;}
+        
+    </style>
+</head>
+<body>
+<div class="main-content">
+ 	<div class="title news-title">${title}</div>
+	<div class="author-box">
+		<span class="date">${create_time}</span>
+	</div>
+	<div class="content-box">
+		${content}
+	</div>
+</div>
+
+
+<script type="text/javascript">
+   var h = screen.height;
+    var scroll = document.querySelector('.mui-scroll');
+    scroll.style.cssText = 'height:'+h+'px; overflow:auto;';
+</script>
+</body>
+</html>

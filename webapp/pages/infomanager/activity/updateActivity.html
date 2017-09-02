@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<base href="${basePath}">
+<meta charset="UTF-8">
+<title>修改活动</title>
+<#include "/common/easyui_css.inc"/>
+<#include "/common/css.inc"/>
+<#include "/common/umeditor_css.inc"/>
+</head>
+<body>
+
+<div class="easyui-layout" data-options="fit:true">
+	<div data-options="region:'center', title:'活动管理>>修改活动',iconCls:'icon-texe',cls:'white'">
+	<form id="uploadImgForm" style="display: none" action="${basePath}file/uploadFileToTemp.do" method="post" target="imgIfr"  enctype="multipart/form-data">
+ 		<input type="file" id="imgInput" onchange="javascript:uploadImg()" name="img" value="" accept=".jpg,.gif,.png,.jpeg,.bpm" />
+	</form>
+	<div id="showDiv" data-options="region:'center'" style="margin-left:0%;padding:10px; border:none !important;">
+           <input type="hidden" id="activityId" value="${bean.id}" />
+           <input type="hidden" id="imgPath" name="imgPath" value="" />
+           <table class="table table" border="1px solid #e5e5e5" style="border:1px solid #e5e5e5;width:100%; margin:0 auto; margin-bottom:20px;margin-left: 0%">
+             <tbody>
+               <tr>
+                <td class="td-right customtabletd" width="10%"><label for="name"><span class="font-red">*</span>标题:</label> </td>
+                <td class="customtabletd" width="89%"><input class="easyui-textbox" type="text" id="title" name="title" value="${bean.title}" style="width:500PX" /> </td>
+               </tr>
+               <tr>
+                <td class="td-right customtabletd"><label for="name" >图片:</label> </td>
+                <td class="customtabletd">
+                  <a class="easyui-linkbutton blue" href="javascript:void(0)"  onclick="javascript:selectImg()" style="width:80px">上传图片</a><br/>
+                  <#if bean.img??>
+                  <img alt="${bean.title}" id="indexImg" src="${bean.img}" style="margin-top:3px;width: 440px;height:200px"><br/>
+                  <#else>
+                  <img alt="活动图片" id="indexImg" src="" style="display: none;margin-top:3px;width: 440px;height:200px"><br/>
+                  </#if>
+                  <span style="color:red">建议尺寸 [宽x高]640x320</span>
+                </td>
+               </tr>
+               <tr>
+                <td class="td-right customtabletd"><label for="name"><span class="font-red">*</span>活动时间:</label> </td>
+                <td class="customtabletd">
+                  <label>
+                   <input class="easyui-datetimebox"  id="beginDate" value="${bean.begin_date}" data-options='panelWidth:175'> 到
+                   <input class="easyui-datetimebox"  id="endDate" value="${bean.end_date}" data-options='panelWidth:175'></label>
+                 </td>
+               </tr>
+               <tr id="contentbox ">
+                <td class="td-right customtabletd"><label for="name" ><span class="font-red">*</span>活动内容:</label> </td>
+                <td class="customtabletd">
+                  <div style="width: 750px;height: 360px;margin-bottom: 10px">
+			        <textarea id="myEditor"  name="myEditor" style="width:120%;height:360px;">
+			        </textarea>
+			      </div>
+                </td>
+               </tr>
+               <tr>
+                <td class="td-right customtabletd"><label for="name" ><span class="font-red">*</span>排序:</label> </td>
+                <td class="customtabletd">
+                  <input class="easyui-textbox" type="text" id="sort" name="sort" value="${bean.sort}" style="width:500PX" /> 
+                  <span style="color:red">排序值越小，活动越靠前</span>
+                </td>
+               </tr>
+         </tbody>
+         </table>        
+	</div>
+	<div data-options="region:'south',border:false" class="panl-footer">
+		<a class="easyui-linkbutton blue" href="javascript:void(0)"  onclick="javascript:updateData()" style="width:80px">保存</a>
+		<a class="easyui-linkbutton gray" href="javascript:void(0)" onclick="javascript:window.history.go(-1);" style="width:80px">取消</a>
+	</div>
+</div>
+</div>
+<input type="hidden" id="content" value="${bean.content}" />
+<input type="hidden" id="selectTitle" value="${parames.selectTitle}" />
+<input type="hidden" id="startDate" value="${parames.startDate}" />
+<input type="hidden" id="endDate" value="${parames.endDate}" />
+<iframe id="imgIfr" name="imgIfr" style="display: none"></iframe>
+<#include "/common/easyui_js.inc"/>
+<#include "/common/umeditor_js.inc"/>
+<script type="text/javascript" src="pages/infomanager/activity/initumeditor.js"></script>
+<script type="text/javascript" src="pages/infomanager/activity/listActivity.js"></script>
+</body>
+</html>

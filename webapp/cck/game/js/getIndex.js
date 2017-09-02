@@ -1,0 +1,11 @@
+var pathName = window.location.pathname.split('/')[2].split('.')[0];
+$('head').append('<script type="text/javascript" src="js/mui/mui.min.js?time='+new Date().getMilliseconds()+'"></script>');
+$('head').append('<script type="text/javascript" src="js/move.js?time='+new Date().getMilliseconds()+'"></script>');
+$('head').append('<script type="text/javascript" src="js/smarticker.js"></script>');
+$('head').append('<script type="text/javascript" src="js/index.js?time='+new Date().getMilliseconds()+'"></script>');
+$('head').append('<script type="text/javascript" src="js/rollups/tripledes.js"></script>');
+$('head').append('<script type="text/javascript" src="js/components/mode-ecb.js"></script>');
+$('head').append('<link type="text/css" rel="stylesheet" href="css/mui/mui.min.css">');
+$('head').append('<link type="text/css" rel="stylesheet" href="css/base.css?time='+new Date().getMilliseconds()+'" />');
+$('head').append('<link type="text/css" rel="stylesheet" href="css/index.css?time='+new Date().getMilliseconds()+'" />');
+$('head').append('<link type="text/css" rel="stylesheet" href="css/jquery.smarticker.css" />');

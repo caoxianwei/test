@@ -1,0 +1,151 @@
+
+* { box-sizing: border-box; margin: 0px; padding: 0px; }
+body { font-size: 16px; font-family: "Microsoft YaHei",Arial,Helvetica,sans-serif; color: rgb(255, 255, 255); }
+body a { text-decoration: none; background-color: transparent; color: rgb(0, 0, 0); }
+body input { outline: 0px none; }
+body ul, body ol { list-style: outside none none; }
+body .qc::after { content: " "; display: table; clear: both; }
+.red { color: rgb(255, 58, 58); }
+.red a { color: rgb(255, 58, 58); }
+.bghui { background: rgb(244, 243, 243) none repeat scroll 0% 0%; }
+.kuang1 { position: relative; }
+.kuang1 .btn-box { display: none; position: absolute; right: 0px; bottom: 125%; width: 220px; border: 1px solid rgb(216, 216, 216); padding: 5px 0px; border-radius: 2px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; z-index: 2000; }
+.kuang1 .btn { width: 24px; height: 18px; border: 0px none; display: block; float: left; margin-left: 6px; }
+.kuang1 .btn:hover { transform: scale(1.05); }
+.kuang1 .btn:active { transform: scale(0.9); }
+.kuang1 .div { border: 1px solid rgb(228, 60, 29); background: rgb(255, 140, 64) none repeat scroll 0% 0%; height: 20px; padding: 0px 20px; font-weight: 600; line-height: 20px; border-radius: 5px; }
+.kuang1 .div a { color: rgb(255, 255, 255); }
+.zhexian { display: none; }
+#box { width: 100%; background: rgb(32, 32, 32) none repeat scroll 0% 0%; }
+#box #Right { float: right; width: 100%; font-size: 12px; }
+#box #Right .main { background: rgb(231, 231, 231) none repeat scroll 0% 0%; margin: auto; }
+#box #Right .main .main-box { margin: auto; width: 1658px; border: 1px solid rgb(215, 215, 215); padding-bottom: 5px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; }
+#box #Right .main .main-box .main-nav { font-size: 14px; height: 40px; background: rgb(244, 244, 244) none repeat scroll 0% 0%; border-bottom: 3px solid rgb(215, 215, 215); }
+#box #Right .main .main-box .main-nav .cplogo { float: left; color: rgb(0, 0, 0); width: 150px; line-height: 40px; font-weight: 700; }
+#box #Right .main .main-box .main-nav .cplogo img { float: left; margin-left: 15px; vertical-align: middle; padding-top: 5px; width: 30px; margin-right: 10px; }
+#box #Right .main .main-box .main-nav .czqh { position: relative; float: left; height: 25px; border: 1px solid rgb(215, 215, 215); border-radius: 4px; margin-top: 7.5px; line-height: 25px; color: rgb(0, 0, 0); padding: 0px 5px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; }
+#box #Right .main .main-box .main-nav .czqh .xiajian { display: inline-block; width: 0px; height: 0px; border-width: 4px; border-style: solid; border-color: rgb(0, 0, 0) transparent transparent; }
+#box #Right .main .main-box .main-nav .min { display: none; z-index: 1000; font-size: 12px; position: absolute; width: 260px; border: 1px solid rgb(195, 195, 195); background: rgb(255, 255, 255) none repeat scroll 0% 0%; top: 24px; left: -140px; overflow: hidden; box-shadow: 1px 1px 2px rgb(204, 204, 204); }
+#box #Right .main .main-box .main-nav .min dl { border-top: 1px solid rgb(228, 228, 228); margin: -1px 8px 0px; padding: 8px 0px 11px; }
+#box #Right .main .main-box .main-nav .min dl dt { float: left; }
+#box #Right .main .main-box .main-nav .min dl dt span { display: inline-block; width: 23px; height: 22px; background: transparent url('../img/t01851b78647fb0cd79.png') no-repeat scroll 0% 0%; vertical-align: middle; }
+#box #Right .main .main-box .main-nav .min dl dd { overflow: hidden; }
+#box #Right .main .main-box .main-nav .min dl dd ul { list-style: outside none none; display: block; padding: 0px; margin: 0px; }
+#box #Right .main .main-box .main-nav .min dl dd ul li { display: list-item; float:left; }
+#box #Right .main .main-box .main-nav .min dl dd ul li a { width: 84px; display: inline-block; padding-right: 4px; color: rgb(51, 51, 51); height: 22px; text-decoration: none; }
+#box #Right .main .main-box .main-nav .min .iconTwo { background-position: 0px -32px; }
+#box #Right .main .main-box .main-nav .btn-navs { margin-left: 35px; float: left; }
+#box #Right .main .main-box .main-nav .btn-navs li { margin-top: 7px; border-width: 1px 1px 3px; border-style: solid; border-color: rgb(231, 231, 231) rgb(231, 231, 231) transparent; -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; border-image: none; height: 33px; line-height: 33px; float: left; color: rgb(102, 102, 102); margin-right: 5px; padding: 0px 15px; border-top-left-radius: 5px; border-top-right-radius: 5px; }
+#box #Right .main .main-box .main-nav .btn-navs li a { color: rgb(102, 102, 102); }
+#box #Right .main .main-box .main-nav .btn-navs .fff { border-bottom: 3px solid rgb(255, 255, 255); background: rgb(255, 255, 255) none repeat scroll 0% 0%; color: rgb(0, 0, 0); }
+#box #Right .main .main-box .main-nav .btn-navs li { cursor: pointer; }
+#box #Right .main .main-box .qhbox .main-li { background: rgb(251, 251, 251) none repeat scroll 0% 0%; position: relative; height: 50px; color: rgb(0, 0, 0); padding: 5px 10px; border-bottom: 1px solid rgb(231, 231, 231); }
+#box #Right .main .main-box .qhbox .main-li p { text-align: center; background: rgb(229, 229, 229) none repeat scroll 0% 0%; height: 17px; line-height: 17px; font-size: 12px; float: left; padding: 0px 2px; border-radius: 2px; color: rgb(0, 0, 0); }
+#box #Right .main .main-box .qhbox .main-li .main-ul-box2 { height: 22px; }
+#box #Right .main .main-box .qhbox .main-li .main-ul-box1 { height: 22px; }
+#box #Right .main .main-box .qhbox .main-li .main-ul-box { float: left; color: rgb(174, 174, 174); margin-right: 35px; }
+#box #Right .main .main-box .qhbox .main-li .main-ul-box a { color: rgb(102, 102, 102); }
+#box #Right .main .main-box .qhbox .main-li .main-ul-box .main-ul-1 { float: left; }
+#box #Right .main .main-box .qhbox .main-li .main-ul-box .main-ul-1 li:last-child { border-right: medium none; }
+#box #Right .main .main-box .qhbox .main-li .main-ul-box .main-ul-1 li { padding: 0px 5px; float: left; border-right: 1px solid rgb(229, 229, 229); }
+#box #Right .main .main-box .qhbox .main-li .main-li-right { position: absolute; right: 10px; top: 8px; padding: 5px 20px; font-size: 18px; height: 35px; border-radius: 10px; color: rgb(255, 255, 255); background: rgb(250, 98, 0) none repeat scroll 0% 0%; border-bottom: 2px solid rgb(176, 69, 0); }
+#box #Right .main .main-box .qhbox .main-li .main-li-right a { color: rgb(255, 255, 255); }
+#box #Right .main .main-box .qhbox .search { height: 30px; color: rgb(0, 0, 0); background: rgb(255, 255, 255) none repeat scroll 0% 0%; line-height: 20px; padding: 5px 10px; }
+#box #Right .main .main-box .qhbox .search .search-left { float: left; }
+#box #Right .main .main-box .qhbox .search .search-left input { background: rgb(222, 222, 222) none repeat scroll 0% 0%; margin-left: 5px; }
+#box #Right .main .main-box .qhbox .search .search-left li { float: left; margin-right: 5px; }
+#box #Right .main .main-box .qhbox .search .search-right { margin-left: 230px; }
+#box #Right .main .main-box .qhbox .search .search-right li { float: left; margin-right: 5px; }
+#box #Right .main .main-box .qhbox .search .search-right li .xuan { border: 1px solid rgb(228, 60, 29); background: rgb(252, 244, 202) none repeat scroll 0% 0%; }
+#box #Right .main .main-box .qhbox .search .search-right li .qi { border-radius: 5px; padding: 0px 10px; border: 1px solid rgb(216, 216, 216); }
+#box #Right .main .main-box .qhbox #shuju1 { width: 100%; display: block; }
+#box #Right .main .main-box .qhbox #shuju1 .chu-box { width: 100%; }
+#box #Right .main .main-box .qhbox #shuju2 { display: none; }
+#box #Right .main .main-box .qhbox #shuju2 .biao { background: rgb(255, 255, 255) none repeat scroll 0% 0%; }
+#box #Right .main .main-box .qhbox #shuju3 { display: none; }
+#box #Right .main .main-box .qhbox #shuju4 { display: none; }
+#box #Right .main .main-box .qhbox #shuju4 table { width: 100%; vertical-align: middle; text-align: center; font-size: 10px; border-collapse: collapse; color: rgb(0, 0, 0); }
+#box #Right .main .main-box .qhbox #shuju4 table td { border: 1px solid rgb(216, 216, 216); height: 20px; }
+#box #Right .main .main-box .qhbox #shuju4 table th { border: 1px solid rgb(216, 216, 216); padding: 5px 0px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; }
+#box #Right .main .main-box .qhbox #shuju5 { display: none; }
+#box #Right .main .main-box .qhbox #shuju5 table { width: 100%; vertical-align: middle; text-align: center; font-size: 10px; border-collapse: collapse; color: rgb(0, 0, 0); }
+#box #Right .main .main-box .qhbox #shuju5 table td { border: 1px solid rgb(216, 216, 216); height: 22px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; }
+td span { color: blue; }
+#box #Right .main .main-box .qhbox #shuju5 table th { border: 1px solid rgb(216, 216, 216); padding: 5px 0px; }
+#box #Right .main .main-box .qhbox .shuoming { margin-top: 10px; color: rgb(0, 0, 0); }
+#box #Right .main .main-box .qhbox .shuoming .shuomingleft { float: left; width: 69%; height: 315px; border: 1px solid rgb(216, 216, 216); background: rgb(255, 255, 255) none repeat scroll 0% 0%; padding: 10px; }
+#box #Right .main .main-box .qhbox .shuoming .shuomingleft .tou h3 { padding: 10px; width: 440px; border-bottom: 1px dotted rgb(216, 216, 216); }
+#box #Right .main .main-box .qhbox .shuoming .shuomingleft .jieshi { padding: 10px; }
+#box #Right .main .main-box .qhbox .shuoming .shuomingleft .jieshi p { padding: 5px 0px; }
+#box #Right .main .main-box .qhbox .shuoming .shuomingright { position: relative; border: 1px solid rgb(216, 216, 216); width: 30%; height: 315px; float: left; padding: 10px; margin-left: 5px; background: rgb(255, 255, 255) url('../img/bgjiang.png') no-repeat scroll 300px center; }
+#box #Right .main .main-box .qhbox .shuoming .shuomingright .tou h4 { padding: 10px; width: 200px; border-bottom: 1px dotted rgb(216, 216, 216); }
+#box #Right .main .main-box .qhbox .shuoming .shuomingright .tou h4 span { color: rgb(250, 112, 38); }
+#box #Right .main .main-box .qhbox .shuoming .shuomingright .btnjiang { position: absolute; bottom: 50px; left: 340px; }
+#box #Right .main .main-box .qhbox .shuoming .shuomingright .jiezhi { padding: 20px 10px 0px; }
+#box #Right .main .main-box .qhbox .shuoming .shuomingright .jiezhi h3 { border: 1px solid rgb(228, 60, 29); width: 260px; background: rgb(252, 244, 202) none repeat scroll 0% 0%; padding: 15px 20px; }
+#box #Right .main .main-box .qhbox .shuoming .shuomingright .jiezhi h3 span { color: rgb(226, 91, 91); }
+#box #Right .main .main-box .qhbox .shuoming .shuomingright .zhushi { padding: 10px; }
+#box #Right .main .main-box .qhbox .shuoming .shuomingright .tongzhi { margin: 10px; width: 260px; background: rgb(250, 250, 250) none repeat scroll 0% 0%; padding: 15px 15px 15px 30px; }
+.xiajiao { display: none; position: fixed; bottom: 0px; right: 0px; padding: 5px 15px; z-index: 15; border: 1px solid rgb(217, 98, 20); background: rgb(255, 140, 64) none repeat scroll 0% 0%; border-radius: 5px; }
+.mb { display: none; border-width: 1px 5px 1px 1px; border-style: solid none solid solid; border-color: rgb(217, 98, 20) currentcolor rgb(217, 98, 20) rgb(217, 98, 20); -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; border-image: none; position: fixed; bottom: 34px; width: 400px; height: 400px; right: 0px; z-index: 100; background: rgb(255, 255, 255) none repeat scroll 0% 0%; }
+
+.red { color: red; }
+@media screen and (max-width: 1010px) {
+	body { min-width: 750pt; }
+}
+.bg-1, .bg-2, .bg-3, .bg-4, .bg-5, .bg-6, .bg-7, .bg-8, .bg-9, .bg-10 { border-radius: 0.03rem; color: rgb(255, 255, 255); }
+.bg-1 { background: rgb(219, 213, 7) none repeat scroll 0% 0% !important; }
+.bg-2 { background: rgb(1, 183, 255) none repeat scroll 0% 0% !important; }
+.bg-4 { background: rgb(228, 103, 13) none repeat scroll 0% 0% !important; }
+.bg-5 { background: rgb(123, 248, 252) none repeat scroll 0% 0% !important; }
+.bg-10 { background: rgb(0, 153, 0) none repeat scroll 0% 0% !important; }
+.hide { display: none; }
+.cl-40 { color: rgb(0, 0, 0); }
+.cl-31, .cl-32 { width: 75pt; height: 67px; line-height: 67px; text-align: center; }
+.cl-34 { width: 210px; height: 45px; line-height: 45px; text-align: center; }
+.cl-40 var { float: left; display: inline-block; font-style: normal; text-align: center; }
+.cl-31, .cl-32, .cl-34, .cl-40 var { border-width: 0px 1px 1px 0px; border-style: none solid solid none; border-color: currentcolor rgb(227, 227, 227) rgb(227, 227, 227) currentcolor; -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; border-image: none; }
+.cl-31, .cl-32, .cl-33 { border-top: 1px solid rgb(227, 227, 227); }
+.cl-40 var i { color: rgb(0, 0, 0); width: 18px; line-height: 18px; height: 18px; display: block; margin: 1px; font-style: normal; position: relative; }
+.cl-40 var i.bg-4, .cl-40 var i.bg-5, cl-40 var i.red { color: rgb(255, 255, 255); background: red none repeat scroll 0% 0%; border-radius: 25px; }
+.cl-30 .number, .cl-30 .openCode { height: 21px; line-height: 21px; border-top: 0px none; }
+.cl-30 .number { background: rgb(244, 243, 243) none repeat scroll 0% 0%; }
+.cl-30 .openCode { background: rgb(243, 242, 242) none repeat scroll 0% 0%; color: rgb(152, 63, 63); }
+.cl-40 var.bg-1 { background: rgb(244, 251, 255) none repeat scroll 0% 0% !important; }
+.cl-40 var.bg-2 { background: rgb(255, 245, 238) none repeat scroll 0% 0% !important; }
+.bg-white .cl-51, .bg-white var { background: rgb(255, 255, 255) none repeat scroll 0% 0% !important; }
+.bg-gray .cl-51, .bg-gray var { background: rgb(247, 247, 247) none repeat scroll 0% 0% !important; }
+.clean { clear: both; }
+.zhexian { position: absolute; }
+.cl-40 var i.bg-4 { background: rgb(98, 46, 46) none repeat scroll 0% 0% !important; color: rgb(255, 255, 255) !important; }
+.cl-40 var i.bg-5 { background: rgb(204, 0, 0) none repeat scroll 0% 0% !important; color: rgb(255, 255, 255) !important; }
+.cl-33 var i { color: rgb(0, 0, 0); }
+.cl-40 var i.transparent { color: transparent; }
+.cl-40 var i.not-transparent { color: rgb(153, 153, 153); }
+.cl-51 { width: 200px; height: 21px; line-height: 21px; }
+#box #Right .main .main-box .qhbox .shuoming { clear: both; }
+.cl-41 p { padding: 5px 0px; margin-left: 10px; }
+#box #Right .main .main-box .qhbox .shuoming .shuomingright .tou h4 { width: 260px; }
+#box #Right .main .main-box .qhbox .shuoming .shuomingright .jiezhi h3 { padding-left: 15px; padding-right: 15px; }
+.chu-box .chu { float: left; width: auto; clear: both; }
+#zhexianData { overflow: hidden; clear: both; }
+#shuju5 .bg-10 { width: 25px; height: 25px; display: inline-block; line-height: 25px; font-size: 1pc; margin: 0px 5px; }
+#shuju5 .bg-10, .cl-40 var i.bg-red { background: red none repeat scroll 0% 0% !important; border-radius: 25px; color: rgb(255, 255, 255); }
+#box #Right .main .main-box .qhbox .shuoming .shuomingleft { height: auto; }
+#shuju5 table tbody tr td span { margin-right: 5px; }
+.left { float: left; }
+h1, h2, h3, h4, h5, h6 { font-weight: 400; }
+
+* { outline: medium none; }
+.table-common table th, table td { text-align: center; }
+.btn { width: 56px; height: 24px; line-height: 24px; text-align: center; color: rgb(255, 255, 255); outline: medium none; }
+.clearfix::after { content: "."; display: block; height: 0px; clear: both; visibility: hidden; }
+
+.k3_varW { width: 35px; height: 21px; }
+.k3_varW i { margin: 0px auto !important; }
+
+
+html #layuicss-skinlayercss { display: none; position: absolute; width: 1989px; }
+.layui-layer-move { display: none; position: fixed; left: 0px; top: 0px; width: 100%; height: 100%; cursor: move; opacity: 0; background-color: rgb(255, 255, 255); z-index: 2147483647; }
+@media screen and (max-width: 1100px) {
+}

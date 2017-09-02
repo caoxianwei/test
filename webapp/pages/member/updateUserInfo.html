@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<base href="${basePath}">
+<meta charset="UTF-8">
+<title>充值</title>
+<#include "/common/easyui_css.inc"/>
+<#include "/common/css.inc"/>
+
+</head>
+<body>
+<div class="easyui-layout" data-options="fit:true">
+	<div id="showDiv" data-options="region:'center'" style="margin-left:-15%;padding:10px; border:none !important;">
+		<form id="ff" action="users/updateUserInfo.do" method="post" style="text-align:center;">   
+                 <input type="hidden" name="userid" value="${user.user_id?c}" />
+                  <table class="table">
+                    <tbody>
+                      <tr>
+                       <td class="td-right width-30"><label for="name">登录名:</label> </td>
+                       <td>${user.login_name}</td>
+                      </tr>
+                      <tr>
+                       <td class="td-right width-30"><label for="name"><span style="color: red;">*</span>用户名:</label> </td>
+                       <td><input class="easyui-textbox" type="text" id="user_name" name="user_name"  style="width:300PX" value="${user.user_name}" /> </td>
+                      </tr>
+                      <tr>
+                       <td class="td-right width-30"><label for="name">性别:</label> </td>
+                       <td>
+                         <label><input type="radio" name="gender" value="1" ${(user.gender==null || user.gender=='' || user.gender=='1')?string('checked','')} />男</label>
+                         <label><input type="radio" name="gender"  value="2" ${(user.gender=='2')?string('checked','')} />女</label>
+                       </td>
+                      </tr>
+                      <tr>
+                       <td class="td-right width-30"><label for="name">邮箱:</label> </td>
+                       <td><input class="easyui-textbox" type="text" id="user_email" name="user_email" style="width:300PX" value="${user.user_email}" /> </td>
+                      </tr>
+                      <tr>
+                       <td class="td-right width-30"><label for="name">手机号码:</label> </td>
+                       <td><input class="easyui-textbox" type="text" id="cell_phone" name="cell_phone" style="width:300PX" value="${user.cell_phone}" /> </td>
+                      </tr>
+                </tbody>
+                </table>        
+              </form> 
+	</div>
+	<div data-options="region:'south',border:false" class="panl-footer">
+		<a class="easyui-linkbutton blue" href="javascript:void(0)"  onclick="javascript:saveData()" style="width:80px">保存</a>
+		<a class="easyui-linkbutton gray" href="javascript:void(0)" onclick="javascript:closeWin()" style="width:80px">取消</a>
+	</div>
+</div>
+<#include "/common/easyui_js.inc"/>
+<script type="text/javascript" src="pages/member/updateUserInfo.js"></script>
+</body>
+</html>

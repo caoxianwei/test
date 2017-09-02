@@ -1,0 +1,30 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<#assign tool =JspTaglibs["http://caicaike.lottery.com/tag/toolbar"]/>
+<html>
+<head>
+<base href="${basePath}">
+<meta charset="UTF-8">
+<title>提现详情页面</title>
+<#include "/common/easyui_css.inc"/>
+<#include "/common/css.inc"/>
+</head>
+<body style="overflow: hidden">
+<input type="hidden" id="menuid" value="${parames.menuid}" />
+<input type="hidden" id="userid" value="${parames.userid}" />
+<div class="easyui-layout" data-options="fit:true">
+	<div data-options="region:'center', title:'资金调整>>提现管理',iconCls:'icon-texe',cls:'white'">
+        <div class="easyui-layout" data-options="fit:true" >
+		<div data-options="region:'center'" style="padding:5px; border:none !important">
+			<div id="cashApplyTabs" class="easyui-tabs">
+				<div title="投注记录" style="padding:5px"></div>
+				<div title="余额明细" style="padding:5px"></div>
+			</div> 
+		</div> 
+	 </div>
+</div>  
+</div>
+
+<#include "/common/easyui_js.inc"/>
+<script type="text/javascript" src="pages/capital/cashapply/cashApplyInfo.js"></script>
+</body>
+</html>

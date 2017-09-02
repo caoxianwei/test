@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<#assign date =JspTaglibs["http://caicaike.lottery.com/tag/formatdate"]/>
+<html>
+<head>
+<base href="${basePath}">
+<meta charset="UTF-8">
+<title>注册代理审核</title>
+<#include "/common/easyui_css.inc"/>
+<#include "/common/css.inc"/>
+
+</head>
+<body>
+<div class="easyui-layout" data-options="fit:true">
+	<div id="showDiv" data-options="region:'center'" style="margin-left:-15%;padding:10px; border:none !important;">
+		<form id="ff" action="${basePath}userAgencyAudit/audit.do" method="post" style="text-align:center;">   
+            <input type="hidden" id="user_id" name="user_id" value="${user.user_id?c}" />
+             <table class="table">
+               <tbody>
+                 <tr>
+                  <td class="td-right width-30"><label for="name">用户名:</label> </td>
+                  <td>${user.login_name} </td>
+                 </tr>
+                 <tr>
+                  <td class="td-right width-30"><label for="name" >余额:</label> </td>
+                  <td>${user.money}</td>
+                 </tr>
+                 <tr>
+                  <td class="td-right width-30"><label for="name" >状态:</label> </td>
+                  <td>
+                    <#if user.status == "0">
+                                                               禁用
+                    <#elseif user.status == "1">
+                                                               启用
+                    <#elseif user.status == "2">
+                                                               未激活
+                    </#if>
+                  </td>
+                 </tr>
+                 <tr>
+                  <td class="td-right width-30"><label for="name" >允许投注:</label> </td>
+                  <td>
+                    <#if user.bet_status == "0">
+                                                            拒绝
+                    <#else>
+                                                            允许
+                    </#if>
+                  </td>
+                 </tr>
+                 <tr>
+                  <td class="td-right width-30"><label for="name" >注册日期:</label> </td>
+                  <td><@date.format date="${user.regist_date_time}"/></td>
+                 </tr>
+                 <tr>
+                  <td class="td-right width-30"><label for="name" ><span class="font-red">*</span>审核状态:</label> </td>
+                  <td>
+                    <select id="proxy_status" name="proxy_status" class="easyui-combobox" style="width:140px;" >
+			          	<option value="1" selected="selected">通过</option>
+			        	<option value="2" >拒绝</option>
+			        </select>
+                  </td>
+                 </tr>
+           </tbody>
+           </table>        
+         </form> 
+	</div>
+	<div data-options="region:'south',border:false" class="panl-footer">
+		<a class="easyui-linkbutton blue" href="javascript:void(0)"  onclick="javascript:audit()" style="width:80px">保存</a>
+		<a class="easyui-linkbutton gray" href="javascript:void(0)" onclick="javascript:closeDiv()" style="width:80px">取消</a>
+	</div>
+</div>
+<#include "/common/easyui_js.inc"/>
+<script type="text/javascript" src="pages/member/agency/listAgency.js"></script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<base href="${basePath}">
+<meta charset="UTF-8">
+<title>新增角色</title>
+<#include "/common/easyui_css.inc"/>
+<#include "/common/css.inc"/>
+
+</head>
+<body>
+<div class="easyui-layout" data-options="fit:true">
+	<div id="showDiv" data-options="region:'center'" style="margin-left:-20%;padding:10px; border:none !important;">
+		<form id="ff" action="${basePath}sysRole/addData.do" method="post" style="text-align:center;">   
+                  <table class="table">
+                    <tbody>
+                      <tr>
+                       <td class="td-right width-30"><label for="name"><span class="font-red">*</span>角色名:</label> </td>
+                       <td><input class="easyui-textbox" type="text" id="role_name" name="role_name" style="width:300PX" /> </td>
+                      </tr>
+                      
+                      <tr>
+                       <td class="td-right width-30"><label for="name" >备注:</label> </td>
+                       <td><input class="easyui-textbox" type="text" name="remark" style="width:300PX" /> </td>
+                      </tr>
+                      <tr>
+                       <td class="td-right width-30"><label for="name" >菜单权限:</label> </td>
+                       <td> 
+                         <table class="table">
+				      	    <thead>
+				      	       <tr>
+				      	       <th width="150px" style="text-align: center;">权限名称</th>
+				      	       <th style="text-align: center;">权限值</th>
+				      	       </tr>
+				      	    </thead>
+				      	    <tbody>
+				      	       <#list menuList as item>
+				      	            <tr>
+					      	          <td><B>${item.mname }</B></td>
+					      	          <td>
+					      	          </td>
+					      	        </tr>
+				      	         <!-- 循环设置二级菜单 -->
+				      	        <#if item.childrens?? && (item.childrens?size > 0)>
+				      	          <#list item.childrens as childItem>
+					      	         <tr>
+					      	          <td>&nbsp;&nbsp;&nbsp;&nbsp;${childItem.mname }</td>
+					      	          <td>
+					      	             <#if childItem.operateList?? && (childItem.operateList?size > 0)>
+					      	               <#list childItem.operateList as operItem>
+					      	                   <label><input type="checkbox" name="menuoper" value="second_${item.mid }_${childItem.mid }_${operItem.operid }" />${operItem.operatename }</label> &nbsp; 
+					      	               </#list>
+					      	             </#if>
+					      	          </td>
+					      	        </tr>
+					      	     </#list>
+				      	        </#if>
+				      	      </#list>
+				      	    </tbody>
+			      	  	  </table>
+                       </td>
+                      </tr>   
+                </tbody>
+                </table>        
+              </form> 
+	</div>
+	<div data-options="region:'south',border:false" class="panl-footer">
+		<a class="easyui-linkbutton blue" href="javascript:void(0)"  onclick="javascript:addData()" style="width:80px">保存</a>
+		<a class="easyui-linkbutton gray" href="javascript:void(0)" onclick="javascript:closeDiv()" style="width:80px">取消</a>
+	</div>
+</div>
+<#include "/common/easyui_js.inc"/>
+<script type="text/javascript" src="pages/sys/role/listRole.js"></script>
+</body>
+</html>

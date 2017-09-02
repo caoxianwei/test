@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<#assign date =JspTaglibs["http://caicaike.lottery.com/tag/formatdate"]/>
+<html>
+<head>
+<base href="${basePath}">
+<meta charset="UTF-8">
+<title>查看用户余额明细详细记录</title>
+<#include "/common/easyui_css.inc"/>
+<#include "/common/css.inc"/>
+
+</head>
+<body>
+<div class="easyui-layout" data-options="fit:true">
+	<div data-options="region:'center'" style="margin-left:0px;padding:10px; border:none !important;">
+        <table class="table" >
+          <tbody>
+            <tr>
+             <td class="td-right" width="13%"><label for="name">彩种:</label> </td>
+             <td width="86%">${order.game_name}</td>
+            </tr>
+            <tr>
+             <td class="td-right"><label for="name" >期号:</label> </td>
+             <td>${order.session_no}</td>
+            </tr>
+            <tr>
+             <td class="td-right"><label for="name" >用户名:</label> </td>
+             <td>${login_name}</td>
+            </tr>
+            <tr>
+             <td class="td-right"><label for="name" >玩法:</label> </td>
+             <td>${order.play_name}</td>
+            </tr>
+            <tr>
+             <td class="td-right"><label for="name" >投注项:</label> </td>
+             <td>${order.bet_name} &nbsp;&nbsp;&nbsp;  ${order.option_title}</td>
+            </tr>
+            <tr>
+             <td class="td-right"><label for="name" >投注时间:</label> </td>
+             <td><@date.format date="${order.bet_time}"/></td>
+            </tr>
+            <tr>
+             <td class="td-right"><label for="name" >投注金额:</label> </td>
+             <td>${order.bet_money}</td>
+            </tr>
+            <tr>
+             <td class="td-right"><label for="name" >赔率:</label> </td>
+             <td>
+                <#if order.bet_rate2 != null && (order.bet_rate2 != '')>
+                   ${order.bet_rate2}
+                <#else>
+                   ${order.bet_rate}
+                </#if>
+             </td>
+            </tr>
+            <tr>
+             <td class="td-right"><label for="name" >是否中奖:</label> </td>
+             <td>
+                <#if order.win_result == "0">
+                                                        未开奖
+                <#elseif order.win_result == "1">
+                                                          中奖
+                <#elseif order.win_result == "2">
+                                                          未中奖
+                <#elseif order.win_result == "3">
+                                                          打和
+                <#elseif order.win_result == "4">
+                                                        撤单
+                <#else>
+                                                       未中奖
+                </#if>
+             </td>
+            </tr>
+            <#if order.win_result == "1">
+              <tr>
+              <td class="td-right"><label for="name" >中奖金额:</label> </td>
+              <td>${order.win_cash}</td>
+             </tr>
+            </#if>
+            <tr>
+              <td class="td-right"><label for="name" >返点:</label></td>
+               <td>${order.rebate}</td>
+            </tr>
+            <tr>
+               <td class="td-right"><label for="name" >是否异常订单:</label></td>
+               <td>
+                 <#if order.bet_sign == "1">
+                                                            是
+                 <#else>
+                                                            否
+                 </#if>
+               </td>
+            </tr>
+            <#if order.bet_sign == "1">
+              <tr>
+               <td class="td-right"><label for="name" >异常订单中奖金额:</label></td>
+               <td>${order.win_cash2}</td>
+            </tr>
+            </#if>
+      </tbody>
+      </table>        
+	</div>
+	<div data-options="region:'south',border:false" class="panl-footer">
+		<a class="easyui-linkbutton gray" href="javascript:void(0)" onclick="javascript:closeDiv()" style="width:80px">取消</a>
+	</div>
+</div>
+<#include "/common/easyui_js.inc"/>
+<script type="text/javascript" src="pages/member/balancedetail/listBalanceDetail.js"></script>
+</body>
+</html>

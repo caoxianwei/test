@@ -1,0 +1,139 @@
+/* ::::: http://www.600wan.cm/static/public/css/cabel-v1.css ::::: */
+
+body { margin: 30px; padding: 0px; border: 0px none; color: rgb(0, 0, 0); font-family: helvetica,sans-serif; font-weight: normal; font-size: 12px; }
+img { border: 0px none; }
+/* ::::: http://www.600wan.cm/static/public/css/style.css ::::: */
+
+body, p, h1, h2, h3, h4, h5, li, span, i, ul, img, a, strong, input, button, textarea { margin: 0px; padding: 0px; }
+body { font-family: "microsoft yahei"; font-size: 14px; line-height: 1; }
+li { list-style-type: none; float: left; }
+a { text-decoration: none; outline: medium none; color: rgb(0, 0, 0); }
+img { border: medium none; vertical-align: middle; }
+.fl { float: left; }
+.list_ject ul li .Time .timer_wrap ol::after { content: ""; position: absolute; left: -10px; top: 12px; width: 7px; height: 24px; background: transparent url('../../images/ico31.png') repeat scroll 0% 0%; }
+.list_ject ul li .Time .timer_wrap ol.s::after { display: none; }
+.list_ject ul li .Time .timer_wrap ol span::after { content: ""; position: absolute; left: 5%; top: 50%; width: 90%; height: 1px; background: rgb(74, 74, 74) none repeat scroll 0% 0%; }
+.list_ject ul li .Result p a::after { content: ""; position: absolute; left: 0px; top: 0px; width: 1px; height: 100%; background: rgb(204, 204, 204) none repeat scroll 0% 0%; }
+.list_ject ul li .Result p a.first::after { display: none; }
+.men_list .nav_list ul li:hover::after { display: none; }
+.men_list .nav_list ul li::after { content: ""; position: absolute; right: 0px; top: 44px; width: 1px; height: 20px; background: rgb(248, 123, 43) none repeat scroll 0% 0%; }
+.banner .four_men ul li::after { content: ""; position: absolute; left: 0px; top: 2%; width: 1px; height: 96%; background: rgb(46, 47, 39) none repeat scroll 0% 0%; border-right: 1px solid rgb(88, 88, 88); }
+.banner .four_men ul li.last::before { content: ""; position: absolute; right: 0px; top: 2%; width: 1px; height: 96%; background: rgb(46, 47, 39) none repeat scroll 0% 0%; border-right: 1px solid rgb(88, 88, 88); }
+.type_top .left .left_div span.line a:nth-child(1) { border-left: medium none; }
+.type_top .right ul li.sli b::after { content: ""; position: absolute; left: 1px; bottom: -1px; width: 70px; height: 1px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; z-index: 11; }
+.game_name .box3_timer .timer_wrap ol::after { content: ""; position: absolute; left: -13px; top: 16px; width: 8px; height: 32px; background: transparent url('../../images/ico47-1.png') repeat scroll 0% 0%; }
+.game_name .box3_timer .timer_wrap ol.s::after { display: none; }
+.game_name .box3_timer .timer_wrap ol span::after { content: ""; position: absolute; left: 5%; top: 50%; width: 90%; height: 1px; background: rgb(74, 74, 74) none repeat scroll 0% 0%; }
+.Single .layout .Pick p.p1 span.fr a var::after { content: ""; left: 50%; bottom: -12px; position: absolute; width: 0px; height: 0px; border-width: 6px; border-style: solid; border-color: rgb(0, 0, 0) transparent transparent; }
+.Betting .list_wrap ul li:hover:not(.not) { background: rgb(238, 238, 238) none repeat scroll 0% 0%; }
+.Detailedlist .layout .boxt .left ul li:not(.head) span.sp3 { color: rgb(67, 181, 128); }
+.process .layout .list_tems .date::after { content: ""; position: absolute; width: 10px; height: 10px; border-radius: 50%; border: 2px solid rgb(255, 255, 255); background: rgb(250, 98, 0) none repeat scroll 0% 0%; right: -28px; top: 0px; }
+.process .layout .list_tems::after { content: ""; width: 19px; height: 19px; background: transparent url('../../images/ico70.png') repeat scroll 0% 0%; left: -19px; position: absolute; top: -1px; }
+.Resultt .latyout .tabs_ce ul li.acti a::after { content: ""; position: absolute; left: 0px; bottom: -1px; width: 100%; height: 1px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; }
+.Resultt .latyout .tabs_ce ul li::after { content: ""; position: absolute; left: -1px; top: 17px; width: 1px; height: 14px; background: rgb(191, 191, 191) none repeat scroll 0% 0%; }
+.Resultt .latyout .tabs_ce ul li.acti::after { display: none; }
+.Resultt .latyout .tabs_ce ul li.nob::after { display: none; }
+.Newest .tabs_cg ul li::after { content: ""; position: absolute; left: -1px; top: 17px; width: 1px; height: 14px; background: rgb(191, 191, 191) none repeat scroll 0% 0%; }
+.Newest .tabs_cg ul li.acti::after { display: none; }
+.Newest .tabs_cg ul li.first::after { display: none; }
+.Newest .tabs_cg ul li.acti i::after { content: ""; position: absolute; left: 0px; bottom: -1px; width: 100%; height: 1px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; }
+.Newest .Analysis .box3 .timer_wrap ol::after { content: ""; position: absolute; left: -20px; top: 16px; width: 10px; height: 38px; background: transparent url('../../images/ico78.png') repeat scroll 0% 0%; }
+.Newest .Analysis .box3 .timer_wrap ol.f::after { display: none; }
+.Newest .Analysis .box3 .three ol::after { left: -10px; }
+.Newest .Analysis .box3 .three ol.f::after { display: block; }
+.Newest .Analysis .box3 .three ol.s::after { display: none; }
+.main_layout .left_layout h1::after { content: ""; position: absolute; width: 6px; height: 50px; background: transparent url('../../images/ico83.png') repeat scroll 0% 0%; right: -6px; opacity: 0.5; }
+.main_layout .left_layout ul li i.i0::after { content: ""; left: -12px; bottom: 0px; position: absolute; width: 0px; height: 0px; border-right: 8px solid rgb(255, 162, 0); border-top: 6px solid transparent; border-left: 6px solid transparent; }
+.main_layout .right_layotu .left_wrap .tabs_cg ul li::after { content: ""; position: absolute; left: -1px; top: 17px; width: 1px; height: 14px; background: rgb(191, 191, 191) none repeat scroll 0% 0%; }
+.main_layout .right_layotu .left_wrap .tabs_cg ul li.acti::after { display: none; }
+.main_layout .right_layotu .left_wrap .tabs_cg ul li.first::after { display: none; }
+.main_layout .right_layotu .left_wrap .tabs_cg ul li.acti i::after { content: ""; position: absolute; left: 0px; bottom: -1px; width: 100%; height: 1px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; }
+.main_layout .right_layotu .right_wrap .login ul.state li:nth-child(3) { font-size: 16px; }
+.main_layout .right_layotu .right_wrap .login ul.state li a:nth-child(1) { margin-left: 0px; }
+.main_layout .right_layotu .chart .pic_wp .links p a::after { content: ""; position: absolute; right: -10px; top: 0px; width: 1px; height: 12px; background: rgb(204, 204, 204) none repeat scroll 0% 0%; }
+@media screen and (max-width: 1210px) {
+	body { min-width: 1000px; }
+}
+.type_top .left .left_div span.line a:nth-child(1) { border-left: medium none; }
+.type_top .right ul li.sli b::after { content: ""; position: absolute; left: 1px; bottom: -1px; width: 70px; height: 1px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; z-index: 11; }
+.game_name .box3_timer .timer_wrap ol::after { content: ""; position: absolute; left: -13px; top: 16px; width: 8px; height: 32px; background: transparent url('../../images/ico47-1.png') repeat scroll 0% 0%; }
+.game_name .box3_timer .timer_wrap ol.s::after { display: none; }
+.game_name .box3_timer .timer_wrap ol span::after { content: ""; position: absolute; left: 5%; top: 50%; width: 90%; height: 1px; background: rgb(74, 74, 74) none repeat scroll 0% 0%; }
+.Single .layout .Pick p.p1 span.fr a var::after { content: ""; left: 50%; bottom: -12px; position: absolute; width: 0px; height: 0px; border-width: 6px; border-style: solid; border-color: rgb(0, 0, 0) transparent transparent; }
+.Betting .list_wrap ul li:hover:not(.not) { background: rgb(238, 238, 238) none repeat scroll 0% 0%; }
+.Detailedlist .layout .boxt .left ul li:not(.head) span.sp3 { color: rgb(67, 181, 128); }
+.process .layout .list_tems .date::after { content: ""; position: absolute; width: 10px; height: 10px; border-radius: 50%; border: 2px solid rgb(255, 255, 255); background: rgb(250, 98, 0) none repeat scroll 0% 0%; right: -28px; top: 0px; }
+.process .layout .list_tems::after { content: ""; width: 19px; height: 19px; background: transparent url('../../images/ico70.png') repeat scroll 0% 0%; left: -19px; position: absolute; top: -1px; }
+.Resultt .latyout .tabs_ce ul li.acti a::after { content: ""; position: absolute; left: 0px; bottom: -1px; width: 100%; height: 1px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; }
+.Resultt .latyout .tabs_ce ul li::after { content: ""; position: absolute; left: -1px; top: 17px; width: 1px; height: 14px; background: rgb(191, 191, 191) none repeat scroll 0% 0%; }
+.Resultt .latyout .tabs_ce ul li.acti::after { display: none; }
+.Resultt .latyout .tabs_ce ul li.nob::after { display: none; }
+.Newest .tabs_cg ul li::after { content: ""; position: absolute; left: -1px; top: 17px; width: 1px; height: 14px; background: rgb(191, 191, 191) none repeat scroll 0% 0%; }
+.Newest .tabs_cg ul li.acti::after { display: none; }
+.Newest .tabs_cg ul li.first::after { display: none; }
+.Newest .tabs_cg ul li.acti i::after { content: ""; position: absolute; left: 0px; bottom: -1px; width: 100%; height: 1px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; }
+.Newest .Analysis .box3 .timer_wrap ol::after { content: ""; position: absolute; left: -20px; top: 16px; width: 10px; height: 38px; background: transparent url('../../images/ico78.png') repeat scroll 0% 0%; }
+.Newest .Analysis .box3 .timer_wrap ol.f::after { display: none; }
+.Newest .Analysis .box3 .three ol::after { left: -10px; }
+.Newest .Analysis .box3 .three ol.f::after { display: block; }
+.Newest .Analysis .box3 .three ol.s::after { display: none; }
+.left_layout h1::after { content: ""; position: absolute; width: 6px; height: 50px; background: transparent url('../../images/ico83.png') repeat scroll 0% 0%; right: -6px; opacity: 0.5; }
+.left_layout ul li i.i0::after { content: ""; left: -12px; bottom: 0px; position: absolute; width: 0px; height: 0px; border-right: 8px solid rgb(255, 162, 0); border-top: 6px solid transparent; border-left: 6px solid transparent; }
+.main_layout .right_layotu .left_wrap .tabs_cg ul li::after { content: ""; position: absolute; left: -1px; top: 17px; width: 1px; height: 14px; background: rgb(191, 191, 191) none repeat scroll 0% 0%; }
+.main_layout .right_layotu .left_wrap .tabs_cg ul li.acti::after { display: none; }
+.main_layout .right_layotu .left_wrap .tabs_cg ul li.first::after { display: none; }
+.main_layout .right_layotu .left_wrap .tabs_cg ul li.acti i::after { content: ""; position: absolute; left: 0px; bottom: -1px; width: 100%; height: 1px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; }
+.main_layout .right_layotu .right_wrap .login ul.state li:nth-child(3) { font-size: 16px; }
+.main_layout .right_layotu .right_wrap .login ul.state li a:nth-child(1) { margin-left: 0px; }
+.main_layout .right_layotu .chart .pic_wp .links p a::after { content: ""; position: absolute; right: -10px; top: 0px; width: 1px; height: 12px; background: rgb(204, 204, 204) none repeat scroll 0% 0%; }
+.men_list .logo h1::after { content: ""; position: absolute; width: 6px; height: 50px; background: transparent url('../../images/ico83.png') repeat scroll 0% 0%; right: -6px; opacity: 0.5; }
+.reg_list ul li::after { content: ""; position: absolute; right: -4px; top: -3px; width: 6px; height: 3px; background: rgb(204, 204, 204) none repeat scroll 0% 0%; }
+@media screen and (max-width: 1210px) {
+	body { min-width: 1000px; }
+}
+.zs_list { width: 98%; display: table; padding-left: 10px; margin-top: 0px; }
+.zs_list h2 { color: rgb(51, 51, 51); height: 40px; line-height: 40px; font-size: 18px; border-bottom: 1px dashed rgb(204, 204, 204); margin: 20px; font-weight: normal; }
+.zs_list li { width: 286px; height: 121px; float: left; margin: 0px 0px 10px 20px; border: 5px solid #F13131 !important; border-radius: 10px;}
+.zs_list li .p-img { width: 45px; height: 75px; padding: 22px 10px 20px 20px; }
+.zs_list li .p-url { width: 164px; height: 121px; padding: 0px 0px 0px 38px; }
+.zs_list li .p-url h3 { padding: 25px 0px 10px; }
+.zs_list li a { line-height: 22px; color: rgb(51, 51, 51); border-radius: 4px; padding-left: 8px; font-size: 12px; }
+.zs_list li a:hover { color: rgb(250, 98, 0); }
+.zs_list li a:before{
+	display: inline-block;
+	content: '';
+	width: 5px;
+	height: 5px;
+	border-radius: 50%;
+	background-color: #F13131;
+	position: relative;
+	right: 3px;
+	bottom: 3px;
+}
+/* ::::: http://www.600wan.cm/static/public/css/animate.min.css ::::: */
+
+/* ::::: http://www.600wan.cm/static/public/css/lottery.css ::::: */
+
+* { outline: medium none; }
+.clearfix::after { content: "."; display: block; height: 0px; clear: both; visibility: hidden; }
+/* ::::: http://www.600wan.cm/static/public/css/liMarquee.css ::::: */
+
+/* ::::: http://www.600wan.cm/static/public/jRange/jquery.range.css ::::: */
+
+/* ::::: http://www.600wan.cm/static/public/css/global.css ::::: */
+
+@media screen and (max-width: 1010px) {
+	body { min-width: 750pt; }
+}
+h1, h2, h3, h4, h5, h6 { font-weight: 400; }
+/* ::::: http://www.600wan.cm/static/public/css/other.css ::::: */
+
+/* ::::: http://www.600wan.cm/static/public/css/gfwf.css ::::: */
+
+a:hover { color: red; }
+a:active { color: deepskyblue; }
+/* ::::: http://www.600wan.cm/static/public/layer/skin/default/layer.css?v=3.0.11110 ::::: */
+
+html #layuicss-skinlayercss { display: none; position: absolute; width: 1989px; }
+@media screen and (max-width: 1100px) {
+}

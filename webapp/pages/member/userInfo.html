@@ -1,0 +1,128 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<#assign date =JspTaglibs["http://caicaike.lottery.com/tag/formatdate"]/>
+<html>
+<head>
+<base href="${basePath}">
+<meta charset="UTF-8">
+<title>用户详情页面</title>
+<#include "/common/easyui_css.inc"/>
+<#include "/common/css.inc"/>
+<style type="text/css">
+.textbox{
+  min-width: 50px !important;
+}
+
+.label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: normal !important;
+}
+</style>
+</head>
+<body>
+<div class="easyui-layout" data-options="fit:true">
+	<div data-options="region:'center', title:'用户管理>>注册用户>>用户详情',iconCls:'icon-texe',cls:'white'">
+          <div class="titlebar"><img src="images/texe.png"><span>用户基本信息</span></div>
+            <table class="table table" border="1px solid #e5e5e5" style="border:1px solid #e5e5e5;width:100%; margin:0 auto; margin-bottom:20px;margin-left: 0%">
+                <tbody>
+                  <tr>
+                     <td class="td-right " width="13%"><label for="name" >ID:</label> </td>
+                     <td  width="80%">${user.user_id?c}</td>
+                  </tr>
+                 
+                  <tr>
+                     <td class="td-right " ><label for="name" >用户名:</label> </td>
+                     <td>${user.user_name}</td>
+                  </tr>
+                 <tr>
+                     <td class="td-right " ><label for="name" >登录名:</label> </td>
+                     <td>${user.login_name}</td>
+                  </tr>
+                  <tr>
+                    <td class="td-right "><label for="name" >用户类型:</label> </td>
+                    <td>
+                       <#if user.user_type == '1'>
+                                                                  注册用户
+                       <#elseif user.user_type == '02'>
+                                                                  试玩用户
+                       <#elseif user.user_type == '03'>
+                                                                  注册代理
+                       </#if>
+                    </td>
+                   </tr>
+                  <tr>
+                     <td class="td-right "><label for="name" >注册日期:</label> </td>
+                     <td ><@date.format date="${user.regist_date_time}"/></td>
+                  </tr>
+                  <tr>
+                     <td class="td-right "><label for="name" >电话:</label> </td>
+                     <td >${user.cell_phone}</td>
+                  </tr>
+                  <#if user.user_type == '1'>
+                    <tr>
+                     <td class="td-right "><label for="name" >余额:</label> </td>
+                     <td >${user.money}</td>
+                    </tr>
+                  </#if>
+                  <#if user.bet_status == '0'>
+                    <tr>
+                     <td class="td-right "><label for="name" >拒绝投注原因:</label> </td>
+                     <td >${user.bet_remark}</td>
+                    </tr>
+                  </#if>
+              </tbody>    
+            </table>
+          <div class="titlebar"><img src="images/texe.png"><span>账户信息</span></div>
+            <table class="table table" border="1px solid #e5e5e5" style="border:1px solid #e5e5e5;width:; margin:0 auto; margin-bottom:20px;margin-left: 0%">
+                <tbody>
+                  <tr>
+                     <td class="td-right " width="20px"><label for="name" >序号</label> </td>
+                     <td class="td-right "><label for="name" >账户</label> </td>
+                     <td class="td-right "><label for="name" >银行</label> </td>
+                     <td class="td-right "><label for="name" >开户名</label> </td>
+                  </tr>
+                  <#if bankList?? && (bankList?size>0)>
+                    <#list bankList as bank>
+                       <tr>
+                        <td class="td-right "><label class="label">${bank_index+1}</label></td>
+                        <td class="td-right "><label class="label">${bank.bind_account}</label></td>
+                        <td class="td-right "><label class="label">${bank.bank_name}</label></td>
+                        <td class="td-right "><label class="label">${bank.bind_name}</label></td>
+                        </tr>
+                    </#list>
+                  </#if>
+              </tbody>    
+            </table>
+          <div class="titlebar"><img src="images/texe.png"><span>登录信息</span></div>
+              <table class="table table" border="1px solid #e5e5e5" style="border:1px solid #e5e5e5;width:; margin:0 auto; margin-bottom:20px;margin-left: 0%">
+                <tbody>
+                  <tr>
+                     <td class="td-right " width="20px"><label for="name" >序号</label> </td>
+                     <td class="td-right "><label for="name" >登录IP</label> </td>
+                     <td class="td-right "><label for="name" >登录地址</label> </td>
+                     <td class="td-right "><label for="name" >登录时间</label> </td>
+                     <td class="td-right "><label for="name" >备注</label> </td>
+                  </tr>
+                  <#if logList?? && (logList?size>0)>
+                    <#list logList as log>
+                       <tr>
+                        <td class="td-right "><label class="label">${log_index+1}</label></td>
+                        <td class="td-right "><label class="label">${log.ip_address}</label></td>
+                        <td class="td-right "><label class="label">${log.login_address}</label></td>
+                        <td class="td-right "><label class="label"><@date.format date="${log.date_time}"/></label></td>
+                        <td class="td-right "><label class="label">${log.action_text}</label></td>
+                        </tr>
+                    </#list>
+                  </#if>
+              </tbody>    
+            </table>
+            <div data-options="region:'south',border:false" class="panl-footer">
+			    <a class="easyui-linkbutton blue" href="javascript:void(0)" onclick="javascript:window.history.go(-1)" style="width:80px">返回</a>
+           </div>
+    </div>  
+</div>
+
+<#include "/common/easyui_js.inc"/>
+</body>
+</html>

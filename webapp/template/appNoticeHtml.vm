@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+<meta content="telephone=no" name="format-detection">
+<meta content="black" name="apple-mobile-web-app-status-bar-style">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta http-equiv="X-UA-Compatible" content="edge">
+<title>邦邦开门</title>
+<link href="../css/test.css?v=${t}" rel="stylesheet" />
+</head>
+<body>
+<div class="noticebox">
+	<h1>${estateNotice.title}</h1>
+	<div class="notice-sub">
+		#if($estateCompany)
+		<span class="notice-company">${estateCompany.compayName}</span>
+		#end
+		<span class="notice-dt">${submitTime}</span>
+	</div>
+	<div class="notice-content">${estateNotice.content}</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<#assign tool =JspTaglibs["http://caicaike.lottery.com/tag/toolbar"]/>
+<html>
+<head>
+<base href="${basePath}">
+<meta charset="UTF-8">
+<title>角色列表</title>
+<#include "/common/easyui_css.inc"/>
+<#include "/common/css.inc"/>
+</head>
+<body>
+<div class="easyui-layout" data-options="fit:true">
+	<div data-options="region:'center', title:'系统管理>>在线客服管理',iconCls:'icon-texe',cls:'white'">
+         <div style="margin-top: 10px">
+           <input type="hidden" id="id" value="${online.id}" />
+           <table class="table" style="margin-left: -15%">
+              <tbody>
+                <tr>
+                 <td class="td-right width-30"><label for="name"><span class="font-red">*</span>客服地址:</label> </td>
+                 <td>
+                   <input class="easyui-textbox" type="text" id="address" name="address" value="${online.address}" style="width:700PX" data-options="required:true" />
+                 </td>
+                </tr>
+                <tr>
+                 <td class="td-right width-30"></td>
+                 <td>
+                    <@tool.bar menuId="${menuid!}"/>
+                 </td>
+                </tr>
+          </tbody>
+          </table>
+         </div>
+	</div>
+</div>
+
+<div id="roleDiv"></div>
+<#include "/common/easyui_js.inc"/>
+<script type="text/javascript" src="pages/sys/sysonlineservice/listSysOnline.js"></script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>购彩大厅</title>
+    <link rel="icon" href="../images/44.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../images/44.png" mce_href="../images/44" type="image/x-icon">
+    
+    <script>
+        // 防止被frame
+        if (top.location != self.location) {
+            top.location = self.location;
+        }
+        // 屏蔽右键
+        document.oncontextmenu = false;
+    </script>
+    <script>
+        <!--
+//        window.onerror = function () {
+//            return true;
+//        }
+        // -->
+    </script><script>
+    var nowHref = "../error/index.html";
+</script>
+<link media="all" href="index.css" type="text/css" rel="stylesheet">
+<link rel="stylesheet" href="../static/public/css/global.css">
+
+</head>
+<body>
+<iframe src="index_1.html" marginheight="0" marginwidth="0" scrolling="auto" id="ifm" name="ifm" width="100%" frameborder="0"></iframe>
+<script type="text/javascript" src="../static/public/js/jquery.min.js"></script><!--jQuery库-->
+<script type="text/javascript" src="../static/public/js/scrollanim.min.js"></script> <!--"动画库"-->
+<script src="../static/public/js/type.js"></script><!--自定义封装函数-->
+<script src="../static/public/js/global.js"></script><!--自定义封装函数-->
+<script src="../static/public/js/jquery.cookie.js"></script><!--自定义封装函数-->
+<script src="../static/public/js/jquery.md5.js"></script><!--自定义封装函数-->
+<script src="../static/public/layer/layer.js"></script>
+<script src="../static/public/js/jquery.nicescroll.js"></script>
+<script src="../static/public/js/dateformat.js"></script>
+<script src="../static/public/js/template.js"></script>
+<script src="../static/public/js/swfobject/swfobject.js"></script>
+<script src="../static/public/js/jquery.limarquee.js"></script>
+<script src="../static/public/js/placeholders.jquery.min.js"></script>
+<script src="../static/public/jRange/jquery.range-min.js"></script>
+
+<script src="../static/public/js/rollups/tripledes.js"></script>
+<script src="../static/public/js/components/mode-ecb.js"></script>
+<script src="../static/public/js/move.js"></script>
+<script>
+
+    var nowHref = "../error/index.html";
+    var name = 'module';
+    if(window.location.search.substr(1))
+    var url = window.location.search.substr(1).match(new RegExp("(^|&)"+ name +"=([^&]*)(&|$)"));
+
+    var strUrl = 'url';
+    var zstUrl = window.location.search.substr(1).match(new RegExp("(^|&)"+ strUrl +"=([^&]*)(&|$)"));
+    if(zstUrl != null){
+        window.zstUrl = zstUrl[2];
+    }
+//    debugger;
+    if(url != null) {
+        window.url = url[2];
+    } else {
+        function GetRequest() {
+            var url = location.search; //获取url中"?"符后的字串
+            var theRequest = new Object();
+            if (url.indexOf("?") != -1) {
+                var str = url.substr(1);
+                strs = str.split("&");
+                for (var i = 0; i < strs.length; i++) {
+                    theRequest[strs[i].split("=")[0]] = unescape(strs[i].split("=")[1]);
+                }
+            }
+            return theRequest;
+        }
+        var a = GetRequest();
+        window.url = a.caizhong;
+        window.navIndex = a.navIndex;
+        window.nums = a.nums;
+        window.money = a.money;
+    };
+
+</script>
+</body>
+</html>

@@ -1,0 +1,208 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<#assign tool =JspTaglibs["http://caicaike.lottery.com/tag/toolbar"]/>
+<html>
+<head>
+<base href="${basePath}">
+<meta charset="UTF-8">
+<title>彩种玩法-赔率设置</title>
+<#include "/common/easyui_css.inc"/>
+<#include "/common/css.inc"/>
+</head>
+<body >
+ <input type="hidden" id="gameType" value="${parames.gameType}" />
+<input type="hidden" id="playType" value="${parames.playType}" />
+<input type="hidden" id="menuid" value="${menuid }" />
+<div class="easyui-layout" data-options="fit:true">
+	<div data-options="region:'center'" style="padding:5px; border:none !important">
+		<div id="betrateTabs" class="easyui-tabs" >
+	        <#if parames.gameType == '0' || parames.gameType == '3' || parames.gameType == '6' || parames.gameType == '7' || parames.gameType == '9'> 
+	           <!-- 三分彩，重庆时时彩，天津时时彩，新疆时时彩，广东11选5 -->
+		       <#list allPlayType as playtype>
+		           <#if playtype == '0'>
+		               <div title="两面盘" style="padding:5px"></div>
+		            <#elseif playtype == '1'>
+		               <div title="1-5球" style="padding:5px"></div>
+		           </#if>
+		        </#list>
+	       <#elseif parames.gameType == '1'>
+	           <!-- 北京赛车 -->
+	           <#list allPlayType as playtype>
+		           <#if playtype=='0'>
+		              <div title="两面盘" style="padding:5px"></div>
+		           <#elseif playtype='1'>
+		              <div title="1-10名" style="padding:5px"></div>
+		           <#elseif playtype='2'>
+		              <div title="冠亚军和" style="padding:5px"></div>
+		           </#if>
+		        </#list>
+	       <#elseif parames.gameType == '4'>
+	           <!-- PC蛋蛋 -->
+	           <#list allPlayType as playtype>
+		           <#if playtype=='0'>
+		              <div title="两面盘" style="padding:5px"></div>
+		           <#elseif playtype='1'>
+		              <div title="特码" style="padding:5px"></div>
+		           </#if>
+	           </#list>
+	       <#elseif parames.gameType == '10'>
+	           <!-- 江苏快3 -->
+	           <#list allPlayType as playtype>
+		           <#if playtype=='0'>
+		              <div title="两面盘" style="padding:5px"></div>
+		           <#elseif playtype='1'>
+		              <div title="两连" style="padding:5px"></div>
+		           </#if>
+		       </#list>
+	        <#elseif parames.gameType == '5'>
+	           <!-- 广东快乐10分 -->
+	           <#list allPlayType as playtype>
+		           <#if playtype=='0'>
+		              <div title="两面盘" style="padding:5px"></div>
+		           <#elseif playtype='1'>
+		              <div title="1球" style="padding:5px"></div>
+		           <#elseif playtype='2'>
+		              <div title="2球" style="padding:5px"></div>
+		           <#elseif playtype='3'>
+		               <div title="3球" style="padding:5px"></div> 
+		           <#elseif playtype='4'>
+		               <div title="4球" style="padding:5px"></div> 
+		           <#elseif playtype='5'>
+		               <div title="5球" style="padding:5px"></div>
+		           <#elseif playtype='6'>
+		               <div title="6球" style="padding:5px"></div>
+		           <#elseif playtype='7'>
+		               <div title="7球" style="padding:5px"></div> 
+		           <#elseif playtype='8'>
+		               <div title="8球" style="padding:5px"></div>               
+		           </#if>
+		       </#list>
+		   <#elseif parames.gameType == '12'>
+		       <!-- 六合彩 -->
+		       <#list allPlayType as playtype>
+		          <#if playtype == '0'>
+		             <div title="特码A" style="padding:5px"></div>
+		          <#elseif playtype == '1'>
+		             <div title="特码B" style="padding:5px"></div>
+		          <#elseif playtype == '2'>
+		             <div title="正码" style="padding:5px"></div>
+		          <#elseif playtype == '3'>
+		             <div title="正1特" style="padding:5px"></div>
+		          <#elseif playtype == '4'>
+		             <div title="正2特" style="padding:5px"></div>
+		          <#elseif playtype == '5'>
+		             <div title="正3特" style="padding:5px"></div>   
+		          <#elseif playtype == '6'>
+		             <div title="正4特" style="padding:5px"></div>
+		          <#elseif playtype == '7'>
+		             <div title="正5特" style="padding:5px"></div>   
+		          <#elseif playtype == '8'>
+		             <div title="正6特" style="padding:5px"></div>
+		          <#elseif playtype == '9'>
+		             <div title="正码1-6" style="padding:5px"></div>   
+		          <#elseif playtype == '10'>
+		             <div title="过关" style="padding:5px"></div>
+		          <#elseif playtype == '11'>
+		             <div title="二全中" style="padding:5px"></div>
+		          <#elseif playtype == '12'>
+		             <div title="二中特" style="padding:5px"></div>
+		          <#elseif playtype == '13'>
+		             <div title="特串" style="padding:5px"></div>
+		          <#elseif playtype == '14'>
+		             <div title="三全中" style="padding:5px"></div>
+		          <#elseif playtype == '15'>
+		             <div title="三中二" style="padding:5px"></div>
+		          <#elseif playtype == '16'>
+		             <div title="四全中" style="padding:5px"></div>
+		          <#elseif playtype == '17'>
+		             <div title="半波" style="padding:5px"></div>
+		          <#elseif playtype == '18'>
+		             <div title="一肖" style="padding:5px"></div>
+		          <#elseif playtype == '19'>
+		             <div title="尾数" style="padding:5px"></div>
+		          <#elseif playtype == '20'>
+		             <div title="特码生肖" style="padding:5px"></div>
+		          <#elseif playtype == '21'>
+		             <div title="二肖" style="padding:5px"></div>
+		          <#elseif playtype == '22'>
+		             <div title="三肖" style="padding:5px"></div>   
+		          <#elseif playtype == '23'>
+		             <div title="四肖" style="padding:5px"></div>
+		          <#elseif playtype == '24'>
+		             <div title="五肖" style="padding:5px"></div>
+		          <#elseif playtype == '25'>
+		             <div title="六肖" style="padding:5px"></div>
+		          <#elseif playtype == '26'>
+		             <div title="七肖" style="padding:5px"></div>
+		          <#elseif playtype == '27'>
+		             <div title="八肖" style="padding:5px"></div>
+		          <#elseif playtype == '28'>
+		             <div title="九肖" style="padding:5px"></div>
+		          <#elseif playtype == '29'>
+		             <div title="十肖" style="padding:5px"></div>
+		          <#elseif playtype == '30'>
+		             <div title="十一肖" style="padding:5px"></div>
+		          <#elseif playtype == '31'>
+		             <div title="二肖连中" style="padding:5px"></div>
+		          <#elseif playtype == '32'>
+		             <div title="三肖连中" style="padding:5px"></div>
+		          <#elseif playtype == '33'>
+		             <div title="四肖连中" style="padding:5px"></div>
+		          <#elseif playtype == '34'>
+		             <div title="五肖连中" style="padding:5px"></div>
+		          <#elseif playtype == '35'>
+		             <div title="二肖连不中" style="padding:5px"></div>
+		          <#elseif playtype == '36'>
+		             <div title="三肖连不中" style="padding:5px"></div>
+		          <#elseif playtype == '37'>
+		             <div title="四肖连不中" style="padding:5px"></div>
+		          <#elseif playtype == '38'>
+		             <div title="二尾连中" style="padding:5px"></div>
+		          <#elseif playtype == '39'>
+		             <div title="三尾连中" style="padding:5px"></div>
+		          <#elseif playtype == '40'>
+		             <div title="四尾连中" style="padding:5px"></div>
+		          <#elseif playtype == '41'>
+		             <div title="二尾连不中" style="padding:5px"></div>
+		          <#elseif playtype == '42'>
+		             <div title="三尾连不中" style="padding:5px"></div>
+		          <#elseif playtype == '43'>
+		             <div title="四尾连不中" style="padding:5px"></div>
+		          <#elseif playtype == '44'>
+		             <div title="五不中" style="padding:5px"></div>   
+		          <#elseif playtype == '45'>
+		             <div title="六不中" style="padding:5px"></div>
+		          <#elseif playtype == '46'>
+		             <div title="七不中" style="padding:5px"></div>
+		          <#elseif playtype == '47'>
+		             <div title="八不中" style="padding:5px"></div>
+		          <#elseif playtype == '48'>
+		             <div title="九不中" style="padding:5px"></div>
+		          <#elseif playtype == '49'>
+		             <div title="十不中" style="padding:5px"></div>
+		          <#elseif playtype == '50'>
+		             <div title="十一不中" style="padding:5px"></div>
+		          <#elseif playtype == '51'>
+		             <div title="十二不中" style="padding:5px"></div>
+		          </#if>
+		       </#list>
+	       <#elseif parames.gameType == '13'>
+	           <!-- 幸运飞艇 -->
+	           <#list allPlayType as playtype>
+		           <#if playtype=='0'>
+		              <div title="两面盘" style="padding:5px"></div> 
+		           <#elseif playtype='1'>
+		              <div title="1-10名" style="padding:5px"></div> 
+		           <#elseif playtype='2'>
+		              <div title="冠亚军和" style="padding:5px"></div>
+		           </#if>
+		       </#list>
+	       </#if>
+        </div>
+    </div>
+</div>
+      
+
+<#include "/common/easyui_js.inc"/>
+<script type="text/javascript" src="${basePath}pages/paramset/betrate/betrateView.js"></script>
+</body>
+</html>

@@ -1,0 +1,257 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+<meta http-equiv="pragma" content="no-cache"> 
+<meta http-equiv="cache-control" content="no-cache"> 
+<meta http-equiv="expires" content="0"> 
+<meta content="telephone=no" name="format-detection">
+<meta content="black" name="apple-mobile-web-app-status-bar-style">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta http-equiv="X-UA-Compatible" content="edge">
+<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="js/mui/mui.min.js"></script>
+<script type="text/javascript" src="js/move.js"></script>
+<script type="text/javascript" src="js/me.js"></script>
+<script type="text/javascript" src="js/rollups/tripledes.js"></script>
+<script type="text/javascript" src="js/components/mode-ecb.js"></script>
+<link type="text/css" rel="stylesheet" href="css/mui/mui.min.css" />
+<link type="text/css" rel="stylesheet" href="css/base.css" />
+<link type="text/css" rel="stylesheet" href="css/info.css" />
+<title>个人资料</title>
+<script type="text/javascript">
+if(move.width>640){
+	move.width=540;
+}
+$(document).ready(function(){
+	move.hideHeader();
+	$('.btn').width(move.width);
+	if(move.user.u!=null){
+		$('.bottom-box').show();
+	}
+});
+</script>
+</head>
+<body>
+<div class="main-content">
+	<header class="mui-bar mui-bar-nav ">
+		<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+		<h1 class="mui-title">个人资料</h1>
+	</header>
+	<div class="cl-330">
+		上次登录：2017-08-11 09:05:58，不是我登录？ <a href="/member/xgmm/index.html">修改密码</a>
+	</div>
+	<div class="row cl-100">
+		<div class="col-100">个人信息</div>
+	</div>
+	<div class="cl-302 cl-311">
+		<div class="list-block">
+			<ul>
+				<li>
+					<div class="item-content">
+						<div class="item-media"><i class="icon icon-form-zhyhm"></i></div>
+						<div class="item-inner">
+							<div class="item-title label">会员名：</div>
+							<div class="item-input">
+								<font style="font-size: 0.9rem;color: #999;">
+									qw123456</font>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="item-content">
+						<div class="item-media"><i class="icon icon-form-zhzsxm"></i></div>
+						<div class="item-inner">
+							<div class="item-title label">真实姓名：</div>
+							<div class="item-input">
+								<font style="font-size: 0.9rem;color: #999;">
+									李伟标</font>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="item-content">
+						<div class="item-media"><i class="icon"></i></div>
+						<div class="item-inner">
+							<div class="item-title label">手机号码：</div>
+							<div class="item-input re-item-input">
+								<span>151***749</span>
+								<span class="green"><i class="icon_mini icon_ok"></i>&nbsp;已绑定</span>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="item-content">
+						<div class="item-media"><i class="icon"></i></div>
+						<div class="item-inner">
+							<div class="item-title label">电子邮箱：</div>
+							<div class="item-input re-item-input">
+								<span>159471572@qq.com</span>
+								<span class="green"><i class="icon_mini icon_ok"></i>已绑定</span>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="item-content item-link">
+						<div class="item-media"><i class="icon"></i></div>
+						<div class="item-inner">
+							<div class="item-title label">腾讯QQ：</div>
+							<div class="item-input info_gr">
+								745484117<a href="editinfo.html" class="edit_color"> 编辑</a>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="item-content item-link">
+						<div class="item-media"><i class="icon"></i></div>
+						<div class="item-inner">
+							<div class="item-title label">昵称：</div>
+							<div class="item-input info_gr">
+								vip<a href="editinfo.html" class="edit_color"> 编辑</a>
+							</div>
+						</div>
+					</div>
+				</li>
+
+				<li>
+					<div class="item-content item-link">
+						<div class="item-media"><i class="icon"></i></div>
+						<div class="item-inner">
+							<div class="item-title label">性别：</div>
+							<div class="item-input info_gr">
+								男<a href="editinfo.html" class="edit_color"> 编辑</a>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="item-content item-link">
+						<div class="item-media"><i class="icon"></i></div>
+						<div class="item-inner">
+							<div class="item-title label">生日：</div>
+							<div class="item-input info_gr">
+								2017-06-13<a href="editinfo.html" class="edit_color"> 编辑</a>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="item-content">
+						<div class="item-media"><i class="icon icon-form-zhye"></i></div>
+						<div class="item-inner">
+							<div class="item-title label">账户余额：</div>
+							<div class="item-input">
+								<font style="font-size: 0.9rem;color: #999;">
+									44.800</font>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="item-content">
+						<div class="item-media"><i class="icon icon-form-zhdj"></i></div>
+						<div class="item-inner">
+							<div class="item-title label">账户等级：</div>
+							<div class="item-input">
+								<font style="font-size: 0.9rem;color: #999;">
+									VIP-1</font>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="item-content">
+						<div class="item-media"><i class="icon icon-form-zhfd"></i></div>
+						<div class="item-inner">
+							<div class="item-title label">会员返点：</div>
+							<div class="item-input">
+								<font style="font-size: 0.9rem;color: #999;">0.000</font>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="item-content">
+						<div class="item-media"><i class="icon icon-form-scdlsj"></i></div>
+						<div class="item-inner">
+							<div class="item-title label">上次登录时间：</div>
+							<div class="item-input">
+
+								<font style="font-size: 0.9rem;color: #999;">
+									2017-08-11 09:05:58</font>
+							</div>
+						</div>
+					</div>
+				</li>
+
+				<li>
+					<div class="item-content">
+						<div class="item-media"><i class="icon icon-form-scfwip"></i></div>
+						<div class="item-inner">
+							<div class="item-title label">上次访问IP：</div>
+							<div class="item-input">
+								<font style="font-size: 0.9rem;color: #999;">
+									117.30.61.183</font>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="item-content">
+						<div class="item-media"><i class="icon icon-form-szyxtz"></i></div>
+						<div class="item-inner">
+							<div class="item-title label">上周投注：</div>
+							<div class="item-input">
+								<font style="font-size: 0.9rem;color: #999;">0.000（有效）</font>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="item-content">
+						<div class="item-media"><i class="icon icon-form-bzyxtz"></i></div>
+						<div class="item-inner">
+							<div class="item-title label">本周投注：</div>
+							<div class="item-input">
+								<font style="font-size: 0.9rem;color: #999;">0.000（有效）</font>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="item-content">
+						<div class="item-media"><i class="icon icon-form-zjck"></i></div>
+						<div class="item-inner">
+							<div class="item-title label">最近存款：</div>
+							<div class="item-input">
+								<font style="font-size: 0.9rem;color: #999;">
+									2017-05-04 15:30:09</font>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="item-content">
+						<div class="item-media"><i class="icon icon-form-zjqk"></i></div>
+						<div class="item-inner">
+							<div class="item-title label">最近取款：</div>
+							<div class="item-input">
+								<font style="font-size: 0.9rem;color: #999;">
+									2017-08-10 13:57:31</font>
+							</div>
+						</div>
+					</div>
+				</li>
+
+			</ul>
+		</div>
+	</div>
+</div>
+</body>
+</html>

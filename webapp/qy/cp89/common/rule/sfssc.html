@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+
+		<base id="">
+
+		<meta name="referrer" content="always">
+		<meta name="renderer" content="webkit">
+		<meta name="referrer" content="unsafe-url">
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+		<title>千亿彩票 - 彩票APP,彩票开奖查询,重庆时时彩开奖号码,北京pk10开奖记录</title>
+
+		<link type="text/css" rel="stylesheet" href="../../assets/statics/css/home.css" />
+		<link type="text/css" rel="stylesheet" href="../../assets/statics/css/style.css" />
+		<link type="text/css" rel="stylesheet" href="../../assets/statics/css/page.css" />
+		<link rel="shortcut icon" type="image/x-icon" href="../../assets/statics/images/qianyi.png" media="screen" />
+	</head>
+
+	<body>
+
+		<div class="header-plus" id="header_plus">
+			<div class="header-toptray-plus">
+				<div class="quick-tpis">
+					<i class="icon-acc"></i>
+					<marquee id="sys_tip" behavior="scroll" onmouseover="this.stop()" onmouseout="this.start()">千亿彩票（易记域名58qycp.com）购彩就上千亿彩票，下载彩票APP及完善个人资料即送18元并可提升尊享VIP高级服务，六合彩、时时彩赔率业界最高。</marquee>
+					<div id="scroll" class="quick-list" style="width: 388px;">
+						<a id="news_url" href="https://f18.livechatvalue.com/chat/chatClient/chatbox.jsp?companyID=866220&configID=71383&jid=9483081749&s=1" target="_blank">在线客服</a><span style="margin-left: 2px;"> | </span>
+						<div id="spread_url_1" style="display: none;">
+							<!-- <a href="../../member/spread.html">千亿彩票网<img style="margin-left: 2px;margin-bottom: 10px;" src="../../assets/statics/images/hot_new.gif"></a><span> | </span></div> -->
+						<a href="lhc.html">玩法</a><span> | </span>
+						<a href="../help.html">帮助中心</a><span> | </span>
+						<a id="shoucang" onclick="addFavorite2()">加入收藏</a>
+						<a id="agent_reg_url" href="../agency.html" title="加入代理"><span> | </span>加入代理</a>
+						<a id="play_free" href="../trail.html"><span> | </span>免费试玩</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="liansai-wrap" id="liansai-wrap">
+			<div class="liansai" id="liansai">
+				<div class="wrapper clearfix relative">
+					<h1 class="sprite sprite-logo">
+        	<a href="../../index.html"><img src="../../assets/statics/images/qycplogo.png" alt=""></a>
+        </h1>
+
+					<div id="header_user_login" class="wrap-login" style="display:none;">
+						<div class="logxinxi" id="logxinxi">
+							<div class="top_login">
+								<div style="float:right;">
+									<div class="top-login-bg"><i class="icon-6"></i>
+										<input class="top_loginip" name="username" type="text" placeholder="请输入用户名">
+									</div>
+									<div class="top-login-bg"><i class="icon-lock-icon"></i>
+										<input class="top_loginip" name="passwd" type="password" placeholder="请输入密码" style="width: 70px;">
+										<span style="position: relative;">
+                            	<a href="https://f18.livechatvalue.com/chat/chatClient/chatbox.jsp?companyID=866220&configID=71383&jid=9483081749&s=1" style="float:left;color:blue;margin-top: 8px;">忘记密码</a>
+                            </span>
+									</div>
+									<div class="need_captcha">
+										<div class="top_click" name="div_top_click">请输入验证码</div>
+										<div class="yanzhengma">
+											<div class="top-login-bg2">
+												<input class="top_loginmm" id="authnum" name="authnum" maxlength="4" type="text" placeholder="验证码">
+												<span class="register_captcha_span" style="margin:0; position: relative;">
+                                        <img name="login_img" class="login_img">
+                                    </span>
+											</div>
+										</div>
+									</div>
+									<input class="dr_anniu" type="submit" name="login" value="登录">
+									<input class="dr_anniu reg_anniu" type="button" value="注册" onclick="location=document.getElementById('base_path').href+'common/register?type=0'">
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div id="header_user" class="logxinxi" style="display:none;">
+						<div class="top_login">
+							<span>您好，<a href="../member/center.html" class="play-jl" name="user_name"></a></span>
+							<span>可用余额：</span>
+							<span><a class="balance colorRed" id="a_show_money" rel="nofollow"><span id="balance" class="orange">￥</span></a>
+							</span>
+							<span><a id="header_money_refresh"><i class="icon-refresh-icon"></i></a></span>
+							<span>
+                   &nbsp;|&nbsp;
+                   <a href="../../member/center.html">用户中心</a>&nbsp;|&nbsp;
+                   <a href="../../member/recharge.html">充值</a>&nbsp;|&nbsp;
+                   <a href="../../member/withdraw.html">提现</a>&nbsp;|&nbsp;
+                   <a href="../../member/deal.html">交易记录</a>&nbsp;|&nbsp;
+                   <a href="../../member/message.html?tab=2">个人消息<b id="un_read_msg_count" style="color:red;display:none;"></b></a>&nbsp;|&nbsp;
+               	   <a href="javascript:void(0)" onclick="sigout()">退出</a>&nbsp;
+               </span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="header-navbar-plus">
+			<div class="wrapper clearfix" id="header_box">
+				<div class="lottery-plus" id="lotterys">
+					<h2 class="xzcz">选择彩种 <a  class="dropdown-desc" style="margin-left: 75px;"><i class="icon arrow"></i></a></h2>
+					<div class="lotterys-list-hd" id="lotterysList">
+						<ul class="lottery-list-box" id="lottery-list-box2">
+
+						</ul>
+						<ul class="gpc_li">
+							<li>
+								<span style="display: inline-block;width: 80px;position: relative;bottom: 20px;"><i class="icon-ALARM" style="position: relative;left: 14px;"></i><span style="position: relative;right: 20px;top: 20px;">高频彩</span></span>
+								<span class="gpc_li_list"></span>
+							</li>
+						</ul>
+						<ul class="dpc_li">
+							<li style="border-top: 1px solid #F13131;">
+								<span style="display: inline-block;width: 80px;position: relative;bottom: 20px;"><i class="icon-TIME" style="position: relative;left: 14px;"></i><span style="position: relative;right: 20px;top: 20px;">低频彩</span></span>
+								<span class="dpc_li_list"></span>
+							</li>
+						</ul>
+						<ul class="all_li">
+							<li style="border-top: 1px solid #F13131;">
+								<span style="display: inline-block;width: 80px;position: relative;bottom: 20px;"><i class="" style="display: inline-block;width: 32px;height: 32px;position: relative;right: 10px;background-image: url(../../assets/statics/images/qianyi.png);"></i><span style="display: inline-block;position: relative;left: 20px;top: 20px;float: left;">全部</span></span>
+								<span class="all_li_list"></span>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<ul class="nav-plus clearfix">
+					<li class="">
+						<a href="../../../cp89/index.html">首页</a>
+					</li>
+					<li>
+						<a href="../../../cp89/ssc/main.html">购彩大厅</a>
+					</li>
+					<li class="">
+						<a href="../../../cp89/phone.html"><i class="icon-iphone-icon"></i>&nbsp;手机购彩</a><em class="hot-icon"></em></li>
+					<li class="">
+						<a href="../activity.html">优惠活动</a><em class="hot-icon"></em></li>
+					<li class="">
+						<a href="../draw.html" class="dropdown-desc">开奖公告</a>
+					</li>
+					<li class="">
+						<a href="../trend.html">走势图表</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="wrap-bg">
+			<div class="wrapper">
+				<div id="left" class="rule-left">
+					<div class="lbar"><span>玩法规则</span></div>
+					<div class="list" style="">
+						<ul id="rule_list" style="float: left;">
+
+						</ul>
+					</div>
+					<div class="lbot"></div>
+				</div>
+
+				<div class="rule-right">
+					<div class="rtop"></div>
+					<div id="rcont">
+						<!-- begin -->
+						<div class="rbar">
+							<h1><span class="gamek-51">三分时时彩玩法规则</span></h1>
+						</div>
+
+						<div class="rcon">
+							<h2><a href="sfssc.html#1">一、玩法类型及承销</a></h2>
+							<h2><a href="sfssc.html#2">二、开奖与购买方式</a></h2>
+							<h2><a href="sfssc.html#3">三、兑奖</a></h2>
+							<h2><a href="sfssc.html#4">四、玩法说明</a></h2>
+							<br>
+
+							<b><p id="1">一、玩法类型及承销</p></b> 三分时时彩是一种在线即开型彩票玩法，属于基诺型彩票，由本站管理中心负责承销。
+
+							<b><p id="2">二、开奖与购买方式</p></b> 1. 本站三分时时彩游戏每天进行460期，开奖时间为08:03至次日07:00，每3分钟开奖一次。购买者可在对其选定的投注号码进行投注，返点越高则投注赔率越低。
+							<br> 2. 购买者可选择机选号码投注、自选号码投注。机选号码投注是指由投注机随机产生投注号码进行投注，自选号码投注是指将购买者选定的号码输入投注机进行投注。
+							<br> 3. 购买者还可进行追号投注。追号投注是指将一注或一组号码进行两期或两期以上的投注。追号可分为连续追号和间隔追号，连续追号指追号的期数是连续的，间隔追号指追号的期数不连续。
+							<br> 4. 如果用户投注成功后，若因销售终端故障、通讯线路故障和投注站信用额度受限等原因造成当期无法开奖的，应退还购买者投注金额。
+							<br>
+							<br>
+
+							<b><p id="3">三、兑奖</p></b> 1. 返奖：无论大小奖均返还至用户在本站的账户中，一旦用户中奖，系统将自动返还中奖金额。可继续投注或提款，永无弃奖。
+							<br>
+
+							<br>
+							<b><p id="4">四、玩法说明</p></b> 1. 时时彩投注区分为万位、千位、百位、十位和个位，各位号码范围为0～9。每期从各位上开出1个号码作为中奖号码，即开奖号码为5位数。时时彩玩法即是竞猜5位开奖号码的全部号码、部分号码或部分号码特征。
+							<div align="center">
+								<img src="../../assets/statics/images/rule/rule.ssc.p1.gif" />
+							</div>
+							<br> 2. 时时彩包括双面、数字盘、总和、龙虎和等玩法。玩法如下：
+							<br>
+							<table width="100%" cellspacing="1" cellpadding="0" border="0" bgcolor="#CCCCCC" class="s-table">
+								<tbody>
+									<tr align="center" class="cu">
+										<td width="79" height="25" bgcolor="#efefef" class="td">玩法</td>
+										<td width="514" height="25" bgcolor="#efefef" class="td">规则</td>
+									</tr>
+									<tr align="left">
+										<td height="25" bgcolor="#FFFFFF" align="center">双面</td>
+										<td width="514" height="25" bgcolor="#FFFFFF">
+											开奖结果万位、千位、百位、十位或个位数字为1、3、5、7、9时为“单”，若为0、2、4、6、8时为“双”，当投注位数单双与开奖结果的位数单双相符时，即为中奖。<br> 开奖结果万位、千位、百位、十位或个位数字为0、1、2、3、4时为“小”，若为5、6、7、8、9时为“大”，当投注位数大小与开奖结果的位数大小相符时，即为中奖。
+											<br> 开奖结果万位、千位、百位、十位或个位数字为1、2、3、5、7时为“质数”，若为0、4、6、8、9时为“合数”，当投注位数质合与开奖结果的位数质合相符时，即为中奖。
+										</td>
+									</tr>
+									<tr align="left">
+										<td height="25" bgcolor="#FFFFFF" align="center">数字盘</td>
+										<td width="514" height="25" bgcolor="#FFFFFF">于万千百十个任选一位，自0~9任选1个号进行投注，当开奖结果与所选的定位与号码相同时，即为中奖。</td>
+									</tr>
+									<tr align="left">
+										<td height="25" bgcolor="#FFFFFF" align="center">总和</td>
+										<td width="514" height="25" bgcolor="#FFFFFF">
+											开奖结果万位、千位、百位、十位或个位开出的数字总和值大于或等于 23 为总和大，小于或等于 22 为总和小。<br> 开奖结果万位、千位、百位、十位或个位开出的数字总和值是双数为总和双，数字总和值是单数为总和单。
+											<br>
+										</td>
+									</tr>
+									<tr align="left">
+										<td height="25" bgcolor="#FFFFFF" align="center">龙虎和</td>
+										<td width="514" height="25" bgcolor="#FFFFFF">龙 > 虎 > 和 (0为最小，9为最大)，详见<b style="color: red;">注1</b></td>
+									</tr>
+									<!-- <tr align="left">
+                        <td height="25" bgcolor="#FFFFFF" align="center">3连</td>
+                        <td width="514" height="25" bgcolor="#FFFFFF">豹子 > 顺子 > 对子 > 半顺 > 杂六，详见<b style="color: red;">注2</b></td>
+                    </tr>
+                    <tr align="left">
+                        <td height="25" bgcolor="#FFFFFF" align="center">牛牛</td>
+                        <td width="514" height="25" bgcolor="#FFFFFF">开奖5个号码中任选3个号码总和为10的倍数，另外两个号码的总和除以10余几为牛几，如果任意三个号码的总和都不为10的倍数，则为无牛，详见<b style="color: red;">注3</td>
+                    </tr> -->
+								</tbody>
+							</table>
+							<b style="font-weight: bold;">注：&nbsp;1)&nbsp;龙虎和玩法：</b>
+							<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b style="color: red;">龙：</b>开奖万位的号码 大于个位的号码。如：万位开出 6，个位开出 2，开奖为龙，投注龙者视为中奖，其它视为不中奖。
+							<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b style="color: red;">虎：</b>开奖万位的号码 小于个位的号码。如：万位开出 2，个位开出 6，开奖为虎，投注虎者视为中奖，其它视为不中奖。
+							<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b style="color: red;">和：</b>开奖万位的号码 等于个位的号码。如：2XXX2、6XXX6、8XXX8...开奖为和，投注和者视为中奖，其它视为不中奖。
+							<br>
+							<!-- <br><b style="font-weight: bold;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2)&nbsp;3连玩法：</b>
+            <br><b style="font-weight: bold;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;前三特殊玩法：</b>
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b style="color: red;">豹子：</b>开奖号码的万位千位百位数字都相同。如开奖号码为：222、666、888...开奖号码的万位千位百位数字相同，则投注三连豹子者视为中奖，其它视为不中奖。
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b style="color: red;">顺子：</b>开奖号码的万位千位百位数字都相连，不分顺序（数字9、0、1相连）。如开奖号码为：123、901、321、798...开奖号码的万位千位百位数字相连，则投注三连顺子者视为中奖，其它视为不中奖。
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b style="color: red;">对子：</b>开奖号码的万位千位百位任意两位数字相同（不包括豹子）。如开奖号码为：001，288、696...开奖号码的万位千位百位有两位数字相同，则投注三连对子者视为中奖，其它视为不中奖。如果开奖号码为三连豹子，则三连对子视为不中奖。
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b style="color: red;">半顺：</b>开奖号码的万位千位百位任意两位数字相连，不分顺序（不包括顺子、对子）。如开奖号码为：125、540、390、160...开奖号码的万位千位百位有两位数字相连，则投注三连半顺者视为中奖，其它视为不中奖。如果开奖号码为三连顺子、三连对子，则三连半顺视为不中奖。如开奖号码为：123、901、556、233...视为不中奖。
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b style="color: red;">杂六：</b>不包括豹子、对子、顺子、半顺的所有开奖号码。如开奖号码为：157、268...开奖号码位数之间无关联性，则投注三连杂六者视为中奖，其它视为不中奖。
+            <br><b style="font-weight: bold;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;中三特殊玩法：</b>
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b style="color: red;">豹子：</b>开奖号码的千位百位十位数字都相同。如开奖号码为：222、666、888...开奖号码的千位百位十位数字相同，则投注三连豹子者视为中奖，其它视为不中奖。
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b style="color: red;">顺子：</b>开奖号码的千位百位十位数字都相连，不分顺序（数字9、0、1相连）。如开奖号码为：123、901、321、798...开奖号码的千位百位十位数字相连，则投注三连顺子者视为中奖，其它视为不中奖。
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b style="color: red;">对子：</b>开奖号码的千位百位十位任意两位数字相同（不包括豹子）。如开奖号码为：001，288、696...开奖号码的千位百位十位有两位数字相同，则投注三连对子者视为中奖，其它视为不中奖。如果开奖号码为三连豹子，则三连对子视为不中奖。
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b style="color: red;">半顺：</b>开奖号码的千位百位十位任意两位数字相连，不分顺序（不包括顺子、对子）。如开奖号码为：125、540、390、160...开奖号码的千位百位十位有两位数字相连，则投注三连半顺者视为中奖，其它视为不中奖。如果开奖号码为三连顺子、三连对子，则三连半顺视为不中奖。如开奖号码为：123、901、556、233...视为不中奖。
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b style="color: red;">杂六：</b>不包括豹子、对子、顺子、半顺的所有开奖号码。如开奖号码为：157、268...开奖号码位数之间无关联性，则投注三连杂六者视为中奖，其它视为不中奖。
+            <br><b style="font-weight: bold;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*&nbsp;后三特殊玩法：</b>
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b style="color: red;">豹子：</b>开奖号码的百位十位个位数字都相同。如开奖号码为：222、666、888...开奖号码的百位十位个位数字相同，则投注三连豹子者视为中奖，其它视为不中奖。
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b style="color: red;">顺子：</b>开奖号码的百位十位个位数字都相连，不分顺序（数字9、0、1相连）。如开奖号码为：123、901、321、798...开奖号码的百位十位个位数字相连，则投注三连顺子者视为中奖，其它视为不中奖。
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b style="color: red;">对子：</b>开奖号码的百位十位个位任意两位数字相同（不包括豹子）。如开奖号码为：001，288、696...开奖号码的百位十位个位有两位数字相同，则投注三连对子者视为中奖，其它视为不中奖。如果开奖号码为三连豹子，则三连对子视为不中奖。
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b style="color: red;">半顺：</b>开奖号码的百位十位个位任意两位数字相连，不分顺序（不包括顺子、对子）。如开奖号码为：125、540、390、160...开奖号码的百位十位个位有两位数字相连，则投注三连半顺者视为中奖，其它视为不中奖。如果开奖号码为三连顺子、三连对子，则三连半顺视为不中奖。如开奖号码为：123、901、556、233...视为不中奖。
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b style="color: red;">杂六：</b>不包括豹子、对子、顺子、半顺的所有开奖号码。如开奖号码为：157、268...开奖号码位数之间无关联性，则投注三连杂六者视为中奖，其它视为不中奖。
+            
+            <br>
+            <br><b style="font-weight: bold;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3)&nbsp;牛牛：</b>
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b style="color: red;">牛牛：</b>三个号码的总和为10的倍数，另外两个号码的总和也为10的倍数，如开奖结果： 1 ，2 ，7 ，4 ，6。
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b style="color: red;">牛1-牛9：</b>三个号码的总和为10的倍数，另外两个号码的总和除以10余几为牛几，如开奖结果： 1 ，2 ，7 ，4 ，5为牛9。
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b style="color: red;">无牛：</b>任意三个号码的总和都不为10的倍数，如开奖结果为：1，2，6，9，8为无牛
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b style="color: red;">牛大：</b>牛6，牛7，牛8，牛9，牛牛 为 牛大(若开出斗牛结果为没牛，则投注牛大牛小皆为不中奖)
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b style="color: red;">牛小：</b>牛1，牛2，牛3，牛4，牛5 为 牛小(若开出斗牛结果为没牛，则投注牛大牛小皆为不中奖)
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b style="color: red;">牛单：</b>牛1，牛3，牛5，牛7，牛9 为 牛单(若开出斗牛结果为没牛，则投注牛单牛双皆为不中奖)
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b style="color: red;">牛双：</b>牛2，牛4，牛6，牛8，牛牛 为 牛双(若开出斗牛结果为没牛，则投注牛单牛双皆为不中奖)
+            <br>  -->
+						</div>
+
+						<div class="rcon">
+							<a href="#top"><span>回到顶部</span></a>
+						</div>
+						<div class="rbot"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="all_gpc" style="width: 400px;height:120px;position: relative;bottom: 798px;left: 610px;">
+			<div style="width:400px;height: 30px;margin-top: 30px;position: relative;left: 50px;font-weight: bold;color: black;">高频彩</div>
+			<span></span>
+		</div>
+		<div class="all_all" style="width: 400px;height:150px;position: relative;bottom: 699px;left: 610px;">
+			<div style="width:400px;height: 30px;margin-top: 30px;position: relative;left: 50px;font-weight: bold;color: black;">全部</div>
+			<span></span>
+		</div>
+		<div class="jc-footer">
+
+			<div class="foot_box">
+				<div class="about_box">
+					<ul class="foot_info">
+						<li class="foot_wljc"></li>
+						<li class="foot_wangan"></li>
+						<li class="foot_wsjy"></li>
+						<li class="foot_xylh"></li>
+						<li class="foot_kxwz"></li>
+					</ul>
+
+					<p>2009-2017©
+						<span>千亿彩票</span>
+						<br>
+						<span class="c-grey">千亿彩票郑重提示：彩票有风险，投注需谨慎！ 不向未满18周岁的青少年出售彩票</span>
+					</p>
+
+					<div class="clear"></div>
+				</div>
+			</div>
+
+			<div class="clear nospace"></div>
+		</div>
+
+		<!-- 更新浏览器 -->
+		<div class="ie-alert-wrap" style="display: none;">
+			<h1>是时候升级你的浏览器了</h1>
+			<p>你正在使用 Internet Explorer 的早期版本（IE9以下版本 或使用该内核的浏览器）。这意味着在升级浏览器前，你将无法访问此网站。</p>
+			<hr>
+			<h2>请注意：Windows XP 及 Internet Explorer 早期版本的支持已经结束</h2>
+			<p>自 2016 年 1 月 12 日起，Microsoft 不再为 IE 11 以下版本提供相应支持和更新。没有关键的浏览器安全更新，您的 PC 可能易受有害病毒、间谍软件和其他恶意软件的攻击，它们可以窃取或损害您的业务数据和信息。请参阅
+				<a href="https://www.microsoft.com/zh-cn/WindowsForBusiness/End-of-IE-support">微软对 Internet Explorer 早期版本的支持将于 2016 年 1 月 12 日结束的说明</a> 。</p>
+			<hr>
+			<h2>更先进的浏览器</h2>
+			<p>推荐使用以下浏览器的最新版本。如果你的电脑已有以下浏览器的最新版本则直接使用该浏览器访问<b id="referrer"></b>即可。</p>
+			<ul class="browser">
+				<li class="browser-chrome">
+					<a href="http://www.google.cn/chrome/browser/index.html?hl=zh-CN&standalone=1" target="_blank"> 谷歌浏览器<span>Google Chrome</span></a>
+				</li>
+				<li class="browser-360">
+					<a href="http://se.360.cn/" target="_blank"> 360安全浏览器 <span>360用户推荐</span></a>
+				</li>
+				<!-- 2016-08-06 -->
+				<li class="browser-firefox">
+					<a href="http://www.firefox.com.cn/" target="_blank"> 火狐浏览器<span>Mozilla Firefox</span></a>
+				</li>
+				<li class="browser-ie">
+					<a href="http://windows.microsoft.com/zh-cn/internet-explorer/download-ie" target="_blank"> IE浏览器<span>Internet Explorer</span></a>
+				</li>
+				<li class="browser-qq">
+					<a href="http://browser.qq.com/" target="_blank"> QQ浏览器9 <span>全新升级版本</span></a>
+				</li>
+				<!-- 9.4.8187.400 -->
+				<div class="clean"></div>
+			</ul>
+			<hr>
+			<h2>为什么会出现这个页面？</h2>
+			<p>如果你不知道升级浏览器是什么意思，请请教一些熟练电脑操作的朋友。如果你使用的不是IE6/7/8/9/10，而是360浏览器、QQ浏览器、搜狗浏览器等，出现这个页面是因为你使用的不是该浏览器的最新版本，升级至最新即可。</p>
+			<hr>
+		</div>
+		<div class="ie-alert-bg" style="display: none;"></div>
+		<div id="_leftAD " class="_float_AD l_AD ">
+			<img src="../../assets/statics/images/online-left.png ">
+			<div class="close_btn " id="left_close"></div>
+			<a class="top1_btn " href="tencent://message/?uin=2598889959&Site=千亿彩票网&Menu=yes "></a>
+			<a class="top2_btn " href="common/trail.html "></a>
+			<div class="two_img "><img src="../../assets/statics/images/download.png"></div>
+		</div>
+		<div id="_rightAD " class="_float_AD r_AD ">
+			<img src="../../assets/statics/images/online-right.png ">
+			<div class="close_btn " id="right"></div>
+			<a class="top1_btn kefu" href="" target="_blank"></a>
+			<a class="top2_btn " href="javascript:void(0)"></a>
+			<div class="two_img "><img src="../../assets/statics/images/download.png "></div>
+		</div>
+
+		<script src="../../assets/js/plugins/jquery/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../assets/js/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../assets/js/global.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../static/public/js/rollups/tripledes.js "></script>
+		<script src="../../static/public/js/components/mode-ecb.js "></script>
+		<script src="../../assets/js/application/move.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../assets/js/application/type.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../assets/js/base.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+		//获得在线客服地址
+		$.ajax({
+		  url : CONFIG.BASEURL + 'baseData_onlineService',
+		  type: 'get',
+		  dataType: 'json',
+		  success: function (json) {
+		      if(json.code != 200){
+		          return;
+		      } else {
+		          var data = json.data.url;
+		          $(".kefu").attr('href',data);
+		      }
+		  }
+		});
+			$('#left_close').on('click', function() {
+				$('.l_AD').css('display', 'none');
+			})
+			$('#right').on('click', function() {
+				$('.r_AD').css('display', 'none');
+			})
+
+			$('.xzcz,#lotterysList').on('mouseenter', function() {
+				$('#lotterysList').show();
+			});
+			$('.xzcz,#lotterysList').on('mouseleave', function() {
+				$('#lotterysList').hide();
+			});
+
+			$('.all_gpc,.all_all').on('mouseenter', function() {
+				$('#lotterysList').css('display', 'block');
+			})
+			$('.all_gpc,.all_all').on('mouseleave', function() {
+				$('#lotterysList').css('display', 'none');
+			})
+
+			function addFavorite2() {
+				var url = window.location;
+				var title = document.title;
+				var ua = navigator.userAgent.toLowerCase();
+				if(ua.indexOf("360se") > -1) {
+					alert("由于360浏览器功能限制，请按 Ctrl+D 手动收藏！");
+				} else if(ua.indexOf("msie 8") > -1) {
+					window.external.AddToFavoritesBar(url, title); //IE8
+				} else if(document.all) {
+					try {
+						window.external.addFavorite(url, title);
+					} catch(e) {
+						alert('您的浏览器不支持,请按 Ctrl+D 手动收藏!');
+					}
+				} else if(window.sidebar) {
+					window.sidebar.addPanel(title, url, "");
+				} else {
+					alert('您的浏览器不支持,请按 Ctrl+D 手动收藏!');
+				}
+			}
+		</script>
+	</body>
+
+</html>

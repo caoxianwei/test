@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<#assign date =JspTaglibs["http://caicaike.lottery.com/tag/formatdate"]/>
+<html>
+<head>
+<base href="${basePath}">
+<meta charset="UTF-8">
+<title>投注详情</title>
+<#include "/common/easyui_css.inc"/>
+<#include "/common/css.inc"/>
+
+</head>
+<body>
+<div class="easyui-layout" data-options="fit:true">
+	<div id="showDiv" data-options="region:'center'" style="margin-left:-15%;padding:10px; border:none !important;">
+         <table class="table">
+           <tbody>
+             <tr>
+              <td class="td-right width-30"><label for="name"><span class="font-red"></span>期号:</label> </td>
+              <td>${order.session_no}</td>
+             </tr>
+             <tr>
+              <td class="td-right width-30"><label for="name">ID:</label> </td>
+              <td>${order.user_id?c}</td>
+             </tr>
+             <tr>
+              <td class="td-right width-30"><label for="name">用户名:</label> </td>
+              <td>${order.login_name}</td>
+             </tr>
+             <tr>
+              <td class="td-right width-30"><label for="name">玩法:</label> </td>
+              <td>${order.play_name}</td>
+             </tr>
+             <tr>
+              <td class="td-right width-30"><label for="name">投注选项:</label> </td>
+              <td>${order.bet_name}</td>
+             </tr>
+             <tr>
+              <td class="td-right width-30"><label for="name">投注名称:</label> </td>
+              <td>${order.option_title}</td>
+             </tr>
+             <tr>
+              <td class="td-right width-30"><label for="name">投注时间:</label> </td>
+              <td><@date.format date="${order.bet_time}"/></td>
+             </tr>
+             <tr>
+              <td class="td-right width-30"><label for="name">投注金额:</label> </td>
+              <td>${order.bet_money}</td>
+             </tr>
+             <tr>
+              <td class="td-right width-30"><label for="name">是否中奖:</label> </td>
+              <td>
+                 <#if order.win_result == "0">
+                                                    未开奖
+                 <#elseif order.win_result == "1">
+                                                    中奖
+                 <#elseif order.win_result == "2">
+                                                    未中奖
+                 <#elseif order.win_result == "3">
+                                                     打和
+                 <#elseif order.win_result == "4">
+                                                    撤单   
+                 </#if>
+              </td>
+             </tr>
+             <#if order.win_result == "1">
+              <tr>
+                <td class="td-right width-30"><label for="name">中奖金额:</label> </td>
+                <td>${order.win_cash}</td>
+              </tr>
+             </#if>
+             <tr>
+              <td class="td-right width-30"><label for="name">赔率:</label> </td>
+              <td>
+                <#if order.bet_rate2 != null && order.bet_rate2 != '' > 
+                   ${order.bet_rate2}
+                <#else>
+                   ${order.bet_rate}
+                </#if>
+              </td>
+             </tr>
+               
+       </tbody>
+       </table>        
+	</div>
+	<div data-options="region:'south',border:false" class="panl-footer">
+		<a class="easyui-linkbutton gray" href="javascript:void(0)" onclick="javascript:closeDiv()" style="width:80px">取消</a>
+	</div>
+</div>
+<#include "/common/easyui_js.inc"/>
+<script type="text/javascript" src="pages/order/betmanager/listBet.js"></script>
+</body>
+</html>

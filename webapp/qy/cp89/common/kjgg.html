@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link type="text/css" rel="stylesheet" href="../assets/statics/css/home.css" />
+		<link type="text/css" rel="stylesheet" href="../assets/statics/css/style.css" />
+		<link type="text/css" rel="stylesheet" href="../assets/statics/css/draw.css" />
+		<link rel="stylesheet" type="text/css" href="../assets/statics/css/result.css" />
+		<style type="text/css">
+			body{
+				overflow-x: hidden;
+			}
+			.main {
+				min-height: 778px;
+				background-color: white;
+			}
+			
+			.kj_box tbody {
+				background-color: #ECECEC;
+			}
+			
+			.wrap-bg {
+				background-color: white;
+			}
+			
+			#_games_1>div {
+				/*display: inline-block;*/
+				float: left;
+				display: none;
+			}
+			
+			.active_games {
+				display: block !important;
+			}
+			
+			.cz_menu {
+				height: 25px;
+			}
+			
+			#_menu_draw_b_3 {
+				width: 986px;
+			}
+			
+			.ball i {
+				display: inline-block;
+				width: 20px;
+				height: 20px;
+				border-radius: 50%;
+				background-color: #D90000;
+				color: white;
+				text-align: center !important;
+				line-height: 20px;
+				margin-right: 5px;
+				font-style: normal;
+			}
+		</style>
+	</head>
+
+	<body id="html_id">
+		<div id="_iframe_divs" name="iframe_div">
+			<div id="_games_2" class="cz-box" style="display:block">
+				<div class="kj_box">
+					<h1 style="background-color: white;height: 45px;font-size: 15px;font-weight: 300;line-height: 45px;">最新彩票开奖结果</h1>
+					<table cellpadding="0" cellspacing="0" class="kj_tab">
+						<thead class="thead">
+							<tr class="title">
+								<td width="120">彩种</td>
+								<td width="80">期号</td>
+								<td width="180">开奖时间</td>
+								<td width="365">开奖号码</td>
+								<td width="100">期数(每天)</td>
+								<td width="78">开奖频率</td>
+								<td width="30">详情</td>
+								<td width="30">走势</td>
+								<td width="60">购买彩票 </td>
+							</tr>
+						</thead>
+						<div id="tbody_list">
+							<tbody class="tbody_list"></tbody>
+						</div>
+
+					</table>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="../assets/js/plugins/jquery/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../assets/js/jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../assets/js/global.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../static/public/js/rollups/tripledes.js "></script>
+	<script src="../static/public/js/components/mode-ecb.js "></script>
+	<script src="../assets/js/application/move.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../assets/js/application/type.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../assets/js/base.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../assets/js/application/draw.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		window.onload = function (){
+			setTimeout(function(){
+				var parent1 = window.parent.document.getElementsByClassName('jc-footer');
+				$(parent1).css('top','0');
+				var parent = window.parent.document.getElementById("iframeid1");
+				var iframe2 = window.parent.document.getElementById("_iframe_divs1").offsetHeight;
+				$(parent).css('height',iframe2+'px');
+				$(document.body).height($('.kj_box').height()+'px');
+			},1500)
+   			
+		};
+	</script>
+</html>

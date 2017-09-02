@@ -1,0 +1,359 @@
+
+body { margin: 30px; padding: 0px; border: 0px none; color: rgb(0, 0, 0); font-family: helvetica,sans-serif; font-weight: normal; font-size: 12px; }
+img { border: 0px none; }
+
+body, p, h1, h2, h3, h4, h5, li, span, i, ul, img, a, strong, input, button, textarea { margin: 0px; padding: 0px; }
+body { font-family: "microsoft yahei"; font-size: 14px; line-height: 1; }
+li { list-style-type: none; float: left; }
+a { text-decoration: none; outline: medium none; color: rgb(0, 0, 0); }
+img { border: medium none; vertical-align: middle; }
+i, var { font-style: normal; }
+input, select, textarea { outline: medium none; font-family: "microsoft yahei"; }
+.at { margin: 0px auto; }
+.fl { float: left; }
+.fr { float: right; }
+.hide { display: none; }
+.list_ject ul li .Time .timer_wrap ol::after { content: ""; position: absolute; left: -10px; top: 12px; width: 7px; height: 24px; background: transparent url('../static/public/img/ico31.png') repeat scroll 0% 0%; }
+.list_ject ul li .Time .timer_wrap ol.s::after { display: none; }
+.list_ject ul li .Time .timer_wrap ol span::after { content: ""; position: absolute; left: 5%; top: 50%; width: 90%; height: 1px; background: rgb(74, 74, 74) none repeat scroll 0% 0%; }
+.list_ject ul li .Result p a::after { content: ""; position: absolute; left: 0px; top: 0px; width: 1px; height: 100%; background: rgb(204, 204, 204) none repeat scroll 0% 0%; }
+.list_ject ul li .Result p a.first::after { display: none; }
+.wid1 { width: 1000px; margin: 0px auto; }
+.ico-d { width: 8px; height: 4px; background: transparent url('../static/public/img/ico32.png') repeat scroll 0% 0%; display: inline-block; margin-left: 4px; margin-top: -4px; vertical-align: middle; transition: all 0.3s ease 0s; }
+.men_list { background: rgb(250, 98, 0) none repeat scroll 0% 0%; height: 122px; }
+.men_list .logo { float: left; margin-top: 35px; }
+.men_list .mt0 { margin-top: 10px; }
+.men_list .nav_list { float: right; height: 100%; }
+.men_list .nav_list ul { height: 100%; }
+.men_list .nav_list ul li { width: 105px; text-align: center; position: relative; height: 100%; transition: all 0.3s ease 0s; }
+.men_list .nav_list ul li img { margin-top: 28px; }
+.men_list .nav_list ul li:hover { background: rgb(255, 116, 27) none repeat scroll 0% 0%; }
+.men_list .nav_list ul li a { display: block; }
+.men_list .nav_list ul li:hover::after { display: none; }
+.men_list .nav_list ul p { color: rgb(255, 255, 255); font-size: 16px; margin-top: 6px; }
+.men_list .nav_list ul li::after { content: ""; position: absolute; right: 0px; top: 44px; width: 1px; height: 20px; background: rgb(248, 123, 43) none repeat scroll 0% 0%; }
+.men_list .wid1 { height: 100%; }
+.banner .four_men ul li::after { content: ""; position: absolute; left: 0px; top: 2%; width: 1px; height: 96%; background: rgb(46, 47, 39) none repeat scroll 0% 0%; border-right: 1px solid rgb(88, 88, 88); }
+.banner .four_men ul li.last::before { content: ""; position: absolute; right: 0px; top: 2%; width: 1px; height: 96%; background: rgb(46, 47, 39) none repeat scroll 0% 0%; border-right: 1px solid rgb(88, 88, 88); }
+.type_top { height: 24px; font-family: ""; background: rgb(250, 251, 252) none repeat scroll 0% 0%; border-top: 1px solid rgb(212, 212, 213); border-bottom: 1px solid rgb(243, 193, 160); position: relative; z-index: 2; }
+.type_top .left {  }
+.type_top .left .left_div { font-size: 12px; color: rgb(153, 153, 153); line-height: 24px; position: relative; }
+.type_top .left .left_div a { color: rgb(15, 63, 148); margin-left: 14px; }
+.type_top .left .left_div a:hover { color: rgb(250, 98, 0); }
+.type_top .left .left_div a.a1 { color: rgb(216, 70, 0); }
+.type_top .left .left_div span { border-left: 1px solid rgb(217, 217, 217); margin-left: 10px; }
+.type_top .left .left_div span.line a:nth-child(1) { border-left: medium none; }
+.type_top .right {  }
+.type_top .right ul {  }
+.type_top .right ul li { font-size: 12px; line-height: 24px; position: relative; }
+.type_top .right ul li b { width: 70px; height: 23px; border-width: medium 1px; border-style: none solid; border-color: currentcolor rgb(255, 255, 255); -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; border-image: none; font-weight: 100; display: block; float: left; line-height: 23px; text-align: center; }
+.type_top .right ul li .pay { width: 224px; min-height: 150px; border: 1px solid rgb(204, 204, 204); position: absolute; left: 0px; top: 24px; display: none; background: rgb(255, 255, 255) none repeat scroll 0% 0%; z-index: 9; }
+.type_top .right ul li .pay .pay_list { width: 200px; display: table; border-bottom: 1px solid rgb(204, 204, 204); margin: auto; padding-top: 8px; padding-bottom: 8px; }
+.type_top .right ul li .pay .pay_list h4 { width: 36px; display: table; float: left; font-weight: 100; font-size: 12px; font-family: "宋体"; color: rgb(153, 153, 153); }
+.type_top .right ul li .pay .pay_list p { width: 160px; display: table; min-height: 60px; float: right; }
+.type_top .right ul li .pay .pay_list p span { border: medium none; width: auto; margin: 0px 8px; text-align: justify; color: rgb(102, 102, 102); float: left; }
+.type_top .right ul li .pay .pay_list p span a { padding: 0px; }
+.type_top .right ul li .pay .pay_list:last-child { border-bottom: medium none; }
+.type_top .right ul li.l a { border: medium none; width: auto; margin-left: -10px; }
+.type_top .right ul li.l i { margin-left: -10px; margin-top: 10px; float: left; }
+.type_top .right ul li.sli b::after { content: ""; position: absolute; left: 1px; bottom: -1px; width: 70px; height: 1px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; z-index: 11; }
+.type_top .right ul li a { color: rgb(136, 136, 136); padding: 0px 10px; border-left: 1px solid rgb(217, 218, 218); }
+.type_top .right ul li.li0 a { border-left: medium none; }
+.type_top .right ul li a:hover { color: rgb(216, 70, 0); }
+.type_top .right ul li .link { width: 225px; min-height: 100px; border: 1px solid rgb(204, 204, 204); position: absolute; left: 0px; top: 24px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; z-index: 9; display: none; }
+.type_top .right ul li .link h5 { width: 200px; height: 30px; border-bottom: 1px solid rgb(204, 204, 204); margin: auto; line-height: 30px; color: rgb(15, 63, 148); }
+.type_top .right ul li .link h5 a { color: rgb(15, 63, 148); font-size: 12px; }
+.type_top .right ul li .link h4 { width: 200px; display: table; min-height: 50px; border-bottom: 1px solid rgb(204, 204, 204); margin: auto; }
+.type_top .right ul li .link h4 strong { line-height: 35px; color: rgb(153, 153, 153); }
+.type_top .right ul li .link h4 p { width: 90%; display: table; padding-right: 20%; }
+.type_top .right ul li .link h4 p a { font-weight: 100; width: auto; line-height: 22px; }
+.type_top .right ul li .link h5.last { border-bottom: medium none; }
+.tail { width: 998px; border: 1px solid rgb(219, 219, 219); display: table; padding: 16px 0px; margin-top: 58px; }
+.tail ul {  }
+.tail ul li { border-right: 1px solid rgb(218, 218, 218); width: 153px; padding-left: 81px; }
+.tail ul li h2 { font-weight: normal; font-size: 18px; color: rgb(85, 85, 85); position: relative; margin-bottom: 16px; }
+.tail ul li h2 img { position: absolute; left: -30px; top: -2px; }
+.tail ul li p { font-size: 12px; font-family: ""; float: left; }
+.tail ul li p a { display: block; color: rgb(153, 153, 153); line-height: 1.8; }
+.tail ul li p a:hover { color: rgb(250, 98, 0); text-decoration: underline; }
+.record { text-align: center; margin-top: 11px; border-top: 2px solid rgb(250, 98, 0); margin-bottom: 67px; display: table; }
+.record p { margin-top: 22px; font-family: ""; font-size: 12px; color: rgb(68, 68, 68); }
+.record p span { color: rgb(233, 48, 48); }
+.record p.mt30 { margin-top: 30px; }
+.record .comp { height: 39px; }
+.record .comp ul { margin-left: 10px; }
+.record .comp ul li { border: 1px solid rgb(220, 220, 220); margin-left: 13px; }
+.game_name .box3_timer .timer_wrap ol::after { content: ""; position: absolute; left: -13px; top: 16px; width: 8px; height: 32px; background: transparent url('../static/public/img/ico47-1.png') repeat scroll 0% 0%; }
+.game_name .box3_timer .timer_wrap ol.s::after { display: none; }
+.game_name .box3_timer .timer_wrap ol span::after { content: ""; position: absolute; left: 5%; top: 50%; width: 90%; height: 1px; background: rgb(74, 74, 74) none repeat scroll 0% 0%; }
+.Single .layout .Pick p.p1 span.fr a var::after { content: ""; left: 50%; bottom: -12px; position: absolute; width: 0px; height: 0px; border-width: 6px; border-style: solid; border-color: rgb(0, 0, 0) transparent transparent; }
+.Betting .list_wrap ul li:hover:not(.not) { background: rgb(238, 238, 238) none repeat scroll 0% 0%; }
+.Detailedlist .layout .boxt .left ul li:not(.head) span.sp3 { color: rgb(67, 181, 128); }
+.process { background: rgb(231, 231, 231) none repeat scroll 0% 0%; display: table; width: 100%; }
+.process .layout .list_tems .date::after { content: ""; position: absolute; width: 10px; height: 10px; border-radius: 50%; border: 2px solid rgb(255, 255, 255); background: rgb(250, 98, 0) none repeat scroll 0% 0%; right: -28px; top: 0px; }
+.process .layout .list_tems::after { content: ""; width: 19px; height: 19px; background: transparent url('../static/public/img/ico70.png') repeat scroll 0% 0%; left: -19px; position: absolute; top: -1px; }
+.process .wid1 { position: relative; display: table; }
+.Customerservice { position: fixed; right: 0px; top: 57%; }
+.Customerservice ul {  }
+.Customerservice ul li { width: 60px; height: 60px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; float: none; margin-bottom: 9px; border-radius: 6px; box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.4); }
+.Customerservice ul li .pict { width: 100%; height: 60px; text-align: center; display: table; }
+.Customerservice ul li .pict a { vertical-align: middle; display: table-cell; }
+.Resultt { background: rgb(250, 98, 0) none repeat scroll 0% 0%; margin-top: 28px; border-radius: 8px; position: relative; display: table; margin-bottom: 22px; box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.5); }
+.Resultt h1 { height: 50px; border-bottom: 5px solid rgb(180, 28, 0); text-align: center; }
+.Resultt h1 img { margin-top: 10px; }
+.Resultt .it0 { position: absolute; left: 30px; z-index: 1; top: -26px; }
+.Resultt .it1 { position: absolute; right: 30px; z-index: 1; top: -26px; }
+.Resultt .latyout { background: rgb(255, 255, 255) none repeat scroll 0% 0%; width: 98%; border-radius: 8px; display: table; margin-bottom: 12px; }
+.Resultt .latyout .tabs_ce { height: 50px; border-bottom: 1px solid rgb(250, 98, 0); margin-top: 14px; width: 96%; }
+.Resultt .latyout .tabs_ce ul {  }
+.Resultt .latyout .tabs_ce ul li { font-size: 16px; color: rgb(135, 135, 135); line-height: 47px; border-top: 3px solid rgb(255, 255, 255); position: relative; cursor: pointer; }
+.Resultt .latyout .tabs_ce ul li.acti { border-top: 3px solid rgb(250, 98, 0); color: rgb(250, 98, 0); }
+.Resultt .latyout .tabs_ce ul li.acti a::after { content: ""; position: absolute; left: 0px; bottom: -1px; width: 100%; height: 1px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; }
+.Resultt .latyout .tabs_ce ul li::after { content: ""; position: absolute; left: -1px; top: 17px; width: 1px; height: 14px; background: rgb(191, 191, 191) none repeat scroll 0% 0%; }
+.Resultt .latyout .tabs_ce ul li a { color: rgb(135, 135, 135); padding: 0px 20px; position: relative; border-left: 1px solid rgb(255, 255, 255); border-right: 1px solid rgb(255, 255, 255); }
+.Resultt .latyout .tabs_ce ul li.acti a { color: rgb(250, 98, 0); border-left: 1px solid rgb(250, 98, 0); border-right: 1px solid rgb(250, 98, 0); display: block; z-index: 1; }
+.Resultt .latyout .tabs_ce ul li.acti::after { display: none; }
+.Resultt .latyout .tabs_ce ul li.nob::after { display: none; }
+.Resultt .latyout .wrap_select { margin-top: 27px; width: 96%; height: 45px; border-bottom: 1px dotted rgb(173, 173, 173); }
+.Resultt .latyout .wrap_select a { border: 1px solid rgb(220, 220, 220); border-radius: 2px; font-size: 12px; float: left; width: 72.5px; line-height: 20px; height: 20px; text-align: center; background: transparent -moz-linear-gradient(center top , rgb(255, 255, 255), rgb(232, 232, 232)) repeat scroll 0% 0%; color: rgb(34, 34, 34); margin-right: 4px; }
+.Resultt .latyout .wrap_select a.acti { background: rgb(233, 48, 48) none repeat scroll 0% 0%; color: rgb(255, 255, 255); }
+.Resultt .latyout .wrap_select a.last { margin-right: 0px; }
+.Resultt .latyout .Color_type { margin-top: 24px; display: table; margin-bottom: 35px; }
+.Newest .tabs_cg ul li::after { content: ""; position: absolute; left: -1px; top: 17px; width: 1px; height: 14px; background: rgb(191, 191, 191) none repeat scroll 0% 0%; }
+.Newest .tabs_cg ul li.acti::after { display: none; }
+.Newest .tabs_cg ul li.first::after { display: none; }
+.Newest .tabs_cg ul li.acti i::after { content: ""; position: absolute; left: 0px; bottom: -1px; width: 100%; height: 1px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; }
+.Newest .Analysis .box3 .timer_wrap ol::after { content: ""; position: absolute; left: -20px; top: 16px; width: 10px; height: 38px; background: transparent url('../static/public/img/ico78.png') repeat scroll 0% 0%; }
+.Newest .Analysis .box3 .timer_wrap ol.f::after { display: none; }
+.Newest .Analysis .box3 .three ol::after { left: -10px; }
+.Newest .Analysis .box3 .three ol.f::after { display: block; }
+.Newest .Analysis .box3 .three ol.s::after { display: none; }
+.main_layout .left_layout h1::after { content: ""; position: absolute; width: 6px; height: 50px; background: transparent url('../static/public/img/ico83.png') repeat scroll 0% 0%; right: -6px; opacity: 0.5; }
+.main_layout .left_layout ul li i.i0::after { content: ""; left: -12px; bottom: 0px; position: absolute; width: 0px; height: 0px; border-right: 8px solid rgb(255, 162, 0); border-top: 6px solid transparent; border-left: 6px solid transparent; }
+.main_layout .right_layotu .left_wrap .tabs_cg ul li::after { content: ""; position: absolute; left: -1px; top: 17px; width: 1px; height: 14px; background: rgb(191, 191, 191) none repeat scroll 0% 0%; }
+.main_layout .right_layotu .left_wrap .tabs_cg ul li.acti::after { display: none; }
+.main_layout .right_layotu .left_wrap .tabs_cg ul li.first::after { display: none; }
+.main_layout .right_layotu .left_wrap .tabs_cg ul li.acti i::after { content: ""; position: absolute; left: 0px; bottom: -1px; width: 100%; height: 1px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; }
+.main_layout .right_layotu .right_wrap .login ul.state li:nth-child(3) { font-size: 16px; }
+.main_layout .right_layotu .right_wrap .login ul.state li a:nth-child(1) { margin-left: 0px; }
+.main_layout .right_layotu .chart .pic_wp .links p a::after { content: ""; position: absolute; right: -10px; top: 0px; width: 1px; height: 12px; background: rgb(204, 204, 204) none repeat scroll 0% 0%; }
+@media screen and (max-width: 1210px) {
+	body { min-width: 1000px; }
+}
+.type_top { height: 24px; font-family: ""; background: rgb(250, 251, 252) none repeat scroll 0% 0%; border-top: 1px solid rgb(212, 212, 213); border-bottom: 1px solid rgb(243, 193, 160); position: relative; z-index: 2; }
+.type_top .left {  }
+.type_top .left .left_div { font-size: 12px; color: rgb(153, 153, 153); line-height: 24px; position: relative; }
+.type_top .left .left_div a { color: rgb(15, 63, 148); margin-left: 14px; }
+.type_top .left .left_div a:hover { color: rgb(250, 98, 0); }
+.type_top .left .left_div a.a1 { color: rgb(216, 70, 0); }
+.type_top .left .left_div span { border-left: 1px solid rgb(217, 217, 217); margin-left: 10px; }
+.type_top .left .left_div span.line a:nth-child(1) { border-left: medium none; }
+.type_top .right {  }
+.type_top .right ul {  }
+.type_top .right ul li { font-size: 12px; line-height: 24px; position: relative; }
+.type_top .right ul li b { width: 70px; height: 23px; border-width: medium 1px; border-style: none solid; border-color: currentcolor rgb(255, 255, 255); -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; border-image: none; font-weight: 100; display: block; float: left; line-height: 23px; text-align: center; }
+.type_top .right ul li .pay { width: 224px; min-height: 150px; border: 1px solid rgb(204, 204, 204); position: absolute; left: 0px; top: 24px; display: none; background: rgb(255, 255, 255) none repeat scroll 0% 0%; z-index: 9; }
+.type_top .right ul li .pay .pay_list { width: 200px; display: table; border-bottom: 1px solid rgb(204, 204, 204); margin: auto; padding-top: 8px; padding-bottom: 8px; }
+.type_top .right ul li .pay .pay_list h4 { width: 36px; display: table; float: left; font-weight: 100; font-size: 12px; font-family: "宋体"; color: rgb(153, 153, 153); }
+.type_top .right ul li .pay .pay_list p { width: 160px; display: table; min-height: 60px; float: right; }
+.type_top .right ul li .pay .pay_list p span { border: medium none; width: auto; margin: 0px 8px; text-align: justify; color: rgb(102, 102, 102); float: left; }
+.type_top .right ul li .pay .pay_list p span a { padding: 0px; }
+.type_top .right ul li .pay .pay_list:last-child { border-bottom: medium none; }
+.type_top .right ul li.l a { border: medium none; width: auto; margin-left: -10px; }
+.type_top .right ul li.l i { margin-left: -10px; margin-top: 10px; float: left; }
+.type_top .right ul li.sli b::after { content: ""; position: absolute; left: 1px; bottom: -1px; width: 70px; height: 1px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; z-index: 11; }
+.type_top .right ul li a { color: rgb(136, 136, 136); padding: 0px 10px; border-left: 1px solid rgb(217, 218, 218); }
+.type_top .right ul li.li0 a { border-left: medium none; }
+.type_top .right ul li a:hover { color: rgb(216, 70, 0); }
+.type_top .right ul li .link { width: 225px; min-height: 100px; border: 1px solid rgb(204, 204, 204); position: absolute; left: 0px; top: 24px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; z-index: 9; display: none; }
+.type_top .right ul li .link h5 { width: 200px; height: 30px; border-bottom: 1px solid rgb(204, 204, 204); margin: auto; line-height: 30px; color: rgb(15, 63, 148); }
+.type_top .right ul li .link h5 a { color: rgb(15, 63, 148); font-size: 12px; }
+.type_top .right ul li .link h4 { width: 200px; display: table; min-height: 50px; border-bottom: 1px solid rgb(204, 204, 204); margin: auto; }
+.type_top .right ul li .link h4 strong { line-height: 35px; color: rgb(153, 153, 153); }
+.type_top .right ul li .link h4 p { width: 90%; display: table; padding-right: 20%; }
+.type_top .right ul li .link h4 p a { font-weight: 100; width: auto; line-height: 22px; }
+.type_top .right ul li .link h5.last { border-bottom: medium none; }
+.tail { width: 998px; border: 1px solid rgb(219, 219, 219); display: table; padding: 16px 0px; margin-top: 58px; }
+.tail ul {  }
+.tail ul li { border-right: 1px solid rgb(218, 218, 218); width: 153px; padding-left: 81px; }
+.tail ul li h2 { font-weight: normal; font-size: 18px; color: rgb(85, 85, 85); position: relative; margin-bottom: 16px; margin-right: 70px; }
+.tail ul li h2 img { position: absolute; left: -30px; top: -2px; }
+.tail ul li p { font-size: 12px; font-family: ""; float: left; }
+.tail ul li p a { display: block; color: rgb(153, 153, 153); line-height: 1.8; }
+.tail ul li p a:hover { color: rgb(250, 98, 0); text-decoration: underline; }
+.record { text-align: center; margin-top: 11px; border-top: 2px solid rgb(250, 98, 0); margin-bottom: 67px; display: table; }
+.record p { margin-top: 22px; font-family: ""; font-size: 12px; color: rgb(68, 68, 68); }
+.record p span { color: rgb(233, 48, 48); }
+.record p.mt30 { margin-top: 30px; }
+.record .comp { height: 39px; }
+.record .comp ul { margin-left: 10px; }
+.record .comp ul li { border: 1px solid rgb(220, 220, 220); margin-left: 13px; }
+.game_name .box3_timer .timer_wrap ol::after { content: ""; position: absolute; left: -13px; top: 16px; width: 8px; height: 32px; background: transparent url('../static/public/img/ico47-1.png') repeat scroll 0% 0%; }
+.game_name .box3_timer .timer_wrap ol.s::after { display: none; }
+.game_name .box3_timer .timer_wrap ol span::after { content: ""; position: absolute; left: 5%; top: 50%; width: 90%; height: 1px; background: rgb(74, 74, 74) none repeat scroll 0% 0%; }
+.Single .layout .Pick p.p1 span.fr a var::after { content: ""; left: 50%; bottom: -12px; position: absolute; width: 0px; height: 0px; border-width: 6px; border-style: solid; border-color: rgb(0, 0, 0) transparent transparent; }
+.Betting .list_wrap ul li:hover:not(.not) { background: rgb(238, 238, 238) none repeat scroll 0% 0%; }
+.Detailedlist .layout .boxt .left ul li:not(.head) span.sp3 { color: rgb(67, 181, 128); }
+.process { background: rgb(231, 231, 231) none repeat scroll 0% 0%; display: table; width: 100%; }
+.process .layout .list_tems .date::after { content: ""; position: absolute; width: 10px; height: 10px; border-radius: 50%; border: 2px solid rgb(255, 255, 255); background: rgb(250, 98, 0) none repeat scroll 0% 0%; right: -28px; top: 0px; }
+.process .layout .list_tems::after { content: ""; width: 19px; height: 19px; background: transparent url('../static/public/img/ico70.png') repeat scroll 0% 0%; left: -19px; position: absolute; top: -1px; }
+.process .wid1 { position: relative; display: table; }
+.Customerservice { position: fixed; right: 0px; top: 57%; }
+.Customerservice ul {  }
+.Customerservice ul li { width: 60px; height: 60px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; float: none; margin-bottom: 9px; border-radius: 6px; box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.4); }
+.Customerservice ul li .pict { width: 100%; height: 60px; text-align: center; display: table; }
+.Customerservice ul li .pict a { vertical-align: middle; display: table-cell; }
+.Resultt { background: rgb(250, 98, 0) none repeat scroll 0% 0%; margin-top: 28px; border-radius: 8px; position: relative; display: table; margin-bottom: 22px; box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.5); width: 1000px; }
+.Resultt h1 { height: 50px; border-bottom: 5px solid rgb(180, 28, 0); text-align: center; }
+.Resultt h1 img { margin-top: 10px; }
+.Resultt .it0 { position: absolute; left: 30px; z-index: 1; top: -26px; }
+.Resultt .it1 { position: absolute; right: 30px; z-index: 1; top: -26px; }
+.Resultt .latyout { background: rgb(255, 255, 255) none repeat scroll 0% 0%; width: 98%; border-radius: 8px; display: table; margin-bottom: 12px; margin-top: 10px; }
+.Resultt .latyout .tabs_ce { height: 50px; border-bottom: 1px solid rgb(250, 98, 0); margin-top: 14px; width: 96%; }
+.Resultt .latyout .tabs_ce ul {  }
+.Resultt .latyout .tabs_ce ul li { font-size: 16px; color: rgb(135, 135, 135); line-height: 47px; border-top: 3px solid rgb(255, 255, 255); position: relative; cursor: pointer; }
+.Resultt .latyout .tabs_ce ul li.acti { border-top: 3px solid rgb(250, 98, 0); color: rgb(250, 98, 0); }
+.Resultt .latyout .tabs_ce ul li.acti a::after { content: ""; position: absolute; left: 0px; bottom: -1px; width: 100%; height: 1px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; }
+.Resultt .latyout .tabs_ce ul li::after { content: ""; position: absolute; left: -1px; top: 17px; width: 1px; height: 14px; background: rgb(191, 191, 191) none repeat scroll 0% 0%; }
+.Resultt .latyout .tabs_ce ul li a { color: rgb(135, 135, 135); padding: 0px 20px; position: relative; border-left: 1px solid rgb(255, 255, 255); border-right: 1px solid rgb(255, 255, 255); }
+.Resultt .latyout .tabs_ce ul li.acti a { color: rgb(250, 98, 0); border-left: 1px solid rgb(250, 98, 0); border-right: 1px solid rgb(250, 98, 0); display: block; z-index: 1; }
+.Resultt .latyout .tabs_ce ul li.acti::after { display: none; }
+.Resultt .latyout .tabs_ce ul li.nob::after { display: none; }
+.Resultt .latyout .wrap_select { margin-top: 27px; width: 96%; height: 45px; border-bottom: 1px dotted rgb(173, 173, 173); }
+.Resultt .latyout .wrap_select a { border: 1px solid rgb(220, 220, 220); border-radius: 2px; font-size: 12px; float: left; width: 72.5px; line-height: 20px; height: 20px; text-align: center; background: transparent -moz-linear-gradient(center top , rgb(255, 255, 255), rgb(232, 232, 232)) repeat scroll 0% 0%; color: rgb(34, 34, 34); margin-right: 4px; }
+.Resultt .latyout .corl1 a { color: rgb(102, 102, 102); }
+.Resultt .latyout .wrap_select a.acti { background: rgb(233, 48, 48) none repeat scroll 0% 0%; color: rgb(255, 255, 255); }
+.Resultt .latyout .wrap_select a.last { margin-right: 0px; }
+.Resultt .latyout .Color_type { margin-top: 24px; display: table; margin-bottom: 35px; }
+.Newest .tabs_cg ul li::after { content: ""; position: absolute; left: -1px; top: 17px; width: 1px; height: 14px; background: rgb(191, 191, 191) none repeat scroll 0% 0%; }
+.Newest .tabs_cg ul li.acti::after { display: none; }
+.Newest .tabs_cg ul li.first::after { display: none; }
+.Newest .tabs_cg ul li.acti i::after { content: ""; position: absolute; left: 0px; bottom: -1px; width: 100%; height: 1px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; }
+.Newest .Analysis .box3 .timer_wrap ol::after { content: ""; position: absolute; left: -20px; top: 16px; width: 10px; height: 38px; background: transparent url('../static/public/img/ico78.png') repeat scroll 0% 0%; }
+.Newest .Analysis .box3 .timer_wrap ol.f::after { display: none; }
+.Newest .Analysis .box3 .three ol::after { left: -10px; }
+.Newest .Analysis .box3 .three ol.f::after { display: block; }
+.Newest .Analysis .box3 .three ol.s::after { display: none; }
+.left_layout { float: left; width: 238px; border-left: 1px solid rgb(219, 219, 219); border-right: 1px solid rgb(219, 219, 219); border-bottom: 1px solid rgb(219, 219, 219); position: relative; }
+.left_layout h1::after { content: ""; position: absolute; width: 6px; height: 50px; background: transparent url('../static/public/img/ico83.png') repeat scroll 0% 0%; right: -6px; opacity: 0.5; }
+.left_layout ul {  }
+.left_layout ul li { height: 50px; line-height: 50px; border-bottom: 1px solid rgb(236, 235, 235); width: 100%; cursor: pointer; }
+.left_layout ul li:hover a { color: rgb(250, 98, 0); }
+.left_layout ul li img { width: 37px; margin-right: 6px; margin-left: 24px; vertical-align: middle; position: relative; top: -3px; }
+.left_layout ul li a { color: rgb(34, 34, 34); transition: all 0.3s ease 0s; }
+.left_layout ul li i { font-size: 12px; color: rgb(153, 153, 153); float: right; margin-right: 7px; }
+.left_layout ul li i.i0 { height: 22px; color: rgb(255, 255, 255); background: rgb(255, 162, 0) none repeat scroll 0% 0%; line-height: 22px; margin-top: 15px; padding: 0px 6px; position: relative; }
+.left_layout ul li i.i0::after { content: ""; left: -12px; bottom: 0px; position: absolute; width: 0px; height: 0px; border-right: 8px solid rgb(255, 162, 0); border-top: 6px solid transparent; border-left: 6px solid transparent; }
+.left_layout .high { height: 110px; border-bottom: 1px solid rgb(236, 235, 235); width: 100%; float: left; position: relative; transition: all 0.3s ease 0s; }
+.left_layout .high:hover .downt_more { display: block; }
+.left_layout .high:hover { background: rgb(238, 238, 238) none repeat scroll 0% 0%; }
+.left_layout .high .downt_more { background: rgb(238, 238, 238) none repeat scroll 0% 0%; width: 520px; height: 272px; position: absolute; top: -1px; left: 238px; z-index: 2; padding: 0px 50px; border: 1px solid rgb(236, 235, 235); display: none; }
+.left_layout .high .downt_more h5 { font-weight: normal; font-size: 16px; margin-top: 30px; color: rgb(102, 102, 102); }
+.left_layout .high .downt_more strong { font-weight: normal; margin-top: 15px; display: block; }
+.left_layout .high .downt_more strong a { display: block; width: 130px; float: left; margin-bottom: 15px; color: rgb(102, 102, 102); }
+.left_layout .high .downt_more strong a:hover { color: rgb(250, 98, 0); }
+.left_layout .high .bott { bottom: -52px; top: auto; }
+.left_layout .high .bott1 { bottom: -1px; top: auto; }
+.left_layout .high b { font-weight: normal; font-size: 16px; width: 24px; display: block; float: left; text-align: center; padding: 0px 8px; line-height: 1.2; border-right: 1px solid rgb(243, 242, 242); height: 100%; }
+.left_layout .high b img { display: block; margin-bottom: 3px; margin-top: 13px; }
+.left_layout .high b.b0 { color: rgb(219, 56, 18); }
+.left_layout .high b.b1 { color: rgb(18, 150, 219); }
+.left_layout .high p { width: 160px; float: left; margin-left: 15px; }
+.left_layout .high p a { float: left; width: 44%; display: block; font-size: 12px; color: rgb(102, 102, 102); margin-top: 13px; transition: all 0.3s ease 0s; }
+.left_layout .high p a:hover { color: rgb(250, 98, 0); }
+.left_layout .high a.more { float: right; margin-right: 7px; margin-top: 40px; position: relative; left: -2px; }
+.left_layout h3 { line-height: 50px; float: left; width: 100%; text-align: center; font-size: 18px; color: rgb(102, 102, 102); font-weight: normal; }
+.left_layout .tesh { height: 50px; border-bottom: medium none; }
+.main_layout .right_layotu .left_wrap .tabs_cg ul li::after { content: ""; position: absolute; left: -1px; top: 17px; width: 1px; height: 14px; background: rgb(191, 191, 191) none repeat scroll 0% 0%; }
+.main_layout .right_layotu .left_wrap .tabs_cg ul li.acti::after { display: none; }
+.main_layout .right_layotu .left_wrap .tabs_cg ul li.first::after { display: none; }
+.main_layout .right_layotu .left_wrap .tabs_cg ul li.acti i::after { content: ""; position: absolute; left: 0px; bottom: -1px; width: 100%; height: 1px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; }
+.main_layout .right_layotu .right_wrap .login ul.state li:nth-child(3) { font-size: 16px; }
+.main_layout .right_layotu .right_wrap .login ul.state li a:nth-child(1) { margin-left: 0px; }
+.main_layout .right_layotu .chart .pic_wp .links p a::after { content: ""; position: absolute; right: -10px; top: 0px; width: 1px; height: 12px; background: rgb(204, 204, 204) none repeat scroll 0% 0%; }
+.Resultt .latyout {  }
+.Resultt .latyout .Thelottery { border-width: 1px 1px medium; border-style: solid solid none; border-color: rgb(204, 204, 204) rgb(204, 204, 204) currentcolor; -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; border-image: none; display: table; width: 96%; margin: 18px auto 20px; font-family: ""; }
+.Resultt .latyout .Thelottery ul {  }
+.Resultt .latyout .Thelottery ul li { border-bottom: 1px solid rgb(204, 204, 204); height: 68px; width: 100%; }
+.Resultt .latyout .Thelottery ul li div { float: left; font-size: 12px; }
+.Resultt .latyout .Thelottery ul li .box1 { width: 225px; }
+.Resultt .latyout .Thelottery ul li .box1 var { height: 62px; background: rgb(250, 94, 0) none repeat scroll 0% 0%; color: rgb(255, 255, 255); width: 20px; float: left; text-align: center; line-height: 1.2; padding-top: 6px; }
+.Resultt .latyout .Thelottery ul li .box1 var.no { background: transparent none repeat scroll 0% 0%; }
+.Resultt .latyout .Thelottery ul li .box1 .text { width: 195px; margin-top: 16px; margin-left: 10px; }
+.Resultt .latyout .Thelottery ul li .box1 .text h3 { color: rgb(102, 102, 102); }
+.Resultt .latyout .Thelottery ul li .box1 .text h3 span { font-weight: normal; color: rgb(51, 51, 51); margin-left: 13px; font-size: 12px; }
+.Resultt .latyout .Thelottery ul li .box1 .text p { color: rgb(153, 153, 153); margin-top: 10px; }
+.Resultt .latyout .Thelottery ul li .box2 { width: 360px; }
+.Resultt .latyout .Thelottery ul li .box2 .box_num { width: 100%; margin-top: 10px; }
+.Resultt .latyout .Thelottery ul li .box2 .box_num_klb { margin-top: 20px; }
+.Resultt .latyout .Thelottery ul li .box2 .box_num span { color: rgb(255, 255, 255); width: 28px; height: 28px; background: transparent url('../static/public/img/ico103.png') repeat scroll 0% 0%; float: left; font-weight: bold; font-size: 17px; text-align: center; line-height: 28px; margin-right: 5px; }
+.Resultt .latyout .Thelottery ul li .box2 .box_num_klb span { margin-top: 5px; }
+.Resultt .latyout .Thelottery ul li .box2 .box_num span.col0 { background: transparent url('../static/public/img/ico104.png') repeat scroll 0% 0%; }
+.Resultt .latyout .Thelottery ul li .box2 .box_num span.col1 { background: transparent url('../static/public/img/ico105.png') repeat scroll 0% 0%; }
+.Resultt .latyout .Thelottery ul li .box2 .box_num a { color: rgb(63, 121, 208); line-height: 28px; transition: all 0.3s ease 0s; }
+.Resultt .latyout .Thelottery ul li .box2 .box_num a.kl8 { color: rgb(63, 121, 208); line-height: 105px; transition: all 0.3s ease 0s; }
+.Resultt .latyout .Thelottery ul li .box2 .box_num a:hover { color: rgb(250, 98, 0); }
+.Resultt .latyout .Thelottery ul li .box2 p { font-size: 12px; font-family: ""; color: rgb(153, 153, 153); margin-top: 6px; float: left; margin-left: 4px; }
+.Resultt .latyout .Thelottery ul li .box2 p i { border: 1px solid rgb(229, 229, 229); color: rgb(149, 149, 149); min-width: 18px; width: auto; height: 17px; text-align: center; line-height: 16px; margin-right: 11.5px; margin-left: 0.9px; float: left; }
+.Resultt .latyout .Thelottery ul li .box3 { width: 240px; margin-left: 15px; }
+.Resultt .latyout .Thelottery ul li .box3 a { line-height: 68px; color: rgb(0, 102, 204); float: left; margin-left: 10px; transition: all 0.3s ease 0s; }
+.Resultt .latyout .Thelottery ul li .box3 a:hover { color: rgb(250, 98, 0); }
+.Resultt .latyout .Thelottery ul li .box4 { width: 94px; }
+.Resultt .latyout .Thelottery ul li .box4 a { width: 42px; height: 23px; background: transparent url('../static/public/img/ico101.png') repeat scroll 0% 0%; display: inline-block; text-align: center; line-height: 23px; margin-top: 23px; }
+.Resultt .latyout .Thelottery ul li .box4 a.a1 { background: transparent url('../static/public/img/ico102.png') repeat scroll 0% 0%; }
+.men_list .wid1 { position: relative; }
+.men_list .left_layout { position: absolute; left: 0px; top: 122px; z-index: 10; background: rgb(255, 255, 255) none repeat scroll 0% 0%; display: none; }
+.men_list h1 i { width: 22px; height: 22px; background: transparent url('../static/public/img/ico108.png') repeat scroll 0% 0%; float: right; margin-right: 20px; margin-top: 14px; transition: all 0.3s ease 0s; }
+.acti1 { transform: rotate(90deg); }
+.men_list .logo h1 { line-height: 50px; height: 50px; background: rgb(255, 116, 27) none repeat scroll 0% 0%; font-size: 18px; font-weight: normal; color: rgb(255, 255, 255); text-indent: 24px; position: absolute; width: 238px; top: 72px; }
+.men_list .logo h1::after { content: ""; position: absolute; width: 6px; height: 50px; background: transparent url('../static/public/img/ico83.png') repeat scroll 0% 0%; right: -6px; opacity: 0.5; }
+.reg_list ul li::after { content: ""; position: absolute; right: -4px; top: -3px; width: 6px; height: 3px; background: rgb(204, 204, 204) none repeat scroll 0% 0%; }
+@media screen and (max-width: 1210px) {
+	body { min-width: 1000px; }
+}
+.men_list .left_layout { position: absolute; z-index: 10; background: rgb(255, 255, 255) none repeat scroll 0% 0%; top: 122px; left: -1px; }
+.Resultt .latyout .wrap_select .zx { width: 100%; height: 30px; margin-bottom: 14px; float: left; display: none; }
+.Resultt .latyout .wrap_select .zx p { line-height: 30px; color: rgb(250, 98, 0); font-size: 14px; float: left; margin-right: 14px; }
+.Resultt .latyout .wrap_select .zx select { width: 147px; height: 28px; border: 1px solid rgb(204, 204, 204); border-radius: 3px; color: rgb(73, 71, 80); margin-right: 10px; text-align: center; }
+.Resultt .latyout .wrap_select .zx .inp1 { width: 150px; height: 28px; border: 1px solid rgb(204, 204, 204); border-radius: 3px; margin-right: 6px; padding-left: 6px; }
+.Resultt .latyout .wrap_select .zx .inp2 { border: medium none; background: rgb(250, 98, 0) none repeat scroll 0% 0%; width: 64px; height: 28px; border-radius: 5px; line-height: 28px; text-align: center; color: rgb(255, 255, 255); font-size: 14px; cursor: pointer; }
+
+
+* { outline: medium none; }
+.clearfix::after { content: "."; display: block; height: 0px; clear: both; visibility: hidden; }
+
+@media screen and (max-width: 1010px) {
+	body { min-width: 750pt; }
+}
+.bg-1, .bg-2, .bg-3, .bg-4, .bg-5, .bg-6, .bg-7, .bg-8, .bg-9, .bg-10 { border-radius: 0.03rem; color: rgb(255, 255, 255); }
+.bg-1 { background: rgb(219, 213, 7) none repeat scroll 0% 0% !important; }
+.bg-2 { background: rgb(1, 183, 255) none repeat scroll 0% 0% !important; }
+.bg-3 { background: rgb(99, 104, 98) none repeat scroll 0% 0% !important; }
+.bg-4 { background: rgb(228, 103, 13) none repeat scroll 0% 0% !important; }
+.bg-5 { background: rgb(123, 248, 252) none repeat scroll 0% 0% !important; }
+.bg-6 { background: rgb(38, 0, 247) none repeat scroll 0% 0% !important; }
+.bg-7 { background: rgb(206, 206, 214) none repeat scroll 0% 0% !important; }
+.bg-8 { background: rgb(248, 5, 9) none repeat scroll 0% 0% !important; }
+.bg-9 { background: rgb(105, 0, 0) none repeat scroll 0% 0% !important; }
+.bg-10 { background: rgb(0, 153, 0) none repeat scroll 0% 0% !important; }
+.Resultt .latyout .Thelottery ul li.kl8 { height: 105px; }
+.Resultt .latyout .Thelottery ul li.kl8 .box1 var { height: 85px; padding-top: 20px; }
+.Resultt .latyout .Thelottery ul li.kl8 .box1 .text { margin-top: 35px; }
+.Resultt .latyout .Thelottery ul li.kl8 .box3, .Resultt .latyout .Thelottery ul li.kl8 .box4 { margin-top: 20px; }
+.Resultt .latyout .Thelottery ul li.pk10 .box2 .box_num span { width: 25px; height: 25px; line-height: 25px; border-radius: 0px; }
+.Resultt .latyout .Thelottery ul li .box2 .box_num span { background: red none repeat scroll 0% 0%; border-radius: 25px; }
+.Resultt .latyout .Thelottery ul li .box2 p i { width: auto; }
+.hide { display: none; }
+.record { padding-bottom: 65px; margin-bottom: 0px; }
+.left { float: left; }
+.right { float: right; }
+h1, h2, h3, h4, h5, h6 { font-weight: 400; }
+.tail { margin-top: 20px; }
+.kjjg_hz_style { width: 98% !important; padding-bottom: 4px; }
+
+a:hover { color: red; }
+a:active { color: deepskyblue; }
+html #layuicss-skinlayercss { display: none; position: absolute; width: 1989px; }
+.layui-layer-move { display: none; position: fixed; left: 0px; top: 0px; width: 100%; height: 100%; cursor: move; opacity: 0; background-color: rgb(255, 255, 255); z-index: 2147483647; }
+@media screen and (max-width: 1100px) {
+}

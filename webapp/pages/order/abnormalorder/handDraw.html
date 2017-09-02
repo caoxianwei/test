@@ -1,0 +1,176 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<#assign date =JspTaglibs["http://caicaike.lottery.com/tag/formatdate"]/>
+<html>
+<head>
+<base href="${basePath}">
+<meta charset="UTF-8">
+<title>异常订单手动开奖</title>
+<#include "/common/easyui_css.inc"/>
+<#include "/common/css.inc"/>
+<style type="text/css">
+.textbox{
+  min-width: 50px !important;
+}
+
+.label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: normal !important;
+}
+</style>
+</head>
+<body>
+<div class="easyui-layout" data-options="fit:true">
+	<div data-options="region:'center', title:'用户管理>>异常订单',iconCls:'icon-texe',cls:'white'">
+          <div class="titlebar"><img src="images/texe.png"><span>订单基本信息</span></div>
+            <input type="hidden" id="menuid" value="${menuid}" />
+            <input type="hidden" id="order_id" value="${order.bet_detail_id?c}" />
+            <table class="table table" border="1px solid #e5e5e5" style="border:1px solid #e5e5e5;width:100%; margin:0 auto; margin-bottom:20px;margin-left: 0%">
+                <tbody>
+                  <tr>
+                     <td class="td-right customtabletd" width="13%"><label for="name" >用户名:</label> </td>
+                     <td class="customtabletd"  width="80%">${parames.login_name}</td>
+                  </tr>
+                 
+                  <tr>
+                     <td class="td-right customtabletd" ><label for="name" >期号:</label> </td>
+                     <td class="customtabletd">${order.session_no}</td>
+                  </tr>
+                 
+                  <tr>
+                    <td class="td-right customtabletd"><label for="name" >彩种:</label> </td>
+                    <td class="customtabletd">${order.game_name}</td>
+                   </tr>
+                  <tr>
+                     <td class="td-right customtabletd"><label for="name" >玩法:</label> </td>
+                     <td class="customtabletd">${order.play_name}</td>
+                  </tr>
+                  <tr>
+                     <td class="td-right customtabletd"><label for="name" >投注项:</label> </td>
+                     <td class="customtabletd">${order.bet_name}</td>
+                  </tr>
+                   <tr>
+                     <td class="td-right customtabletd"><label for="name" >具体投注项:</label> </td>
+                     <td class="customtabletd">${order.option_title}</td>
+                  </tr>
+                  <tr>
+                     <td class="td-right customtabletd"><label for="name" >投注金额:</label> </td>
+                     <td class="customtabletd">${order.bet_money}</td>
+                  </tr>
+                  <tr>
+                     <td class="td-right customtabletd"><label for="name" >赔率:</label> </td>
+                     <td class="customtabletd">
+                       <#if order.bet_rate2 == null || order.bet_rate2 == ''>
+                         ${order.bet_rate}
+                        <#else>
+                         ${order.bet_rate2}
+                       </#if>
+  					 </td>
+                  </tr>
+                  <tr>
+                     <td class="td-right customtabletd"><label for="name" >预计中奖金额:</label> </td>
+                     <td class="customtabletd">${order.win_cash2}</td>
+                  </tr>
+                  <tr>
+                     <td class="td-right customtabletd"><label for="name" >开奖结果:</label> </td>
+                     <td class="customtabletd">${order.open_result}</td>
+                  </tr>
+              </tbody>    
+            </table>
+          <div class="titlebar"><img src="images/texe.png"><span>预选投注项(<label><input type="checkbox" name="option" value="-1" onclick="javascript:checkOptionTitle(this)" />按原单开奖</label>)</span></div>
+            <table class="table" border="1px solid #e5e5e5" style="border:1px solid #e5e5e5;cellspacing:2px;width:90%; margin:0 auto; margin-bottom:20px;margin-left: 5%;table-layout:fixed !important;word-break:break-all !important;">
+                <tbody>
+                    <!-- 显示该用户当前期 当前彩种 当前玩法 未选的投注项 -->
+                    <#if optionList?? && (optionList?size > 0)>
+                      <#assign tdIndex=0>
+                      <#list optionList as option>
+                         <#if tdIndex%10==0>
+                           <tr>
+                         </#if>
+                         <#assign isShow="1">
+                         <#if userBetList?? && (userBetList?size >0)>
+                           <#list userBetList as bet>
+                              <#if bet.bet_option_id?c == option.bet_option_id?c>
+                                <#assign isShow="0">
+                              </#if>
+                           </#list>
+                         </#if>
+                         <#if option.title != order.bet_name>
+                            <#assign isShow="0">
+                         </#if>
+                         <#if isShow == "1">
+                           <#assign tdIndex=tdIndex + 1>
+                           <td class="customtabletd" width="20" >
+                             <label class="label">
+                                <input type="checkbox" id="option_${option.bet_option_id?c}" name="option" value="${option.bet_option_id?c}" onclick="javascript:checkOptionTitle(this)" />${option.option_title}
+                                <input type="hidden" name="optionTitleName_${option.bet_option_id?c}" value="${option.option_title}" />
+                              </label>
+                           </td> 
+                         </#if>
+                         <#if (tdIndex+10)%10==0>
+                           </tr>
+                         </#if>
+                      </#list>
+                    </#if>
+              </tbody>    
+            </table>
+          <div class="titlebar"><img src="images/texe.png"><span>已投注项</span></div>
+              <table class="table table" border="1px solid #e5e5e5" style="border:1px solid #e5e5e5;width:; margin:0 auto; margin-bottom:20px;margin-left: 0%">
+                <tbody>
+                  <tr>
+                     <td class="td-right customtabletd"><label for="name" >序号</label> </td>
+                     <td class="td-right customtabletd"><label for="name" >投注项</label> </td>
+                     <td class="td-right customtabletd"><label for="name" >具体投注项</label> </td>
+                     <td class="td-right customtabletd"><label for="name" >投注金额</label> </td>
+                     <td class="td-right customtabletd"><label for="name" >赔率</label> </td>
+                     <td class="td-right customtabletd"><label for="name" >中奖金额</label> </td>
+                     <td class="td-right customtabletd"><label for="name" >是否中奖</label> </td>
+                     <td class="td-right customtabletd"><label for="name" >投注时间</label> </td>
+                  </tr>
+                  <#if userBetList?? && (userBetList?size>0)>
+                    <#list userBetList as bet>
+                       <#if bet.bet_detail_id != order.bet_detail_id>
+                        <tr>
+                        <td class="td-right customtabletd"><label class="label">${bet_index+1}</label></td>
+                        <td class="td-right customtabletd"><label class="label">${bet.bet_name}</label></td>
+                        <td class="td-right customtabletd"><label class="label">${bet.option_title}</label></td>
+                        <td class="td-right customtabletd"><label class="label">${bet.bet_money}</label></td>
+                        <td class="td-right customtabletd"><label class="label">${bet.bet_rate}</label></td>
+                        <td class="td-right customtabletd"><label class="label">${bet.win_cash}</label></td>
+                        <td class="td-right customtabletd"><label class="label">
+                           <#if bet.win_result == "0">
+			                                                        未开奖
+			                <#elseif bet.win_result == "1">
+			                                                          中奖
+			                <#elseif bet.win_result == "2">
+			                                                          未中奖
+			                <#elseif bet.win_result == "3">
+			                                                          打和
+			                <#elseif bet.win_result == "4">
+			                                                        撤单
+			                <#else>
+			                                                       未中奖
+			                </#if>
+                        </label></td>
+                        <td class="td-right customtabletd"><label class="label"><@date.format date="${bet.bet_time}"/></label></td>
+                        </tr>
+                      </#if>
+                    </#list>
+                  </#if>
+              </tbody>    
+            </table>
+            <div data-options="region:'south',border:false" class="panl-footer">
+				<a class="easyui-linkbutton blue" href="javascript:void(0)"  onclick="javascript:updateData()" style="width:80px">确定</a>
+			    <a class="easyui-linkbutton gray" href="javascript:void(0)" onclick="javascript:window.history.go(-1)" style="width:80px">返回</a>
+           </div>
+    </div>  
+</div>
+<input type="hidden" id="select_login_name" value="${parames.select_login_name}" />
+<input type="hidden" id="session_no" value="${parames.session_no}" />
+<input type="hidden" id="game_name" value="${parames.game_name}" />
+<input type="hidden" id="play_name" value="${parames.play_name}" />
+<#include "/common/easyui_js.inc"/>
+<script type="text/javascript" src="${basePath}pages/order/abnormalorder/handDraw.js"></script>
+</body>
+</html>

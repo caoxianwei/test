@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<base href="${basePath}">
+<meta charset="UTF-8">
+<title>充值</title>
+<#include "/common/easyui_css.inc"/>
+<#include "/common/css.inc"/>
+
+</head>
+<body>
+<div class="easyui-layout" data-options="fit:true">
+	<div id="showDiv" data-options="region:'center'" style="margin-left:-20%;padding:10px; border:none !important;">
+		<form id="ff" action="users/saveRecharge.do" method="post" style="text-align:center;">   
+                  <table class="table">
+                    <tbody>
+                      <tr>
+                       <td class="td-right width-30"><label for="name">ID:</label> </td>
+                       <td><input class="easyui-textbox" type="text" name="user_id" style="width:300PX" value="${user.user_id?c}" readonly="readonly" /> </td>
+                      </tr>
+                      <tr>
+                       <td class="td-right width-30"><label for="name">用户名:</label> </td>
+                       <td><input class="easyui-textbox" type="text"  style="width:300PX" value="${user.user_name}" readonly="readonly" /> </td>
+                      </tr>
+                      
+                      <tr>
+                       <td class="td-right width-30"><label for="name"><span style="color: red;">*</span>密码:</label> </td>
+                       <td><input  class="easyui-textbox" type="text" id="pwd" name="pwd" style="width:300PX" ></input>  </td>
+                      </tr>
+                </tbody>
+                </table>        
+              </form> 
+	</div>
+	<div data-options="region:'south',border:false" class="panl-footer">
+		<a class="easyui-linkbutton blue" href="javascript:void(0)"  onclick="javascript:saveData()" style="width:80px">重置</a>
+		<a class="easyui-linkbutton gray" href="javascript:void(0)" onclick="javascript:closeWin()" style="width:80px">取消</a>
+	</div>
+</div>
+<#include "/common/easyui_js.inc"/>
+<script type="text/javascript" src="pages/member/useresetloginpw.js"></script>
+</body>
+</html>

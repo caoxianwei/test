@@ -1,0 +1,1300 @@
+<html><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title></title>
+    <link rel="stylesheet" href="../../static/public/css/cabel-v1.css" type="text/css">
+    <link rel="stylesheet" href="../../static/public/css/style.css" type="text/css"><!--页面CSS-->
+    <link rel="stylesheet" href="../../static/public/css/animate.min.css" type="text/css"><!--CSS3动画-->
+    <link rel="stylesheet" href="../../static/public/css/lottery.css" type="text/css"><!--页面CSS-->
+    <link rel="stylesheet" href="../../static/public/css/liMarquee.css" type="text/css"><!--页面CSS-->
+    <link rel="stylesheet" href="../../static/public/jRange/jquery.range.css" type="text/css">
+    <link rel="stylesheet" href="../../static/public/css/global.css" type="text/css"><!--页面CSS-->
+    <link rel="stylesheet" href="../../static/public/css/other.css" type="text/css"><!--页面CSS-->
+    <link rel="stylesheet" href="../../static/public/css/gfwf.css" type="text/css"><!--页面CSS-->
+    <script src="../../static/public/js/fancyzoom.js" language="JavaScript" type="text/javascript"></script>
+    <script src="../../static/public/js/fancyzoomhtml.js" language="JavaScript" type="text/javascript"></script>
+    <script type="text/javascript" src="../../static/public/js/jquery.min.js"></script><!--jQuery库-->
+    <script type="text/javascript" src="../../static/public/js/scrollanim.min.js"></script> <!--"动画库"-->
+    <script src="../../static/public/js/type.js"></script><!--自定义封装函数-->
+    <script src="../../static/public/js/global.js"></script><!--自定义封装函数-->
+    <script src="../../static/public/js/jquery.cookie.js"></script><!--自定义封装函数-->
+    <script src="../../static/public/js/jquery.md5.js"></script><!--自定义封装函数-->
+    <script src="../../static/public/layer/layer.js"></script>
+    <script src="../../static/public/js/jquery.nicescroll.js"></script>
+    <script src="../../static/public/js/dateformat.js"></script>
+    <script src="../../static/public/js/template.js"></script>
+    <script src="../../static/public/js/swfobject/swfobject.js"></script>
+    <script src="../../static/public/js/jquery.limarquee.js"></script>
+    <script src="../../static/public/js/placeholders.jquery.min.js"></script>
+    <script src="../../static/public/jRange/jquery.range-min.js"></script>
+    <script>
+        // 闪烁
+        var blinkColorArr = "#D32036|#0f3f94".split("|");
+        $(".blink").each(function() {
+            var obj = $(this);
+            setInterval(function() {
+                var tmpColor = blinkColorArr[parseInt(Math.random() * blinkColorArr.length)];
+                $(obj).css("color", tmpColor);
+            },200);
+        });
+
+
+
+        $(function() {
+            // 底部信息调用
+            function ajaxGetDbxx() {
+                ajaxRequest({
+                    url: CONFIG.BASEURL + "ajaxGetWebInfo.json",
+                    success: function (json) {
+                        if (json.result != 1) {
+                            return;
+                        }
+                        $(".webDbxx").html(json.webDbxx);
+                    }
+                });
+            }
+
+            if ($(".webDbxx").length > 0) {
+                ajaxGetDbxx();
+            }
+        });
+
+
+    </script>
+    <script>
+        <!--
+        // 屏蔽JS错误
+        //    window.onerror = function(){return true;}
+        // -->
+    </script>
+    <script>
+        var CONFIG = {
+            BASEURL: "../../",    // 根路径
+            RESURL: "../../static/public/"         // 资源路径
+        };
+    </script>
+    <script src="../../static/public/js/mobile-detect.min.js"></script><style>
+    a:hover{
+        color: red;
+
+    }
+    a:active{
+        color:deepskyblue;
+    }
+</style>
+    <style>
+        .eveb_nav_sub .on,.button_1, .button_1:link, .button_1:visited,.alert_col h5,.onlineService,.head,.layui-layer-popup .layui-layer-title,.xzqd,.game_name .box2_stage p span i.acti,.Betting,.Single,.list_ject ul li .Result p a.acti,.list_ject ul li .Result p a.acti:hover,.top{background:#D32036!important}
+        .eveb_nav_sub .on a,.bankInfo .name,.help_l_menu .title p .sum,.help_r_main .light,.game_name .box2_stage p span i,.game_name .box1_name  p i,.Account p a.red{color:#D32036!important}
+        .eveb_nav_sub .on,.game_name .box2_stage p span{border:1px solid #D32036!important;}
+        .eveb_nav_sub .on,.game_name .box2_stage p span i.acti{color:#fff!important;}
+        .eveb_nav_sub .on a{border-top:1px #D32036 solid!important;}
+        .eveb_nav_sub ul{border-bottom:1px #D32036 solid!important;}
+        .alert_col div::-webkit-scrollbar-thumb {background-color: #D32036!important;}
+    </style>
+    <style>
+        .head div h5,.Betting .tabs ul li,.top .nav h1{background:#B73638!important}
+        .jf_box .url a,.eveb_form label.error,.eveb_transfer_box .center_wallet .money,.eveb_transfer_box .wallet_list li p{color:#B73638!important}
+        .Betting .tabs ul li.acti{background:#fff!important}
+        .button_1, .button_1:link, .button_1:visited{border:1px solid #B73638!important;}
+    </style>
+    <link rel="stylesheet" href="../../static/public/layer/skin/default/layer.css?v=3.0.11110" id="layuicss-skinlayercss"></head>
+<body marginwidth="0" marginheight="0">
+<script>if (window.top === window.self) {window.location.href = "../../";}</script><style>.game_name .box2_stage .number span {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 16px;
+    margin-right: 2px;
+}</style>
+<div id="gameContent">
+    <div class="game_name">
+        <div class="wid1">
+            <div class="box1_name">
+                <h2>北京快乐8</h2>
+                <p>Lottery results</p>
+                <p class="p1">第<i id="number">827696</i>期</p>
+                <div class="select">
+                    <img src="../../static/public/img/ico48.png" alt="">
+                    <select name="" id="selectCount">
+                        <option data-file="../../static/public/sounds/sound_1.mp3">铃声一</option>
+                        <option data-file="../../static/public/sounds/sound_2.mp3">铃声二</option>
+                        <option data-file="../../static/public/sounds/sound_3.mp3">铃声三</option>
+                        <option data-file="../../static/public/sounds/sound_4.mp3">铃声四</option>
+                        <option data-file="../../static/public/sounds/sound_5.mp3">铃声五</option>
+                    </select>
+                </div>
+            </div>
+            <div class="box2_stage">
+                <p><span><i class="acti">近一期</i><i>近五期</i></span><font id="lastNumber">北京快乐8第<var>827695</var>期</font></p>
+                <div class="number pt10 kl8" id="lastOpenCode" style="display: block;"><span>01</span><span>04</span><span>07</span><span>09</span><span>33</span><span>34</span><span>36</span><span>40</span><span>44</span><span>46</span><span>52</span><span>59</span><span>60</span><span>66</span><span>70</span><span>71</span><span>72</span><span>73</span><span>75</span><span>79</span></div>
+                <div class="number" id="lastOpenCodeList" style="display: none;">
+                    <ul><li style="width: 325px!important;">
+                        <p style="height:28px">第827695期</p>
+
+
+
+                        <i style="margin-top: 1.5px">01</i>
+
+
+
+                        <i style="margin-top: 1.5px">04</i>
+
+
+
+                        <i style="margin-top: 1.5px">07</i>
+
+
+
+                        <i style="margin-top: 1.5px">09</i>
+
+
+
+                        <i style="margin-top: 1.5px">33</i>
+
+
+
+                        <i style="margin-top: 1.5px">34</i>
+
+
+
+                        <i style="margin-top: 1.5px">36</i>
+
+
+
+                        <i style="margin-top: 1.5px">40</i>
+
+
+
+                        <i style="margin-top: 1.5px">44</i>
+
+
+
+                        <i style="margin-top: 1.5px">46</i>
+
+
+
+                        <i style="margin-top: 1.5px">52</i><br>
+
+
+
+                        <i style="margin-top: 1.5px">59</i>
+
+
+
+                        <i style="margin-top: 1.5px">60</i>
+
+
+
+                        <i style="margin-top: 1.5px">66</i>
+
+
+
+                        <i style="margin-top: 1.5px">70</i>
+
+
+
+                        <i style="margin-top: 1.5px">71</i>
+
+
+
+                        <i style="margin-top: 1.5px">72</i>
+
+
+
+                        <i style="margin-top: 1.5px">73</i>
+
+
+
+                        <i style="margin-top: 1.5px">75</i>
+
+
+
+                        <i style="margin-top: 1.5px">79</i>
+
+
+
+                    </li><li style="width: 325px!important;">
+                        <p style="height:28px">第827694期</p>
+
+
+
+                        <i style="margin-top: 1.5px">03</i>
+
+
+
+                        <i style="margin-top: 1.5px">07</i>
+
+
+
+                        <i style="margin-top: 1.5px">09</i>
+
+
+
+                        <i style="margin-top: 1.5px">10</i>
+
+
+
+                        <i style="margin-top: 1.5px">11</i>
+
+
+
+                        <i style="margin-top: 1.5px">12</i>
+
+
+
+                        <i style="margin-top: 1.5px">27</i>
+
+
+
+                        <i style="margin-top: 1.5px">28</i>
+
+
+
+                        <i style="margin-top: 1.5px">34</i>
+
+
+
+                        <i style="margin-top: 1.5px">38</i>
+
+
+
+                        <i style="margin-top: 1.5px">41</i><br>
+
+
+
+                        <i style="margin-top: 1.5px">43</i>
+
+
+
+                        <i style="margin-top: 1.5px">45</i>
+
+
+
+                        <i style="margin-top: 1.5px">49</i>
+
+
+
+                        <i style="margin-top: 1.5px">56</i>
+
+
+
+                        <i style="margin-top: 1.5px">62</i>
+
+
+
+                        <i style="margin-top: 1.5px">66</i>
+
+
+
+                        <i style="margin-top: 1.5px">68</i>
+
+
+
+                        <i style="margin-top: 1.5px">72</i>
+
+
+
+                        <i style="margin-top: 1.5px">76</i>
+
+
+
+                    </li><li style="width: 325px!important;">
+                        <p style="height:28px">第827693期</p>
+
+
+
+                        <i style="margin-top: 1.5px">05</i>
+
+
+
+                        <i style="margin-top: 1.5px">16</i>
+
+
+
+                        <i style="margin-top: 1.5px">20</i>
+
+
+
+                        <i style="margin-top: 1.5px">23</i>
+
+
+
+                        <i style="margin-top: 1.5px">28</i>
+
+
+
+                        <i style="margin-top: 1.5px">31</i>
+
+
+
+                        <i style="margin-top: 1.5px">36</i>
+
+
+
+                        <i style="margin-top: 1.5px">37</i>
+
+
+
+                        <i style="margin-top: 1.5px">40</i>
+
+
+
+                        <i style="margin-top: 1.5px">46</i>
+
+
+
+                        <i style="margin-top: 1.5px">50</i><br>
+
+
+
+                        <i style="margin-top: 1.5px">52</i>
+
+
+
+                        <i style="margin-top: 1.5px">57</i>
+
+
+
+                        <i style="margin-top: 1.5px">58</i>
+
+
+
+                        <i style="margin-top: 1.5px">65</i>
+
+
+
+                        <i style="margin-top: 1.5px">68</i>
+
+
+
+                        <i style="margin-top: 1.5px">70</i>
+
+
+
+                        <i style="margin-top: 1.5px">71</i>
+
+
+
+                        <i style="margin-top: 1.5px">75</i>
+
+
+
+                        <i style="margin-top: 1.5px">78</i>
+
+
+
+                    </li><li style="width: 325px!important;">
+                        <p style="height:28px">第827692期</p>
+
+
+
+                        <i style="margin-top: 1.5px">01</i>
+
+
+
+                        <i style="margin-top: 1.5px">12</i>
+
+
+
+                        <i style="margin-top: 1.5px">15</i>
+
+
+
+                        <i style="margin-top: 1.5px">18</i>
+
+
+
+                        <i style="margin-top: 1.5px">20</i>
+
+
+
+                        <i style="margin-top: 1.5px">21</i>
+
+
+
+                        <i style="margin-top: 1.5px">24</i>
+
+
+
+                        <i style="margin-top: 1.5px">28</i>
+
+
+
+                        <i style="margin-top: 1.5px">30</i>
+
+
+
+                        <i style="margin-top: 1.5px">44</i>
+
+
+
+                        <i style="margin-top: 1.5px">46</i><br>
+
+
+
+                        <i style="margin-top: 1.5px">49</i>
+
+
+
+                        <i style="margin-top: 1.5px">52</i>
+
+
+
+                        <i style="margin-top: 1.5px">57</i>
+
+
+
+                        <i style="margin-top: 1.5px">58</i>
+
+
+
+                        <i style="margin-top: 1.5px">65</i>
+
+
+
+                        <i style="margin-top: 1.5px">66</i>
+
+
+
+                        <i style="margin-top: 1.5px">72</i>
+
+
+
+                        <i style="margin-top: 1.5px">74</i>
+
+
+
+                        <i style="margin-top: 1.5px">76</i>
+
+
+
+                    </li><li style="width: 325px!important;">
+                        <p style="height:28px">第827691期</p>
+
+
+
+                        <i style="margin-top: 1.5px">02</i>
+
+
+
+                        <i style="margin-top: 1.5px">17</i>
+
+
+
+                        <i style="margin-top: 1.5px">20</i>
+
+
+
+                        <i style="margin-top: 1.5px">23</i>
+
+
+
+                        <i style="margin-top: 1.5px">27</i>
+
+
+
+                        <i style="margin-top: 1.5px">28</i>
+
+
+
+                        <i style="margin-top: 1.5px">30</i>
+
+
+
+                        <i style="margin-top: 1.5px">32</i>
+
+
+
+                        <i style="margin-top: 1.5px">33</i>
+
+
+
+                        <i style="margin-top: 1.5px">34</i>
+
+
+
+                        <i style="margin-top: 1.5px">35</i><br>
+
+
+
+                        <i style="margin-top: 1.5px">36</i>
+
+
+
+                        <i style="margin-top: 1.5px">42</i>
+
+
+
+                        <i style="margin-top: 1.5px">44</i>
+
+
+
+                        <i style="margin-top: 1.5px">45</i>
+
+
+
+                        <i style="margin-top: 1.5px">55</i>
+
+
+
+                        <i style="margin-top: 1.5px">59</i>
+
+
+
+                        <i style="margin-top: 1.5px">61</i>
+
+
+
+                        <i style="margin-top: 1.5px">69</i>
+
+
+
+                        <i style="margin-top: 1.5px">77</i>
+
+
+
+                    </li></ul>
+                </div>
+            </div>
+            <div class="box3_timer">
+                <p id="tip">827696期已开盘，欢迎投注。距离下一期还有:</p>
+                <div class="timer_wrap" id="leftTime"><ol class="s"><span class="sp1">0</span><span class="sp2">0</span></ol><ol class="f"><span class="sp1">0</span><span class="sp2">1</span></ol><ol class="m"><span class="sp1">5</span><span class="sp2">7</span></ol></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="Single wid1">
+        <div class="layout at">
+            <div class="Playmethod">
+                <ul>
+                    <li>
+                        <b>快钱玩法</b>
+                        <p>
+                            <span class="acti"><a href="javascript:void(0)" data-url="kl8-x5">选5</a></span>
+                            <span><a href="javascript:void(0)" data-url="kl8-x4">选4</a></span>
+                            <span><a href="javascript:void(0)" data-url="kl8-x3">选3</a></span>
+                            <span><a href="javascript:void(0)" data-url="kl8-x2">选2</a></span>
+                            <span><a href="javascript:void(0)" data-url="kl8-x1">选1</a></span>
+                            <span><a href="javascript:void(0)" data-url="kl8-qt">其他</a></span>
+
+                        </p>
+                    </li>
+                </ul>
+            </div>
+
+            <div id="sscContent"><div class="lot-content clearfix">
+                <div class="fl main-left">
+                    <div class="table-common">
+                        <table width="100%" border="1">
+                            <thead>
+                            <tr>
+                                <th colspan="16"><strong>选5</strong> (中5@<span class="red pl" data-plid="8572">251</span> 中4@<span class="red pl" data-plid="8573">21</span> 中3@<span class="red pl" data-plid="8574">3</span>)
+                                </th>
+                            </tr>
+                            <tr>
+                                <th width="36">号码</th>
+                                <th>勾选</th>
+                                <th width="36">号码</th>
+                                <th>勾选</th>
+                                <th width="36">号码</th>
+                                <th>勾选</th>
+                                <th width="36">号码</th>
+                                <th>勾选</th>
+                                <th width="36">号码</th>
+                                <th>勾选</th>
+                                <th width="36">号码</th>
+                                <th>勾选</th>
+                                <th width="36">号码</th>
+                                <th>勾选</th>
+                                <th width="36">号码</th>
+                                <th>勾选</th>
+                            </tr>
+                            </thead>
+
+                            <tbody>
+                            <tr>
+                                <td style="cursor: pointer;">1</td>
+                                <td><input type="checkbox" data-name="1"></td>
+
+                                <td style="cursor: pointer;">11</td>
+                                <td><input type="checkbox" data-name="11"></td>
+
+                                <td style="cursor: pointer;">21</td>
+                                <td><input type="checkbox" data-name="21"></td>
+
+                                <td style="cursor: pointer;">31</td>
+                                <td><input type="checkbox" data-name="31"></td>
+
+                                <td style="cursor: pointer;">41</td>
+                                <td><input type="checkbox" data-name="41"></td>
+
+                                <td style="cursor: pointer;">51</td>
+                                <td><input type="checkbox" data-name="51"></td>
+
+                                <td style="cursor: pointer;">61</td>
+                                <td><input type="checkbox" data-name="1"></td>
+
+                                <td style="cursor: pointer;">71</td>
+                                <td><input type="checkbox" data-name="71"></td>
+                            </tr>
+
+                            <tr>
+                                <td style="cursor: pointer;">2</td>
+                                <td><input type="checkbox" data-name="2"></td>
+
+                                <td style="cursor: pointer;">12</td>
+                                <td><input type="checkbox" data-name="12"></td>
+
+                                <td style="cursor: pointer;">22</td>
+                                <td><input type="checkbox" data-name="22"></td>
+
+                                <td style="cursor: pointer;">32</td>
+                                <td><input type="checkbox" data-name="32"></td>
+
+                                <td style="cursor: pointer;">42</td>
+                                <td><input type="checkbox" data-name="42"></td>
+
+                                <td style="cursor: pointer;">52</td>
+                                <td><input type="checkbox" data-name="52"></td>
+
+                                <td style="cursor: pointer;">62</td>
+                                <td><input type="checkbox" data-name="62"></td>
+
+                                <td style="cursor: pointer;">72</td>
+                                <td><input type="checkbox" data-name="72"></td>
+                            </tr>
+
+                            <tr>
+                                <td style="cursor: pointer;">3</td>
+                                <td><input type="checkbox" data-name="3"></td>
+
+                                <td style="cursor: pointer;">13</td>
+                                <td><input type="checkbox" data-name="13"></td>
+
+                                <td style="cursor: pointer;">23</td>
+                                <td><input type="checkbox" data-name="23"></td>
+
+                                <td style="cursor: pointer;">33</td>
+                                <td><input type="checkbox" data-name="33"></td>
+
+                                <td style="cursor: pointer;">43</td>
+                                <td><input type="checkbox" data-name="43"></td>
+
+                                <td style="cursor: pointer;">53</td>
+                                <td><input type="checkbox" data-name="53"></td>
+
+                                <td style="cursor: pointer;">63</td>
+                                <td><input type="checkbox" data-name="63"></td>
+
+                                <td style="cursor: pointer;">73</td>
+                                <td><input type="checkbox" data-name="73"></td>
+                            </tr>
+
+                            <tr>
+                                <td style="cursor: pointer;">4</td>
+                                <td><input type="checkbox" data-name="4"></td>
+
+                                <td style="cursor: pointer;">14</td>
+                                <td><input type="checkbox" data-name="14"></td>
+
+                                <td style="cursor: pointer;">24</td>
+                                <td><input type="checkbox" data-name="24"></td>
+
+                                <td style="cursor: pointer;">34</td>
+                                <td><input type="checkbox" data-name="34"></td>
+
+                                <td style="cursor: pointer;">44</td>
+                                <td><input type="checkbox" data-name="44"></td>
+
+                                <td style="cursor: pointer;">54</td>
+                                <td><input type="checkbox" data-name="54"></td>
+
+                                <td style="cursor: pointer;">64</td>
+                                <td><input type="checkbox" data-name="64"></td>
+
+                                <td style="cursor: pointer;">74</td>
+                                <td><input type="checkbox" data-name="74"></td>
+                            </tr>
+
+                            <tr>
+                                <td style="cursor: pointer;">5</td>
+                                <td><input type="checkbox" data-name="5"></td>
+
+                                <td style="cursor: pointer;">15</td>
+                                <td><input type="checkbox" data-name="15"></td>
+
+                                <td style="cursor: pointer;">25</td>
+                                <td><input type="checkbox" data-name="25"></td>
+
+                                <td style="cursor: pointer;">35</td>
+                                <td><input type="checkbox" data-name="35"></td>
+
+                                <td style="cursor: pointer;">45</td>
+                                <td><input type="checkbox" data-name="45"></td>
+
+                                <td style="cursor: pointer;">55</td>
+                                <td><input type="checkbox" data-name="55"></td>
+
+                                <td style="cursor: pointer;">65</td>
+                                <td><input type="checkbox" data-name="65"></td>
+
+                                <td style="cursor: pointer;">75</td>
+                                <td><input type="checkbox" data-name="75"></td>
+                            </tr>
+
+                            <tr>
+                                <td style="cursor: pointer;">6</td>
+                                <td><input type="checkbox" data-name="6"></td>
+
+                                <td style="cursor: pointer;">16</td>
+                                <td><input type="checkbox" data-name="16"></td>
+
+                                <td style="cursor: pointer;">26</td>
+                                <td><input type="checkbox" data-name="26"></td>
+
+                                <td style="cursor: pointer;">36</td>
+                                <td><input type="checkbox" data-name="36"></td>
+
+                                <td style="cursor: pointer;">46</td>
+                                <td><input type="checkbox" data-name="46"></td>
+
+                                <td style="cursor: pointer;">56</td>
+                                <td><input type="checkbox" data-name="56"></td>
+
+                                <td style="cursor: pointer;">66</td>
+                                <td><input type="checkbox" data-name="66"></td>
+
+                                <td style="cursor: pointer;">76</td>
+                                <td><input type="checkbox" data-name="76"></td>
+                            </tr>
+
+                            <tr>
+                                <td style="cursor: pointer;">7</td>
+                                <td><input type="checkbox" data-name="7"></td>
+
+                                <td style="cursor: pointer;">17</td>
+                                <td><input type="checkbox" data-name="17"></td>
+
+                                <td style="cursor: pointer;">27</td>
+                                <td><input type="checkbox" data-name="27"></td>
+
+                                <td style="cursor: pointer;">37</td>
+                                <td><input type="checkbox" data-name="37"></td>
+
+                                <td style="cursor: pointer;">47</td>
+                                <td><input type="checkbox" data-name="47"></td>
+
+                                <td style="cursor: pointer;">57</td>
+                                <td><input type="checkbox" data-name="57"></td>
+
+                                <td style="cursor: pointer;">67</td>
+                                <td><input type="checkbox" data-name="67"></td>
+
+                                <td style="cursor: pointer;">77</td>
+                                <td><input type="checkbox" data-name="77"></td>
+                            </tr>
+
+                            <tr>
+                                <td style="cursor: pointer;">8</td>
+                                <td><input type="checkbox" data-name="8"></td>
+
+                                <td style="cursor: pointer;">18</td>
+                                <td><input type="checkbox" data-name="18"></td>
+
+                                <td style="cursor: pointer;">28</td>
+                                <td><input type="checkbox" data-name="28"></td>
+
+                                <td style="cursor: pointer;">38</td>
+                                <td><input type="checkbox" data-name="38"></td>
+
+                                <td style="cursor: pointer;">48</td>
+                                <td><input type="checkbox" data-name="48"></td>
+
+                                <td style="cursor: pointer;">58</td>
+                                <td><input type="checkbox" data-name="58"></td>
+
+                                <td style="cursor: pointer;">68</td>
+                                <td><input type="checkbox" data-name="68"></td>
+
+                                <td style="cursor: pointer;">78</td>
+                                <td><input type="checkbox" data-name="78"></td>
+                            </tr>
+
+                            <tr>
+                                <td style="cursor: pointer;">9</td>
+                                <td><input type="checkbox" data-name="9"></td>
+
+                                <td style="cursor: pointer;">19</td>
+                                <td><input type="checkbox" data-name="19"></td>
+
+                                <td style="cursor: pointer;">29</td>
+                                <td><input type="checkbox" data-name="29"></td>
+
+                                <td style="cursor: pointer;">39</td>
+                                <td><input type="checkbox" data-name="39"></td>
+
+                                <td style="cursor: pointer;">49</td>
+                                <td><input type="checkbox" data-name="49"></td>
+
+                                <td style="cursor: pointer;">59</td>
+                                <td><input type="checkbox" data-name="59"></td>
+
+                                <td style="cursor: pointer;">69</td>
+                                <td><input type="checkbox" data-name="69"></td>
+
+                                <td style="cursor: pointer;">79</td>
+                                <td><input type="checkbox" data-name="79"></td>
+                            </tr>
+
+                            <tr>
+                                <td style="cursor: pointer;">10</td>
+                                <td><input type="checkbox" data-name="10"></td>
+
+                                <td style="cursor: pointer;">20</td>
+                                <td><input type="checkbox" data-name="20"></td>
+
+                                <td style="cursor: pointer;">30</td>
+                                <td><input type="checkbox" data-name="30"></td>
+
+                                <td style="cursor: pointer;">40</td>
+                                <td><input type="checkbox" data-name="40"></td>
+
+                                <td style="cursor: pointer;">50</td>
+                                <td><input type="checkbox" data-name="50"></td>
+
+                                <td style="cursor: pointer;">60</td>
+                                <td><input type="checkbox" data-name="60"></td>
+
+                                <td style="cursor: pointer;">70</td>
+                                <td><input type="checkbox" data-name="70"></td>
+
+                                <td style="cursor: pointer;">80</td>
+                                <td><input type="checkbox" data-name="80"></td>
+                            </tr>
+                            </tbody>
+
+                            <tfoot>
+                            <tr>
+                                <td colspan="18">
+                                    <div class="hd clearfix rehd tzgz" id="toptouzhu">
+                                        <div class="fl refl xzje">
+                                            下注金额：<input type="text" class="txt" id="inputMoney">
+                                        </div>
+                                        <div class="kjanniu">
+                                            <a href="javascript:void(0)" class="img-50" data-num="50"></a>
+                                            <a href="javascript:void(0)" class="img-100" data-num="100"></a>
+                                            <a href="javascript:void(0)" class="img-500" data-num="500"></a>
+                                            <a href="javascript:void(0)" class="img-1000" data-num="1000"></a>
+                                            <a href="javascript:void(0)" class="img-5000" data-num="5000"></a>
+                                            <a href="javascript:void(0)" class="img-10000" data-num="10000"></a>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+
+                    <div class="btns">
+                        <button type="submit" class="btn btn-1">提交</button>
+                        <button class="btn btn-2">重设</button>
+                    </div>
+                </div>
+
+                <div class="fr main-right cl-10">
+                </div>
+            </div>
+                <script>
+                    $(function() {
+                        $(".table-common table td").each(function() {
+                            if ($(this).find("input").length > 0) {
+
+                            } else {
+                                $(this).css({"cursor": "pointer"});
+                            }
+                        });
+                        // 点击变黄
+                        $(".main-left .table-common tbody tr td").click(function() {
+                            if ($(".main-left .fl input").length == 0) {
+                                return;
+                            }
+                            var val = $(".main-left .fl input").val();
+                            if (typeof val == 'undefined' || !val) {
+                                val = '';
+                            }
+
+                            if ($.inArray(playId, [227,239,251,286,303,336,390,390,402,414]) >= 0) { //$.inArray() 函数用于在数组中查找指定值，并返回它的索引值（如果没有找到，则返回-1）
+                                var index = $(this).index();
+                                if ($(this).find("input").length > 0) {
+                                } else if ($(this).find(".pl").length > 0) {
+                                    if ($(this).hasClass("bg-yellow")) {
+                                        $(this).removeClass("bg-yellow");
+                                        $(this).parent().prev().find("td").eq(index).removeClass("bg-yellow");
+                                        $(this).parent().next().find("td").eq(index).find("input").val("");
+                                    } else {
+                                        $(this).addClass("bg-yellow");
+                                        $(this).parent().prev().find("td").eq(index).addClass("bg-yellow");
+                                        $(this).parent().next().find("td").eq(index).find("input").val(val);
+                                    }
+                                } else {
+                                    if ($(this).hasClass("bg-yellow")) {
+                                        $(this).removeClass("bg-yellow");
+                                        $(this).parent().next().find("td").eq(index).removeClass("bg-yellow");
+                                        $(this).parent().next().next().find("td").eq(index).find("input").val("");
+                                    } else {
+                                        $(this).addClass("bg-yellow");
+                                        $(this).parent().next().find("td").eq(index).addClass("bg-yellow");
+                                        $(this).parent().next().next().find("td").eq(index).find("input").val(val);
+                                    }
+                                }
+                            } else if ($.inArray(playId, [223,235,247,207,258,318,382,406,394,480,494]) >= 0) {
+                                if ($(this).find("input").length > 0) {
+                                } else if ($(this).find(".pl").length > 0) {
+                                    if ($(this).hasClass("bg-yellow")) {
+                                        $(this).removeClass("bg-yellow");
+                                        $(this).next().find("input").val("");
+                                    } else {
+                                        $(this).addClass("bg-yellow");
+                                        $(this).next().find("input").val(val);
+                                    }
+                                }
+                            } else if ($.inArray(playId, [216, 217, 218, 221, 226, 228, 229, 230, 233, 238, 240, 241, 242, 245, 250,204,205,206,209,210,211,259,260,261,262,263,264,265,266,267,268,269,270,252,287,288,289,290,254,293,257,292,294,295,296,297,298,299,300,301,302,303,277,278,279,280,281,282,283,284,285,286,253,332,338,342,337,333,339,389,413,401,385,387,389,409,413,392,380,404,395,383,407,399,387,339,397,399,411,437,438,439,441,444,445,454,463,472,450,459,468,446,455,464,447,456,465,452,448,461,457,466,470,493,479,473,492,478,491,276]) >= 0) {
+                                if ($(this).find("input").length > 0) {
+                                } else if ($(this).find(".pl").length > 0) {
+
+                                    if ($(this).hasClass("bg-yellow")) {
+                                        $(this).removeClass("bg-yellow");
+                                        $(this).prev().find("input").length == 0 && $(this).prev().html() != '&nbsp;' && (typeof $(this).prev().html() != 'undefined' && $(this).prev().html().indexOf('和数') < 0) && $(this).prev().removeClass("bg-yellow");
+                                        $(this).next().find("input").val("");
+                                    } else {
+                                        $(this).addClass("bg-yellow");
+                                        $(this).prev().find("input").length == 0 && $(this).prev().html() != '&nbsp;' && (typeof $(this).prev().html() != 'undefined' && $(this).prev().html().indexOf('和数') < 0) && $(this).prev().addClass("bg-yellow");
+                                        $(this).next().find("input").val(val);
+                                    }
+                                } else if ($(this).html() != '&nbsp;' && ($(this).prev().find("strong").length == 0 || $(this).prev().find("strong").html() == 'undefined' || $(this).prev().find("strong").html().indexOf('和数') < 0)) {
+                                    if ($(this).find("strong").length > 0 && $(this).find("strong").html().indexOf('和数') >= 0 || $(this).find(".ball-icon").length > 0) {
+                                        return;
+                                    }
+                                    if ($(this).hasClass("bg-yellow")) {
+                                        $(this).removeClass("bg-yellow");
+                                        $(this).next().removeClass("bg-yellow");
+                                        $(this).next().next().find("input").val("");
+                                    } else {
+                                        $(this).addClass("bg-yellow");
+                                        $(this).next().addClass("bg-yellow");
+                                        $(this).next().next().find("input").val(val);
+                                    }
+                                }
+                            }
+                        });
+
+                        $(".main-left .table-common .touzhuArea tbody tr td").click(function() {
+                            if ($(this).find('input').length == 1) {
+                                return;
+                            }
+
+                            var val = $(".main-left .fl input").val();
+                            if (typeof val == 'undefined' || !val) {
+                                val = '';
+                            }
+                            if($.inArray(playId, [318,330,319,321,325,496,495]) >= 0){
+                                var obj = $(this).parent().children(':last-child').prevAll();
+                                var wu_flag = $(this).parent();
+                                if(obj.hasClass('bg-yellow')){
+                                    $(this).parent().children(':last-child').prevAll().removeClass("bg-yellow");
+                                    $(this).parent().children(':last-child').find("input").val("");
+                                }else {
+                                    if (!wu_flag.hasClass('wu')) {
+                                        $(this).parent().children(':last-child').prevAll().addClass("bg-yellow");
+                                        $(this).parent().children(':last-child').find("input").val(val);
+                                    }
+                                }
+                            }
+                        });
+
+                        // 幸运选号
+                        var tmpXyxhNums = getQueryString("nums");
+
+                        var tmpXyxhMoney = getQueryString("money");
+                        if (typeof tmpXyxhNums != 'undefined' && typeof tmpXyxhMoney != 'undefined' && tmpXyxhNums != '' && tmpXyxhMoney != '' && tmpXyxhNums != null && tmpXyxhMoney != null) {
+                            var oArr = [
+                                ['wan', '万位'],['qian', '千位'],['bai', '百位'],['shi', '十位'],['ge', '个位'],
+                                ['tm_b', '特码B'],
+                                ['gj', '冠军'],['jj', '季军'],['yj', '亚军'],['q4', '第四名'],['q5', '第五名'],['q6', '第六名'],['q7', '第七名'],['q8', '第八名'],['q9', '第九名'],['q10', '第十名']
+                            ];
+
+                            for (var i = 0; i < oArr.length; ++i) {
+                                tmpXyxhNums = tmpXyxhNums.replace(new RegExp(oArr[i][0],'gm'), oArr[i][1]);
+                            }
+
+                            $(".main-left .fl input").val(tmpXyxhMoney);
+                            var arr = tmpXyxhNums.split(",");
+
+
+                            for (var i = 0; i < arr.length; ++i) {
+                                var obj = $("[data-name='" + arr[i] + "']");
+                                $(obj).val(tmpXyxhMoney);
+                                $(obj).parent().prev().addClass("bg-yellow");
+                                $(obj).parent().prev().prev().addClass("bg-yellow");
+                            }
+                        }
+                    });
+                </script><input type="hidden" data-plid="8572" id="pl5">
+                <input type="hidden" data-plid="8573" id="pl4">
+                <input type="hidden" data-plid="8574" id="pl3">
+                <script>
+                    var playGroupId = 8;
+                    var playId = 271;
+                    var playGroupName = '选5';
+
+                    function getZhudan() {
+                        var betForm = {
+                            totalMoney: 0,
+                            sscBetList: [],
+                            totalZhushu: 0
+                        };
+
+                        var arr = [];
+                        $(".main-left .table-common input").each(function () {
+                            if ($(this).is(":checked")) {
+                                arr.push($(this).data("name"));
+                            }
+                        });
+
+                        if (arr.length != 5) {
+                            Tools.error("只能选择5个号码");
+                            return;
+                        }
+
+                        var inputMoney = $("#inputMoney").val();
+                        if (typeof inputMoney == 'undefined' || !inputMoney) {
+                            Tools.toast("请输入正确的金额");
+                            return;
+                        }
+                        betForm.sscBetList.push({
+                            playGroupName: playGroupName,
+                            playGroupId: playGroupId,
+                            number: $("#number").data("number"),
+                            playId: playId,
+                            zhushu: 1,
+                            perMoney: inputMoney,
+                            content: arr.join(","),
+                            playPlId: $("#pl5").data("plid"),
+                            playPl: $("#pl5").data("pl")
+                        });
+                        betForm.totalMoney = add(betForm.totalMoney, inputMoney);
+                        betForm.totalZhushu = add(betForm.totalZhushu, 1);
+                        return betForm;
+                    }
+
+                    function checkZhudan() {
+                        var arr = [];
+                        $(".main-left .table-common input").each(function () {
+                            if ($(this).is(":checked")) {
+                                arr.push($(this).data("name"));
+                            }
+                        });
+
+                        if (arr.length > 5) {
+                            Tools.error("只能选择5个号码");
+                            return false;
+                        }
+                        if (arr.length < 5) {
+                            return true;
+                        }
+                        return true;
+                    }
+                </script></div>
+
+        </div>
+    </div><!--Single-->
+    <div class="Betting wid1" id="bottomInfo">
+        <div class="tabs">
+            <ul>
+                <li data-opertype="wdtz" class="acti">我的投注</li>
+                <li data-opertype="wdzj">我的中奖</li>
+                <li data-opertype="kjhm">今日开奖号码</li>
+                <li data-opertype="jjsm">奖金计算说明</li>
+            </ul>
+        </div>
+        <div class="list_wrap wdtz" style="display: table;"><li style="width:100%;padding:15px;text-align:center;" id="BetLogin"> 请先&nbsp;&nbsp;<span class="spanlogin">登录</span>&nbsp;&nbsp;还没有帐号？&nbsp;&nbsp;<span class="spanreg"><a href="../../?u=../../register.html" target="_blank">注册</a></span>一个</li></div>
+        <div class="list_wrap wdzj" style="display: none;"><li style="width:100%;padding:15px;text-align:center;" id="BetLogin"> 请先&nbsp;&nbsp;<span class="spanlogin">登录</span>&nbsp;&nbsp;还没有帐号？&nbsp;&nbsp;<span class="spanreg"><a href="../../?u=../../register.html" target="_blank">注册</a></span>一个</li></div>
+        <div class="list_wrap kjhm" style="display: none;"></div>
+        <div class="list_wrap jjsm" style="display: none;"></div>
+    </div>
+
+
+
+
+
+</div>
+<script src="../../static/public/js/ssc.js"></script>
+
+<div class="alert_log two2">
+    <div class="alert_log_col">
+        <h5>欢迎您登录<i>×</i></h5>
+        <form onsubmit="registerLogin();return false;">
+            <div>
+                <h4><span><img src="../../static/public/img/l1.png"></span></h4>
+                <p><input type="text" id="registerLoginAccount" placeholder="请输入您的账号"></p>
+            </div>
+            <div>
+                <h4><span><img src="../../static/public/img/l2.png"></span></h4>
+                <p><input type="password" id="registerLoginPassword" placeholder="密码"></p>
+            </div>
+            <div>
+                <h4><span><img src="../../static/public/img/l2.png"></span></h4>
+                <p><input type="text" id="registerLoginYzm" placeholder="验证码" onfocus="refreshYzm(document.getElementById('registerYzmImg2'))"><img id="registerYzmImg2" onclick="refreshYzm(this)" src="../../code/yzm?imgWidth=113&amp;imgHeight=43&amp;imgFontHeight=40&amp;imgCodeY=35&amp;imgCodeX=2"></p>
+            </div>
+            <h3><input type="checkbox"><a href="#">记住密码</a><span><a href="javascript:void(0)" id="online-serve" target="_blank">忘记密码？</a></span></h3>
+            <h6><input type="submit" class="sub" value="登录"></h6>
+        </form>
+    </div>
+</div>
+<div type="text/html" id="soundContainer" style="display:none;"></div>
+<script type="text/html" id="wdtzTemplate">
+    <ul>
+        <li class="not">
+            <span>游戏种类</span>
+            <span>期号</span>
+            <span>玩法</span>
+            <span>投注号码</span>
+            <span>投注额</span>
+            <span>奖金</span>
+            <span>状态</span>
+        </li>
+        {{each list as value index}}
+        {{if index % 2 == 0}}
+        <li class="odd">
+            {{else}}
+        <li>
+            {{/if}}
+            <span>{{value.playGroupName}}</span>
+            <span>{{value.number}}</span>
+            <span>{{value.playName}}</span>
+            <span>{{value.content}}</span>
+            <span>{{value.totalMoney}}</span>
+            <span>{{value.jiangjin}}</span>
+            {{if value.status == 0}}
+            <span>等待开奖</span>
+            {{else if value.status == 1}}
+            {{if value.zjMoney > 0}}
+            <span>已中奖</span>
+            {{else}}
+            <span>未中奖</span>
+            {{/if}}
+            {{else if value.status == 2}}
+            <span>已撤单</span>
+            {{/if}}
+        </li>
+        {{/each}}
+        <li style="width:100%;text-align:center;"><a href="javascript:void(0)" onclick="parent.openHyzx('lsjl/tzjl')">查看更多</a></li>
+    </ul>
+</script>
+<script type="text/html" id="wdzjTemplate">
+    <ul>
+        <li class="not">
+            <span>游戏种类</span>
+            <span>期号</span>
+            <span>玩法</span>
+            <span>投注号码</span>
+            <span>投注额</span>
+            <span>中奖金额</span>
+            <span>状态</span>
+        </li>
+        {{each list as value index}}
+        {{if index % 2 == 0}}
+        <li class="odd">
+            {{else}}
+        <li>
+            {{/if}}
+            <span>{{value.playGroupName}}</span>
+            <span>{{value.number}}</span>
+            <span>{{value.playName}}</span>
+            <span>{{value.content}}</span>
+            <span>{{value.totalMoney}}</span>
+            <span>{{value.zjMoney}}</span>
+            {{if value.status == 0}}
+            <span>等待开奖</span>
+            {{else if value.status == 1}}
+            {{if value.zjMoney > 0}}
+            <span>已中奖</span>
+            {{else}}
+            <span>未中奖</span>
+            {{/if}}
+            {{else if value.status == 2}}
+            <span>已撤单</span>
+            {{/if}}
+        </li>
+        {{/each}}
+        <li style="width:100%;text-align:center;"><a href="javascript:void(0)" onclick="parent.openHyzx('lsjl/tzjl')">查看更多</a></li>
+    </ul>
+</script>
+<script type="text/html" id="kjhmTemplate">
+    <ul>
+        <li class="not">
+            <span>游戏种类</span>
+            <span>期号</span>
+            <span>奖号</span>
+            <span>开奖时间</span>
+        </li>
+        {{each list as value index}}
+        {{if index % 2 == 0}}
+        <li class="odd">
+            {{else}}
+        <li>
+            {{/if}}
+            <span>{{value.playGroupName}}</span>
+            <span>{{value.number}}</span>
+            <span style="color:red;">{{value.openCode}}</span>
+            <span>{{value.openTime}}</span>
+            <span class="pid" style="visibility: hidden">{{value.playGroupId}}</span>
+        </li>
+        {{/each}}
+        <li style="width:100%;text-align:center;"><a href="../../?u=../../kjjg.html?playGroupId={{playGroupId}}" target="_blank">查看更多</a></li>
+    </ul>
+</script>
+<script>
+</script>
+<script>
+    var playGroupId = 8;    // 彩种ID
+</script>
+<script>
+    // 随机号码
+    function randomNumber() {
+        var arr = [];
+        var tmpStr = '';
+        for (var i = 0; i < 20; ++i) {
+            tmpStr += '<span>' + (Math.floor(Math.random() * 80) + 1) + '</span>';
+        }
+        $("#lastOpenCode").html(tmpStr);
+    }
+
+    // 渲染上期开奖模板
+    function renderLastOpenCode(openCodeArr) {
+        var tmpStr = '';
+        $.each(openCodeArr, function(index, value) {
+            tmpStr += '<span>' + value + '</span>';
+        });
+        $("#lastOpenCode").html(tmpStr);
+    }
+</script>
+<!-- 开奖历史模板 -->
+<script type="text/html" id="template_openDataHistory">
+    <li style="width: 325px!important;">
+        <p style="height:28px">第{{number}}期</p>
+        {{if list.length == 0}}
+        <p style="margin-left:5px;">开奖中</p>
+        {{else}}
+        {{each list as value index}}
+        {{if index == 10}}
+        <i style="margin-top: 1.5px">{{value}}</i><br>
+        {{else}}
+        <i style="margin-top: 1.5px">{{value}}</i>
+        {{/if}}
+        {{/each}}
+        {{/if}}
+    </li>
+</script>
+
+</body></html>

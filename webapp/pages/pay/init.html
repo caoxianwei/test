@@ -1,0 +1,84 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<base href="${basePath}">
+<meta charset="utf-8">
+<meta name="description" content=""> 
+<meta content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+<meta http-equiv="pragma" content="no-cache"> 
+<meta http-equiv="cache-control" content="no-cache"> 
+<meta http-equiv="expires" content="0"> 
+<meta content="telephone=no" name="format-detection">
+<meta content="black" name="apple-mobile-web-app-status-bar-style">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta http-equiv="X-UA-Compatible" content="edge">
+<title>支付</title>
+<#include "/common/pay_css.inc"/>
+</head>
+<body>
+<!-- 订单号 -->
+<input type="hidden" id="code" value="${code}" />
+<input type="hidden" id="msg" value="${msg}" />
+<input type="hidden" id="a" value="${a}" />
+<input type="hidden" id="t" value="${t}" />
+<input type="hidden" id="s" value="${s}" />
+<input type="hidden" id="g" value="${g}" />
+<div class="main-content">
+	<header class="mui-bar mui-bar-nav ">
+		<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" href="${basePath}game/rechargeList.html"></a>
+		<h1 class="mui-title">支付</h1>
+	</header>
+		<div class="pay-box">
+			<div id="sawtoothbox"></div>
+			<div id="payprice">￥ ${p}</div>
+			<div id="QRcode">
+				<img src="${QRcodeURL}">
+				<div class="mask">二维码失效</div>
+			</div>
+			<div id="paytime">
+				<div class="text">距离该订单过期还有</div>
+				<div id="timebox">
+					<span id="hour_show" class="secc">00时</span>
+					<span id="minute_show" class="secc">00分</span>
+					<span id="second_show" class="secc">00秒</span>
+				</div>
+			</div>
+			<span class="round" id="leftround"></span>
+			<span class="round" id="rightround"></span>
+			<div class="scan-box">
+				<div class="scan-box-data">
+					<div class="scan-ico">
+						<img src="pay/img/mqpay/ico_richscan.png">
+					</div>
+					<div class="scan-text">
+						<p class="text">请使用<span id="paylable"></span>扫一扫</p>
+						<p class="text">扫描二维码完成支付</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="tips-box" id="tipswechat">
+			<div class="title">充值步骤：</div>
+			<ul class="tips-cell-box">
+				<li class="tips-cell">1.点击截图将自动截图并保存到相册（若图片未保存到相册，请手动截屏保存）</li>
+				<li class="tips-cell">2.打开微信，点击扫一扫</li>
+				<li class="tips-cell">3.在扫一扫中从相册选取二维码，找到截图，完成充值</li>
+			</ul>
+		</div>
+		<div class="tips-box" id="tipsalipay">
+			<div class="title">充值步骤：</div>
+			<ul class="tips-cell-box">
+				<li class="tips-cell">1.点击截图将自动截图并保存到相册（若图片未保存到相册，请手动截屏保存）</li>
+				<li class="tips-cell">2.打开支付宝，点击扫一扫</li>
+				<li class="tips-cell">3.在扫一扫中从相册选取二维码，找到截图，完成充值</li>
+			</ul>
+		</div>
+		<div class="copyright-box">
+			<p class="text">在付款前请确认收款人账户信息，转账后将立即到达对方账户</p>
+<!-- 			<p class="text">版权所有 大面包支付</p> -->
+		</div>
+	</div>
+<#include "/common/pay_js.inc"/>
+<script type="text/javascript" src="pages/pay/init.js"></script>
+</body>
+</html>

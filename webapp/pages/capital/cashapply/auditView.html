@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<base href="${basePath}">
+<meta charset="UTF-8">
+<title>提现审核</title>
+<#include "/common/easyui_css.inc"/>
+<#include "/common/css.inc"/>
+
+</head>
+<body>
+<div class="easyui-layout" data-options="fit:true">
+	<div id="showDiv" data-options="region:'center'" style="margin-left:-15%;padding:10px; border:none !important">
+		<form id="ff" action="${basePath}cashApply/gotoAuditing.do" method="post" style="text-align:center; width:100%;">   
+                  <input type="hidden" name="apply_cash_id" value="${cashApply.apply_cash_id}" />
+                  <table class="table" >
+                    <tbody>
+                      <tr>
+                       <td class="td-right width-30"><label for="name" >申请人:</label> </td>
+                       <td>${cashApply.login_name}</td>
+                      </tr>
+                      
+                      <tr>
+                       <td class="td-right width-30"><label for="name" >申请提现金额:</label> </td>
+                       <td>${cashApply.cash_money}</td>
+                      </tr>
+                      <tr>
+                       <td class="td-right width-30"><label for="name" >申请提现银行:</label> </td>
+                       <td>${cashApply.bank_name}</td>
+                      </tr>
+                      <tr>
+                       <td class="td-right width-30"><label for="name" >申请时间:</label> </td>
+                       <td>
+                          ${cashApply.create_time}
+                       </td>
+                      </tr>
+                      <tr>
+                       <td class="td-right width-30"><label for="name"><span class="font-red">*</span>审核状态:</label> </td>
+                       <td>
+                          <select class="easyui-combobox" id="audit_status" name="audit_status">
+                            <option value='' ${(cashApply.audit_status == null || cashApply.audit_status=='')?string('selected','')}>请选择</option>
+                            <option value='1' ${(cashApply.audit_status=='1')?string('selected','')}>已通过</option>
+                            <option value='2' ${(cashApply.audit_status=='2')?string('selected','')}>未通过</option>
+                          </select>
+                       </td>
+                      </tr>
+                </tbody>
+                </table>        
+              </form> 
+	</div>
+	<div data-options="region:'south',border:false" class="panl-footer">
+		<a class="easyui-linkbutton blue" href="javascript:void(0)"  onclick="javascript:addData()" style="width:80px">保存</a>
+		<a class="easyui-linkbutton gray" href="javascript:void(0)" onclick="javascript:closeDiv()" style="width:80px">取消</a>
+	</div>
+</div>
+<#include "/common/easyui_js.inc"/>
+<script type="text/javascript" src="pages/capital/cashapply/listCashApply.js"></script>
+</body>
+</html>

@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title></title>
+    
+    <!--页面CSS-->
+    <!--CSS3动画-->
+    <!--页面CSS-->
+    <!--页面CSS-->
+    
+    <!--页面CSS-->
+    <!--页面CSS-->
+    <!--页面CSS-->
+    <script src="../static/public/js/fancyzoom.js" language="JavaScript" type="text/javascript"></script>
+    <script src="../static/public/js/fancyzoomhtml.js" language="JavaScript" type="text/javascript"></script>
+    <script>
+    <!--
+    // 屏蔽JS错误
+//    window.onerror = function(){return true;}
+    // -->
+</script>
+    <script>
+        var nowHref = "../error/index.html";
+    </script>
+<script src="../static/public/js/mobile-detect.min.js"></script>
+<link media="all" href="index_1.css" type="text/css" rel="stylesheet">
+<link href="../static/public/css/global.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<script>if (window.top === window.self) {window.location.href = "#";}</script><div class="type_top" style="z-index: 100;">
+    <div class="wid1">
+        <div class="left fl">
+            <div class="left_div">你好，欢迎来到彩彩客彩票网!
+                <a href="../login/index.html" class="log">请登录</a>
+                        <span>
+                            <a href="../register/index.html" class="a1 blink" style="color: rgb(15, 63, 148);">免费注册</a>
+                            <a href="../trial/index.html" style="color: rgb(15, 63, 148);">免费试玩</a>
+                            <a href="../dlreg/index.html" class="par">加入代理</a>
+                        </span>
+                    </div>
+        </div>
+        <div class="right fr">
+            <ul>
+                <li class="li0"><a href="../index.html">首页</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<script>
+    function getJluPage(module) {
+        if (typeof module == 'undefined') {
+            module = '';
+        }
+        if (typeof $.cookie("uid") == 'undefined' || typeof $.cookie("token") == 'undefined') {
+            layer.msg("请先登录");
+            if ($("#loginAccount1").length > 0) {
+                $("#loginAccount1").focus();
+                return;
+            }
+            window.location.href = "../index//main.html";
+            return;
+        }
+        windowOpen('../index//member/index.html?module=' + module, '会员中心', 1250, 834);
+    }
+    function login2() {
+        var loginAccount = $.trim($("#loginAccount2").val());
+        var loginPassword = $.trim($("#loginPassword2").val());
+        var yzm = $.trim($("#loginYzm2").val());
+
+        if (!loginAccount) {
+            layer.msg("请输入账号");
+            return;
+        }
+        if (!loginPassword) {
+            layer.msg("请输入密码");
+            return;
+        }
+
+        var mw = baseObj.mw({
+            loginName:loginAccount,
+            password:$.md5(loginPassword).toUpperCase(),
+            machineType:3
+        });
+        ajaxRequest({
+            url:CONFIG.BASEURL+"user_login",
+            data: {
+                mw : mw
+            },
+            success: function(json) {
+                if (json.code == 200) {
+                    var json = json.data.obj;
+                    $.cookie("u", json.u, {path: "/"});
+                    $.cookie("loginName", json.loginName, {path: "/"});
+                    window.location.href='../index.html';
+                }else {
+                    layer.msg('登录失败');
+                    location.reload();
+                }
+            }
+        });
+    }
+</script><div class="img"><a href="../"><img src="../images/logo.png" alt=""></a></div>
+<img src="../images/bj.jpg" class="back" alt="" style="height: 913px;" width="100%">
+<div class="regedit">
+
+    <div class="reg_col">
+        <div class="reg_list">
+            <ul>
+                <li class="sli">
+                    <h5>1</h5>
+                    <p>填写信息</p>
+                </li>
+                <li>
+                    <h5>2</h5>
+                    <p>注册试玩账号成功</p>
+                </li>
+                <li>
+                    <h5>3</h5>
+                    <p>立即购彩</p>
+                </li>
+            </ul>
+        </div>
+        <div class="reg">
+            <div class="reg_le">
+                <form onsubmit="ajaxRegister();return false;" action="../index/register/index.html">
+                    <div>
+                        <h4><span><img src="../images/r1.png"></span></h4>
+                        <p><input id="trialAccount" placeholder="" disabled value="" type="text"></p>
+                    </div>
+                    <div>
+                        <h4><span><img src="../images/r2.png"></span></h4>
+                        <p><input id="trialPassword" placeholder="请输入密码(必填)" type="password"></p>
+                    </div>
+                    <div>
+                        <h4><span><img src="../images/r3.png"></span></h4>
+                        <p>
+                            <input id="trialYzm" class="short"  placeholder="请输入验证码(必填)" value="" type="text">
+                            <img id="trialYzmImg1" onclick="refreshYzm(this)" src="" title="点击更换验证码">
+                        </p>
+                    </div>
+                    <div class="no">
+                        <h3><input value="立即注册" type="submit"></h3>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="copy">
+    <p style="font-family: arial;">
+        <script>
+        var date = new Date;
+        var year=date.getFullYear();
+        document.write(year);
+    </script>©彩彩客彩票网</p>&nbsp;&nbsp;
+</div>
+
+<script type="text/html" id="template_khxy">
+</script>
+
+<script type="text/javascript" src="../static/public/js/jquery.min.js"></script><!--jQuery库-->
+<script type="text/javascript" src="../static/public/js/scrollanim.min.js"></script> <!--"动画库"-->
+<script src="../static/public/js/type.js"></script><!--自定义封装函数-->
+<script src="../static/public/js/global.js"></script><!--自定义封装函数-->
+<script src="../static/public/js/jquery.cookie.js"></script><!--自定义封装函数-->
+<script src="../static/public/js/jquery.md5.js"></script><!--自定义封装函数-->
+<script src="../static/public/layer/layer.js"></script>
+<script src="../static/public/js/jquery.nicescroll.js"></script>
+<script src="../static/public/js/dateformat.js"></script>
+<script src="../static/public/js/template.js"></script>
+<script src="../static/public/js/swfobject.js"></script>
+<script src="../static/public/js/jquery.limarquee.js"></script>
+<script src="../static/public/js/placeholders.jquery.min.js"></script>
+
+<script src="../static/public/js/rollups/tripledes.js"></script>
+<script src="../static/public/js/components/mode-ecb.js"></script>
+<script src="../static/public/js/jquery.range-min.js"></script>
+<script src="../static/public/js/move.js"></script>
+<script src="../static/public/js/base.js"></script>
+<script>
+    $(function() {
+
+        //获得试玩账号
+        ajaxRequest({
+            url: CONFIG.BASEURL + 'user_testAccount',
+            type: 'get',
+            success: function (json) {
+                var data = json.data;
+                $("#trialAccount").val(data.loginName);
+            }
+        });
+        //获取验证码
+        $('#trialYzmImg1').attr('src',CONFIG.BASEURL+'baseData_checkCode?t='+new Date().getTime());
+
+    });
+
+
+</script><script>
+    //更换验证码
+    function refreshYzm(obj) {
+        $(obj).attr("src", CONFIG.BASEURL+"baseData_checkCode?t="+new Date().getTime());
+    }
+
+    function showLoading() {
+        layer.load(2, {
+            shade: [0.1,'#000'] //0.1透明度的白色背景
+        })
+    }
+    function hideLoading() {
+        layer.closeAll();
+    }
+</script>
+<script>
+
+
+    function ajaxRegister(){
+        var account = $("#trialAccount").val().trim();
+        var password = $("#trialPassword").val().trim();
+        var yzm = $("#trialYzm").val().trim();
+        if (!password) {
+            layer.msg("请输入密码");
+            return;
+        }
+        if (!yzm) {
+            layer.msg("请输入验证码");
+            return;
+        }
+        var code=yzm.trim();
+        var map = {};
+        map['loginName'] = account;
+        map['password'] = $.md5(password).toUpperCase();
+        map['inpcode'] = code;
+        var mw=baseObj.mw(map);
+        console.log(mw);
+        $.ajax({
+            type:"POST",
+            url:CONFIG.BASEURL+"user_testreg",
+            xhrFields:{
+                withCredentials: true
+            },
+            crossDomain: true,
+            dataType:'json',
+            data:{mw:mw},
+            success: function(json){
+                if( json.code == 200){
+                    layer.msg(json.msg);
+                    console.log(json);
+                    var json = json.data.obj;
+
+                    $.cookie("u", json.u, {path: "/"});
+                    $.cookie("user", JSON.stringify(json), {path: "/"});
+                    $.cookie("eamil", json.eamil, {path: "/"});
+                    $.cookie("loginName", json.loginName, {path: "/"});
+                    $.cookie("uid", json.uid, {path: "/"});
+                    $.cookie('type',json.userGrade,{path: "/"});
+                    setTimeout(function () {
+                        window.location.href = "../index.html";
+                    },1000);
+            } else {
+                layer.msg(json.msg);
+//                location.reload();
+            }
+            }
+        });
+    }
+    function showLoading() {
+        layer.load(2, {
+            shade: [0.1,'#000'] //0.1透明度的白色背景
+        })
+    }
+    function hideLoading() {
+        layer.closeAll();
+    }
+    $(window).resize(function(){
+        ate();
+    });
+
+    $(function() {
+        ate();
+        $(".alert_log_col h5 i").click(function(){
+            $(".two2").fadeOut();
+        });
+        autobox(".Customerservice",1,1180,0);
+        tabs_cg(".Resultt .latyout .tabs_ce ul li","","hover","acti","","");
+        click_addname(".Resultt .latyout .wrap_select a","acti","click");
+        $('.reg_rt h5 span').click(function(){
+            $('.two2').fadeIn();
+        })
+    });
+
+    function ate(){
+        var hei=$(window).height();
+        $(".back").css("height",hei-27+"px");
+    }
+
+    function login1() {
+        var loginAccount = $.trim($("#loginAccount1").val());
+        var loginPassword = $.trim($("#loginPassword1").val());
+        var yzm = $.trim($("#loginYzm1").val());
+
+        if (!loginAccount) {
+            layer.msg("请输入账号");
+            return;
+        }
+        if (!loginPassword) {
+            layer.msg("请输入密码");
+            return;
+        }
+//        if (!yzm) {
+//            layer.msg("请输入验证码");
+//            return;
+//        }
+
+        ajaxRequest({
+            url: "http://caicaike.com/api/user_reg",
+            data: {
+                yzm: yzm,
+                account: loginAccount,
+                password: $.md5(loginPassword).toUpperCase()
+            },
+            beforeSend: function() {
+                layer.load(2, {
+                    shade: [0.1,'#000'] //0.1透明度的白色背景
+                })
+            },
+            success: function(json) {
+                var json = eval('('+json+")");
+                layer.closeAll();
+                if (json.code == 200) {
+                    location.reload();
+                } else {
+                    layer.msg(json.msg);
+                }
+            }
+        });
+    }
+</script>
+</body>
+</html>

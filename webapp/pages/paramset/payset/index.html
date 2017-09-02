@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<#assign tool =JspTaglibs["http://caicaike.lottery.com/tag/toolbar"]/>
+<html>
+<head>
+<base href="${basePath}">
+<meta charset="UTF-8">
+<title>支付设置</title>
+<#include "/common/easyui_css.inc"/>
+<#include "/common/css.inc"/>
+<style type="text/css">
+ .buttoncls{
+    color: #fff;
+    background: #30acf2;
+ }
+</style>
+</head>
+<body>
+<div class="easyui-layout" data-options="fit:true">
+	<div data-options="region:'center', title:'参数设置>>支付设置',iconCls:'icon-texe',cls:'white'">
+         <div style="margin-top: 10px">
+           <table class="table" style="margin-left: -15%">
+              <tbody>
+                <tr>
+                 <td class="td-right width-30"><label for="name"><span class="font-red">*</span>默认支付:</label> </td>
+                 <td>
+                    <label><input type="radio" name="payType" value="1" ${(value=='1')?string('checked','')} />仁信</label>
+                    <label><input type="radio" name="payType" value="2" ${(value=='2')?string('checked','')} />闪付</label>
+                    <label style="margin-right: 20px"><input type="radio" name="payType" value="3" ${(value=='3')?string('checked','')}  />艾米森</label>
+                    <@tool.bar menuId="${menuid!}"/>
+                 </td>
+                </tr>
+                <tr>
+                 <td class="td-right width-30"><label for="name" >设置:</label> </td>
+                 <td>
+                    <button onclick="javascript:clickButton(this,'1')"  class="l-btn l-btn-small blue-x" style="width:70px;padding: 5px !important;outline: none !important;border-color:#30acf2">仁信</button>
+                    <button onclick="javascript:clickButton(this,'2')" class="l-btn l-btn-small blue-x" style="width:70px;padding: 5px !important;outline: none !important;border-color:#30acf2">闪付</button>
+                    <button onclick="javascript:clickButton(this,'3')" class="l-btn l-btn-small blue-x" style="width:70px;padding: 5px !important;outline: none !important;border-color:#30acf2">艾米森</button>
+                 </td>
+                </tr>
+          </tbody>
+          </table>
+         </div>
+          <form id="renxin_form" action="${basePath}payConfig/savePaySet.do" method="post" style="text-align:center;">   
+             <input type="hidden" name="payType" value="${renxin.type}"/>
+             <!-- 仁信支付表格 -->
+             <table id="payConfig_renxin" class="table" style="margin-left:0%;margin-top: 10px;display: none">
+              <tbody>
+                 <tr>
+                    <td class="td-right width-30"><label for="name"><span class="font-red">*</span>商户partner:</label> </td>
+                    <td>
+                      <input class="easyui-textbox" type="text" name="partner" value="${renxin.par}" style="width:400PX" data-options="required:true" /> 
+                    </td>
+                 </tr>
+                 <tr>
+                    <td class="td-right width-30"><label for="name"><span class="font-red">*</span>秘钥:</label> </td>
+                    <td>
+                      <input class="easyui-textbox" type="text" name="secretKey" value="${renxin.pay_key}" style="width:400PX" data-options="required:true" /> 
+                    </td>
+                 </tr>
+                 <tr>
+                    <td class="td-right width-30"><label for="name"><span class="font-red">*</span>支付链接地址:</label> </td>
+                    <td>
+                      <input class="easyui-textbox" type="text" id="rx_payurl" name="payUrl" value="${renxin.url}" style="width:400PX" data-options="required:true" /> 
+                    </td>
+                 </tr>
+                 <tr>
+                    <td class="td-right width-30"><label for="name"><span class="font-red">*</span>支付回调地址:</label> </td>
+                    <td>
+                      <input class="easyui-textbox" type="text" id="rx_callback_url" name="callback_url" value="${renxin.callback_url}" style="width:400PX" data-options="required:true" /> 
+                    </td>
+                 </tr>
+                 <tr>
+                   <td></td>
+                   <td>
+                     <a class="easyui-linkbutton green l-btn l-btn-small" style="width: 50px" onclick="javascript:saveRenxinPaySet()">保存</a>
+                   </td>
+                 </tr>
+           </tbody>
+           </table> 
+           </form>
+           <!-- 闪付支付表格 -->
+           <form id="shanfu_form" action="${basePath}payConfig/savePaySet.do" method="post" style="text-align:center;">
+           <input type="hidden" name="payType" value="${shanfu.type}"/>
+           <table id="payConfig_shanfu" class="table" style="margin-left:0%;margin-top: 10px;display: none">
+              <tbody>
+                 <tr>
+                    <td class="td-right width-30"><label for="name"><span class="font-red">*</span>商户partner:</label> </td>
+                    <td>
+                      <input class="easyui-textbox" type="text" name="partner" value="${shanfu.par}" style="width:400PX" data-options="required:true" /> 
+                    </td>
+                 </tr>
+                 <tr>
+                    <td class="td-right width-30"><label for="name"><span class="font-red">*</span>终端id:</label> </td>
+                    <td>
+                      <input class="easyui-textbox" type="text" name="srcCode" value="${shanfu.code}" style="width:400PX" data-options="required:true" /> 
+                    </td>
+                 </tr>
+                 <tr>
+                    <td class="td-right width-30"><label for="name"><span class="font-red">*</span>秘钥:</label> </td>
+                    <td>
+                      <input class="easyui-textbox" type="text" name="secretKey" value="${shanfu.pay_key}" style="width:400PX" data-options="required:true" /> 
+                    </td>
+                 </tr>
+                 <tr>
+                    <td class="td-right width-30"><label for="name"><span class="font-red">*</span>支付链接地址:</label> </td>
+                    <td>
+                      <input class="easyui-textbox" type="text" id="sf_payurl" name="payUrl" value="${shanfu.url}" style="width:400PX" data-options="required:true" /> 
+                    </td>
+                 </tr>
+                 <tr>
+                    <td class="td-right width-30"><label for="name"><span class="font-red">*</span>支付回调地址:</label> </td>
+                    <td>
+                      <input class="easyui-textbox" type="text" id="sf_callback_url" name="callback_url" value="${shanfu.callback_url}" style="width:400PX" data-options="required:true" /> 
+                    </td>
+                 </tr>
+                 <tr>
+                   <td></td>
+                   <td>
+                     <a class="easyui-linkbutton green l-btn l-btn-small" style="width: 50px" onclick="javascript:saveShanFUPaySet()">保存</a>
+                   </td>
+                 </tr>
+           </tbody>
+           </table>
+           </form>
+           <!-- 艾米森支付表格 -->
+           <form id="amx_form" action="${basePath}payConfig/savePaySet.do" method="post" style="text-align:center;">
+           <input type="hidden" name="payType" value="${amx.type}"/>
+           <table id="payConfig_AMX" class="table" style="margin-left:0%;margin-top: 10px;display: none">
+              <tbody>
+                 <tr>
+                    <td class="td-right width-30"><label for="name"><span class="font-red">*</span>商户号:</label> </td>
+                    <td>
+                      <input class="easyui-textbox" name="partner" value="${amx.par}" style="width:400PX" data-options="required:true" /> 
+                    </td>
+                 </tr>
+                 <tr>
+                    <td class="td-right width-30"><label for="name"><span class="font-red">*</span>商户号标识:</label> </td>
+                    <td>
+                      <input class="easyui-textbox" type="text" name="srcCode" value="${amx.code}" style="width:400PX" data-options="required:true" /> 
+                    </td>
+                 </tr>
+                 <tr>
+                    <td class="td-right width-30"><label for="name"><span class="font-red">*</span>秘钥:</label> </td>
+                    <td>
+                      <input class="easyui-textbox" type="text" name="secretKey" value="${amx.pay_key}" style="width:400PX" data-options="required:true" /> 
+                    </td>
+                 </tr>
+                 <tr>
+                    <td class="td-right width-30"><label for="name"><span class="font-red">*</span>支付链接地址:</label> </td>
+                    <td>
+                      <input class="easyui-textbox" type="text" id="amx_payurl" name="payUrl" value="${amx.url}" style="width:400PX" data-options="required:true" /> 
+                    </td>
+                 </tr>
+                 <tr>
+                    <td class="td-right width-30"><label for="name"><span class="font-red">*</span>支付回调地址:</label> </td>
+                    <td>
+                      <input class="easyui-textbox" type="text" id="amx_callback_url" name="callback_url" value="${amx.callback_url}" style="width:400PX" data-options="required:true" /> 
+                    </td>
+                 </tr>
+                 <tr>
+                   <td></td>
+                   <td>
+                     <a class="easyui-linkbutton green l-btn l-btn-small" style="width: 50px" onclick="javascript:saveAmxPaySet()">保存</a>
+                   </td>
+                 </tr>
+           </tbody>
+           </table>
+          </form>
+	</div>
+</div>
+<#include "/common/easyui_js.inc"/>
+<script type="text/javascript" src="pages/paramset/payset/index.js"></script>
+</body>
+</html>

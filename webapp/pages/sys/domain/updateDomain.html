@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<base href="${basePath}">
+<meta charset="UTF-8">
+<title>新增角色</title>
+<#include "/common/easyui_css.inc"/>
+<#include "/common/css.inc"/>
+
+</head>
+<body>
+<div class="easyui-layout" data-options="fit:true">
+	<div id="showDiv" data-options="region:'center'" style="margin-left:-15%;padding:10px; border:none !important">
+		<form id="ff" action="${basePath}sysDomain/updateData.do" method="post" style="text-align:center; width:100%;">   
+		    <input type="hidden" name="domain_id" value="${domain.domain_id}" />
+            <table class="table">
+               <tbody>
+                 <tr>
+                  <td class="td-right width-30"><label for="name"><span class="font-red">*</span>系统域名:</label> </td>
+                  <td><input class="easyui-textbox" type="text" id="domain_url" name="domain_url" value="${domain.domain_url}" style="width:500PX" /> </td>
+                 </tr>
+                 <!-- <tr>
+                  <td class="td-right width-30"><label for="name" >是否主域名:</label> </td>
+                  <td>
+                     <select name="primary_domain" class="easyui-combobox" style="width:140px;" >
+				        <option value="1" ${(domain.primary_domain=='1')?string('selected="selected"','')} >是</option>
+			           	<option value="0" ${(domain.primary_domain=='0')?string('selected="selected"','')} >否</option>
+			         </select>
+                  </td>
+                 </tr> -->
+                 <tr>
+                  <td class="td-right width-30"><label for="name" >是否可用:</label> </td>
+                  <td>
+                    <select  name="domain_status" class="easyui-combobox" style="width:140px;" >
+			         	<option value="1" ${(domain.domain_status=='1')?string('selected="selected"','')}>可用</option>
+			       		<option value="0" ${(domain.domain_status=='0')?string('selected="selected"','')}>不可用</option>
+			       </select>                       
+                  </td>
+                 </tr>
+                 <tr>
+                  <td class="td-right width-30"><label for="name" >域名用途:</label> </td>
+                  <td>
+                     <select name="domain_used" class="easyui-combobox" style="width:140px;" >
+				        <option value="0" ${(domain.domain_used=='0')?string('selected="selected"','')}>后台</option>
+			           	<option value="1" ${(domain.domain_used=='1')?string('selected="selected"','')}>图片(文件)</option>
+			           	<option value="2" ${(domain.domain_used=='2')?string('selected="selected"','')}>推广</option>
+			           	<option value="3" ${(domain.domain_used=='3')?string('selected="selected"','')}>其他</option>
+			         </select>
+                  </td>
+                 </tr>
+           </tbody>
+           </table>       
+        </form> 
+	</div>
+	<div data-options="region:'south',border:false" class="panl-footer">
+		<a class="easyui-linkbutton blue" href="javascript:void(0)"  onclick="javascript:updateData()" style="width:80px">保存</a>
+		<a class="easyui-linkbutton gray" href="javascript:void(0)" onclick="javascript:closeDiv()" style="width:80px">取消</a>
+	</div>
+</div>
+<#include "/common/easyui_js.inc"/>
+<script type="text/javascript" src="pages/sys/domain/listSysDomain.js"></script>
+</body>
+</html>

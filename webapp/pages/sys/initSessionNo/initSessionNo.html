@@ -1,0 +1,50 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<#assign tool =JspTaglibs["http://caicaike.lottery.com/tag/toolbar"]/>
+<html>
+<head>
+<base href="${basePath}">
+<meta charset="UTF-8">
+<title>初始化期号</title>
+<#include "/common/easyui_css.inc"/>
+<#include "/common/css.inc"/>
+<style type="text/css">
+.textbox{
+  min-width: 50px !important;
+}
+.datagrid-editable-input {
+    margin: 0;
+    padding: 0px !important;
+    border: 1px solid #95B8E7;
+    font-size: 14px !important;
+    outline-style: none;
+    -moz-border-radius: 0 0 0 0;
+    -webkit-border-radius: 0 0 0 0;
+    border-radius: 2px !important;
+    min-height:30px
+}
+</style>
+</head>
+<body>
+<div class="easyui-layout" data-options="fit:true">
+	<div data-options="region:'center', title:'游戏初始化>>初始化今天期号',iconCls:'icon-texe',cls:'white'">
+	 <table class="table table" border="1px solid #e5e5e5" style="border:1px solid #e5e5e5;width:100%; margin:0 auto; margin-bottom:20px;margin-left: 0%">
+          <tbody>
+             <#if sessionList?? && (sessionList?size > 0)>
+               <#list sessionList as session>
+                 <tr>
+	               <td class="td-right customtabletd" width="20%"><label for="name" >${session.game_title}</label> </td>
+	               <td class="customtabletd" width="69%">
+	                 <a class="easyui-linkbutton green" href="javascript:initSessionNo('${session.game_type}');" style="width: 60px;margin-left: 30px;font-size: 18px !important" >初始化</a>
+	               </td>
+	            </tr>
+               </#list>
+             </#if>
+        </tbody>    
+      </table>
+</div>  
+</div>
+
+<#include "/common/easyui_js.inc"/>
+<script type="text/javascript" src="pages/sys/initSessionNo/initSessionNo.js"></script>
+</body>
+</html>

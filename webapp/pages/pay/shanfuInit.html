@@ -1,0 +1,36 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<base href="${basePath}">
+<meta charset="utf-8">
+<meta name="description" content=""> 
+<meta content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+<meta http-equiv="pragma" content="no-cache"> 
+<meta http-equiv="cache-control" content="no-cache"> 
+<meta http-equiv="expires" content="0"> 
+<meta content="telephone=no" name="format-detection">
+<meta content="black" name="apple-mobile-web-app-status-bar-style">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta http-equiv="X-UA-Compatible" content="edge">
+<title>初始化闪付</title>
+<#include "/common/pay_css.inc"/>
+</head>
+<body onload="document.form1.submit()">
+<form id="form1" name="form1" method="post" action="${payurl}">
+<!-- 订单号 -->
+<input type="hidden" name="MemberID" value="${MemberID}" />
+<input type="hidden" name="TerminalID" value="${TerminalID}" />
+<input type="hidden" name="InterfaceVersion" value="${InterfaceVersion}" />
+<input type="hidden" name="KeyType" value="${KeyType}" />
+<input type="hidden" name="PayID" value="${PayID}" />
+<input type="hidden" name="TradeDate" value="${TradeDate}" />
+<input type="hidden" name="TransID" value="${TransID}"/>
+<input type="hidden" name="OrderMoney" value="${OrderMoney}" />
+<input type="hidden" name="NoticeType" value="${NoticeType}" />
+<input type="hidden" name="PageUrl" value="${PageUrl}" />
+<input type="hidden" name="ReturnUrl" value="${ReturnUrl}" />
+<input type="hidden" name="Md5Sign" value="${Md5Sign}" />
+</form>
+<#include "/common/pay_js.inc"/>
+</body>
+</html>

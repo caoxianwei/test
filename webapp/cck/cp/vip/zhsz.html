@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>会员中心</title>
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/hpn-common.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/global.css">
+    <script>
+            <!--
+    //        window.onerror=function(){return true;}
+            // -->
+    </script>
+    <script>
+        <!--
+        // 屏蔽JS错误
+    //    window.onerror = function(){return true;}
+        // -->
+        var nowHref = "../error/index.html";
+    </script>
+<script src="../static/public/js/mobile-detect.min.js"></script>
+    <style>
+        .eveb_content{display: none;}
+        .eveb_nav_sub .on,.button_1, .button_1:link, .button_1:visited,.alert_col h5,.onlineService,.head,.layui-layer-popup .layui-layer-title,.xzqd,.game_name .box2_stage p span i.acti,.Betting,.Single,.list_ject ul li .Result p a.acti,.list_ject ul li .Result p a.acti:hover,.top{background:#fa6200!important}
+        .eveb_nav_sub .on a,.bankInfo .name,.help_l_menu .title p .sum,.help_r_main .light,.game_name .box2_stage p span i,.game_name .box1_name  p i,.Account p a.red{color:#fa6200!important}
+        .eveb_nav_sub .on,.game_name .box2_stage p span{border:1px solid #fa6200!important;}
+        .eveb_nav_sub .on,.game_name .box2_stage p span i.acti{color:#fff!important;}
+        .eveb_nav_sub .on a{border-top:1px #fa6200 solid!important;}
+        .eveb_nav_sub ul{border-bottom:1px #fa6200 solid!important;}
+        .alert_col div::-webkit-scrollbar-thumb {background-color: #fa6200!important;}
+        .head div h5,.Betting .tabs ul li,.top .nav h1{background:#f87c2d!important}
+        .jf_box .url a,.eveb_form label.error,.eveb_transfer_box .center_wallet .money,.eveb_transfer_box .wallet_list li p{color:#f87c2d!important}
+        .Betting .tabs ul li.acti{background:#fff!important}
+        .button_1, .button_1:link, .button_1:visited{border:1px solid #f87c2d!important;}
+    </style>
+<link type="text/css" rel="stylesheet" href="../static/public/layer/skin/default/laydate.css">
+    <link rel="stylesheet" href="../static/public/layer/skin/default/layer.css" id="layuicss-skinlayercss">
+</head>
+<body>
+<div class="help_r_main">
+    <div class="eveb_content">
+        <div class="eveb_nav_sub">
+            <ul class="clearfix">
+                 <!--<li><a href="javascript:void(0)">个人资料</a></li>-->
+                <li class="on"><a href="javascript:void(0)">登录密码</a></li>
+                <li><a href="javascript:void(0)">提现密码</a></li>
+                 <!--<li><a href="javascript:void(0)">银行卡管理</a></li>-->
+            </ul>
+        </div>
+    <!--<form class="setForm" novalidate="novalidate" onsubmit="return false;">
+        <table class="eveb_setting_table">
+            <tbody>
+            <tr>
+                <td class="tit">会员名</td>
+                <td class="wid">qw123456</td>
+                <td class="tit">手机号码</td>
+                <td class="wid">
+                    <span class="ff">151***749</span>
+                    <span class="green"><i class="icon_mini icon_ok"></i>已绑定</span>
+                </td>
+            </tr>
+            <tr>
+                <td class="tit">真实姓名</td>
+                <td class="wid">李伟标</td>
+                <td class="tit">电子邮箱</td>
+                <td colspan="2" class="wid">
+                    <span class="ff">159471572@qq.com</span>
+                    <span class="green"><i class="icon_mini icon_ok"></i>已绑定</span>
+                </td>
+            </tr>
+            <tr>
+                <td class="tit">昵称</td>
+                <td class="ff wid">vip<a href="javascript:void(0)" onclick="eveb_popup_show('#eveb_setting_edit')"> 编辑</a>
+                </td>
+                <td class="tit">QQ</td>
+                <td class="ff wid">745484117<a href="javascript:void(0)" onclick="eveb_popup_show('#eveb_setting_edit')"> 编辑</a></td>
+            </tr>
+            <tr>
+                <td class="tit">生日</td>
+                <td class="ff wid">2017-06-13<a href="javascript:void(0)" onclick="eveb_popup_show('#eveb_setting_edit')"> 编辑</a></td>
+                <td class="tit">性别</td>
+                <td class="ff wid">
+                    男<a href="javascript:void(0)" onclick="eveb_popup_show('#eveb_setting_edit')"> 编辑</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+        <div class="eveb_tip light">
+        请完善资料
+        </div>-->
+        <!-- help content e -->
+        <!-- <div class="eveb_popup_wrap" style="display: none;"></div>
+        <div class="eveb_popup" id="eveb_setting_edit" style="display: none;">
+            <div class="eveb_popup_hd">
+                <h4 class="fl">编辑个人资料</h4>
+                <a href="javascript:void(0)" onclick="eveb_popup_hide()" class="icon_mini icon_close fr" title="关闭"></a>
+            </div>
+            <div class="eveb_popup_bd">
+                <form name="editUserInfoForm" novalidate="novalidate" onsubmit="return false;">
+                    <ul class="eveb_form">
+                        <li>
+                            <span>会员名：</span>
+                            qw123456</li>
+                        <li>
+                            <span>昵称：</span>
+                            <input type="text" style="width:140px;" class="_border" value="vip"
+                                   name="nickname" id="nickname">
+                            <label class="error" for="nickname"></label>
+                        </li>
+                        <li>
+                            <span>生日：</span>
+                            <input onclick="laydate({istime: true, format: 'YYYY-MM-DD'})" name="birthday" id="birthday"
+                                   type="text" size="16" class="_border" style="width:140px;"
+                                   value="2017-06-13" readonly>
+                            <label class="error" for="birthday"></label>
+                        </li>
+                        <li>
+                            <span>QQ：</span>
+                            <input type="text" style="width:140px;" maxlength="11" class="_border" value="745484117" name="qq" id="qq" onkeyup="this.value=this.value.replace(/\D/g,'')"  onafterpaste="this.value=this.value.replace(/\D/g,'')">
+                            <label class="error" for="qq"></label>
+                        </li>
+                        <li>
+                            <span>性别：</span>
+                            <select name="sex" id="sex">
+                                <option value="1" selected="selected">男</option>
+                                <option value="2" >女</option>
+                            </select>
+                        </li>
+                        <li>
+                            <span>手机号码：</span>
+                            <input name="telephone" type="text" size="20" class="_border" value="15177499181" id="telephone" readonly>
+                            <label class="error" for="telephone"></label>
+                        </li>
+                        <li>
+                            <span>电子邮箱：</span>
+                            <input name="email" type="text" size="20" class="_border" value="159471572@qq.com" id="email" readonly>
+                            <label class="error" for="email"></label>
+                        </li>
+
+                    </ul>
+                    <div class="eveb_popup_btn">
+                        <input type="submit" class="button_medium button_1" value="确认">
+                        <a href="javascript:void(0)" class="button_medium button_3" onclick="eveb_popup_hide()">取消</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </form> -->
+    <form name="resetPasswordForm" class="setForm" novalidate="novalidate" onsubmit="return false;" >
+        <ul class="eveb_form eveb_setting_form">
+            <li>
+                <span>原密码：</span>
+                <input name="oldPassword" id="oldPassword" type="password" size="20" class="passwinp">
+                <label class="error" for="oldPassword">* 请填写您的原始登录密码</label>
+            </li>
+            <li>
+                <span>新密码：</span>
+                <input name="newPassword" id="newpassword" type="password" size="20" class="passwinp">
+                <label class="error" for="newpassword"></label>
+            </li>
+            <li>
+                <span>确认密码：</span>
+                <input name="confirmPassword" id="confirmPassword" type="password" size="20" class="passwinp">
+                <label class="error" for="confirmPassword"></label>
+            </li>
+        </ul>
+        <div class="eveb_form_submit">
+            <input type="submit" id="confirmSubmit" value="确认修改" class="button_medium button_1">
+            <input type="reset" value="重置" class="ml_10 button_medium button_3">
+        </div>
+    </form>
+    <form name="resetTxPasswordForm" class="setForm" novalidate="novalidate" style="display: none;" onsubmit="return false;">
+        <ul class="eveb_form eveb_setting_form">
+            <li>
+                <span>登录密码：</span>
+                <input name="oldPassword" id="loginPassword" type="password" size="20" class="passwinp">
+                <label class="error" for="loginPassword">* 请填写登录密码</label>
+            </li>
+            <li>
+                <span>提现密码：</span>
+                <input name="newPassword" id="txpassword" type="password" size="20" class="passwinp">
+                <label class="error" for="txpassword">* 请填写提现密码</label>
+            </li>
+            <li>
+                <span>确认提现密码：</span>
+                <input name="confirmPassword" id="confirmTxPassword" type="password" size="20" class="passwinp">
+                <label class="error" for="confirmTxPassword">* 请确认提现密码</label>
+            </li>
+        </ul>
+        <div class="eveb_form_submit">
+            <input type="submit" id="setSubmit" value="设置" class="button_medium button_1">
+            <input type="reset" value="重置" class="ml_10 button_medium button_3">
+        </div>
+    </form> 
+       <!--  <form name="addYhkForm" class="setForm" onsubmit="return false;" novalidate="novalidate" style="display: none;">
+            <div class="mb10 color-888">银行卡列表：</div>
+            <ul class="management_bank">
+                <li>
+                    <div class="item w125 color-e77c3c" style="width:30px">默认</div>
+                    <div class="item w105">上海银行</div>
+                    <div class="item w105">李伟标</div>
+                    <div class="item w205">6205 **** **** **** 8797</div>
+                    <div class="item w230">银联</div>
+                    <div class="item">
+                        <a href="javascript:void(0)" class="mr10 color-c4463c" onclick="setDefault(1904)">设为默认</a>
+                        <a href="javascript:void(0)" class="icon deleteIcon2" onclick="ajaxDel(1904)"></a>
+                    </div>
+                </li>
+            </ul>
+            <ul class="eveb_form eveb_withdraw">
+                <li>
+                    <span>银行名称：</span>
+                    <select name="bankName" id="bankName" style="width:182px" class="valid">
+                        <option value="中国工商银行">中国工商银行</option>
+                        <option value="中国农业银行">中国农业银行</option>
+                        <option value="中国建设银行">中国建设银行</option>
+                        <option value="中国银行">中国银行</option>
+                        <option value="交通银行">交通银行</option>
+                        <option value="招商银行">招商银行</option>
+                        <option value="兴业银行">兴业银行</option>
+                        <option value="浦发银行">浦发银行</option>
+                        <option value="华夏银行">华夏银行</option>
+                        <option value="中信银行">中信银行</option>
+                        <option value="中国光大银行">中国光大银行</option>
+                        <option value="广发银行">广发银行</option>
+                        <option value="中国邮政储蓄银行">中国邮政储蓄银行</option>
+                        <option value="平安银行">平安银行</option>
+                        <option value="上海银行">上海银行</option>
+                        <option value="广东省商业银行">广东省商业银行</option>
+                    </select>
+                    <label class="error" for="bankName" style="display: none;"></label>
+                </li>
+                <li>
+                    <span>开户支行：</span>
+                    <input type="text" class="passwinp error" id="subBankName" name="subBankName" style="width:180px;" placeholder="请输入开户支行">
+                    <label class="error" for="subBankName">* 请填写开户支行</label>
+                </li>
+                <li>
+                    <span>开户人：</span>
+                    <input type="text" class="passwinp" id="userName" name="userName" style="width:180px;" placeholder="请输入真实姓名" value="李伟标" readonly="">
+                    <label class="error" for="userName" style="display: none;"></label>
+                </li>
+                <li>
+                    <span>银行账号：</span>
+                    <input type="text" name="bankAccount" id="bankAccount" style="width:180px;" class="passwinp error" placeholder="请输入银行卡号" onkeyup="this.value=this.value.replace(/\D/g,'')" onafterpaste="this.value=this.value.replace(/\D/g,'')">
+                    <label class="error" for="bankAccount">* 请填写银行账号</label>
+                </li>
+            </ul>
+            <div class="eveb_form_submit">
+                <input type="submit" value="提交" class="button_medium button_1">
+                <input type="reset" value="重置" class="ml_10 button_medium button_3">
+            </div>
+        </form>-->
+
+</div>
+    </div>
+<script type="text/javascript" src="../static/public/js/jquery.min.js"></script>
+<script type="text/javascript" src="../static/public/js/jquery.validate.min.js"></script>
+<script type="text/javascript" src="../static/public/js/laydate.js"></script>
+<script type="text/javascript" src="../static/public/js/validate.js"></script>
+<script type="text/javascript" src="../static/public/js/global.js"></script>
+<script type="text/javascript" src="../static/public/js/jquery.form.min.js"></script>
+<script type="text/javascript" src="../static/public/js/jquery.md5.js"></script>
+<script type="text/javascript" src="../static/public/layer/layer.js"></script>
+<script type="text/javascript" src="../static/public/js/jquery.nicescroll.js"></script>
+<script type="text/javascript" src="../static/public/js/clipboard.min.js"></script>
+<script src="../static/public/js/dateformat.js"></script>
+<script src="../static/public/js/template.js"></script>
+<script src="../static/public/js/jquery.cookie.js"></script><!--自定义封装函数-->
+
+<script src="../static/public/js/rollups/tripledes.js"></script>
+<script src="../static/public/js/components/mode-ecb.js"></script>
+<script src="../static/public/js/move.js"></script>
+    <script src="../static/public/js/base.js"></script>
+<script>
+    $(function() {
+        var userType = $.cookie('type');
+        if(userType != null && userType == '01') {
+            var objImg = document.createElement('img');
+            objImg.style.cssText= 'margin:auto;margin-top:15%;display:block;';
+            objImg.src = "images/noaccess.png";
+            $(".eveb_content").html(objImg);
+            $('.eveb_content').show();
+        }else {
+            $('.eveb_content').show();
+            $(".clearfix li").click(function () {
+                $(this).addClass('on').siblings().removeClass('on');
+                var index = $(this).index();
+                $('.setForm').eq(index).show().siblings('form').hide();
+            });
+
+            //修改登录密码
+            $('#confirmSubmit').click(function () {
+                if ($.cookie('u') == null) {
+                    return;
+                }
+                var old = $('#oldPassword').val();
+                var newPwd = $("#newpassword").val();
+                var confirmnewPwd = $("#confirmPassword").val();
+                if (!old) {
+                    layer.msg('请输入原始登录密码');
+                    return;
+                }
+                ;
+                if (!newPwd) {
+                    layer.msg('请输入新密码');
+                    return;
+                }
+                ;
+                if (!confirmnewPwd) {
+                    layer.msg('请输入确认密码');
+                    return;
+                }
+                ;
+                var map = {};
+                map['u'] = $.cookie('u');
+                map['oldpassword'] = $.md5(old).toUpperCase();
+                map['newpassword'] = $.md5(newPwd).toUpperCase();
+                map['repassword'] = $.md5(confirmnewPwd).toUpperCase();
+                var mw = baseObj.mw(map);
+                ajaxRequest({
+                    url: CONFIG.BASEURL + 'user_changePwd',
+                    data: {
+                        mw: mw
+                    },
+                    success: function (ret) {
+                        var code = ret.code;
+                        var msg = ret.msg;
+                        if (code == '200') {
+                            layer.msg('修改成功');
+                            $.cookie('u', '', {path: '/'});
+                            setTimeout(function () {
+                                parent.window.close();
+                            }, 1000);
+                        } else {
+                            layer.msg(msg);
+                        }
+                    }
+                });
+            });
+
+            //设置提现密码
+            $('#setSubmit').click(function () {
+                if ($.cookie('u') == null) {
+                    return;
+                }
+                var old = $('#loginPassword').val();
+                var newPwd = $("#txpassword").val();
+                var confirmnewPwd = $("#confirmTxPassword").val();
+                if (!old) {
+                    layer.msg('请输入登录密码');
+                    return;
+                }
+                ;
+                if (!newPwd) {
+                    layer.msg('请输入提现密码');
+                    return;
+                }
+                ;
+                if (!confirmnewPwd) {
+                    layer.msg('请输入确认提现密码');
+                    return;
+                }
+                ;
+                var map = {};
+                map['u'] = $.cookie('u');
+                map['password'] = $.md5(old).toUpperCase();
+                map['cashPassword'] = $.md5(newPwd).toUpperCase();
+                map['recashPassword'] = $.md5(confirmnewPwd).toUpperCase();
+                var mw = baseObj.mw(map);
+                ajaxRequest({
+                    url: CONFIG.BASEURL + 'user_cashPassword',
+                    data: {
+                        mw: mw
+                    },
+                    success: function (ret) {
+                        var code = ret.code;
+                        var msg = ret.msg;
+                        if (code == '200') {
+                            layer.msg('修改成功');
+                            setTimeout(function () {
+                                window.location.reload();
+                            }, 1000);
+                        } else {
+                            layer.msg(msg);
+                        }
+                    },
+                    error: function (msg) {
+                        layer.msg(msg);
+                    }
+                });
+            });
+        };
+    });
+</script>
+<script>
+    $(function() {
+        parent.hideLoading();
+    });
+</script>
+<script>
+
+    //弹窗 定位
+    function eveb_popup_position(_target){
+        var popupW = $(_target).width() / 2;
+        var popupH = $(_target).height() / 2;
+        $(_target).css('margin-left',-popupW).css('margin-top',-popupH);
+    }
+    //弹窗 显示
+    function eveb_popup_show(_target){
+        scrollHeight = $(document).height();
+        $('.eveb_popup_wrap').height(scrollHeight);
+        eveb_popup_position(_target);
+        $('.eveb_popup').fadeOut('fast');
+        $('.eveb_popup_wrap').fadeIn('fast');
+        $(_target).fadeIn('fast');
+        $('.eveb_popup_wrap').click(function(){
+            eveb_popup_hide();
+        })
+        $("form[name='editUserInfoForm']").valid();
+    }
+    //弹窗 关闭
+    function eveb_popup_hide(){
+        $('.eveb_popup_wrap').fadeOut('fast');
+        $('.eveb_popup').fadeOut('fast');
+    }
+
+    $(function () {
+        $("form[name='editUserInfoForm']").validate({
+            rules: {
+                nickname: {
+                    required: true
+                },
+                birthday: {
+                    required: true
+                },
+                qq: {
+                    required: true,
+                    minlength: 5,
+                    maxlength: 11
+                },
+                telephone: {
+                    required: true,
+                    minlength: 11,
+                    maxlength: 11
+                },
+                email: {
+                    required: true,
+                    email: true
+                }
+            },
+            messages: {
+                nickname: {
+                    required: "* 昵称必填！"
+                },
+                birthday: {
+                    required: "* 格式：yyyy-MM-dd"
+                },
+                qq: {
+                    required: "* 请输入QQ号",
+                    minlength: "* 请输入正确格式的QQ号",
+                    maxlength: "* 请输入正确格式的QQ号"
+                },
+                telephone: {
+                    required: "* 一经确认不能修改",
+                    minlength: "* 请输入11位手机号码",
+                    maxlength: "* 请输入11位手机号码"
+                },
+                email: {
+                    required: "* 一经确认不能修改",
+                    email: "* 请输入正确格式的电子邮件"
+                }
+            }
+            , submitHandler: function (form) {
+                var options = {
+                    url: "/member/zhsz/ajaxEditUserInfo.json",
+                    success: showResponse,      //提交后的回调函数
+                    type: 'post',               //默认是form的method（get or post），如果申明，则会覆盖
+                    dataType: 'json',           //html(默认), xml, script, json...接受服务端返回的类型
+                    timeout: 3000               //限制请求的时间，当请求大于3秒后，跳出请求
+                }
+                $(form).ajaxSubmit(options);
+            }
+        });
+        function showResponse(json) {
+            if (json.result == 1) {
+                alert("修改成功");
+                $(".eveb_nav_sub ul li:eq(0) a").trigger("click");
+                $(".icon_close").trigger("click");
+                location.reload();
+            } else {
+                alert("修改失败：" + json.description);
+            }
+        };
+    });
+</script>
+</body>
+</html>

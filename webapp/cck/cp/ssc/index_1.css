@@ -1,0 +1,205 @@
+
+body { margin: 30px; padding: 0px; border: 0px none; color: rgb(0, 0, 0); font-family: helvetica,sans-serif; font-weight: normal; font-size: 12px; }
+img { border: 0px none; }
+
+body, p, h1, h2, h3, h4, h5, li, span, i, ul, img, a, strong, input, button, textarea { margin: 0px; padding: 0px; }
+body { font-family: "microsoft yahei"; font-size: 14px; line-height: 1; }
+li { list-style-type: none; float: left; }
+a { text-decoration: none; outline: medium none; color: rgb(0, 0, 0); }
+img { border: medium none; vertical-align: middle; }
+i, var { font-style: normal; }
+button { font-family: "microsoft yahei"; outline: medium none; cursor: pointer; }
+iframe { border: medium none; }
+input, select, textarea { outline: medium none; font-family: "microsoft yahei"; }
+.hide { display: none; }
+.menu_left { background: rgb(32, 32, 32) none repeat scroll 0% 0%; width: 239px; height: 100%; float: left; position: fixed; left: 0px; top: 0px; }
+.menu_left .logo { height: 115px; }
+.menu_left .logo img { float: left; margin-top: 34px; margin-left: 40px; }
+.menu_left .logo a { width: 29px; height: 29px; background: transparent url('../static/public/img/ico0.png') repeat scroll 0% 0%; float: right; margin-right: 14px; margin-top: 41px; transition: all 0.3s ease 0s; }
+.menu_left .list_menu {  }
+.menu_left .list_menu ul {  }
+.menu_left .list_menu ul li { width: 100%; margin-bottom: 1px; display: table; position: relative; }
+.menu_left .list_menu ul li a { color: rgb(255, 255, 255); display: block; }
+.menu_left .list_menu ul li h2 { font-size: 16px; color: rgb(254, 254, 254); font-weight: normal; height: 40px; background: rgb(63, 63, 63) none repeat scroll 0% 0%; line-height: 40px; cursor: pointer; }
+.menu_left .list_menu ul li h2 b { font-weight: normal; }
+.menu_left .list_menu ul li h2 span { width: 26px; margin-right: 17px; margin-left: 47px; text-align: center; float: left; transition: all 0.3s ease 0s; }
+.menu_left .list_menu ul li h2 span .pict { display: table; width: 100%; height: 40px; }
+.menu_left .list_menu ul li h2 span .pict var { vertical-align: middle; display: table-cell; }
+.menu_left .list_menu ul li h2 i { width: 12px; height: 24px; background: transparent url('../static/public/img/ico7.png') repeat scroll 0% 0%; float: right; margin-right: 24px; margin-top: 9px; transition: all 0.3s ease 0s; }
+.menu_left .list_menu ul li a.Refresh { background: transparent url('../static/public/img/ico4.png') repeat scroll 0% 0%; width: 25px; height: 21px; position: absolute; top: 9px; right: 18px; cursor: pointer; }
+.menu_left .list_menu ul li h2 i.show { margin-right: 19px; width: 24px; height: 12px; background: transparent url('../static/public/img/ico6.png') repeat scroll 0% 0%; margin-top: 14px; }
+.menu_left .list_menu ul li .down { display: none; }
+.menu_left .list_menu ul li .down a { display: block; color: rgb(210, 210, 210); height: 40px; margin-top: 1px; margin-bottom: 1px; background: rgb(39, 39, 39) none repeat scroll 0% 0%; line-height: 40px; transition: all 0.3s ease 0s; }
+.menu_left .list_menu ul li .down a img { width: 24px; margin-left: 47px; margin-right: 17px; float: left; margin-top: 8px; }
+.menu_left .list_menu ul li .down a:hover { background: rgb(63, 63, 63) none repeat scroll 0% 0%; color: rgb(255, 255, 255); }
+.con_right { float: right; }
+.top { width: 100%; height: 40px; background: rgb(250, 98, 0) none repeat scroll 0% 0%; position: fixed; top: 0px; z-index: 3; }
+.top .news { float: left; margin-left: 30px; height: 40px; overflow: hidden; position: relative; width: 700px; }
+.top .news img { float: left; margin-top: 9px; }
+.top .news ul { float: left; margin-left: 6px; }
+.top .news ul li { font-size: 12px; color: rgb(255, 255, 255); line-height: 40px; position: absolute; }
+.top .news ul li a { color: rgb(255, 255, 255); }
+.top .nav { width: 111px; position: relative; height: 100%; float: right; }
+.top .nav:hover .downte { display: block; }
+.top .nav .downte { background: rgb(255, 255, 255) none repeat scroll 0% 0%; border: 1px solid rgb(204, 204, 204); position: absolute; height: 200px; width: 480px; right: 0px; z-index: 2; border-radius: 3px; display: none; }
+.top .nav .downte ul {  }
+.top .nav .downte ul li { width: 21%; padding-left: 4%; }
+.top .nav .downte ul li h2 { font-size: 18px; font-weight: normal; margin-top: 20px; }
+.top .nav .downte ul li p { margin-top: 12px; float: left; }
+.top .nav .downte ul li p a { display: block; line-height: 26px; transition: all 0.3s ease 0s; }
+.top .nav .downte ul li p a:hover { color: rgb(250, 98, 0); }
+.top .nav h1 { font-weight: normal; color: rgb(255, 255, 255); font-size: 14px; line-height: 40px; width: 111px; background: rgb(248, 124, 45) none repeat scroll 0% 0%; text-align: center; }
+.top .nav h1 i { width: 19px; height: 15px; background: transparent url('../static/public/img/ico2.png') repeat scroll 0% 0%; display: inline-block; vertical-align: middle; margin-top: -2px; margin-left: 5px; }
+.Account { height: 50px; background: transparent url('../static/public/img/line0.png') repeat scroll 0% 0%; border-top: 1px solid rgb(0, 0, 0); border-bottom: 1px solid rgb(0, 0, 0); position: fixed; top: 40px; width: 100%; z-index: 2; }
+.Account p { color: rgb(186, 186, 186); font-size: 12px; line-height: 50px; margin-left: 30px; }
+.Account p a { color: rgb(186, 186, 186); margin-left: 2px; margin-right: 2px; }
+.Account p a:hover { text-decoration: underline; }
+.Account .state { float: left; margin-left: 62px; margin-top: 11px; }
+.Account .state ul { float: left; }
+.Account .state ul li { border: 1px solid rgb(87, 87, 87); width: 148px; height: 28px; margin-right: 10px; }
+.Account .state ul li input { border: medium none; height: 100%; margin-left: 6px; background: transparent none repeat scroll 0% 0%; font-size: 12px; color: rgb(151, 151, 151); line-height: 28px; }
+.Account .state ul li input.short { width: 75px; }
+.Account .state ul li img { float: right; margin-right: 4px; margin-top: 4px; }
+.Account .state .buton { float: left; }
+.Account .state .buton button { width: 66px; height: 29px; background: rgb(71, 205, 49) none repeat scroll 0% 0%; border-radius: 3px; color: rgb(255, 255, 255); border: medium none; }
+.Account .state .buton p { float: right; margin-left: 10px; line-height: 30px; }
+.Account .state .buton p a { margin: 0px 10px; }
+.list_ject ul li .Time .timer_wrap ol::after { content: ""; position: absolute; left: -10px; top: 12px; width: 7px; height: 24px; background: transparent url('../static/public/img/ico31.png') repeat scroll 0% 0%; }
+.list_ject ul li .Time .timer_wrap ol.s::after { display: none; }
+.list_ject ul li .Time .timer_wrap ol span::after { content: ""; position: absolute; left: 5%; top: 50%; width: 90%; height: 1px; background: rgb(74, 74, 74) none repeat scroll 0% 0%; }
+.list_ject ul li .Result p a::after { content: ""; position: absolute; left: 0px; top: 0px; width: 1px; height: 100%; background: rgb(204, 204, 204) none repeat scroll 0% 0%; }
+.list_ject ul li .Result p a.first::after { display: none; }
+.men_list .nav_list ul li:hover::after { display: none; }
+.men_list .nav_list ul li::after { content: ""; position: absolute; right: 0px; top: 44px; width: 1px; height: 20px; background: rgb(248, 123, 43) none repeat scroll 0% 0%; }
+.banner .four_men ul li::after { content: ""; position: absolute; left: 0px; top: 2%; width: 1px; height: 96%; background: rgb(46, 47, 39) none repeat scroll 0% 0%; border-right: 1px solid rgb(88, 88, 88); }
+.banner .four_men ul li.last::before { content: ""; position: absolute; right: 0px; top: 2%; width: 1px; height: 96%; background: rgb(46, 47, 39) none repeat scroll 0% 0%; border-right: 1px solid rgb(88, 88, 88); }
+.type_top .left .left_div span.line a:nth-child(1) { border-left: medium none; }
+.type_top .right ul li.sli b::after { content: ""; position: absolute; left: 1px; bottom: -1px; width: 70px; height: 1px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; z-index: 11; }
+.game_name .box3_timer .timer_wrap ol::after { content: ""; position: absolute; left: -13px; top: 16px; width: 8px; height: 32px; background: transparent url('../static/public/img/ico47-1.png') repeat scroll 0% 0%; }
+.game_name .box3_timer .timer_wrap ol.s::after { display: none; }
+.game_name .box3_timer .timer_wrap ol span::after { content: ""; position: absolute; left: 5%; top: 50%; width: 90%; height: 1px; background: rgb(74, 74, 74) none repeat scroll 0% 0%; }
+.Single .layout .Pick p.p1 span.fr a var::after { content: ""; left: 50%; bottom: -12px; position: absolute; width: 0px; height: 0px; border-width: 6px; border-style: solid; border-color: rgb(0, 0, 0) transparent transparent; }
+.Betting .list_wrap ul li:hover:not(.not) { background: rgb(238, 238, 238) none repeat scroll 0% 0%; }
+.Detailedlist .layout .boxt .left ul li:not(.head) span.sp3 { color: rgb(67, 181, 128); }
+.process .layout .list_tems .date::after { content: ""; position: absolute; width: 10px; height: 10px; border-radius: 50%; border: 2px solid rgb(255, 255, 255); background: rgb(250, 98, 0) none repeat scroll 0% 0%; right: -28px; top: 0px; }
+.process .layout .list_tems::after { content: ""; width: 19px; height: 19px; background: transparent url('../static/public/img/ico70.png') repeat scroll 0% 0%; left: -19px; position: absolute; top: -1px; }
+.Resultt .latyout .tabs_ce ul li.acti a::after { content: ""; position: absolute; left: 0px; bottom: -1px; width: 100%; height: 1px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; }
+.Resultt .latyout .tabs_ce ul li::after { content: ""; position: absolute; left: -1px; top: 17px; width: 1px; height: 14px; background: rgb(191, 191, 191) none repeat scroll 0% 0%; }
+.Resultt .latyout .tabs_ce ul li.acti::after { display: none; }
+.Resultt .latyout .tabs_ce ul li.nob::after { display: none; }
+.Newest .tabs_cg ul li::after { content: ""; position: absolute; left: -1px; top: 17px; width: 1px; height: 14px; background: rgb(191, 191, 191) none repeat scroll 0% 0%; }
+.Newest .tabs_cg ul li.acti::after { display: none; }
+.Newest .tabs_cg ul li.first::after { display: none; }
+.Newest .tabs_cg ul li.acti i::after { content: ""; position: absolute; left: 0px; bottom: -1px; width: 100%; height: 1px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; }
+.Newest .Analysis .box3 .timer_wrap ol::after { content: ""; position: absolute; left: -20px; top: 16px; width: 10px; height: 38px; background: transparent url('../static/public/img/ico78.png') repeat scroll 0% 0%; }
+.Newest .Analysis .box3 .timer_wrap ol.f::after { display: none; }
+.Newest .Analysis .box3 .three ol::after { left: -10px; }
+.Newest .Analysis .box3 .three ol.f::after { display: block; }
+.Newest .Analysis .box3 .three ol.s::after { display: none; }
+.main_layout .left_layout h1::after { content: ""; position: absolute; width: 6px; height: 50px; background: transparent url('../static/public/img/ico83.png') repeat scroll 0% 0%; right: -6px; opacity: 0.5; }
+.main_layout .left_layout ul li i.i0::after { content: ""; left: -12px; bottom: 0px; position: absolute; width: 0px; height: 0px; border-right: 8px solid rgb(255, 162, 0); border-top: 6px solid transparent; border-left: 6px solid transparent; }
+.main_layout .right_layotu .left_wrap .tabs_cg ul li::after { content: ""; position: absolute; left: -1px; top: 17px; width: 1px; height: 14px; background: rgb(191, 191, 191) none repeat scroll 0% 0%; }
+.main_layout .right_layotu .left_wrap .tabs_cg ul li.acti::after { display: none; }
+.main_layout .right_layotu .left_wrap .tabs_cg ul li.first::after { display: none; }
+.main_layout .right_layotu .left_wrap .tabs_cg ul li.acti i::after { content: ""; position: absolute; left: 0px; bottom: -1px; width: 100%; height: 1px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; }
+.main_layout .right_layotu .right_wrap .login ul.state li:nth-child(3) { font-size: 16px; }
+.main_layout .right_layotu .right_wrap .login ul.state li a:nth-child(1) { margin-left: 0px; }
+.main_layout .right_layotu .chart .pic_wp .links p a::after { content: ""; position: absolute; right: -10px; top: 0px; width: 1px; height: 12px; background: rgb(204, 204, 204) none repeat scroll 0% 0%; }
+@media screen and (max-width: 1210px) {
+	.top .news { width: 514px; }
+	.con_right { width: 655px; }
+	body { min-width: 1000px; }
+}
+.type_top .left .left_div span.line a:nth-child(1) { border-left: medium none; }
+.type_top .right ul li.sli b::after { content: ""; position: absolute; left: 1px; bottom: -1px; width: 70px; height: 1px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; z-index: 11; }
+.game_name .box3_timer .timer_wrap ol::after { content: ""; position: absolute; left: -13px; top: 16px; width: 8px; height: 32px; background: transparent url('../static/public/img/ico47-1.png') repeat scroll 0% 0%; }
+.game_name .box3_timer .timer_wrap ol.s::after { display: none; }
+.game_name .box3_timer .timer_wrap ol span::after { content: ""; position: absolute; left: 5%; top: 50%; width: 90%; height: 1px; background: rgb(74, 74, 74) none repeat scroll 0% 0%; }
+.Single .layout .Pick p.p1 span.fr a var::after { content: ""; left: 50%; bottom: -12px; position: absolute; width: 0px; height: 0px; border-width: 6px; border-style: solid; border-color: rgb(0, 0, 0) transparent transparent; }
+.Betting .list_wrap ul li:hover:not(.not) { background: rgb(238, 238, 238) none repeat scroll 0% 0%; }
+.Detailedlist .layout .boxt .left ul li:not(.head) span.sp3 { color: rgb(67, 181, 128); }
+.process .layout .list_tems .date::after { content: ""; position: absolute; width: 10px; height: 10px; border-radius: 50%; border: 2px solid rgb(255, 255, 255); background: rgb(250, 98, 0) none repeat scroll 0% 0%; right: -28px; top: 0px; }
+.process .layout .list_tems::after { content: ""; width: 19px; height: 19px; background: transparent url('../static/public/img/ico70.png') repeat scroll 0% 0%; left: -19px; position: absolute; top: -1px; }
+.Resultt .latyout .tabs_ce ul li.acti a::after { content: ""; position: absolute; left: 0px; bottom: -1px; width: 100%; height: 1px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; }
+.Resultt .latyout .tabs_ce ul li::after { content: ""; position: absolute; left: -1px; top: 17px; width: 1px; height: 14px; background: rgb(191, 191, 191) none repeat scroll 0% 0%; }
+.Resultt .latyout .tabs_ce ul li.acti::after { display: none; }
+.Resultt .latyout .tabs_ce ul li.nob::after { display: none; }
+.Newest .tabs_cg ul li::after { content: ""; position: absolute; left: -1px; top: 17px; width: 1px; height: 14px; background: rgb(191, 191, 191) none repeat scroll 0% 0%; }
+.Newest .tabs_cg ul li.acti::after { display: none; }
+.Newest .tabs_cg ul li.first::after { display: none; }
+.Newest .tabs_cg ul li.acti i::after { content: ""; position: absolute; left: 0px; bottom: -1px; width: 100%; height: 1px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; }
+.Newest .Analysis .box3 .timer_wrap ol::after { content: ""; position: absolute; left: -20px; top: 16px; width: 10px; height: 38px; background: transparent url('../static/public/img/ico78.png') repeat scroll 0% 0%; }
+.Newest .Analysis .box3 .timer_wrap ol.f::after { display: none; }
+.Newest .Analysis .box3 .three ol::after { left: -10px; }
+.Newest .Analysis .box3 .three ol.f::after { display: block; }
+.Newest .Analysis .box3 .three ol.s::after { display: none; }
+.left_layout h1::after { content: ""; position: absolute; width: 6px; height: 50px; background: transparent url('../static/public/img/ico83.png') repeat scroll 0% 0%; right: -6px; opacity: 0.5; }
+.left_layout ul li i.i0::after { content: ""; left: -12px; bottom: 0px; position: absolute; width: 0px; height: 0px; border-right: 8px solid rgb(255, 162, 0); border-top: 6px solid transparent; border-left: 6px solid transparent; }
+.main_layout .right_layotu .left_wrap .tabs_cg ul li::after { content: ""; position: absolute; left: -1px; top: 17px; width: 1px; height: 14px; background: rgb(191, 191, 191) none repeat scroll 0% 0%; }
+.main_layout .right_layotu .left_wrap .tabs_cg ul li.acti::after { display: none; }
+.main_layout .right_layotu .left_wrap .tabs_cg ul li.first::after { display: none; }
+.main_layout .right_layotu .left_wrap .tabs_cg ul li.acti i::after { content: ""; position: absolute; left: 0px; bottom: -1px; width: 100%; height: 1px; background: rgb(255, 255, 255) none repeat scroll 0% 0%; }
+.main_layout .right_layotu .right_wrap .login ul.state li:nth-child(3) { font-size: 16px; }
+.main_layout .right_layotu .right_wrap .login ul.state li a:nth-child(1) { margin-left: 0px; }
+.main_layout .right_layotu .chart .pic_wp .links p a::after { content: ""; position: absolute; right: -10px; top: 0px; width: 1px; height: 12px; background: rgb(204, 204, 204) none repeat scroll 0% 0%; }
+.men_list .logo h1::after { content: ""; position: absolute; width: 6px; height: 50px; background: transparent url('../static/public/img/ico83.png') repeat scroll 0% 0%; right: -6px; opacity: 0.5; }
+.reg_list ul li::after { content: ""; position: absolute; right: -4px; top: -3px; width: 6px; height: 3px; background: rgb(204, 204, 204) none repeat scroll 0% 0%; }
+@media screen and (max-width: 1210px) {
+	.top .news { width: 514px; }
+	.con_right { width: 655px; }
+	body { min-width: 1000px; }
+}
+* { outline: medium none; }
+.clearfix::after { content: "."; display: block; height: 0px; clear: both; visibility: hidden; }
+
+.Account .state { margin: 15px 11px; }
+.menu_left .logo { height: 75pt; }
+.menu_left .logo img { display: inline-block; margin: auto; height: 50px; padding: 25px; }
+.Account { height: 60px; border: medium none; }
+#rightContent, .Account { overflow: hidden; }
+.con_right .top { width: 100%; overflow: hidden; }
+.con_right { overflow: hidden; width: 0px; }
+.menu_left { width: 15pc; overflow: hidden; }
+.Account p { line-height: 60px; }
+@media screen and (max-width: 1010px) {
+	body { min-width: 750pt; }
+}
+#rightContent, .con_right, .con_right .Account, .con_right .top { width: 0px; overflow: hidden; }
+.menu_left { width: 0px; }
+.Account, .menu_left, .top { position: static; }
+.menu_left { height: 0px; }
+.con_right { float: left; }
+.con_right .top { overflow: visible; }
+.hide { display: none; }
+.top .nav { cursor: pointer; }
+#rightContent { pointer-events: auto !important; }
+.alert { width: 100%; height: 100%; background: rgba(0, 0, 0, 0.3) none repeat scroll 0% 0%; position: fixed; left: 0px; top: 0px; display: none; z-index: 99999; }
+.alert_col { width: 50pc; height: 25pc; background: rgb(255, 255, 255) none repeat scroll 0% 0%; position: absolute; left: 50%; top: 50%; margin-left: -25pc; margin-top: -200px; border-radius: 5px; }
+.alert_col h5 { width: 100%; height: 60px; background: rgb(250, 98, 0) none repeat scroll 0% 0%; border-radius: 5px 5px 0px 0px; }
+.alert_col h5 span { margin-left: 15px; line-height: 60px; color: rgb(255, 255, 255); font-size: 14px; }
+.alert_col h5 i { float: right; margin-right: 15px; font-weight: 100; font-style: normal; color: rgb(255, 255, 255); line-height: 60px; font-size: 24px; cursor: pointer; }
+.alert_col h2 { text-align: center; font-size: 24px; margin-top: 15px; margin-bottom: 10px; }
+.alert_col h4 { float: right; margin-right: 20px; font-size: 1pc; width: 760px; text-align: right; }
+.alert_col div { height: 180px; margin-bottom: 20px; padding-top: 10px; padding-bottom: 10px; width: 760px; margin-left: 20px; overflow-y: scroll; }
+h1, h2, h3, h4, h5, h6 { font-weight: 400; }
+.alert_col div { overflow-wrap: break-word; }
+
+
+.list_menu .show .inner-menu .head-ssc, .list_menu .show .inner-menu .head-lhc, .list_menu .show .inner-menu .head-k3, .list_menu .show .inner-menu .head-pk10, .list_menu .show .inner-menu .head-qita { background-color: rgb(39, 39, 39); width: 98%; margin: 0px auto; height: 36px; line-height: 36px; text-align: center; font-size: 14px; color: rgb(255, 255, 255); cursor: pointer; border-bottom: 1px solid black; }
+.xHide { display: none; }
+.list_menu ul li .down .inner-menu .head-pk10 img, .head-ssc img, .head-k3 img, .head-lhc img, .head-qita img { width: 24px; margin-left: 44px; margin-right: 17px; float: left; margin-top: 8px; }
+.list_menu ul li .down .inner-menu .head-pk10 var, .head-ssc var, .head-k3 var, .head-lhc var, .head-qita var { float: left; }
+.list_menu ul li .down .inner-menu .head-pk10 i, .list_menu ul li .down .inner-menu .head-ssc i, .list_menu ul li .down .inner-menu .head-k3 i, .list_menu ul li .down .inner-menu .head-lhc i, .list_menu ul li .down .inner-menu .head-qita i { width: 12px; height: 24px; background: transparent url('../static/public/img/ico7.png') repeat scroll 0% 0%; float: right; margin-right: 40px; margin-top: 6px; transition: all 0.3s ease 0s; }
+
+
+a:hover { color: red; }
+a:active { color: deepskyblue; }
+.eveb_nav_sub .on, .button_1, .button_1:link, .button_1:visited, .alert_col h5, .onlineService, .head, .layui-layer-popup .layui-layer-title, .xzqd, .game_name .box2_stage p span i.acti, .Betting, .Single, .list_ject ul li .Result p a.acti, .list_ject ul li .Result p a.acti:hover, .top { background: rgb(250, 98, 0) none repeat scroll 0% 0% !important; }
+.head div h5, .Betting .tabs ul li, .top .nav h1 { background: rgb(248, 124, 45) none repeat scroll 0% 0% !important; }
+
+
+html #layuicss-skinlayercss { display: none; position: absolute; width: 1989px; }
+.layui-layer-move { display: none; position: fixed; left: 0px; top: 0px; width: 100%; height: 100%; cursor: move; opacity: 0; background-color: rgb(255, 255, 255); z-index: 2147483647; }
+@media screen and (max-width: 1100px) {
+}
+body { overflow: hidden; }

@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE urlrewrite PUBLIC "-//tuckey.org//DTD UrlRewrite 4.0//EN"
+        "http://www.tuckey.org/res/dtds/urlrewrite4.0.dtd">
+<urlrewrite>
+   <!--  
+   <rule>
+     <note>订单</note>     
+     <from>^/lottery/(\w+)$</from>
+     <to>/lotteryOrder/$1.do</to>
+   </rule>-->
+   <rule>
+     <note>跳转后面登录页面</note>
+     <from>/plat/index</from>
+     <to>/home/index.do</to>
+   </rule>
+   <rule>  
+        <note>后台登录</note>
+        <from>/sysadmin/login</from>  
+        <to type="forward">/sysadmin/login.do</to>  
+    </rule>
+     <rule>  
+         <note>后台退出</note>
+        <from>/sysadmin/logout</from>  
+        <to type="forward">/sysadmin/loginout.do</to>  
+    </rule>
+    <rule>
+     <note>首页轮播</note>     
+     <from>/api/baseData_advert</from>
+     <to>/advertisingApi/advert.do</to>
+   </rule>
+   <rule>
+     <note>首页轮播</note>     
+     <from>/api/baseData_advert</from>
+     <to>/advertisingApi/advert.do</to>
+   </rule>
+    <rule>
+     <note>通知</note>     
+     <from>/api/baseData_notice</from>
+     <to>/noticeApi/notice.do</to>
+   </rule>
+    <rule>
+     <note>优惠活动</note>     
+     <from>/api/baseData_activity</from>
+     <to>/activityApi/activity.do</to>
+   </rule>
+    <rule>
+     <note>用户金额查询</note>     
+     <from>/api/baseData_money</from>
+     <to>/usersApi/money.do</to>
+   </rule>
+    <rule>
+     <note>获取用户的绑定账户</note>     
+     <from>/api/baseData_bindBank</from>
+     <to>/usersApi/bindBank.do</to>
+   </rule>
+    <rule>
+     <note>查询用户徒弟列表</note>     
+     <from>/api/baseData_apprenticelist</from>
+     <to>/usersApi/apprenticelist.do</to>
+   </rule>
+    <rule>
+     <note>用户加载配置</note>     
+     <from>/api/baseData_loadConfig</from>
+     <to>/usersApi/loadConfig.do</to>
+   </rule>
+    <rule>
+     <note>交易明细</note>     
+     <from>/api/baseData_balancelist</from>
+     <to>/usersApi/balancelist.do</to>
+   </rule>
+   
+   <rule match-type="wildcard">
+     <note>用户信息相关查询</note>     
+     <from>/api/user_*</from>
+     <to>/usersApi/$1.do</to>
+   </rule>
+   <rule match-type="wildcard">
+     <note>北京三分彩相关查询</note>     
+     <from>/api/bj3_*</from>
+     <to>/bj3Api/$1.do</to>
+   </rule>
+   <rule match-type="wildcard">
+     <note>江苏快3相关查询</note>     
+     <from>/api/jsK3_*</from>
+     <to>/jsK3Api/$1.do</to>
+   </rule>
+   <rule match-type="wildcard">
+     <note>广东快10相关查询</note>     
+     <from>/api/gdK10_*</from>
+     <to>/gdk10Api/$1.do</to>
+   </rule>
+   <rule match-type="wildcard">
+     <note>北京pk10相关查询</note>     
+     <from>/api/bjPk10_*</from>
+     <to>/bjPk10Api/$1.do</to>
+   </rule>
+   <rule match-type="wildcard">
+     <note>幸运飞艇相关查询</note>     
+     <from>/api/luckyAirship_*</from>
+     <to>/luckyAirshipApi/$1.do</to>
+   </rule>
+   <rule match-type="wildcard">
+     <note>广东11选5</note>     
+     <from>/api/gdPick11_*</from>
+     <to>/gdPick11Api/$1.do</to>
+   </rule>
+   <rule match-type="wildcard">
+     <note>北京幸运28</note>     
+     <from>/api/bjLu28_*</from>
+     <to>/bjLu28Api/$1.do</to>
+   </rule>
+   <rule match-type="wildcard">
+     <note>重庆时时彩</note>     
+     <from>/api/cqSsc_*</from>
+     <to>/cqSscApi/$1.do</to>
+   </rule>
+   <rule match-type="wildcard">
+     <note>新疆时时彩</note>     
+     <from>/api/xjSsc_*</from>
+     <to>/xjSscApi/$1.do</to>
+   </rule>
+   <rule match-type="wildcard">
+     <note>天津时时彩</note>     
+     <from>/api/tjSsc_*</from>
+     <to>/tjSscApi/$1.do</to>
+   </rule>
+   <rule match-type="wildcard">
+     <note>香港六合彩</note>     
+     <from>/api/markSix_*</from>
+     <to>/markSixApi/$1.do</to>
+   </rule>
+   <rule match-type="wildcard">
+     <note>二维码</note>     
+     <from>/api/twocode_*</from>
+     <to>/twoCodeApi/$1.do</to>
+   </rule>
+   <rule match-type="wildcard">
+     <note>新闻</note>     
+     <from>/api/news_*</from>
+     <to>/newsApi/$1.do</to>
+   </rule>
+   <rule>
+     <note>查询用户投注或者中奖纪录</note>     
+     <from>/api/baseData_betlist</from>
+     <to>/orderApi/betlist.do</to>
+   </rule>
+   <rule>
+     <note>银行充值账户</note>     
+     <from>/api/baseData_bankMsg</from>
+     <to>/rechargeApi/bankMsg.do</to>
+   </rule>
+   <rule match-type="wildcard">
+     <note>支付回调函数</note>     
+     <from>/api/recharge_*</from>
+     <to>/rechargeApi/$1.do</to>
+   </rule>
+   <rule>
+        <from>/api/(\w+)_(\w+)&#63;([\s\S]*)$</from>
+        <to type="forward">/$1/$2.do</to>
+    </rule>
+    <rule>
+        <from>/api/(\w+)_(\w+)&amp;([\s\S]*)$</from>
+        <to type="forward">/$1/$2.do</to>
+    </rule>
+    <rule>
+        <from>/api/(\w+)_(\w+)$</from>
+        <to type="forward">/$1/$2.do</to>
+    </rule>
+     <rule>
+        <from>/m/(\w+)&#63;([\s\S]*)$</from>
+        <to type="forward">/user/mobileAction.do?method=$1</to>
+    </rule>
+    
+    
+    
+</urlrewrite>

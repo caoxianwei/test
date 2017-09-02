@@ -1,0 +1,52 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<#assign tool =JspTaglibs["http://caicaike.lottery.com/tag/toolbar"]/>
+<html>
+<head>
+<base href="${basePath}">
+<meta charset="UTF-8">
+<title>统计管理</title>
+<#include "/common/easyui_css.inc"/>
+<#include "/common/css.inc"/>
+<style type="text/css">
+.textbox{
+  min-width: 50px !important;
+}
+.dg-input {
+    margin: 0;
+    padding: 0px !important;
+    border: 1px solid #95B8E7;
+    -moz-border-radius: 0 0 0 0;
+    -webkit-border-radius: 0 0 0 0;
+    border-radius: 2px !important;
+    height:25px
+}
+
+</style>
+</head>
+<body>
+<div class="easyui-layout" data-options="fit:true">
+	<div data-options="region:'center', title:'报表管理>>今日投注统计管理',iconCls:'icon-texe',cls:'white'">
+          <!-- <div  class="quer_label">
+             <label>彩种：
+                 <input id="game_type" style="width:140px"/>  
+             </label>
+             <label>期号：
+               <input class="easyui-textbox" type="text" id="session_no" style="width:120px"/>
+             </label>
+             <label>
+                                         投注时间：<input class="easyui-datebox" style="width:135px" id="startDate">
+                                            到<input class="easyui-datebox" style="width:135px" id="endDate"></label>
+             <a style="width: 60px;margin-right: 10px;font-size: 18px !important"  id="query" class="easyui-linkbutton green" href="javascript:queryData();">查询</a>
+   		 </div> -->
+          <div id="tb" class="quer_label">
+             <!-- <@tool.bar menuId="${menuid!}"/> -->
+         </div>
+       <table id="dg"></table>
+</div>  
+</div>
+
+<div id="gameInfoDiv"></div>
+<#include "/common/easyui_js.inc"/>
+<script type="text/javascript" src="pages/report/listTodayBet.js"></script>
+</body>
+</html>

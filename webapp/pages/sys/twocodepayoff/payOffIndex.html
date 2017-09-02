@@ -1,0 +1,29 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<#assign tool =JspTaglibs["http://caicaike.lottery.com/tag/toolbar"]/>
+<html>
+<head>
+<base href="${basePath}">
+<meta charset="UTF-8">
+<title>支付二维码管理页面</title>
+<#include "/common/easyui_css.inc"/>
+<#include "/common/css.inc"/>
+</head>
+<body style="overflow: hidden">
+<input type="hidden" id="menuid" value="${menuid}" />
+<div class="easyui-layout" data-options="fit:true">
+	<div data-options="region:'center', title:'系统管理>>支付二维码管理',iconCls:'icon-texe',cls:'white'">
+        <div class="easyui-layout" data-options="fit:true" >
+		<div data-options="region:'center'" style="padding:5px; border:none !important">
+			<div id="payOffTabs" class="easyui-tabs" >
+				<div title="微信" style="padding:5px"></div>
+				<div title="支付宝" style="padding:5px"></div>
+			</div> 
+		</div> 
+	 </div>
+</div>  
+</div>
+
+<#include "/common/easyui_js.inc"/>
+<script type="text/javascript" src="pages/sys/twocodepayoff/payOffIndex.js"></script>
+</body>
+</html>
